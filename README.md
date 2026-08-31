@@ -60,9 +60,36 @@ License v3.0** (файл `LICENSE`). Это означает: вы можете 
 
 ```bash
 # посмотреть лекцию
-open lectures/01_metodologiya.md
+open lectures/01_uvodnoe.md
 # проверить цитаты курса по корпусу
 python scripts/verify_quotes.py
 # семантический поиск по корпусу (пример: найдём фрагменты про Ньютона)
 .venv/Scripts/python.exe scripts/rag_search.py "Математические начала Ньютона" -k 5
 ```
+
+## Распределённые CPU-вычисления (кластер)
+
+Если GPU-инференс недоступен или недостаточно быстр, сборка RAG-индекса
+распределяется по CPU-кластеру:
+
+- **Локальный узел** — этот ПК: пул процессов `multiprocessing.Pool`
+  (по умолчанию 6 воркеров, по одному потоку на воркер);
+- **Удалённый узел** — «ubuntu-server» (`zzz@10.0.0.2`, SSH по ключу):
+  воркер `embed_shard_worker.py` с `threads=8` (все ядра сервера).
+
+Запуск координатора:
+
+```bash
+.venv/Scripts/python.exe scripts/rag_build_cluster.py --shards 2048 --local-workers 6
+```
+
+Провижион сервера (один раз):
+
+```bash
+ssh zzz@10.0.0.2 "python3 -m venv ~/ragd && ~/ragd/bin/pip install numpy onnxruntime fastembed"
+```
+
+Координатор нарезает корпус на шарды, чётные шарды считает локальный пул,
+нечётные — сервер (scp→ssh→embed→scp), затем собирает матрицу эмбеддингов,
+строит Annoy и атомарно подменяет индекс. Если сервер недоступен — флаг
+`--remote-enabled=false` оставит только локальный параллельный пул.

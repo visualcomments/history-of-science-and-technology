@@ -39,7 +39,20 @@
 | 10 | `On_the_Origin_of_Species.txt`, `The_Descent_of_Man.txt`, `Zoological_Philosophy.txt`, `The_History_of_Creation_vol.1.txt`, `Рефлексы_головного_мозга.txt` |
 | 11 | `history_of_engineering__Беседы_о_механике.txt`, `Lives_of_the_Engineers.txt` |
 | 12 | `Passages_from_the_Life_of_a_Philosopher.txt` |
+| Р5 / 21 век | `history_of_technology__US_Preparing_for_Future_of_AI_2016.txt`, `history_of_technology__US_National_AI_Strategic_Plan_2019.txt`, `history_of_technology__NASA_Beyond_the_Ionosphere.txt`, `history_of_computing__NASA_Computers_in_Spaceflight.txt` |
 
 Полная инвентаризация корпуса и его происхождение — в каталоге проекта
 (`catalog/`, `catalog/PROVENANCE.md`); карта «модуль → книги» основана на
 верифицированных цитатах (см. `verification/REPORT.md`).
+
+## Источники по науке и технологиям XXI века
+
+Документы правительства США (public domain): «Preparing for the Future
+of Artificial Intelligence» (NSTC, 2016) и «The National Artificial
+Intelligence Research and Development Strategic Plan» (NSTC, 2019).
+Издания NASA (работы правительства США): «Beyond the Ionosphere: Fifty
+Years of Satellite Communication» (NASA SP-4217) и «Computers in
+Spaceflight: The NASA Experience» (J. E. Tomayko, 1988). Тексты
+включены в корпус как «проверенные источники» наряду с классическими
+трудами публичного достояния; они лицензией курса (GPL-3.0) не
+покрываются, но свободны для цитирования в учебных целях.
