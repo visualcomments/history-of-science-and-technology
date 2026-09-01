@@ -22,7 +22,7 @@
 | 08_universitety_nidhem.md | Европейцы ознакомились с индусской арифметикой и с > алгеброй арабов,  | history_of_mathematics__История_математики_в_XVI_и_XVII_веках.txt | OK (cited #20175, actual #20867) | 20867 | 1.00 |
 | 09_kopernik.md | ...the great scientific victory during the Renaissance was > the overt | history_of_physics__A_History_of_Physics.txt | OK (cited #21653, actual #22345) | 22345 | 0.97 |
 | 09_kopernik.md | ...the geocentric theory of the universe has always had > its opponent | history_of_physics__A_History_of_Physics.txt | OK (cited #21654, actual #22346) | 22346 | 0.97 |
-| 10_galiley.md | I refer to motion [moto locale], a phenomenon exhibiting > very many w | history_of_science_general__The_Dialogues_Concerning_Two_New_Sciences.txt | OK (cited #25368, actual #26060) | 26060 | 1.00 |
+| 10_galiley.md | I refer to motion [moto locale], a phenomenon exhibiting > very many w | history_of_science_general__The_Dialogues_Concerning_Two_New_Sciences.txt | OK (cited #25368, actual #24006) | 24006 | 1.00 |
 | 10_galiley.md | More careful experiments carried out by him later, and > described in  | history_of_physics__A_History_of_Physics.txt | OK (cited #21666, actual #22358) | 22358 | 1.00 |
 | 11_nyuton.md | При этом планета, однако, сохраняет скорость, > приобретенную при опус | history_of_physics__Исаак_Ньютон.txt | OK (cited #23105, actual #23797) | 23797 | 0.96 |
 | 11_nyuton.md | In the present epoch we shall contemplate the scientific > labours of  | history_of_physics__A_History_of_Physics.txt | OK (cited #21689, actual #22381) | 22381 | 1.00 |
@@ -60,11 +60,11 @@
 | 26_bebbiddzh.md | The first Difference Engine with which I am acquainted > comprised a f | history_of_computing__Passages_from_the_Life_of_a_Philosopher.txt | OK (cited #11517, actual #12209) | 12209 | 1.00 |
 | 27_cifrovye_dvoyniki.md | At the request of her most gifted Analyst, I brought with > me the dra | history_of_computing__Passages_from_the_Life_of_a_Philosopher.txt | OK (cited #11449, actual #12141) | 12141 | 1.00 |
 | 28_nauka_i_obschestvo_xx.md | Пусть они вспомнят, например, к чему привела человечество > средневеко | history_of_biology__Рефлексы_головного_мозга.txt | OK | 7184 | 1.00 |
-| 28_nauka_i_obschestvo_xx.md | The report follows a series of public-outreach activities > spearheade | history_of_technology__US_Preparing_for_Future_of_AI_2016.txt | OK | 27669 | 1.00 |
+| 28_nauka_i_obschestvo_xx.md | The report follows a series of public-outreach activities > spearheade | history_of_technology__US_Preparing_for_Future_of_AI_2016.txt | OK (cited #27669, actual #25615) | 25615 | 1.00 |
 | 29_kosmicheskaya_gonka.md | При этом планета, однако, сохраняет скорость, > приобретенную при опус | history_of_physics__Исаак_Ньютон.txt | OK (cited #23105, actual #23797) | 23797 | 0.96 |
-| 30_nauka_xxi.md | On 24 July 1954, James H. Trexler, an engineer in the > Radio Counterm | history_of_technology__NASA_Beyond_the_Ionosphere.txt | OK | 26674 | 1.00 |
-| 30_nauka_xxi.md | Experts forecast that rapid progress in the field of > specialized art | history_of_technology__US_Preparing_for_Future_of_AI_2016.txt | OK | 27668 | 1.00 |
-| 30_nauka_xxi.md | Deep learning uses structures loosely inspired by the human > brain, c | history_of_technology__US_Preparing_for_Future_of_AI_2016.txt | OK | 27705 | 1.00 |
-| 30_nauka_xxi.md | What are the right priorities for Federal investments in > AI, especia | history_of_technology__US_National_AI_Strategic_Plan_2019.txt | OK | 27561 | 1.00 |
-| 30_nauka_xxi.md | An understanding is needed of the projected AI R&D > workforce pipelin | history_of_technology__US_National_AI_Strategic_Plan_2019.txt | OK | 27660 | 1.00 |
+| 30_nauka_xxi.md | On 24 July 1954, James H. Trexler, an engineer in the > Radio Counterm | history_of_technology__NASA_Beyond_the_Ionosphere.txt | OK (cited #26674, actual #24620) | 24620 | 1.00 |
+| 30_nauka_xxi.md | Experts forecast that rapid progress in the field of > specialized art | history_of_technology__US_Preparing_for_Future_of_AI_2016.txt | OK (cited #27668, actual #25614) | 25614 | 1.00 |
+| 30_nauka_xxi.md | Deep learning uses structures loosely inspired by the human > brain, c | history_of_technology__US_Preparing_for_Future_of_AI_2016.txt | OK (cited #27705, actual #25651) | 25651 | 1.00 |
+| 30_nauka_xxi.md | What are the right priorities for Federal investments in > AI, especia | history_of_technology__US_National_AI_Strategic_Plan_2019.txt | OK (cited #27561, actual #25507) | 25507 | 1.00 |
+| 30_nauka_xxi.md | An understanding is needed of the projected AI R&D > workforce pipelin | history_of_technology__US_National_AI_Strategic_Plan_2019.txt | OK (cited #27660, actual #25606) | 25606 | 1.00 |
 | 30_nauka_xxi.md | Chapter One: The Gemini Digital Computer: First Machine in > Orbit» > | history_of_computing__NASA_Computers_in_Spaceflight.txt | OK | 11448 | 1.00 |

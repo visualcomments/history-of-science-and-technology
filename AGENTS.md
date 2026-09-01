@@ -19,6 +19,7 @@
 | `tools/` | Инструменты: поиск, сервер RAG, верификация, материалы занятия, задания занятия, OpenAPI |
 | `Makefile` | Короткие цели для всех инструментов (`make help`) |
 | `docs/AGENT-WORKFLOW.md` | Полный цикл работы агента |
+| `docs/REMOTE-RAG.md` | Удалённый RAG: ubuntu-server + ngrok + n8n (публичный доступ к индексу) |
 | `CORPUS.md` | Как устроен локальный корпус и как его пересобрать |
 
 ## Что агент должен уметь делать
@@ -39,6 +40,11 @@
    семантический поиск в реальном времени): `make serve` →
    `tools/serve_api.ps1` (порт 8765, `GET /search?q=...&k=...`);
    OpenAPI-схема: `tools/rag-openapi.json`.
+7. **Искать по удалённому RAG (сервер + ngrok)**: если локального корпуса
+   нет, используй `make remote-search QUERY="..."` →
+   `tools/rag_remote.py "..." -k 5` (публичный ngrok → ubuntu-server →
+   индекс курса; URL — `server/ngrok-url.txt` или `FALT_RAG_URL`).
+   Подробности и демонстрация через n8n — в `docs/REMOTE-RAG.md`.
 
 ## Контракт цитирования (обязателен)
 

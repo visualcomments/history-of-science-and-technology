@@ -18,6 +18,10 @@ search:
 	test -n "$(QUERY)" || (echo "Укажите QUERY=..."; exit 1)
 	$(VENV_PY) tools/rag_search.py "$(QUERY)" -k $(K)
 
+remote-search:
+	test -n "$(QUERY)" || (echo "Укажите QUERY=..."; exit 1)
+	$(PY) tools/rag_remote.py "$(QUERY)" -k $(K)
+
 session:
 	test -n "$(n)" || (echo "Укажите n=НомерЗанятия"; exit 1)
 	$(PY) tools/session_material.py $(n)
