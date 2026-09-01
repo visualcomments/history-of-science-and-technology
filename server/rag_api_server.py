@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Server-side RAG API (runs on ubuntu-server behind ngrok).
+Server-side RAG API (any host with a copy of the course index).
 Serves the course corpus index: annoy + embeddings + chunks.
 Query embedding: fastembed (CPU), multilingual MiniLM.
 Endpoints:

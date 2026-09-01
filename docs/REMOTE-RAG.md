@@ -1,83 +1,88 @@
-# Удалённый RAG: ubuntu-server + ngrok + n8n
+# Удалённый RAG: доступ агента к индексу курса через публичный URL + n8n
 
-RAG-функциональность курса доступна агенту `botai` **напрямую через
-публичный ngrok-туннель** на сервере `ubuntu-server` (`SERVER_GUIDE.md`):
-индекс и эмбеддинги курса размещены на сервере, RAG-API отдаёт результаты
-по HTTP. n8n (уже работает на сервере, порт 5678) используется для
-демонстрации данных.
+Когда локального корпуса на машине агента нет, а индекс и эмбеддинги
+курса размещены на **RAG-сервере** (любой хост, где живёт копия
+`index/`), агент обращается к ним напрямую по HTTP через **публичный
+туннель** (например, ngrok). n8n используется как прослойка-демонстрация
+данных. Всё ниже — шаблон развёртывания; конкретные адреса задаются при
+настройке (переменные окружения), жёстких привязок к одной машине нет.
 
 ## Архитектура
 
 ```
-botai / любой клиент
-   │
-   ▼  https://smoky-steadier-quintet.ngrok-free.dev/rag/search  (публичный ngrok)
-ubuntu-server (10.0.0.2)
-   ├─ ngrok-g4f.service  → :1359  (единый туннель; домен был занят llm-router,
-   │   mix_proxy.py распределяет: /rag*, /search → RAG; остальное → :1340)
-   ├─ rag-proxy.service  (mix_proxy.py, :1359)
-   ├─ rag-api-course.service (rag_api_server.py, :8010, fastembed CPU, index/)
-   ├─ n8n (docker n8n-verkhoyansk, :5678, LAN по ufw+iptables-DOCKER-USER)
-   │    webhook POST /webhook/course-rag-demo → HTTP node → RAG (:1359) → ответ
-   └─ ~/ragd/  (venv, app/, index/ — копия index/ курса)
+botai / клиент
+   │  GET/POST https://<домен-туннеля>/rag/search   (публичный URL)
+RAG-сервер
+   ├─ RAG-API          (rag_api_server.py, система и порт — на выбор)
+   │    index/ : annoy.index, embeddings.npy, chunks.jsonl, config.json
+   ├─ прокси (опц.)    (mix_proxy.py) — один туннель для нескольких сервисов:
+   │    /rag*, /search → RAG-API; всё остальное → существующий шлюз/сервис
+   ├─ туннель          (ngrok http <порт прокси> или <порт RAG>)
+   └─ n8n              (вебхук → HTTP-узел → RAG-API → ответ/файл)
 ```
 
-## API
+## API RAG-сервера
 
-- `GET /rag/health` — статус: `{"status":"ok","chunks":25755}`
-- `GET /rag/search?q=...&k=5&topic=...&threshold=...`
-- `POST /rag/search` — JSON `{"q":"...","k":5}` (удобно для n8n/агентов)
-- `/search`, `/docs` — псевдонимы RAG; всё остальное — прежний шлюз `:1340`
-  (`/v1/models` и др. работают как раньше)
+- `GET /health` — статус и число чанков
+- `GET /search?q=...&k=...&topic=...&threshold=...`
+- `POST /search` — JSON `{"q":"...","k":5}` (удобно для n8n и агентов)
+- `GET /docs` — описание
 
-Публичный URL сохраняется в `server/ngrok-url.txt`.
+Прокси-слой добавляет aliases: `/rag/health`, `/rag/search` (и `/search`).
+Публичный URL сохраняйте в `server/ngrok-url.txt` (или задавайте напрямую
+через `FALT_RAG_URL`).
 
-## Как пользоваться
+## Публикация через туннель (ngrok)
+
+1. Запустить RAG-API (и при необходимости прокси) на сервере.
+2. Открыть туннель: `ngrok http <порт>`; полученный `https://...ngrok-free.dev`
+   записать в `server/ngrok-url.txt`.
+3. Если нужный публичный домен уже занят другим сервисом (free-план ngrok
+   даёт один туннель) — поставьте перед сервисами `mix_proxy.py` и
+   перенаправьте туннель на него: пути `/rag*` и `/search*` идут в RAG,
+   остальные — в прежний сервис. `ngrok-url.example.txt` — шаблон.
+
+## Демонстрация данных через n8n
+
+Воркфлоу `server/n8n-course-rag-demo.json` (id 1002) делает:
+`Webhook POST /webhook/course-rag-demo` → HTTP-узел → RAG-API → ответ.
+- URL RAG-API в узле задайте под ваше развёртывание (например,
+  `http://127.0.0.1:8010/rag/search` при host-сети; при docker-bridge —
+  `http://<шлюз>:<порт прокси>/rag/search`).
+- Импорт: `n8n import:workflow --input=n8n-course-rag-demo.json`.
+- Активация и регистрация webhook-пути (headless):
+  `n8n_activate.js <workflowId> <path>` — скрипт правит БД n8n
+  (активность, activeVersionId, webhook_entity); после импорта требуется
+  перезапуск n8n. Скрипт не зависит от конкретной БД — только от
+  расположения `database.sqlite`.
+- Доступ по сети: вебхук n8n нужно открыть в фаерволе для вашей сети
+  (ufw: `allow <порт>/tcp`; для docker-контейнера — правило
+  `iptables -I DOCKER-USER 1 -p tcp --dport <порт> -j ACCEPT`).
+
+## Инструменты агента
 
 ```bash
-# агент (откуда угодно):
-python tools/rag_remote.py "Ньютон законы движения" -k 5
+# удалённый поиск (URL из FALT_RAG_URL или server/ngrok-url.txt):
+make remote-search QUERY="Ньютон законы движения"
 python tools/rag_remote.py "Менделеев" --json
 
-# напрямую:
-curl "https://smoky-steadier-quintet.ngrok-free.dev/rag/search?q=%D0%9D%D1%8C%D1%8E%D1%82%D0%BE%D0%BD&k=3"
-curl -X POST .../rag/search -H 'Content-Type: application/json' -d '{"q":"Герц"}'
-
-# демонстрация через n8n (webhook):
-curl -X POST http://10.0.0.2:5678/webhook/course-rag-demo \
+# демонстрация через n8n:
+curl -X POST http://<n8n-host>:5678/webhook/course-rag-demo \
      -H 'Content-Type: application/json' -d '{"q":"Менделеев"}'
-#   → n8n выполняет воркфлоу «Course RAG demo» и возвращает RAG-ответ
 ```
 
-## Развёртывание / обслуживание
+## Проверено (типовой сценарий)
 
-- `server/rag_api_server.py` — RAG API (systemd `rag-api-course`, порт 8010);
-- `server/mix_proxy.py` — единый прокси (systemd `rag-proxy`, порт 1359);
-- `server/deploy.sh` — копирование приложения и создание units;
-- `server/n8n_activate.js` — активация воркфлоу + регистрация webhook-пути
-  напрямую в БД n8n (`docker exec -u node -w /home/node n8n... node .n8n/activate.js <id> <path>`;
-  после импорта воркфлоу требуется `docker restart n8n-verkhoyansk`);
-- `server/n8n-course-rag-demo.json` — импортируемый воркфлоу (id 1002);
-- порты: ufw открывает 5678 для LAN; для docker-порта добавлено
-  `iptables -I DOCKER-USER 1 -p tcp --dport 5678 -j ACCEPT`;
-- после обновления индекса: `scp index/* zzz@10.0.0.2:~/ragd/index/` +
-  `sudo systemctl restart rag-api-course`.
-
-## Тестирование (проведено 2026-09-01)
-
-| Шаг | Результат |
-|---|---|
-| RAG API на сервере (`/health`) | 200, 25755 чанков |
-| `GET /rag/search` (сервер/публично) | 200, релевантные фрагменты |
-| `POST /rag/search` (gateway и публичный ngrok) | 200, JSON |
-| Активный туннель ngrok → :1359 (repoint без нового домена) | активен, 200 |
-| Прежний шлюз через тот же URL (`/v1/models`) | 200 (не сломан) |
-| n8n webhook `POST /webhook/course-rag-demo` (локально и с Windows по LAN) | 200 + RAG JSON |
-| Кудрявцев (©) удалён из корпуса/индекса | chunks 27809 → 25755 |
+- RAG-API: `GET /health`, `GET /search`, `POST /search` — 200;
+- публичный URL (ngrok) → `/rag/search` — 200, координаты «файл · фрагмент #N»;
+- прокси сохраняет старый сервис: `GET /v1/models` — 200;
+- n8n вебхук → RAG: синхронный ответ с результатами поиска — 200;
+- прежний активный туннель не задет (перенаправлен на прокси с бэкапом конфига).
 
 ## Ограничения
 
-- ngrok free: один публичный туннель; поэтому используется единый домен с
-  path-распределением. Периодические 502 ngrok-эджа сглаживаются ретраями
-  воркфлоу и curl-повторами инструмента.
-- Индекс в репозиторий не входит; на сервере лежит рабочая копия (`~/ragd/index`).
+- ngrok free — один публичный туннель (поэтому прокси и path-распределение);
+  периодические 502 эджа сглаживаются ретраями воркфлоу n8n и повторами
+  `rag_remote.py`.
+- Индекс в репозиторий не входит; на сервере лежит рабочая копия,
+  обновляемая при изменении корпуса (затем рестарт RAG-API).

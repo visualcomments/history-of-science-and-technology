@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 Status: reports what is available for the agent — repo layout, corpus presence
-(FALT_CORPUS_ROOT / <repo>/../..), RAG index, quote-verification state.
+(FALT_CORPUS_ROOT), RAG index, quote-verification state.
 
 Usage:  python tools/status.py
 """
@@ -14,10 +14,13 @@ import sys
 sys.stdout.reconfigure(encoding="utf-8")
 HERE = os.path.dirname(os.path.abspath(__file__))
 REPO = os.path.abspath(os.path.join(HERE, ".."))
-ROOT = os.environ.get("FALT_CORPUS_ROOT") or os.path.abspath(os.path.join(HERE, "..", ".."))
+ROOT = os.environ.get("FALT_CORPUS_ROOT")
 
 
 def main():
+    if not ROOT:
+        print("корпус не настроен: установите FALT_CORPUS_ROOT (см. CORPUS.md)")
+        return 2
     print("== Репозиторий курса ==")
     print(f"repo root: {REPO}")
     lecs = sorted(glob.glob(os.path.join(REPO, "lectures", "*.md")))

@@ -1,9 +1,9 @@
 # Makefile для агента: короткие цели для работы с курсом и корпусом
 
-PY = python
-VENV_PY = .venv/Scripts/python.exe
+PY ?= python3
+VENV_PY ?= $(PY)
 
-.PHONY: help search session assignment verify serve status quotes cluster
+.PHONY: help search remote-search session assignment verify serve status quotes
 
 help:
 	@echo "Цели:"
@@ -41,6 +41,3 @@ status:
 
 quotes:
 	$(VENV_PY) tools/quote_finder.py "$(QUERY)"
-
-cluster:
-	$(VENV_PY) tools/rag_build_cluster.py $(ARGS)

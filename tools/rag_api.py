@@ -13,7 +13,12 @@ import subprocess
 import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-ROOT = os.environ.get("FALT_CORPUS_ROOT") or os.path.abspath(os.path.join(HERE, "..", ".."))
+ROOT = os.environ.get("FALT_CORPUS_ROOT")
+if not ROOT:
+    sys.stderr.write(
+        "[tools] Установите FALT_CORPUS_ROOT (каталог с txt/, index/, scripts/ корпуса).\n"
+        "См. CORPUS.md в корне репозитория.\n")
+    sys.exit(2)
 SCRIPT = os.path.join(ROOT, "scripts", "rag_api.py")
 
 
@@ -21,7 +26,7 @@ def main():
     if not os.path.exists(SCRIPT):
         sys.stderr.write(f"[tools] корпус не найден: {SCRIPT}\nСм. CORPUS.md\n")
         return 2
-    py = os.environ.get("FALT_VENV_PY") or os.path.join(ROOT, ".venv", "Scripts", "python.exe")
+    py = os.environ.get("FALT_VENV_PY") or sys.executable
     exe = py if os.path.exists(py) else sys.executable
     return subprocess.call([exe, SCRIPT] + sys.argv[1:])
 

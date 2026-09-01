@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
-# Deploy the remote RAG API on ubuntu-server (ssh by key, alias 'server').
-# Run from repo root:  bash server/deploy.sh
+# Deploy the remote RAG API on a RAG server (ssh by key, FALT_SERVER=user@host).
+# Run from repo root:  FALT_SERVER=user@host bash server/deploy.sh
 set -euo pipefail
 
-SERVER="${FALT_SERVER:-zzz@10.0.0.2}"
+SERVER="${FALT_SERVER:?Задайте FALT_SERVER=(пользователь@хост вашего RAG-сервера)}"
 APP_DIR=~/ragd/app
 SERVICE_NAME=rag-api-course
 

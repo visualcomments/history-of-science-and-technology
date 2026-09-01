@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Remote RAG search for agents: queries the RAG API hosted on ubuntu-server
+Remote RAG search for agents: queries a remote RAG API
 (via the public ngrok URL, or FALT_RAG_URL override).
 
 Usage:
@@ -22,7 +22,7 @@ def default_url():
     urlfile = os.path.join(HERE, "..", "server", "ngrok-url.txt")
     if os.path.exists(urlfile):
         return open(urlfile, encoding="utf-8").read().strip()
-    return "https://smoky-steadier-quintet.ngrok-free.dev"
+    return None
 
 
 def main():
@@ -34,6 +34,10 @@ def main():
     ap.add_argument("--json", action="store_true")
     ap.add_argument("--url", default=os.environ.get("FALT_RAG_URL") or default_url())
     a = ap.parse_args()
+    if not a.url:
+        sys.stderr.write("[tools] Укажите FALT_RAG_URL или создайте server/ngrok-url.txt\n"
+                         "(шаблон: server/ngrok-url.example.txt; см. docs/REMOTE-RAG.md)\n")
+        return 2
 
     qs = urllib.parse.urlencode({"q": a.q, "k": a.k})
     if a.topic:
