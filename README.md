@@ -67,6 +67,30 @@ python scripts/verify_quotes.py
 .venv/Scripts/python.exe scripts/rag_search.py "Математические начала Ньютона" -k 5
 ```
 
+## Fast start for AI agents (botai)
+
+Репозиторий адаптирован для работы ИИ-агента (harness типа
+[botai](https://github.com/visualcomments/botai)):
+
+- `AGENTS.md` — инструкция агенту (карта, контракт цитирования, команды);
+- `syllabus.json` + `agents/courses/falt-history-science/track.md` —
+  машиночитаемая программа и трек курса (по шаблонам botai);
+- `tools/` — готовые инструменты (поиск, RAG-API, верификация цитат,
+  материалы/задания занятия, статус, кластерная сборка) + `Makefile`;
+- `.agents/.claude/.cursor/skills/using-course-corpus/` — навык работы
+  с корпусом (зеркала по конвенции botai);
+- `docs/AGENT-WORKFLOW.md` — полный цикл: онбординг → занятие → проверка →
+  прогресс → supplement.
+
+```bash
+python tools/status.py            # состояние курса и корпуса
+make session n=18                 # материал занятия 18
+make assignment n=18              # вопросы и задания занятия 18
+make search QUERY="Ньютон"        # семантический поиск по корпусу
+make verify                       # проверка цитат (REPORT.md)
+make serve                        # RAG-API http://127.0.0.1:8765
+```
+
 ## Распределённые CPU-вычисления (кластер)
 
 Если GPU-инференс недоступен или недостаточно быстр, сборка RAG-индекса
