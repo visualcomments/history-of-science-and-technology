@@ -65,15 +65,25 @@ def drive_download(url, dest):
         ctype = r.headers.get("Content-Type", "")
         data = r.read()
     if "html" in ctype or data[:16].lstrip().startswith(b"<"):
-        # large-file confirm page
+        # large-file confirm / virus-scan page: follow the form action
         t = data.decode("utf-8", "replace")
-        cm = re.search(r"name=\"confirm\" value=\"([^\"]+)\"", t)
-        if not cm:
+        m_action = re.search(r'<form[^>]*action="([^"]+)"', t)
+        inputs = dict(re.findall(r'<input type="hidden" name="([^"]+)" value="([^"]*)"', t))
+        cm = re.search(r'name="confirm" value="([^"]+)"', t)
+        if not (m_action or inputs.get("confirm") or cm):
             sys.stderr.write("[index_fetch] Drive вернул HTML без confirm; проверьте доступность файла (shared: anyone with link)\n")
             return False
-        url2 = base + "&confirm=" + urllib.parse.quote(cm.group(1))
-        with op.open(urllib.request.Request(url2, headers={"User-Agent": "Mozilla/5.0"}), timeout=300) as r2:
+        action = m_action.group(1) if m_action else base
+        params = {"export": "download", "confirm": (inputs.get("confirm") or cm.group(1) if cm else "t")}
+        params["id"] = inputs.get("id", fid)
+        if inputs.get("uuid"):
+            params["uuid"] = inputs["uuid"]
+        url2 = action + "?" + urllib.parse.urlencode(params)
+        with op.open(urllib.request.Request(url2, headers={"User-Agent": "Mozilla/5.0"}), timeout=600) as r2:
             data = r2.read()
+        if data[:16].lstrip().startswith(b"<"):
+            sys.stderr.write("[index_fetch] Drive снова вернул HTML; возможно, нужен pip install gdown (большой файл)\n")
+            return False
     with open(dest, "wb") as f:
         f.write(data)
     return True
