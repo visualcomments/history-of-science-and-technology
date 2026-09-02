@@ -53,5 +53,4 @@ https://github.com/visualcomments/botai) эффективно работает �
 | Проверка цитат | `make verify` / `tools/verify_quotes.py` |
 | RAG API | `make serve` / `tools/rag_api.py` (+ `tools/serve_api.ps1`, `tools/rag-openapi.json`) |
 | Статус окружения | `make status` / `tools/status.py` |
-| Удалённый поиск (нет локального корпуса) | `make remote-search QUERY="..."` / `tools/rag_remote.py` (docs/REMOTE-RAG.md) |
 | Навык работы с корпусом | `.agents/skills/using-course-corpus/SKILL.md` (и зеркала .claude/.cursor) |

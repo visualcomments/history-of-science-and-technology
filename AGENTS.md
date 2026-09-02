@@ -16,11 +16,10 @@
 | `verification/REPORT.md` | Автоматическая проверка каждой цитаты курса по корпусу |
 | `agents/courses/falt-history-science/track.md` | Карта курса (track botai): модули, цели, gaps |
 | `agents/progress/progress-example.md` | Пример файла прогресса (шаблон botai) |
-| `tools/` | Инструменты: поиск, сервер RAG, верификация, материалы занятия, задания занятия, OpenAPI |
+| `tools/` | Инструменты: поиск по корпусу, загрузка индекса с Google Диска, верификация цитат, материалы и задания занятия, локальный RAG-API |
 | `Makefile` | Короткие цели для всех инструментов (`make help`) |
 | `docs/AGENT-WORKFLOW.md` | Полный цикл работы агента |
-| `docs/GOOGLE-DRIVE.md` | Индекс/эмбеддинги на Google Диске — рекомендуемая схема доступа (+ `index-manifest.example.json`) |
-| `docs/REMOTE-RAG.md` | Альтернативная серверная схема (RAG-API + туннель + n8n) |
+| `docs/GOOGLE-DRIVE.md` | Индекс/эмбеддинги на Google Диске — схема доступа (+ `index-manifest.example.json`) |
 | `CORPUS.md` | Как устроен локальный корпус и как его пересобрать |
 
 ## Что агент должен уметь делать
@@ -47,8 +46,6 @@
    разворачивает в `FALT_CORPUS_ROOT/index/`; далее работают `make search`,
    `make verify`, `make serve`. Состав архива и контрольные суммы — в
    `docs/GOOGLE-DRIVE.md`.
-   Альтернативная серверная схема (RAG-API + туннель) — `make remote-search`
-   (URL — `FALT_RAG_URL`), описание в `docs/REMOTE-RAG.md`.
 
 ## Контракт цитирования (обязателен)
 
