@@ -19,7 +19,8 @@
 | `tools/` | Инструменты: поиск, сервер RAG, верификация, материалы занятия, задания занятия, OpenAPI |
 | `Makefile` | Короткие цели для всех инструментов (`make help`) |
 | `docs/AGENT-WORKFLOW.md` | Полный цикл работы агента |
-| `docs/REMOTE-RAG.md` | Удалённый RAG: публичный туннель к серверу индекса + демонстрация через n8n |
+| `docs/GOOGLE-DRIVE.md` | Индекс/эмбеддинги на Google Диске — рекомендуемая схема доступа (+ `index-manifest.example.json`) |
+| `docs/REMOTE-RAG.md` | Альтернативная серверная схема (RAG-API + туннель + n8n) |
 | `CORPUS.md` | Как устроен локальный корпус и как его пересобрать |
 
 ## Что агент должен уметь делать
@@ -40,11 +41,14 @@
    семантический поиск в реальном времени): `make serve` →
    `tools/serve_api.ps1` (порт 8765, `GET /search?q=...&k=...`);
    OpenAPI-схема: `tools/rag-openapi.json`.
-7. **Искать по удалённому RAG (сервер + ngrok)**: если локального корпуса
-   нет, используй `make remote-search QUERY="..."` →
-   `tools/rag_remote.py "..." -k 5` (публичный туннель → RAG-сервер с
-   индексом курса; URL — `FALT_RAG_URL` или `server/ngrok-url.txt`).
-   Подробности и демонстрация через n8n — в `docs/REMOTE-RAG.md`.
+7. **Получить индекс/эмбеддинги корпуса (Google Диск — рекомендуемая схема):**
+   `make index-fetch URL="<share-ссылка Google Drive>"` (или `FALT_INDEX_URL`,
+   или ссылка в `index-manifest.json`) — скачивает архив, проверяет SHA-256,
+   разворачивает в `FALT_CORPUS_ROOT/index/`; далее работают `make search`,
+   `make verify`, `make serve`. Состав архива и контрольные суммы — в
+   `docs/GOOGLE-DRIVE.md`.
+   Альтернативная серверная схема (RAG-API + туннель) — `make remote-search`
+   (URL — `FALT_RAG_URL`), описание в `docs/REMOTE-RAG.md`.
 
 ## Контракт цитирования (обязателен)
 

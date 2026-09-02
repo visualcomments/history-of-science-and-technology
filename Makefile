@@ -3,11 +3,13 @@
 PY ?= python3
 VENV_PY ?= $(PY)
 
-.PHONY: help search remote-search session assignment verify serve status quotes
+.PHONY: help search remote-search index-fetch session assignment verify serve status quotes
 
 help:
 	@echo "Цели:"
 	@echo "  make search QUERY=\"...\"     семантический поиск по корпусу (k=5)"
+	@echo "  make index-fetch URL=\"...\"  скачать/развернуть индекс с Google Диска"
+	@echo "  make remote-search QUERY=\"...\"  поиск по удалённому RAG-API (если настроен)"
 	@echo "  make session n=18            материалы занятия 18 (текст+цитаты+источники)"
 	@echo "  make assignment n=18         вопросы и задания занятия 18"
 	@echo "  make verify                  проверка всех цитат курса по корпусу"
@@ -17,6 +19,9 @@ help:
 search:
 	test -n "$(QUERY)" || (echo "Укажите QUERY=..."; exit 1)
 	$(VENV_PY) tools/rag_search.py "$(QUERY)" -k $(K)
+
+index-fetch:
+	$(PY) tools/index_fetch.py $(if $(URL),--url "$(URL)")
 
 remote-search:
 	test -n "$(QUERY)" || (echo "Укажите QUERY=..."; exit 1)

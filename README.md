@@ -20,7 +20,21 @@
 | `agents/` | Трек и шаблон прогресса по конвенции botai |
 | `tools/` | Инструменты для агента: поиск по корпусу (локально/удалённо), RAG-API, верификация, материалы и задания занятия, статус |
 | `Makefile` | Короткие цели (`make help`) |
-| `docs/` | `AGENT-WORKFLOW.md` — цикл работы агента; `REMOTE-RAG.md` — удалённый RAG; `CORPUS.md` — корпус источников |
+| `docs/` | `AGENT-WORKFLOW.md` — цикл работы агента; `GOOGLE-DRIVE.md` — индекс на Google Диске (рекомендуемая схема); `REMOTE-RAG.md` — серверная схема (опц.); `CORPUS.md` — корпус источников |
+
+## Индекс и эмбеддинги на Google Диске
+
+Индекс корпуса (Annoy + эмбеддинги + чанки, ~86 МБ архив) распространяется
+через **Google Диск** — сервер не нужен:
+
+```bash
+make index-fetch URL="https://drive.google.com/file/d/FILE_ID/view?usp=sharing"
+#   → скачает архив, проверит SHA-256, развернёт в FALT_CORPUS_ROOT/index/
+make search QUERY="Ньютон"        # поиск по локально установленному индексу
+```
+
+Состав архива, контрольные суммы и порядок обновления — в
+`docs/GOOGLE-DRIVE.md`; готовый манифест — `index-manifest.example.json`.
 
 ## Работа с агентом (botai)
 
