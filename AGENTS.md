@@ -14,7 +14,7 @@
 | `lectures/` | 30 занятий: `NN_*.md` — текст, цитаты, вопросы, задания |
 | `citations.md` | Правила цитирования, источники по модулям |
 | `verification/REPORT.md` | Автоматическая проверка каждой цитаты курса по корпусу |
-| `agents/courses/falt-history-science/track.md` | Карта курса (track botai): модули, цели, gaps |
+| `agents/courses/history-science/track.md` | Карта курса (track botai): модули, цели, gaps |
 | `agents/progress/progress-example.md` | Пример файла прогресса (шаблон botai) |
 | `tools/` | Инструменты: поиск по корпусу, загрузка индекса с Google Диска, верификация цитат, материалы и задания занятия, локальный RAG-API |
 | `Makefile` | Короткие цели для всех инструментов (`make help`) |
@@ -24,7 +24,7 @@
 
 ## Что агент должен уметь делать
 
-1. **Составить карту курса** (`agents/courses/falt-history-science/track.md`,
+1. **Составить карту курса** (`agents/courses/history-science/track.md`,
    `syllabus.json`) и объяснять любой сюжет по материалам `lectures/`.
 2. **Разбирать задания** — у каждого занятия есть «Вопросы для
    самопроверки» и «Задания»; задания историко-аналитические.
