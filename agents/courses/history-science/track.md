@@ -1,4 +1,4 @@
-# Track: falt-history-science
+# Track: history-science
 
 Source documents: `syllabus.md`, `syllabus.json`, `lectures/`, `citations.md`, `verification/REPORT.md`
 

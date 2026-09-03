@@ -40,7 +40,7 @@ make search QUERY="Ньютон"        # поиск по локально ус�
 
 Репозиторий адаптирован под harness [botai](https://github.com/visualcomments/botai):
 чистый **AGENTS.md** (инструкция агенту), машиночитаемый `syllabus.json`,
-трек `agents/courses/falt-history-science/track.md`, навык
+трек `agents/courses/history-science/track.md`, навык
 `using-course-corpus` (в `.agents/`, `.claude/`, `.cursor/`), готовые
 инструменты поиска и проверки цитат. Подробный цикл — в
 `docs/AGENT-WORKFLOW.md`; быстрый старт для агента — в `AGENTS.md`.

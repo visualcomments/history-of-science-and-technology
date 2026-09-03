@@ -9,7 +9,7 @@ https://github.com/visualcomments/botai) эффективно работает �
 
 ### 1. Онбординг (starting-course)
 - `python tools/status.py` — проверить репозиторий и наличие корпуса;
-- прочитать `syllabus.json` + `agents/courses/falt-history-science/track.md`
+- прочитать `syllabus.json` + `agents/courses/history-science/track.md`
   (карта модулей и целей по шаблону botai);
 - определить точку старта обучающегося (занятие/модуль, базовый уровень).
 
@@ -28,7 +28,7 @@ https://github.com/visualcomments/botai) эффективно работает �
 ### 4. Прогресс (maintaining-course-progress, reporting-learning-progress)
 - файл `agents/progress/progress-example.md` — шаблон;
 - реальный файл прогресса держится в пространстве агента
-  (`progress/falt-history-science.md`), обновляется после каждого занятия;
+  (`progress/history-science.md`), обновляется после каждого занятия;
 - схема записи: `progress-entry.json` (поля: date, student, course, mode,
   module, objectives, demonstrated, difficult, mastery, delivery_preference,
   consent, open_questions…).
