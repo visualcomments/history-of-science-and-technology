@@ -1,33 +1,33 @@
 {
  "schema": 1,
- "note": "Манифест индекса корпуса на Google Диске. После размещения файлов на Диске заполните поле url (share-link или прямой download link, например https://drive.google.com/uc?export=download&id=FILE_ID) и сохраните как index-manifest.json в корне репозитория. Инструмент tools/index_fetch.py скачает архив, проверит SHA-256 и развернёт в FALT_CORPUS_ROOT/index/.",
- "index_version": "2026-09-01",
+ "index_version": "2026-09-03",
+ "note": "Манифест индекса корпуса курса «История России: история и философия науки и технологий» (PD + статьи Wikipedia CC BY-SA 4.0 + NASA/US gov). АКТУАЛЬНАЯ версия: скачайте новый архив и перезалейте на Google Диск; обновите url (или FALT_INDEX_URL).",
  "archive": {
-  "filename": "course-index-2026-09-01.zip",
-  "size_bytes": 90506029,
-  "sha256": "AB070598F3774A625831E51DC6EBCB44538FE933D13A064CF46C58A1CD4E509C",
+  "filename": "course-index-2026-09-03.zip",
+  "size_bytes": 101582476,
+  "sha256": "6D6924515F6992DEC1A1C0E8E555FC4A8ECE5000DD518AD5FF2CFA32D2B9AF46",
   "url": "https://drive.google.com/file/d/18-sPi7pbUuQgrnW3fFZ4653K0WFN6dQR/view?usp=sharing"
  },
  "files": [
   {
    "path": "annoy.index",
-   "size_bytes": 45299124,
-   "sha256": "4B2BFF628570F7293F81B8DCD92E0CEE7F4EA7A17F8D62BA357B4A53BDC26355"
+   "size_bytes": 51119604,
+   "sha256": "5DAD76BF077A512EAEB707A3A231BD811E15CDAA1B9D12C059238D804B6E10D3"
   },
   {
    "path": "chunks.jsonl",
-   "size_bytes": 47953304,
-   "sha256": "9090DB3D60DD1EF933B377DBF61A4B15E5AD3BD5367D3CBEC353B8DAA74B61CD"
+   "size_bytes": 53749549,
+   "sha256": "15F48FCA92B7A5F4F0D1B5CF90629710F531742E1490AD18B885BDF942FED423"
   },
   {
    "path": "config.json",
-   "size_bytes": 3645,
-   "sha256": "60AECE04A99A016F24D26386FDF45228E3D3EBC53EACBB9434753FFDDBDA4B6C"
+   "size_bytes": 3839,
+   "sha256": "84769A76859210028824691CF1E7704DAE7238DC30E3530475CA270B5A07D93B"
   },
   {
    "path": "embeddings.npy",
-   "size_bytes": 39559808,
-   "sha256": "839E34CF9721F9DFAE065EC4CD911A340E83E5DD3AC630669EB11AD3C92C6C3E"
+   "size_bytes": 44496512,
+   "sha256": "832D30DAC036284508654233AB9BA1A1D2DB82BD8CC695AE2D4CC014632629CF"
   }
  ]
 }
