@@ -1,4 +1,4 @@
-# Agent workflow: курс + co-learner (botai)
+# Agent workflow: курс + соученик (botai)
 
 Этот документ описывает, как ИИ-агент (harness типа botai, см.
 https://github.com/visualcomments/botai) эффективно работает с данным
