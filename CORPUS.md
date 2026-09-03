@@ -9,10 +9,10 @@ GitHub включает только карту источников, прави
 
 ## Где живёт корпус
 
-Путь к корпусу задаётся переменной окружения `FALT_CORPUS_ROOT`:
+Путь к корпусу задаётся переменной окружения `COURSE_CORPUS_ROOT`:
 
 ```
-<FALT_CORPUS_ROOT>/
+<COURSE_CORPUS_ROOT>/
 ├── txt/          ← текстовые версии источников (UTF-8, *.txt)
 ├── index/        ← RAG-индекс: annoy.index, embeddings.npy, chunks.jsonl, config.json
 ├── sources/      ← исходные файлы (pdf/epub/djvu) каталога литературы
@@ -21,10 +21,10 @@ GitHub включает только карту источников, прави
 ```
 
 Инструменты репозитория (`make search`, `make verify`,
-`tools/*.py`) используют `FALT_CORPUS_ROOT` и не требуют фиксированных
+`tools/*.py`) используют `COURSE_CORPUS_ROOT` и не требуют фиксированных
 путей. Индекс корпуса (Annoy/эмбеддинги/чанки, ~86 МБ архив)
 распространяется через **Google Диск**: `make index-fetch URL="<ссылка>"`
-скачает архив, проверит SHA-256 и развернёт в `FALT_CORPUS_ROOT/index/`
+скачает архив, проверит SHA-256 и развернёт в `COURSE_CORPUS_ROOT/index/`
 (см. `docs/GOOGLE-DRIVE.md`).
 
 ## Как собрать корпус
@@ -39,7 +39,7 @@ GitHub включает только карту источников, прави
 
 | Инструмент | Что делает |
 |---|---|
-| `tools/rag_search.py` | локальный семантический поиск (нужен `FALT_CORPUS_ROOT`) |
+| `tools/rag_search.py` | локальный семантический поиск (нужен `COURSE_CORPUS_ROOT`) |
 | `tools/verify_quotes.py` | проверка всех цитат курса по корпусу |
 | `tools/session_material.py`, `tools/assignment_brief.py` | материал/задания занятия |
 | `tools/status.py` | состояние репозитория и корпуса |

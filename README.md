@@ -29,7 +29,7 @@
 
 ```bash
 make index-fetch URL="https://drive.google.com/file/d/FILE_ID/view?usp=sharing"
-#   → скачает архив, проверит SHA-256, развернёт в FALT_CORPUS_ROOT/index/
+#   → скачает архив, проверит SHA-256, развернёт в COURSE_CORPUS_ROOT/index/
 make search QUERY="Ньютон"        # поиск по локально установленному индексу
 ```
 

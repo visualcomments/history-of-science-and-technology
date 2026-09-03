@@ -41,9 +41,9 @@
    `tools/serve_api.ps1` (порт 8765, `GET /search?q=...&k=...`);
    OpenAPI-схема: `tools/rag-openapi.json`.
 7. **Получить индекс/эмбеддинги корпуса (Google Диск — рекомендуемая схема):**
-   `make index-fetch URL="<share-ссылка Google Drive>"` (или `FALT_INDEX_URL`,
+   `make index-fetch URL="<share-ссылка Google Drive>"` (или `COURSE_INDEX_URL`,
    или ссылка в `index-manifest.json`) — скачивает архив, проверяет SHA-256,
-   разворачивает в `FALT_CORPUS_ROOT/index/`; далее работают `make search`,
+   разворачивает в `COURSE_CORPUS_ROOT/index/`; далее работают `make search`,
    `make verify`, `make serve`. Состав архива и контрольные суммы — в
    `docs/GOOGLE-DRIVE.md`.
 

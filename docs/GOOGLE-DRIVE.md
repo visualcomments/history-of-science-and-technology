@@ -4,7 +4,7 @@
 на Google Диске**: репозиторий самодостаточен.
 Агент (или пользователь) скачивает архив по ссылке, инструмент проверяет
 контрольные суммы и разворачивает индекс в локальный корпус
-(`FALT_CORPUS_ROOT/index/`), после чего работают `make search`,
+(`COURSE_CORPUS_ROOT/index/`), после чего работают `make search`,
 `make verify` и локальный RAG-API.
 
 ## Что загружается на Диск
@@ -34,11 +34,11 @@
 2. **Скопируйте share-ссылку** (вид `https://drive.google.com/file/d/FILE_ID/view?usp=sharing`)
    или прямой download-link (`https://drive.google.com/uc?export=download&id=FILE_ID`).
 3. **Подключите одним из способов:**
-   - разово: `make index-fetch URL="<ссылка>"` (или `FALT_INDEX_URL=<ссылка>`);
+   - разово: `make index-fetch URL="<ссылка>"` (или `COURSE_INDEX_URL=<ссылка>`);
    - постоянно: скопируйте `index-manifest.example.json` в `index-manifest.json`
      и впишите ссылку в поле `archive.url` — тогда работает просто `make index-fetch`.
 4. Инструмент проверит SHA-256, распакует и **атомарно** заменит
-   `FALT_CORPUS_ROOT/index/` (старая папка → `index_old/`).
+   `COURSE_CORPUS_ROOT/index/` (старая папка → `index_old/`).
 
 После развёртывания: `make search QUERY="..."`, `make verify`,
 `make serve` — как с любым локальным корпусом.
