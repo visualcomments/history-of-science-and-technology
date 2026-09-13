@@ -1,33 +1,48 @@
 {
  "schema": 1,
- "index_version": "2026-09-03",
- "note": "Манифест индекса корпуса курса «История России: история и философия науки и технологий» (PD + статьи Wikipedia CC BY-SA 4.0 + NASA/US gov). АКТУАЛЬНАЯ версия: скачайте новый архив и перезалейте на Google Диск; обновите url (или COURSE_INDEX_URL).",
+ "index_version": "2026-09-13",
+ "note": "Обновлённый индекс корпуса курса «История России: история и философия науки и технологий». Корпус расширен со 57 до 171 файла (+96 статей Wikipedia CC BY-SA 4.0, +28 PD-первоисточников, −2 пустых файла); чанков 28 969 → 47 781.",
  "archive": {
-  "filename": "course-index-2026-09-03.zip",
-  "size_bytes": 101582476,
-  "sha256": "6D6924515F6992DEC1A1C0E8E555FC4A8ECE5000DD518AD5FF2CFA32D2B9AF46",
-  "url": "https://drive.google.com/file/d/1GlmsHveqBh4rXtCoEOYoRJ4ZZ_-1WwWM/view?usp=sharing"
+  "filename": "course-index-2026-09-13.zip",
+  "size_bytes": 165389408,
+  "sha256": "60FCD293E475DB8F2D8B3094B6D80C88AE87AD44D167F695D5CF1250BCD49770",
+  "url": "https://drive.google.com/uc?export=download&id=1vldomUmeMGNYTTwaS6EEvV0HTerUR6hh",
+  "file_id": "1vldomUmeMGNYTTwaS6EEvV0HTerUR6hh",
+  "view_url": "https://drive.google.com/file/d/1vldomUmeMGNYTTwaS6EEvV0HTerUR6hh/view"
  },
  "files": [
   {
    "path": "annoy.index",
-   "size_bytes": 51119604,
-   "sha256": "5DAD76BF077A512EAEB707A3A231BD811E15CDAA1B9D12C059238D804B6E10D3"
+   "size_bytes": 84126060,
+   "sha256": "CB5614CFE56D557734165C074A202BE80050A81E82BBB6F1078183E43DD2B288"
   },
   {
    "path": "chunks.jsonl",
-   "size_bytes": 53749549,
-   "sha256": "15F48FCA92B7A5F4F0D1B5CF90629710F531742E1490AD18B885BDF942FED423"
+   "size_bytes": 78233067,
+   "sha256": "E83D32CE23767A56D12F64955979B6C8628F8F589B07E75D845E4D832EE8CA0B"
   },
   {
    "path": "config.json",
-   "size_bytes": 3839,
-   "sha256": "84769A76859210028824691CF1E7704DAE7238DC30E3530475CA270B5A07D93B"
+   "size_bytes": 8389,
+   "sha256": "60E1A90842948BCE8575E7D8C4E14FB5EF8848FD3039601CFA090435DC603434"
   },
   {
    "path": "embeddings.npy",
-   "size_bytes": 44496512,
-   "sha256": "832D30DAC036284508654233AB9BA1A1D2DB82BD8CC695AE2D4CC014632629CF"
+   "size_bytes": 73391744,
+   "sha256": "4191FC79885E84B77EE7443A2925B5F05EEC1BC4B38C3145B7EDAAFECDF245CC"
   }
- ]
+ ],
+ "corpus": {
+  "n_files": 171,
+  "n_chunks": 47781,
+  "composition": {
+   "wikipedia_cc_by_sa": 96,
+   "pd_primary_sources": 28,
+   "pre_existing_pd_free": 47
+  },
+  "model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+  "dim": 384,
+  "chunk_chars": 1400,
+  "overlap": 140
+ }
 }
