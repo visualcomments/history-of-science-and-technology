@@ -1,42 +1,43 @@
 {
  "schema": 1,
- "index_version": "2026-09-13",
- "note": "Обновлённый индекс корпуса курса «История России: история и философия науки и технологий». Корпус расширен со 57 до 171 файла (+96 статей Wikipedia CC BY-SA 4.0, +28 PD-первоисточников, −2 пустых файла); чанков 28 969 → 47 781.",
+ "index_version": "2026-09-13-v2",
+ "note": "Индекс корпуса курса «История России: история и философия науки и технологий». Версия v2: корпус расширен до 231 файла — добавлены 60 открытых источников под занятие 1 (28 первоисточников общественного достояния: Уэвелл ×3, Гершель, Милль, Пирсон, Пуанкаре, Джевонс, Бернар, Кэмпбелл, Клиффорд, Флинт ×2, Барнс, Борн, Кроче, Тиндаль, Гексли, Фарадей, Кельвин, Бэкон ×2, Декарт, Либби, Седжвик, Конт, Записи Королевского общества + 32 статьи Wikipedia CC BY-SA 4.0 по историографии науки, научному методу и источниковедению). Чанков 47 781 → 67 242. Полный перечень — docs/lesson1-sources.md.",
  "archive": {
-  "filename": "course-index-2026-09-13.zip",
-  "size_bytes": 165389408,
-  "sha256": "60FCD293E475DB8F2D8B3094B6D80C88AE87AD44D167F695D5CF1250BCD49770",
-  "url": "https://drive.google.com/uc?export=download&id=1vldomUmeMGNYTTwaS6EEvV0HTerUR6hh",
-  "file_id": "1vldomUmeMGNYTTwaS6EEvV0HTerUR6hh",
-  "view_url": "https://drive.google.com/file/d/1vldomUmeMGNYTTwaS6EEvV0HTerUR6hh/view"
+  "filename": "course-index-2026-09-13-v2.zip",
+  "size_bytes": 231504883,
+  "sha256": "996E3CD6C3C1ECB5F49E1D1EC93C88C900CD927B0EC4D26041FBD90A60A9524A",
+  "url": "https://drive.google.com/uc?export=download&id=17byaQPYS9GtkWgHebY5zN5vj-ThcZ5sf",
+  "file_id": "17byaQPYS9GtkWgHebY5zN5vj-ThcZ5sf",
+  "view_url": "https://drive.google.com/file/d/17byaQPYS9GtkWgHebY5zN5vj-ThcZ5sf/view"
  },
  "files": [
   {
    "path": "annoy.index",
-   "size_bytes": 84126060,
-   "sha256": "CB5614CFE56D557734165C074A202BE80050A81E82BBB6F1078183E43DD2B288"
+   "size_bytes": 118360080,
+   "sha256": "B9932D437DA61EE4F575ACCBC28CC0E2F038CB174A09B4A8880960372813107E"
   },
   {
    "path": "chunks.jsonl",
-   "size_bytes": 78233067,
-   "sha256": "E83D32CE23767A56D12F64955979B6C8628F8F589B07E75D845E4D832EE8CA0B"
+   "size_bytes": 105202504,
+   "sha256": "64F44957B77B03FBF8FACCED33AB9D8EAFEDFE14D3897F9C9418599CF8644DBF"
   },
   {
    "path": "config.json",
-   "size_bytes": 8389,
-   "sha256": "60E1A90842948BCE8575E7D8C4E14FB5EF8848FD3039601CFA090435DC603434"
+   "size_bytes": 11078,
+   "sha256": "DAAC4D8E021EC605A61F751F021804EA8D141DA5A91F6C92DE5BB4577F0F1195"
   },
   {
    "path": "embeddings.npy",
-   "size_bytes": 73391744,
-   "sha256": "4191FC79885E84B77EE7443A2925B5F05EEC1BC4B38C3145B7EDAAFECDF245CC"
+   "size_bytes": 103283840,
+   "sha256": "5DBEDC016E2C751355A2C0E83EEA1DEEAB02AE6DC92E6A1F68BC6B583A74F8E0"
   }
  ],
  "corpus": {
-  "n_files": 171,
-  "n_chunks": 47781,
+  "n_files": 231,
+  "n_chunks": 67242,
   "composition": {
-   "wikipedia_cc_by_sa": 96,
+   "wikipedia_cc_by_sa": 128,
+   "lesson1_primary_sources_pd": 28,
    "pd_primary_sources": 28,
    "pre_existing_pd_free": 47
   },
