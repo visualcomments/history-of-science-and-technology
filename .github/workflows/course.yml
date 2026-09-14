@@ -36,6 +36,12 @@ jobs:
       - name: Проверка, что программа разбирается
         run: python3 -c "import json; json.load(open('syllabus.json'))"
 
+      - name: Порядок занятий детерминирован
+        # Порядок тем не должен зависеть от уровня подготовки, от похожести
+        # тем или от порядка обхода файлов: обучающийся должен получать один и
+        # тот же маршрут при каждом запуске.
+        run: python3 tools/curriculum_order.py --check
+
       - name: Тесты инструментов курса
         run: |
           python -m pip install --quiet pytest

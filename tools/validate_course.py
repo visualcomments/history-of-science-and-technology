@@ -153,6 +153,8 @@ def main() -> int:
     # ── 7b. манифесты корпуса: курс, который публикует корпус, обязан
     #        публиковать его с хэшами — иначе повреждённая загрузка не
     #        отличается от исправной, и корпус ставится вслепую.
+    #        Проверка одна: дублирующийся блок раньше проходил дважды и
+    #        удваивал число проверок, ничего не добавляя.
     check("corpus_fetch.py существует", (ROOT / "tools" / "corpus_fetch.py").is_file(),
           "tools/corpus_fetch.py отсутствует — корпус нечем получить")
     check("corpus-manifest.example.json существует",
@@ -183,39 +185,26 @@ def main() -> int:
             check(f"{mname}: у каждого файла есть path", not missing,
                   f"без path: {missing}")
 
-    # ── корпус: манифесты обязаны нести хэши ─────────────────────────────
-    # Курс, который публикует корпус, обязан публиковать его с хэшами:
-    # без них повреждённая загрузка неотличима от исправной, и корпус
-    # ставится вслепую. Пустой archive.url означает «ещё не опубликован»
-    # (черновик) и допустим; заполненный url без sha256 — уже поломка.
-    check("tools/corpus_fetch.py существует",
-          (ROOT / "tools" / "corpus_fetch.py").is_file(),
-          "tools/corpus_fetch.py отсутствует — корпус нечем получить")
-    check("corpus-manifest.example.json существует",
-          (ROOT / "corpus-manifest.example.json").is_file(),
-          "нет образца манифеста текстов")
+    # ── 7c. порядок занятий детерминирован ───────────────────────────────
+    # Порядок тем — свойство программы, а не обучающегося: он не должен
+    # зависеть от уровня подготовки, от похожести тем или от порядка обхода
+    # файлов. Проверка вынесена в отдельный инструмент, потому что нарушение
+    # порядка не выглядит поломкой: занятие просто оказывается раньше своего
+    # основания (см. tools/curriculum_order.py).
+    check("tools/curriculum_order.py существует",
+          (ROOT / "tools" / "curriculum_order.py").is_file(),
+          "нет инструмента проверки порядка занятий")
+    try:
+        sys.path.insert(0, str(ROOT / "tools"))
+        import curriculum_order as co  # noqa: PLC0415
 
-    for mname in ("index-manifest.json", "corpus-manifest.json"):
-        mp = ROOT / mname
-        if not mp.is_file():
-            continue  # корпус может не публиковаться вовсе; это не поломка
-        try:
-            m = json.loads(mp.read_text(encoding="utf-8-sig"))
-        except (ValueError, OSError) as e:
-            check(f"{mname} разбирается", False, f"{type(e).__name__}: {e}")
-            continue
-        arch = m.get("archive") or {}
-        url = arch.get("url") or ""
-        if url:
-            check(f"{mname}: у архива есть sha256", bool(arch.get("sha256")),
-                  "url заполнен, но sha256 пуст — повреждённую загрузку не поймать")
-            files = m.get("files") or []
-            check(f"{mname}: перечислены файлы с хэшами",
-                  bool(files) and all(f.get("sha256") for f in files),
-                  "в files нет sha256 хотя бы у одного файла")
-            check(f"{mname}: у каждого файла есть path",
-                  all(f.get("path") for f in files),
-                  "в files есть запись без path")
+        order_problems = co.check_order(json.loads(SYLLABUS_JSON.read_text(encoding="utf-8"))) \
+            if SYLLABUS_JSON.is_file() else ["syllabus.json отсутствует"]
+        check("порядок занятий детерминирован", not order_problems,
+              "; ".join(order_problems[:5]))
+    except (ImportError, ValueError, OSError) as e:
+        check("проверка порядка занятий выполняется", False,
+              f"{type(e).__name__}: {e}")
 
     # ── 8. контракт цитирования: координаты в отчёте верификации ──────────
     report = ROOT / "verification" / "REPORT.md"

@@ -2,7 +2,9 @@
 # -*- coding: utf-8 -*-
 """
 Status: reports what is available for the agent — repo layout, corpus presence
-(COURSE_CORPUS_ROOT), RAG index, quote-verification state.
+(COURSE_CORPUS_ROOT), RAG index, quote-verification state, and, importantly,
+what is NOT available. A status tool that only prints what exists teaches the
+agent to assume the rest is fine.
 
 Usage:  python tools/status.py
 """
@@ -40,7 +42,8 @@ def main():
     idx = os.path.join(ROOT, "index", "config.json")
     print(f"корпус root: {ROOT}")
     print(f"txt файлов: {ntxt}")
-    if os.path.exists(idx):
+    have_index = os.path.exists(idx)
+    if have_index:
         c = json.load(open(idx, encoding="utf-8"))
         print(f"RAG-индекс: {c.get('n_chunks')} чанков, {c.get('n_files')} файлов, "
               f"backend: {c.get('backend')}")
@@ -48,7 +51,27 @@ def main():
         print("RAG-индекс: НЕ НАЙДЕН (нужен scripts/rag_build*.py и корпус)")
     api = os.path.join(ROOT, "scripts", "rag_api.py")
     print(f"RAG-API скрипт: {'есть' if os.path.exists(api) else 'нет'}")
-    return 0
+
+    # --- чего НЕТ: говорим прямо, иначе агент считает отсутствующее рабочим ---
+    print()
+    print("== Чего сейчас нет ==")
+    if not have_index:
+        print("  семантический поиск: НЕДОСТУПЕН — нет RAG-индекса "
+              "(make search работать не будет)")
+    if not ntxt:
+        print("  проверка цитат:      НЕДОСТУПНА — нет текстов txt/*.txt")
+        print("                       (тексты корпуса в репозитории не публикуются:")
+        print("                        см. corpus-manifest.example.json — url и хэши пусты)")
+    manifest_txt = os.path.join(REPO, "corpus-manifest.json")
+    if not os.path.exists(manifest_txt):
+        print("  манифест текстов:    отсутствует (есть только образец "
+              "corpus-manifest.example.json)")
+    if have_index and ntxt:
+        print("  (ничего — корпус полный)")
+    print()
+    print("  что доступно без корпуса: make session n=NN, make assignment n=NN,")
+    print("  make order, syllabus.md, lectures/, citations.md, verification/REPORT.md")
+    return 0 if (have_index and ntxt) else 1
 
 
 if __name__ == "__main__":

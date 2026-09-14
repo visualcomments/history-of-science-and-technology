@@ -3,7 +3,7 @@
 PY ?= python3
 VENV_PY ?= $(PY)
 
-.PHONY: help search index-fetch session assignment verify serve status quotes corpus-fetch corpus-status
+.PHONY: help search index-fetch session assignment verify serve status quotes corpus-fetch corpus-status order order-check
 
 help:
 	@echo "Цели:"
@@ -15,6 +15,7 @@ help:
 	@echo "  make assignment n=18         вопросы и задания занятия 18"
 	@echo "  make verify                  проверка всех цитат курса по корпусу"
 	@echo "  make serve port=8765         запуск RAG-API (Ctrl+C — стоп)"
+	@echo "  make order                   порядок занятий и проверка его детерминированности"
 	@echo "  make status                  состояние курса и корпуса"
 
 search:
@@ -39,6 +40,16 @@ serve:
 
 status:
 	$(PY) tools/status.py
+
+# Порядок занятий — свойство программы, а не обучающегося: уровень подготовки
+# меняет темп и глубину, но не последовательность тем. Проверка падает, если
+# занятия переставлены, блок начат раньше своего основания или сводное занятие
+# перестало быть последним в блоке.
+order:
+	$(PY) tools/curriculum_order.py
+
+order-check:
+	$(PY) tools/curriculum_order.py --check
 
 quotes:
 	$(VENV_PY) tools/quote_finder.py "$(QUERY)"

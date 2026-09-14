@@ -1,13 +1,16 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 """
-Wrapper for quote verification (verify_quotes.py). Verifies every quote cited
-in course/lectures/*.md against the local corpus and writes
-verification/REPORT.md. Exit code 1 if any quote fails.
+Обёртка проверки цитат. Запускает рабочий скрипт корпуса
+(`<COURSE_CORPUS_ROOT>/scripts/verify_quotes.py`): проверяет каждую цитату
+курса по локальному корпусу и пишет `verification/REPORT.md`.
 
-Usage:
-  python tools/verify_quotes.py
+Коды возврата (важно для агента и CI):
+  0 — все цитаты подтверждены;
+  1 — есть неподтверждённые цитаты (рабочий скрипт вернул 1);
+  2 — корпус не подключён: нет COURSE_CORPUS_ROOT или нет самого скрипта.
+      Это НЕ значит «цитаты неверны»: это значит, что проверить их нечем,
+      и курс в таком состоянии не готов к занятиям по цитатам.
 """
+
 import os
 import subprocess
 import sys
@@ -24,7 +27,11 @@ SCRIPT = os.path.join(ROOT, "scripts", "verify_quotes.py")
 
 def main():
     if not os.path.exists(SCRIPT):
-        sys.stderr.write(f"[tools] корпус не найден: {SCRIPT}\nСм. CORPUS.md\n")
+        sys.stderr.write(
+            f"[tools] корпус не найден: {SCRIPT}\n"
+            "Проверить цитаты нечем. Это не значит, что цитаты неверны —\n"
+            "значит, что корпус не установлен: make corpus-status\n"
+            "См. CORPUS.md\n")
         return 2
     py = os.environ.get("COURSE_VENV_PY") or sys.executable
     exe = py if os.path.exists(py) else sys.executable

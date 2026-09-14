@@ -126,6 +126,42 @@ def main() -> int:
                 "LICENSE", "LICENSE-CONTENT.md", "verification/REPORT.md"):
         check(f"{doc} на месте", (ROOT / doc).is_file(), "файл отсутствует")
 
+    print("\n[порядок занятий]")
+    # Порядок тем — свойство программы, а не обучающегося: проверяем и сам
+    # порядок, и то, что проверка способна упасть (иначе она ничего не значит).
+    proc = run_tool("curriculum_order.py", "--check")
+    check("порядок занятий детерминирован", proc.returncode == 0,
+          (proc.stdout + proc.stderr).strip()[:200])
+
+    order_proc = run_tool("curriculum_order.py", "--json")
+    if order_proc.returncode == 0:
+        try:
+            plan = json.loads(order_proc.stdout)
+        except json.JSONDecodeError as e:
+            plan = None
+            check("план занятий разбирается", False, str(e))
+        if plan is not None:
+            nums = [s["n"] for s in plan["sessions"]]
+            check("план содержит 30 занятий по порядку",
+                  nums == list(range(1, 31)), f"получено {nums}")
+            check("порядок не зависит от уровня подготовки",
+                  all("level" not in s for s in plan["sessions"]),
+                  "в плане появилось поле уровня: порядок начал зависеть от студента")
+
+    # Проверка, которая не может упасть, ничего не проверяет: ломаем копию
+    # программы (переставляем занятия) и убеждаемся, что инструмент это ловит.
+    import tempfile
+    with tempfile.TemporaryDirectory() as tmp:
+        broken = Path(tmp) / "syllabus.json"
+        data = json.loads((ROOT / "syllabus.json").read_text(encoding="utf-8"))
+        data["sessions"][2]["n"], data["sessions"][3]["n"] = 4, 3   # 3 <-> 4
+        broken.write_text(json.dumps(data, ensure_ascii=False), encoding="utf-8")
+        sys.path.insert(0, str(TOOLS))
+        import curriculum_order as co
+        problems = co.check_order(json.loads(broken.read_text(encoding="utf-8")))
+        check("перестановка занятий обнаруживается", bool(problems),
+              "перестановка 3<->4 прошла незамеченной")
+
     print("\n[отчёт верификации цитат]")
     report = ROOT / "verification" / "REPORT.md"
     if report.is_file():
