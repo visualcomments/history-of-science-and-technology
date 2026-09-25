@@ -17,6 +17,7 @@ Usage:
   python tools/index_fetch.py                      # reads index-manifest.json
 """
 import argparse
+import hashlib
 import http.cookiejar
 import json
 import os
@@ -89,6 +90,72 @@ def drive_download(url, dest):
     return True
 
 
+def safe_extract(zpath, dest):
+    """Extract a zip, refusing path traversal, absolute paths and symlinks.
+
+    Returns the number of files extracted. Raises RuntimeError on a bad member.
+    """
+    dest_abs = os.path.abspath(dest)
+    count = 0
+    with zipfile.ZipFile(zpath) as z:
+        for info in z.infolist():
+            name = info.filename
+            # Reject absolute paths and Windows drive/UNC prefixes.
+            if name.startswith(("/", "\\")) or re.match(r"^[A-Za-z]:", name):
+                raise RuntimeError("unsafe zip member: absolute path %r" % name)
+            # Reject traversal after normalisation.
+            target = os.path.abspath(os.path.join(dest_abs, name))
+            if target != dest_abs and not target.startswith(dest_abs + os.sep):
+                raise RuntimeError("unsafe zip member: escapes dest %r" % name)
+            # Reject symlinks (external attribute bit 0xA000).
+            mode = (info.external_attr >> 16) & 0xF000
+            if mode == 0xA000:
+                raise RuntimeError("unsafe zip member: symlink %r" % name)
+            if info.is_dir():
+                os.makedirs(target, exist_ok=True)
+                continue
+            os.makedirs(os.path.dirname(target), exist_ok=True)
+            with z.open(info) as src, open(target, "wb") as out:
+                shutil.copyfileobj(src, out)
+            count += 1
+    return count
+
+
+
+def hf_fetch_manifest_files(repo_url, manifest, root, unpack_dir):
+    """Fetch the four index files individually from a HuggingFace dataset repo.
+    Files are served at .../resolve/main/<name>. Each file is sha256-verified
+    against the manifest and written into unpack_dir, so the atomic-swap logic
+    in main() stays identical to the Drive-Zip path.
+    """
+    repo_id = repo_url.rstrip("/")
+    if "/resolve/" in repo_id:
+        m = re.search(r"huggingface\.co/(?:datasets/)?[^/]+/[^/]+/resolve/main/[^/]+$", repo_id)
+    m = re.search(r"huggingface\.co/(?:datasets/)?([^/]+/[^/]+?)(?:/.*)?$", repo_id)
+    if not m:
+        sys.stderr.write("[index_fetch] not a HF repo URL: %s\n" % repo_url)
+        return False
+    repo_id = "datasets/" + m.group(1)
+    n = 0
+    for f in manifest.get("files", []):
+        fname = f["path"].split("/")[-1]
+        url = "https://huggingface.co/%s/resolve/main/%s" % (repo_id, urllib.parse.quote(fname))
+        dest = os.path.join(unpack_dir, fname)
+        sys.stdout.write("[index_fetch] HF download %s -> %s\n" % (fname, url))
+        req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+        with urllib.request.urlopen(req, timeout=600) as r:
+            data = r.read()
+        h = hashlib.sha256(data).hexdigest().upper()
+        want = f["sha256"].upper()
+        if h != want:
+            sys.stderr.write("[index_fetch] HF files %s: sha256 mismatch\n" % fname)
+            return False
+        with open(dest, "wb") as fh:
+            fh.write(data)
+        n += 1
+    return n > 0
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--url", default=os.environ.get("COURSE_INDEX_URL", ""))
@@ -110,36 +177,57 @@ def main():
     os.makedirs(idx, exist_ok=True)
     tmp = tempfile.mkdtemp(prefix="index_fetch_")
     try:
-        zpath = os.path.join(tmp, "course-index.zip")
-        print(f"[index_fetch] скачивание: {url}")
-        if not drive_download(url, zpath):
-            print("[index_fetch] ОШИБКА: загрузка не удалась")
-            return 1
-        expect = None
-        if manifest:
-            expect = manifest["archive"].get("sha256")
-        if expect:
-            import hashlib  # noqa: PLC0415
-            h = hashlib.sha256(open(zpath, "rb").read()).hexdigest().upper()
-            if h != expect.upper():
-                print(f"[index_fetch] КОНТРОЛЬНАЯ СУММА НЕ СОВПАЛА: {h} != {expect.upper()}")
+        hf_url = None
+        if "huggingface.co" in url:
+            hf_url = url
+        elif manifest and manifest.get("archive", {}).get("kind") == "huggingface":
+            hf_url = manifest["archive"].get("url") or manifest["archive"].get("repo_id") or ""
+        if hf_url:
+            unpack = os.path.join(tmp, "unpacked")
+            os.makedirs(unpack)
+            print("[index_fetch] source: HuggingFace")
+            if not hf_fetch_manifest_files(hf_url, manifest, root, unpack):
+                print("[index_fetch] ERROR: HF fetch failed")
                 return 1
-            print("[index_fetch] SHA-256 подтверждена")
-        unpack = os.path.join(tmp, "unpacked")
-        os.makedirs(unpack)
-        with zipfile.ZipFile(zpath) as z:
-            z.extractall(unpack)
+            n_extracted = len(manifest.get("files", []))
+        else:
+            zpath = os.path.join(tmp, "course-index.zip")
+            print(f"[index_fetch] downloading: {url}")
+            if not drive_download(url, zpath):
+                print("[index_fetch] ERROR: download failed")
+                return 1
+            expect = None
+            if manifest:
+                expect = manifest["archive"].get("sha256")
+            if expect:
+                h = hashlib.sha256(open(zpath, "rb").read()).hexdigest().upper()
+                if h != expect.upper():
+                    print("[index_fetch] SHA256 MISMATCH")
+                    return 1
+                print("[index_fetch] SHA-256 OK")
+            else:
+                print("[index_fetch] NO archive.sha256 - structural check only")
+            unpack = os.path.join(tmp, "unpacked")
+            os.makedirs(unpack)
+            try:
+                n_extracted = safe_extract(zpath, unpack)
+            except (RuntimeError, zipfile.BadZipFile) as exc:
+                print("[index_fetch] archive rejected: %s" % exc)
+                return 1
+            print("[index_fetch] extracted files: %d" % n_extracted)
         if manifest:
             for f in manifest["files"]:
-                fp = os.path.join(unpack, f["path"])
+                fn = f["path"].split("/")[-1]
+                fp = os.path.join(unpack, fn)
                 if not os.path.exists(fp):
-                    print(f"[index_fetch] в архиве нет файла {f['path']}")
+                    print("[index_fetch] missing %s" % f["path"])
                     return 1
                 h = hashlib.sha256(open(fp, "rb").read()).hexdigest().upper()
                 if h != f["sha256"].upper():
-                    print(f"[index_fetch] файл {f['path']}: контрольная сумма не совпала")
+                    print("[index_fetch] file %s: sha256 mismatch" % f["path"])
                     return 1
         # atomic swap
+
         bak = os.path.join(root, "index_old")
         shutil.rmtree(bak, ignore_errors=True)
         if os.path.exists(idx):
@@ -148,6 +236,9 @@ def main():
             os.rename(unpack, idx)
         except OSError:
             shutil.move(unpack, idx)
+        # Drop the backup once the new index is in place: at rest the root
+        # must hold exactly one index, not two (index_old leaked 61 MB before).
+        shutil.rmtree(bak, ignore_errors=True)
         print(f"[index_fetch] индекс установлен: {idx}")
         cfg = os.path.join(idx, "config.json")
         if os.path.exists(cfg):

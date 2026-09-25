@@ -6,30 +6,33 @@
   "filename": "course-index-2026-09-13-v2.zip",
   "size_bytes": 231504883,
   "sha256": "996E3CD6C3C1ECB5F49E1D1EC93C88C900CD927B0EC4D26041FBD90A60A9524A",
-  "url": "https://drive.google.com/uc?export=download&id=17byaQPYS9GtkWgHebY5zN5vj-ThcZ5sf",
+  "url": "https://huggingface.co/datasets/brics-edtech/histsci-corpus",
   "file_id": "17byaQPYS9GtkWgHebY5zN5vj-ThcZ5sf",
-  "view_url": "https://drive.google.com/file/d/17byaQPYS9GtkWgHebY5zN5vj-ThcZ5sf/view"
+  "view_url": "https://drive.google.com/file/d/17byaQPYS9GtkWgHebY5zN5vj-ThcZ5sf/view",
+  "kind": "huggingface",
+  "hf_total_bytes": 473363695,
+  "sha256_note": "per-file sha256 in files[]; aggregate not applicable to HF source"
  },
  "files": [
   {
    "path": "annoy.index",
-   "size_bytes": 118360080,
-   "sha256": "B9932D437DA61EE4F575ACCBC28CC0E2F038CB174A09B4A8880960372813107E"
+   "size_bytes": 165499776,
+   "sha256": "7613F7106F06117F99ABE03439B9EA2BF399B70BD28A0DDE9717CB260BD03A2B"
   },
   {
    "path": "chunks.jsonl",
-   "size_bytes": 105202504,
-   "sha256": "64F44957B77B03FBF8FACCED33AB9D8EAFEDFE14D3897F9C9418599CF8644DBF"
+   "size_bytes": 156804004,
+   "sha256": "774236D0D82538828FB990783203FD88837220095C3E8FC9A99D15C45F7A981A"
   },
   {
    "path": "config.json",
-   "size_bytes": 11078,
-   "sha256": "DAAC4D8E021EC605A61F751F021804EA8D141DA5A91F6C92DE5BB4577F0F1195"
+   "size_bytes": 15691,
+   "sha256": "F2B9B8E2281EAB90F80AD827B8D5B3125BB886499D9B71301FEF2F558FD60122"
   },
   {
    "path": "embeddings.npy",
-   "size_bytes": 103283840,
-   "sha256": "5DBEDC016E2C751355A2C0E83EEA1DEEAB02AE6DC92E6A1F68BC6B583A74F8E0"
+   "size_bytes": 151044224,
+   "sha256": "AA89AC36947487D1D08F9CF109552EF8FEAE24945121B04FAB15EB6D92CC6A3A"
   }
  ],
  "corpus": {
@@ -45,5 +48,6 @@
   "dim": 384,
   "chunk_chars": 1400,
   "overlap": 140
- }
+ },
+ "index_hf_kind": "huggingface"
 }

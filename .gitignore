@@ -4,3 +4,12 @@
 tools/__pycache__/
 __pycache__/
 
+
+# --- Local build artifacts: DO NOT commit (indexes live on HuggingFace) ---
+corpus/
+corpus_index_new/
+merged/
+reading/
+reconstructed/
+_pdf/
+_e2e_test/
