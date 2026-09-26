@@ -34,7 +34,7 @@
 > **Цитата:** «The great improvement which he introduced into chemistry
 > was the employment of phlogiston, to explain the phe...»
 >
-> **Источник:** `txt/history_of_chemistry__The_History_of_Chemistry.txt` · фрагмент #8226
+> **Источник:** `txt/history_of_chemistry__The_History_of_Chemistry.txt` · фрагмент #9797
 
 (В исходном тексте речь идёт о введении флогистона как объяснительного
 принципа горения и превращений металлов.)
@@ -46,7 +46,7 @@
 > rare minerals, but first separated from the atmosphere in 1900; and
 > neon, krypton, and xenon, discovered in conjunc- tion with Dr...»
 >
-> **Источник:** `txt/history_of_chemistry__The_Gases_of_the_Atmosphere_The_History_of_Their_Discovery.txt` · фрагмент #7482
+> **Источник:** `txt/history_of_chemistry__The_Gases_of_the_Atmosphere_The_History_of_Their_Discovery.txt` · фрагмент #9121
 
 ## Авторский синтез: измерение как двигатель науки
 

@@ -31,7 +31,7 @@
 > thoroughly examined and their truth acknowledged by Italy's choicest
 > sons»
 >
-> **Источник:** `txt/history_of_computing__Passages_from_the_Life_of_a_Philosopher.txt` · фрагмент #11449
+> **Источник:** `txt/history_of_computing__Passages_from_the_Life_of_a_Philosopher.txt` · фрагмент #13408
 
 Проект машины — это уже «чертёж-модель»: инженерная документация как
 первый цифровой двойник (в бумажной форме).

@@ -35,7 +35,7 @@
 > understood the use of the fly and extra pole on the tent to utilise the
 > wind in creating a draught and drawing the smoke out»
 >
-> **Источник:** `txt/history_of_engineering__The_Origins_of_Invention_A_Study_of_Industry_Among_Primitive_Peoples.txt` · фрагмент #14099
+> **Источник:** `txt/history_of_engineering__The_Origins_of_Invention_A_Study_of_Industry_Among_Primitive_Peoples.txt` · фрагмент #15838
 
 Использование ветра — от тяги в жилище до паруса — первый шаг к
 «воздушной» технике: движение среды становится рабочим ресурсом.
@@ -47,7 +47,7 @@
 > engineer, the enterprise of the landowner, and the industry of our
 > peaceful army of skilled labourers»
 >
-> **Источник:** `txt/history_of_engineering__Lives_of_the_Engineers.txt` · фрагмент #13863
+> **Источник:** `txt/history_of_engineering__Lives_of_the_Engineers.txt` · фрагмент #15622
 
 Здесь три компонента: **наука инженера** (расчёт), **предприимчивость**
 (организация) и **труд мастеров** (производство). Это — рабочая схема

@@ -37,7 +37,7 @@
 > the overthrow of the Ptolemaic and the establishment of the Copernican
 > System»
 >
-> **Источник:** `txt/history_of_physics__A_History_of_Physics.txt` · фрагмент #21653
+> **Источник:** `txt/history_of_physics__A_History_of_Physics.txt` · фрагмент #22818
 
 Обратите внимание на формулировку: «установление коперниканской
 системы» — речь о процессе, а не о тексте. Каджори подчёркивает и
@@ -47,7 +47,7 @@
 > its opponents, but it was first vigorously attacked by Nicolaus
 > Copernicus (1473–1543)»
 >
-> **Источник:** `txt/history_of_physics__A_History_of_Physics.txt` · фрагмент #21654
+> **Источник:** `txt/history_of_physics__A_History_of_Physics.txt` · фрагмент #22820
 
 Начало систематической астрономии, из которой вырастает модель Коперника,
 лежит в античности: греческие астрономы уже строили вычисляемые модели

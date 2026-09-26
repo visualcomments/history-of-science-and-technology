@@ -34,7 +34,7 @@
 > the language of mathematics, and developed the theory according to
 > which the energy of the electromagnetic field resides»
 >
-> **Источник:** `txt/history_of_physics__A_History_of_Physics.txt` · фрагмент #22023
+> **Источник:** `txt/history_of_physics__A_History_of_Physics.txt` · фрагмент #23157
 
 Обратите внимание на формулировку «перевёл теории Фарадея на язык
 математики»: Максвелл не «опроверг» Фарадея, а придал его образам

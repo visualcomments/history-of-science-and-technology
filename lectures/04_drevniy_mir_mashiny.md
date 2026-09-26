@@ -38,7 +38,7 @@
 > заметить усилие придать плану здания определенную фигуру, фигуру
 > прямоугольника или круга»
 >
-> **Источник:** `txt/history_of_mathematics__История_математики_в_древности_и_в_средние_века.txt` · фрагмент #21124
+> **Источник:** `txt/history_of_mathematics__История_математики_в_древности_и_в_средние_века.txt` · фрагмент #22340
 
 Зодчество — первая «инженерная дисциплина», в которой геометрическое
 знание проверяется практикой: план здания — это чертёж, а значит, модель
@@ -54,7 +54,7 @@
 > time and direction and momentum, namely, the inclined plane, the wedge,
 > the lever, the wheel and axle»
 >
-> **Источник:** `txt/history_of_engineering__The_Origins_of_Invention_A_Study_of_Industry_Among_Primitive_Peoples.txt` · фрагмент #14070
+> **Источник:** `txt/history_of_engineering__The_Origins_of_Invention_A_Study_of_Industry_Among_Primitive_Peoples.txt` · фрагмент #15811
 
 Идея «один человек делает работу нескольких» останется ядром всей
 последующей механики машин — вплоть до редукторов и подъёмных механизмов

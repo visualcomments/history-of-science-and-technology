@@ -36,7 +36,7 @@
 > By accident he was led to the great discovery of current electricity
 > or "galvanism."»
 >
-> **Источник:** `txt/history_of_physics__A_History_of_Physics.txt` · фрагмент #21822
+> **Источник:** `txt/history_of_physics__A_History_of_Physics.txt` · фрагмент #22972
 
 Показательна роль случая, ставшего началом исследований, и ещё более
 показательно, что сам Гальвани описывал опыт прозаичнее легенды:
@@ -45,7 +45,7 @@
 > role in the discovery; only one frog is dissected; an assistant first
 > notices the twitching»
 >
-> **Источник:** `txt/history_of_physics__A_History_of_Physics.txt` · фрагмент #21822
+> **Источник:** `txt/history_of_physics__A_History_of_Physics.txt` · фрагмент #22973
 
 Наука отделяет легенду происхождения от воспроизводимого опыта: важна
 не красивая история, а повторяемость наблюдения.

@@ -35,7 +35,7 @@
 
 > **Цитата:** «Method of keeping account was by means of tally sticks»
 >
-> **Источник:** `txt/history_of_engineering__The_Origins_of_Invention_A_Study_of_Industry_Among_Primitive_Peoples.txt` · фрагмент #14078
+> **Источник:** `txt/history_of_engineering__The_Origins_of_Invention_A_Study_of_Industry_Among_Primitive_Peoples.txt` · фрагмент #15819
 
 Счёт-«зарубками» — технология фиксации количества, без которой
 невозможны ни государственное хозяйство, ни инженерный учёт. От «палочек
@@ -47,7 +47,7 @@
 > **Цитата:** «The Greek astronomers, Eudoxus and Hipparchus, explained
 > planetary motions by the famous theory of epicycles and eccentrics»
 >
-> **Источник:** `txt/history_of_physics__A_History_of_Physics.txt` · фрагмент #21653
+> **Источник:** `txt/history_of_physics__A_History_of_Physics.txt` · фрагмент #22818
 
 Обратите внимание: это уже **модель** — видимое движение объясняется
 комбинацией движений, вычисляемых и предсказуемых. Именно с критики этой

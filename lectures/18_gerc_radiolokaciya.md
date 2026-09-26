@@ -30,7 +30,7 @@
 > detectors of electromagnetic radiation from Leyden jar or coil sparks
 > have been found»
 >
-> **Источник:** `txt/history_of_physics__A_History_of_Physics.txt` · фрагмент #22029
+> **Источник:** `txt/history_of_physics__A_History_of_Physics.txt` · фрагмент #23163
 
 Исследование «искр» и разрядов стало технической лабораторией, из которой
 вышли первые радиопередатчики и приёмники.
@@ -41,7 +41,7 @@
 > **Цитата:** «The velocity of such a wave was very nearly equal to that
 > of light»
 >
-> **Источник:** `txt/history_of_physics__A_History_of_Physics.txt` · фрагмент #22025
+> **Источник:** `txt/history_of_physics__A_History_of_Physics.txt` · фрагмент #23158
 
 ## Авторский синтез: от опыта Герца к радиолокации
 

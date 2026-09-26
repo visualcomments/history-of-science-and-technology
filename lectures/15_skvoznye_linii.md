@@ -49,7 +49,7 @@
 > **Цитата:** «Такой ход изложения вполне согласуется с историческим
 > ходом постепенного развития науки»
 >
-> **Источник:** `txt/history_of_engineering__Беседы_о_механике.txt` · фрагмент #14651
+> **Источник:** `txt/history_of_engineering__Беседы_о_механике.txt` · фрагмент #16829
 
 Мейсон сформулировал инженерный архетип — «обмен времени на усилие»:
 
@@ -57,7 +57,7 @@
 > which enables one man to do the work of several by the interchange of
 > time and direction and momentum»
 >
-> **Источник:** `txt/history_of_engineering__The_Origins_of_Invention_A_Study_of_Industry_Among_Primitive_Peoples.txt` · фрагмент #14070
+> **Источник:** `txt/history_of_engineering__The_Origins_of_Invention_A_Study_of_Industry_Among_Primitive_Peoples.txt` · фрагмент #15811
 
 ## Вопросы для самопроверки
 

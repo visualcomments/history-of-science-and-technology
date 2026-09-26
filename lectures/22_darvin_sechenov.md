@@ -31,7 +31,7 @@
 > **Цитата:** «Main conclusion that man is descended from some lower
 > form»
 >
-> **Источник:** `txt/history_of_biology__The_Descent_of_Man.txt` · фрагмент #3137
+> **Источник:** `txt/history_of_biology__The_Descent_of_Man.txt` · фрагмент #3565
 
 Логика «естественных причин» закреплена и в заголовке книги Геккеля:
 
@@ -40,7 +40,7 @@
 > exposition of the doctrine of evolution in general, and of that of
 > Darwin, Goethe, and Lamarck in particular»
 >
-> **Источник:** `txt/history_of_biology__The_History_of_Creation_vol.1.txt` · фрагмент #4952
+> **Источник:** `txt/history_of_biology__The_History_of_Creation_vol.1.txt` · фрагмент #7459
 
 Физиологическая линия. Сеченов описывает класс рефлексов, который позже
 станет основой учения о поведении:
@@ -49,7 +49,7 @@
 > движения у человека во время сна и при условиях, когда его главной
 > мозг, как говорят, не действует»
 >
-> **Источник:** `txt/history_of_biology__Рефлексы_головного_мозга.txt` · фрагмент #7189
+> **Источник:** `txt/history_of_biology__Рефлексы_головного_мозга.txt` · фрагмент #8923
 
 ## Авторский синтез: от рефлекса к автомату
 

@@ -42,7 +42,7 @@ Origins of Invention, 1895) — одна из первых систематич�
 > **Цитата:** «The chief use of the hatchets among the Delaware Indians
 > of New Jersey, says Kalm, was to make good fields for maize plantations»
 >
-> **Источник:** `txt/history_of_engineering__The_Origins_of_Invention_A_Study_of_Industry_Among_Primitive_Peoples.txt` · фрагмент #14284
+> **Источник:** `txt/history_of_engineering__The_Origins_of_Invention_A_Study_of_Industry_Among_Primitive_Peoples.txt` · фрагмент #16010
 
 Обратите внимание: даже «примитивное» орудие встроено в целую систему
 знаний — топор служит именно тому, чтобы подготовить поле под кукурузу.
@@ -55,7 +55,7 @@ Origins of Invention, 1895) — одна из первых систематич�
 > **Цитата:** «It may be carefully wrapped in leaves and cooked among
 > burning logs or in the midst of hot stones»
 >
-> **Источник:** `txt/history_of_engineering__The_Origins_of_Invention_A_Study_of_Industry_Among_Primitive_Peoples.txt` · фрагмент #14142
+> **Источник:** `txt/history_of_engineering__The_Origins_of_Invention_A_Study_of_Industry_Among_Primitive_Peoples.txt` · фрагмент #15878
 
 Даже в этой сцене виден главный признак технологии: **воспроизводимый
 рецепт**, который можно передать другому человеку и следующему поколению.

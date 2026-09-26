@@ -32,7 +32,7 @@ XIX век превратил биологию из описательной н�
 > **Цитата:** «On the Origin of Species by Means of Natural Selection,
 > or the Preservation of Favoured Races in the Struggle for Life»
 >
-> **Источник:** `txt/history_of_biology__On_the_Origin_of_Species.txt` · фрагмент #2267
+> **Источник:** `txt/history_of_biology__On_the_Origin_of_Species.txt` · фрагмент #2796
 
 Работающий механизм эволюции — отбор наследственных вариаций; Дарвин
 объясняет его на материале домашних пород:
@@ -41,7 +41,7 @@ XIX век превратил биологию из описательной н�
 > domestic races have been produced, either from one or from several
 > allied species»
 >
-> **Источник:** `txt/history_of_biology__On_the_Origin_of_Species.txt` · фрагмент #2323
+> **Источник:** `txt/history_of_biology__On_the_Origin_of_Species.txt` · фрагмент #2845
 
 Предшественник Дарвина — Ламарк, отстаивавший изменчивость видов против
 идеи их неизменности:
@@ -50,7 +50,7 @@ XIX век превратил биологию из описательной н�
 > the theory of the mutability of species against the theory of special
 > creations for each species, then almost universally current»
 >
-> **Источник:** `txt/history_of_biology__Zoological_Philosophy.txt` · фрагмент #6157
+> **Источник:** `txt/history_of_biology__Zoological_Philosophy.txt` · фрагмент #8009
 
 ## Вопросы для самопроверки
 

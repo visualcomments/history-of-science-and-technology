@@ -36,7 +36,7 @@
 > алгеброй арабов, включавшей уже теорию и практику уравнений 2-й
 > степени»
 >
-> **Источник:** `txt/history_of_mathematics__История_математики_в_XVI_и_XVII_веках.txt` · фрагмент #20175
+> **Источник:** `txt/history_of_mathematics__История_математики_в_XVI_и_XVII_веках.txt` · фрагмент #21480
 
 Смит показывает конкретный механизм передачи: переводы арабских
 трактатов на латынь, часто — руками еврейских и христианских учёных
@@ -46,7 +46,7 @@
 > less prominence, such as Samuel ben Abbas, who wrote on arithmetic, the
 > Hindu numerals and their use, algebra, and geometry»
 >
-> **Источник:** `txt/history_of_mathematics__History_of_Mathematics_vol.1.txt` · фрагмент #18231
+> **Источник:** `txt/history_of_mathematics__History_of_Mathematics_vol.1.txt` · фрагмент #19679
 
 ## Авторский синтез: ноль, позиция, алгоритм
 

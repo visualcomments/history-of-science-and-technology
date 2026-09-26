@@ -33,7 +33,7 @@
 > **Цитата:** «A popular exposition of the doctrine of evolution in
 > general, and of that of Darwin, Goethe, and Lamarck in particular»
 >
-> **Источник:** `txt/history_of_biology__The_History_of_Creation_vol.1.txt` · фрагмент #4952
+> **Источник:** `txt/history_of_biology__The_History_of_Creation_vol.1.txt` · фрагмент #6926
 
 Физиологическая рамка Сеченова — рефлекс как элементарный механизм
 поведения:
@@ -42,7 +42,7 @@
 > движения у человека во время сна и при условиях, когда его главной
 > мозг, как говорят, не действует»
 >
-> **Источник:** `txt/history_of_biology__Рефлексы_головного_мозга.txt` · фрагмент #7189
+> **Источник:** `txt/history_of_biology__Рефлексы_головного_мозга.txt` · фрагмент #8923
 
 ## Авторский синтез: от бионических решений к БАС
 

@@ -33,7 +33,7 @@
 > very many wonderful properties, none of which has hitherto been
 > discovered or demonstrated by any one»
 >
-> **Источник:** `txt/history_of_science_general__The_Dialogues_Concerning_Two_New_Sciences.txt` · фрагмент #25368
+> **Источник:** `txt/history_of_science_general__The_Dialogues_Concerning_Two_New_Sciences.txt` · фрагмент #26827
 
 Смелость этой программы — «ни одно из свойств движения до сих пор не
 открыто и не доказано» — отчётливо показывает, что Галилей считал себя
@@ -47,7 +47,7 @@
 > described in his Discorsi, showed that the time of oscillation was
 > independent of the mass and material of the pendulum»
 >
-> **Источник:** `txt/history_of_physics__A_History_of_Physics.txt` · фрагмент #21666
+> **Источник:** `txt/history_of_physics__A_History_of_Physics.txt` · фрагмент #22830
 
 Маятник — это ещё и прообраз измерительного прибора: он превращает
 непрерывное время в счётное число колебаний. Прибор производит факт.

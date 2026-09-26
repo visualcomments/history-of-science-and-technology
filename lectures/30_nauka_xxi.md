@@ -39,7 +39,7 @@ NASA, описывая историю спутниковой связи, при�
 > spoke carefully into a microphone at the laboratory's Stump Neck radio
 > antenna facility in Maryland»
 >
-> **Источник:** `txt/history_of_technology__NASA_Beyond_the_Ionosphere.txt` · фрагмент #26674
+> **Источник:** `txt/history_of_technology__NASA_Beyond_the_Ionosphere.txt` · фрагмент #28461
 
 Необычность примера именно в методе: прежде чем строить спутники,
 инженеры использовали готовый «ретранслятор» — Луну. Это классический
@@ -57,7 +57,7 @@ Artificial Intelligence» (2016) фиксирует главный сдвиг: �
 > unlikely that machines will exhibit broadly-applicable intelligence
 > comparable to or exceeding that of humans in the next 20 years»
 >
-> **Источник:** `txt/history_of_technology__US_Preparing_for_Future_of_AI_2016.txt` · фрагмент #27668
+> **Источник:** `txt/history_of_technology__US_Preparing_for_Future_of_AI_2016.txt` · фрагмент #29362
 
 Тот же доклад описывает технологическое ядро современного ИИ — глубокое
 обучение, вдохновлённое структурой мозга:
@@ -65,7 +65,7 @@ Artificial Intelligence» (2016) фиксирует главный сдвиг: �
 > **Цитата:** «Deep learning uses structures loosely inspired by the human
 > brain, consisting of a set of units (or "neurons")»
 >
-> **Источник:** `txt/history_of_technology__US_Preparing_for_Future_of_AI_2016.txt` · фрагмент #27705
+> **Источник:** `txt/history_of_technology__US_Preparing_for_Future_of_AI_2016.txt` · фрагмент #29396
 
 Обратите внимание: «loosely inspired» — «слабо вдохновлено»: инженеры
 берут из биологии принцип (обучаемые весовые связи), а не копируют
@@ -81,7 +81,7 @@ Artificial Intelligence» (2016) фиксирует главный сдвиг: �
 > AI, especially regarding areas and timeframes where industry is
 > unlikely to invest?»
 >
-> **Источник:** `txt/history_of_technology__US_National_AI_Strategic_Plan_2019.txt` · фрагмент #27561
+> **Источник:** `txt/history_of_technology__US_National_AI_Strategic_Plan_2019.txt` · фрагмент #29266
 
 И вопрос кадров — «конвейера» исследователей и инженеров:
 
@@ -89,7 +89,7 @@ Artificial Intelligence» (2016) фиксирует главный сдвиг: �
 > workforce pipeline. Considerations of educational pathways and
 > potential retraining opportunities should be included»
 >
-> **Источник:** `txt/history_of_technology__US_National_AI_Strategic_Plan_2019.txt` · фрагмент #27660
+> **Источник:** `txt/history_of_technology__US_National_AI_Strategic_Plan_2019.txt` · фрагмент #29354
 
 **Бортовые вычисления — прообраз автономии.**
 NASA (исторический обзор «Computers in Spaceflight», 1988) фиксирует, с
@@ -99,7 +99,7 @@ NASA (исторический обзор «Computers in Spaceflight», 1988) ф
 > **Цитата:** «Chapter One: The Gemini Digital Computer: First Machine in
 > Orbit»
 >
-> **Источник:** `txt/history_of_computing__NASA_Computers_in_Spaceflight.txt` · фрагмент #11448
+> **Источник:** `txt/history_of_computing__NASA_Computers_in_Spaceflight.txt` · фрагмент #12763
 
 Бортовой компьютер «Джемини» — прямой предок современной авионики и
 автономных систем беспилотников: вычисления перестали быть «наземной»
