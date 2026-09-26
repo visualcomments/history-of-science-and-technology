@@ -36,13 +36,15 @@
   }
  ],
  "corpus": {
-  "n_files": 231,
-  "n_chunks": 67242,
+  "n_files": 364,
+  "n_chunks": 100314,
   "composition": {
-   "wikipedia_cc_by_sa": 128,
+   "pre_existing_pd_free": 47,
    "lesson1_primary_sources_pd": 28,
-   "pd_primary_sources": 28,
-   "pre_existing_pd_free": 47
+   "oa_cc_licensed_articles": 17,
+   "pd_primary_sources": 84,
+   "ru_language_publications": 53,
+   "wikipedia_cc_by_sa": 135
   },
   "model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
   "dim": 384,
