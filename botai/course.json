@@ -1,0 +1,581 @@
+{
+  "schema_version": 2,
+  "course_id": "history-of-science-and-technology",
+  "title": "История и философия науки и технологий",
+  "language": "ru",
+  "syllabus_path": "syllabus.md",
+  "track_path": "botai/track.json",
+  "student_material_roots": [
+    "lectures",
+    "docs",
+    "agents",
+    "capstone-aviation-radar",
+    "syllabus.md",
+    "citations.md",
+    "CORPUS.md",
+    "PROVENANCE.md"
+  ],
+  "excluded_material_roots": [
+    "verification",
+    "tests",
+    ".github",
+    ".agents",
+    ".claude",
+    ".cursor",
+    "tools"
+  ],
+  "licenses": {
+    "code": "GPL-3.0-or-later",
+    "materials": "CC-BY-SA-4.0"
+  },
+  "contribution": {
+    "enabled": false,
+    "guide_path": null,
+    "private_submission_allowed": true,
+    "ai_disclosure_required": true
+  },
+  "corpus_manifest_path": "botai/corpus-manifest.json",
+  "environment_path": null,
+  "assignments": [
+    {
+      "assignment_id": "lec-01",
+      "path": "lectures/01_uvodnoe.md",
+      "objective_ids": [
+        "lec-01"
+      ],
+      "assessment": "practice",
+      "assessment_source": {
+        "path": "lectures/01_uvodnoe.md",
+        "sha256": "07720aa738ac43cb3d2de57607673b2247d2b4af6f9e2b05f61d592730bc12b1",
+        "locator": {
+          "lines": {
+            "start": 44,
+            "end": 49
+          }
+        }
+      }
+    },
+    {
+      "assignment_id": "lec-02",
+      "path": "lectures/02_metodologiya.md",
+      "objective_ids": [
+        "lec-02"
+      ],
+      "assessment": "practice",
+      "assessment_source": {
+        "path": "lectures/02_metodologiya.md",
+        "sha256": "03a1c2ce94cbca0c96ef15060e9273b9a40b9fdd1577cf47e0f83cf585fabf6c",
+        "locator": {
+          "lines": {
+            "start": 95,
+            "end": 102
+          }
+        }
+      }
+    },
+    {
+      "assignment_id": "lec-03",
+      "path": "lectures/03_agrarnaya_revolyuciya.md",
+      "objective_ids": [
+        "lec-03"
+      ],
+      "assessment": "graded",
+      "assessment_source": {
+        "path": "syllabus.md",
+        "sha256": "868eadde272bdaa2890b68047937b2c7fd1cee50c0ea8f0d1daba612c08778f4",
+        "locator": {
+          "lines": {
+            "start": 66,
+            "end": 67
+          }
+        }
+      }
+    },
+    {
+      "assignment_id": "lec-04",
+      "path": "lectures/04_drevniy_mir_mashiny.md",
+      "objective_ids": [
+        "lec-04"
+      ],
+      "assessment": "practice",
+      "assessment_source": {
+        "path": "lectures/04_drevniy_mir_mashiny.md",
+        "sha256": "aad720491adb4ebf854668dcf473a76d9c975e79a439e7fc7da88f408316a2a4",
+        "locator": {
+          "lines": {
+            "start": 74,
+            "end": 80
+          }
+        }
+      }
+    },
+    {
+      "assignment_id": "lec-05",
+      "path": "lectures/05_antichnaya_matematika.md",
+      "objective_ids": [
+        "lec-05"
+      ],
+      "assessment": "practice",
+      "assessment_source": {
+        "path": "lectures/05_antichnaya_matematika.md",
+        "sha256": "4c2bd7112d04e5a4c31fbdd53227634b1e18f4d5c7b772b51f9c19bd36dde80d",
+        "locator": {
+          "lines": {
+            "start": 67,
+            "end": 73
+          }
+        }
+      }
+    },
+    {
+      "assignment_id": "lec-06",
+      "path": "lectures/06_antichnaya_nauka.md",
+      "objective_ids": [
+        "lec-06"
+      ],
+      "assessment": "practice",
+      "assessment_source": {
+        "path": "lectures/06_antichnaya_nauka.md",
+        "sha256": "8669b6b92a56fec8b67aa5b937670d41dd0b097bc7e987188d7ae74b575d1f43",
+        "locator": {
+          "lines": {
+            "start": 67,
+            "end": 73
+          }
+        }
+      }
+    },
+    {
+      "assignment_id": "lec-07",
+      "path": "lectures/07_arabskaya_nauka.md",
+      "objective_ids": [
+        "lec-07"
+      ],
+      "assessment": "graded",
+      "assessment_source": {
+        "path": "syllabus.md",
+        "sha256": "868eadde272bdaa2890b68047937b2c7fd1cee50c0ea8f0d1daba612c08778f4",
+        "locator": {
+          "lines": {
+            "start": 66,
+            "end": 67
+          }
+        }
+      }
+    },
+    {
+      "assignment_id": "lec-08",
+      "path": "lectures/08_universitety_nidhem.md",
+      "objective_ids": [
+        "lec-08"
+      ],
+      "assessment": "practice",
+      "assessment_source": {
+        "path": "lectures/08_universitety_nidhem.md",
+        "sha256": "dcc84dc6d311c62ef6a0b741808df011033d88cb0b16e57083fc34c916a2ce23",
+        "locator": {
+          "lines": {
+            "start": 65,
+            "end": 69
+          }
+        }
+      }
+    },
+    {
+      "assignment_id": "lec-09",
+      "path": "lectures/09_kopernik.md",
+      "objective_ids": [
+        "lec-09"
+      ],
+      "assessment": "practice",
+      "assessment_source": {
+        "path": "lectures/09_kopernik.md",
+        "sha256": "f8dba412ef050489f29a299cd3d51d0a9682b1889efa8eca883da768f208371c",
+        "locator": {
+          "lines": {
+            "start": 56,
+            "end": 61
+          }
+        }
+      }
+    },
+    {
+      "assignment_id": "lec-10",
+      "path": "lectures/10_galiley.md",
+      "objective_ids": [
+        "lec-10"
+      ],
+      "assessment": "practice",
+      "assessment_source": {
+        "path": "lectures/10_galiley.md",
+        "sha256": "6bc29849b6991b29f669aac9b95f8bf18e9f6bcc4a752570aff8b9b3addece98",
+        "locator": {
+          "lines": {
+            "start": 65,
+            "end": 69
+          }
+        }
+      }
+    },
+    {
+      "assignment_id": "lec-11",
+      "path": "lectures/11_nyuton.md",
+      "objective_ids": [
+        "lec-11"
+      ],
+      "assessment": "practice",
+      "assessment_source": {
+        "path": "lectures/11_nyuton.md",
+        "sha256": "b03df693bd335852b6fc4085d248132f672b0c5caa83f5cb07aef59b9a1e9861",
+        "locator": {
+          "lines": {
+            "start": 59,
+            "end": 64
+          }
+        }
+      }
+    },
+    {
+      "assignment_id": "lec-12",
+      "path": "lectures/12_nyuton_metod_akademiya.md",
+      "objective_ids": [
+        "lec-12"
+      ],
+      "assessment": "practice",
+      "assessment_source": {
+        "path": "lectures/12_nyuton_metod_akademiya.md",
+        "sha256": "d809b9cbde57c0bfaf0187ff90d3382f9e3e5e54b63bdfef6e02d1847b907d83",
+        "locator": {
+          "lines": {
+            "start": 74,
+            "end": 80
+          }
+        }
+      }
+    },
+    {
+      "assignment_id": "lec-13",
+      "path": "lectures/13_parovoy_dvigatel.md",
+      "objective_ids": [
+        "lec-13"
+      ],
+      "assessment": "practice",
+      "assessment_source": {
+        "path": "lectures/13_parovoy_dvigatel.md",
+        "sha256": "22bd10c3d5e3aa87572d5dd53f61de4929858af269c5372b05c4e745df8c9a41",
+        "locator": {
+          "lines": {
+            "start": 57,
+            "end": 62
+          }
+        }
+      }
+    },
+    {
+      "assignment_id": "lec-14",
+      "path": "lectures/14_inzhenernaya_professiya.md",
+      "objective_ids": [
+        "lec-14"
+      ],
+      "assessment": "practice",
+      "assessment_source": {
+        "path": "lectures/14_inzhenernaya_professiya.md",
+        "sha256": "4721183f910a5396294e59755d939bea6aebcd7e923a1a54e3e648d4e8cba835",
+        "locator": {
+          "lines": {
+            "start": 65,
+            "end": 70
+          }
+        }
+      }
+    },
+    {
+      "assignment_id": "lec-15",
+      "path": "lectures/15_skvoznye_linii.md",
+      "objective_ids": [
+        "lec-15"
+      ],
+      "assessment": "graded",
+      "assessment_source": {
+        "path": "lectures/15_skvoznye_linii.md",
+        "sha256": "e605e5769c75027750f20e80ac2009a85cd2440852ec8a497909eb079084eaeb",
+        "locator": {
+          "lines": {
+            "start": 69,
+            "end": 82
+          }
+        }
+      }
+    },
+    {
+      "assignment_id": "lec-16",
+      "path": "lectures/16_elektrichestvo_xviii.md",
+      "objective_ids": [
+        "lec-16"
+      ],
+      "assessment": "practice",
+      "assessment_source": {
+        "path": "lectures/16_elektrichestvo_xviii.md",
+        "sha256": "d14f8c802e7e7d99477ad7ea545c169640df5e3d49e9795de0b6af55812180a4",
+        "locator": {
+          "lines": {
+            "start": 63,
+            "end": 68
+          }
+        }
+      }
+    },
+    {
+      "assignment_id": "lec-17",
+      "path": "lectures/17_faraday_maksvell.md",
+      "objective_ids": [
+        "lec-17"
+      ],
+      "assessment": "practice",
+      "assessment_source": {
+        "path": "lectures/17_faraday_maksvell.md",
+        "sha256": "063ca340cb290c9cb6199133a6acec43d12c90899e7c3990e2eb55bdfe2466fb",
+        "locator": {
+          "lines": {
+            "start": 53,
+            "end": 58
+          }
+        }
+      }
+    },
+    {
+      "assignment_id": "lec-18",
+      "path": "lectures/18_gerc_radiolokaciya.md",
+      "objective_ids": [
+        "lec-18"
+      ],
+      "assessment": "practice",
+      "assessment_source": {
+        "path": "lectures/18_gerc_radiolokaciya.md",
+        "sha256": "307677a8fb061b4c162af788b78b0fd6b3eb35a1cda1efe7914ce065c208c90f",
+        "locator": {
+          "lines": {
+            "start": 61,
+            "end": 67
+          }
+        }
+      }
+    },
+    {
+      "assignment_id": "lec-19",
+      "path": "lectures/19_himiya_flogiston.md",
+      "objective_ids": [
+        "lec-19"
+      ],
+      "assessment": "practice",
+      "assessment_source": {
+        "path": "lectures/19_himiya_flogiston.md",
+        "sha256": "2b1801b172463fd15ddcdfb7e6302ad88d3d1fbd14f79c16456b85cfabfe74a6",
+        "locator": {
+          "lines": {
+            "start": 61,
+            "end": 65
+          }
+        }
+      }
+    },
+    {
+      "assignment_id": "lec-20",
+      "path": "lectures/20_mendeleev.md",
+      "objective_ids": [
+        "lec-20"
+      ],
+      "assessment": "graded",
+      "assessment_source": {
+        "path": "syllabus.md",
+        "sha256": "868eadde272bdaa2890b68047937b2c7fd1cee50c0ea8f0d1daba612c08778f4",
+        "locator": {
+          "lines": {
+            "start": 66,
+            "end": 67
+          }
+        }
+      }
+    },
+    {
+      "assignment_id": "lec-21",
+      "path": "lectures/21_evolyuciya_lamark_darvin.md",
+      "objective_ids": [
+        "lec-21"
+      ],
+      "assessment": "practice",
+      "assessment_source": {
+        "path": "lectures/21_evolyuciya_lamark_darvin.md",
+        "sha256": "b86aad0a9b9464ae3b6dda7a48b502886fa4ac484440f03069cb50ecd8b904bf",
+        "locator": {
+          "lines": {
+            "start": 55,
+            "end": 59
+          }
+        }
+      }
+    },
+    {
+      "assignment_id": "lec-22",
+      "path": "lectures/22_darvin_sechenov.md",
+      "objective_ids": [
+        "lec-22"
+      ],
+      "assessment": "practice",
+      "assessment_source": {
+        "path": "lectures/22_darvin_sechenov.md",
+        "sha256": "aded0d57c3d5c7ea936b344de3508187f69b43417280c71e2deb37743c8415e5",
+        "locator": {
+          "lines": {
+            "start": 63,
+            "end": 67
+          }
+        }
+      }
+    },
+    {
+      "assignment_id": "lec-23",
+      "path": "lectures/23_bionika.md",
+      "objective_ids": [
+        "lec-23"
+      ],
+      "assessment": "practice",
+      "assessment_source": {
+        "path": "lectures/23_bionika.md",
+        "sha256": "1ae79357145a6b4e135a58e59845ce271fd3f56d4cc4d6d8846e7d91703ab428",
+        "locator": {
+          "lines": {
+            "start": 62,
+            "end": 66
+          }
+        }
+      }
+    },
+    {
+      "assignment_id": "lec-24",
+      "path": "lectures/24_kirpichev.md",
+      "objective_ids": [
+        "lec-24"
+      ],
+      "assessment": "practice",
+      "assessment_source": {
+        "path": "lectures/24_kirpichev.md",
+        "sha256": "e563dbf6f636c36ed630b73fc00259e1ccf58233205af704b8b53d429f08da16",
+        "locator": {
+          "lines": {
+            "start": 57,
+            "end": 62
+          }
+        }
+      }
+    },
+    {
+      "assignment_id": "lec-25",
+      "path": "lectures/25_aerodinamika_bas.md",
+      "objective_ids": [
+        "lec-25"
+      ],
+      "assessment": "practice",
+      "assessment_source": {
+        "path": "lectures/25_aerodinamika_bas.md",
+        "sha256": "495e6ee366f1b569f125840f041f9b350b8d8259924432207e3a8761d8113a92",
+        "locator": {
+          "lines": {
+            "start": 59,
+            "end": 64
+          }
+        }
+      }
+    },
+    {
+      "assignment_id": "lec-26",
+      "path": "lectures/26_bebbiddzh.md",
+      "objective_ids": [
+        "lec-26"
+      ],
+      "assessment": "graded",
+      "assessment_source": {
+        "path": "syllabus.md",
+        "sha256": "868eadde272bdaa2890b68047937b2c7fd1cee50c0ea8f0d1daba612c08778f4",
+        "locator": {
+          "lines": {
+            "start": 66,
+            "end": 67
+          }
+        }
+      }
+    },
+    {
+      "assignment_id": "lec-27",
+      "path": "lectures/27_cifrovye_dvoyniki.md",
+      "objective_ids": [
+        "lec-27"
+      ],
+      "assessment": "practice",
+      "assessment_source": {
+        "path": "lectures/27_cifrovye_dvoyniki.md",
+        "sha256": "ef14ee1dd30491d57e9d3db6d30d85aa4b641bc9af3aed2d75eabe0ed10c641f",
+        "locator": {
+          "lines": {
+            "start": 57,
+            "end": 62
+          }
+        }
+      }
+    },
+    {
+      "assignment_id": "lec-28",
+      "path": "lectures/28_nauka_i_obschestvo_xx.md",
+      "objective_ids": [
+        "lec-28"
+      ],
+      "assessment": "practice",
+      "assessment_source": {
+        "path": "lectures/28_nauka_i_obschestvo_xx.md",
+        "sha256": "5ca271d6f936da04031fa103ae2e2a5b6d85c776a82772398a92b2014dc3cc56",
+        "locator": {
+          "lines": {
+            "start": 71,
+            "end": 77
+          }
+        }
+      }
+    },
+    {
+      "assignment_id": "lec-29",
+      "path": "lectures/29_kosmicheskaya_gonka.md",
+      "objective_ids": [
+        "lec-29"
+      ],
+      "assessment": "graded",
+      "assessment_source": {
+        "path": "syllabus.md",
+        "sha256": "868eadde272bdaa2890b68047937b2c7fd1cee50c0ea8f0d1daba612c08778f4",
+        "locator": {
+          "lines": {
+            "start": 66,
+            "end": 67
+          }
+        }
+      }
+    },
+    {
+      "assignment_id": "lec-30",
+      "path": "lectures/30_nauka_xxi.md",
+      "objective_ids": [
+        "lec-30"
+      ],
+      "assessment": "graded",
+      "assessment_source": {
+        "path": "lectures/30_nauka_xxi.md",
+        "sha256": "1926e55607b7d3ae83578b442e0b69251209bdbcaaf98e49fb7333aaac30074b",
+        "locator": {
+          "lines": {
+            "start": 137,
+            "end": 148
+          }
+        }
+      }
+    }
+  ]
+}

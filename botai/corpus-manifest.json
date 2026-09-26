@@ -1,0 +1,2650 @@
+{
+  "schema_version": 2,
+  "corpus_id": "histsci-corpus",
+  "version": "2026-09-13-v2",
+  "source_revision": "2026-09-13-v2",
+  "description": "Корпус курса «История и философия науки и технологий»: индекс (annoy.index, embeddings.npy, chunks.jsonl, config.json) и тексты (texts.zip → texts/*.txt). Тексты и индекс собраны из одного набора файлов, поэтому цитату можно найти по индексу и подтвердить дословно по тексту с координатами «файл · фрагмент #N».",
+  "artifacts": [
+    {
+      "artifact_id": "annoy.index",
+      "url": "https://huggingface.co/datasets/brics-edtech/histsci-corpus/resolve/main/annoy.index",
+      "sha256": "76087eac2866d1c43321bdf575293ddf5392d49ea2038a3429956baf3799a849",
+      "compressed_bytes": 168812496,
+      "unpacked_bytes_max": 168812496,
+      "media_type": "application/octet-stream",
+      "unpack": "none",
+      "auth_required": false
+    },
+    {
+      "artifact_id": "chunks.jsonl",
+      "url": "https://huggingface.co/datasets/brics-edtech/histsci-corpus/resolve/main/chunks.jsonl",
+      "sha256": "e8378082263a78189ede66c26ec77b04d64b2503288f2fdd8543201a5fd703f7",
+      "compressed_bytes": 161780966,
+      "unpacked_bytes_max": 161780966,
+      "media_type": "application/octet-stream",
+      "unpack": "none",
+      "auth_required": false
+    },
+    {
+      "artifact_id": "config.json",
+      "url": "https://huggingface.co/datasets/brics-edtech/histsci-corpus/resolve/main/config.json",
+      "sha256": "c6eaa1bb1186b86e003577aa8dc159be2382d493367448be1a7d7f78e41c86b2",
+      "compressed_bytes": 22727,
+      "unpacked_bytes_max": 22727,
+      "media_type": "application/octet-stream",
+      "unpack": "none",
+      "auth_required": false
+    },
+    {
+      "artifact_id": "embeddings.npy",
+      "url": "https://huggingface.co/datasets/brics-edtech/histsci-corpus/resolve/main/embeddings.npy",
+      "sha256": "f9eb4434b8611bcf6f9c0d85844ec1853f33bc369a10b3204ad292073748274e",
+      "compressed_bytes": 154082432,
+      "unpacked_bytes_max": 154082432,
+      "media_type": "application/octet-stream",
+      "unpack": "none",
+      "auth_required": false
+    },
+    {
+      "artifact_id": "texts.zip",
+      "url": "https://huggingface.co/datasets/brics-edtech/histsci-corpus/resolve/main/texts.zip",
+      "sha256": "9eb72154ecc6adeef7dc61f7d9b62078b4f0cdef0187fa102b21cb17298f12b6",
+      "compressed_bytes": 135071883,
+      "unpacked_bytes_max": 136048471,
+      "media_type": "application/zip",
+      "unpack": "zip",
+      "auth_required": false
+    }
+  ],
+  "files": [
+    {
+      "path": "annoy.index",
+      "sha256": "76087eac2866d1c43321bdf575293ddf5392d49ea2038a3429956baf3799a849",
+      "byte_size": 168812496,
+      "role": "index",
+      "artifact_id": "annoy.index"
+    },
+    {
+      "path": "chunks.jsonl",
+      "sha256": "e8378082263a78189ede66c26ec77b04d64b2503288f2fdd8543201a5fd703f7",
+      "byte_size": 161780966,
+      "role": "chunks",
+      "artifact_id": "chunks.jsonl"
+    },
+    {
+      "path": "config.json",
+      "sha256": "c6eaa1bb1186b86e003577aa8dc159be2382d493367448be1a7d7f78e41c86b2",
+      "byte_size": 22727,
+      "role": "metadata",
+      "artifact_id": "config.json"
+    },
+    {
+      "path": "embeddings.npy",
+      "sha256": "f9eb4434b8611bcf6f9c0d85844ec1853f33bc369a10b3204ad292073748274e",
+      "byte_size": 154082432,
+      "role": "index",
+      "artifact_id": "embeddings.npy"
+    },
+    {
+      "path": "texts/history_of_astronomy_A_Popular_History_of_Astronomy_During_the_Nineteenth_Centur.txt",
+      "sha256": "f78b9725b963cc0489370792d2e6eb5ad447ef78a802c0d4c568b095303055d4",
+      "byte_size": 1075641,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/history_of_astronomy_Outlines_of_Astronomy.txt",
+      "sha256": "8ea9bf1a43f09b9cea59c0d9a0a9e097cee631dcbc2587ea62dc22de9363e140",
+      "byte_size": 84898,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/history_of_astronomy__A_Popular_History_of_Astronomy_During_the_Nineteenth_Century.txt",
+      "sha256": "f78b9725b963cc0489370792d2e6eb5ad447ef78a802c0d4c568b095303055d4",
+      "byte_size": 1075641,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/history_of_astronomy__A_Short_History_of_Astronomy.txt",
+      "sha256": "cdb630e171fe3f921bc6089b845ea618edd4d18a140bdbd93a821c44d6453c38",
+      "byte_size": 1056067,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/history_of_astronomy__Old_and_New_Astronomy.txt",
+      "sha256": "2f92fa2778cc00e0673bc017de1b79ee36cdc9d285df7e4d3b045b28114d750a",
+      "byte_size": 150100,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/history_of_astronomy__Outlines_of_Astronomy.txt",
+      "sha256": "8ea9bf1a43f09b9cea59c0d9a0a9e097cee631dcbc2587ea62dc22de9363e140",
+      "byte_size": 84898,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/history_of_biology__On_the_Origin_of_Species.txt",
+      "sha256": "06488b655f2b2e883376cff05604a016431319928ea200cac47f03bd258d9b95",
+      "byte_size": 954824,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/history_of_biology__The_Descent_of_Man.txt",
+      "sha256": "dfc080338496fe46a49f65f7de1db1d61a228c7f5a0cfda4015bcb4de68dc052",
+      "byte_size": 1917711,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/history_of_biology__The_History_of_Biology.txt",
+      "sha256": "f596186172aff58524b212121ae34276cb068ea8ca4c0aa1ef3a0089b231fe08",
+      "byte_size": 2356450,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/history_of_biology__The_History_of_Creation_vol.1.txt",
+      "sha256": "8b703c73d71709ad235246ebcda3a588547973b6c91b3f9d9a1e8ed0d1a0233d",
+      "byte_size": 696063,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/history_of_biology__The_History_of_Creation_vol.2.txt",
+      "sha256": "6c4e569461f5ac7f13dc6a91d59eb0deae9fbf2290579cf3744b1b1b131ed26a",
+      "byte_size": 640245,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/history_of_biology__Zoological_Philosophy.txt",
+      "sha256": "adee93589c1dcff6f34df1d81c862a9bf12062a7e0ef40cf4236c2a9164de1c6",
+      "byte_size": 1173494,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/history_of_biology__Рефлексы_головного_мозга.txt",
+      "sha256": "b00c9832a82c909c52ad998397861cb50eefb7296540d3ed7b2f887b4cddbbac",
+      "byte_size": 431475,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/history_of_chemistry__A_History_of_Chemistry.txt",
+      "sha256": "a2906c4f579f663a6c65ce461b0003b5041fc34159d3bb3b97331193607f70fd",
+      "byte_size": 14795,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/history_of_chemistry__The_Gases_of_the_Atmosphere_The_History_of_Their_Discovery.txt",
+      "sha256": "0a669cb890b574d736945c2dd9e673319e9c04071f311c6c64d680e6dd69b13d",
+      "byte_size": 375305,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/history_of_chemistry__The_History_of_Chemistry.txt",
+      "sha256": "be003e1d1983198e669ba6c5496ff3fabcd75b0e75a79ed156f4bf86bd3460dc",
+      "byte_size": 1253395,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/history_of_chemistry__Основы_химии.txt",
+      "sha256": "c373abd573551e96431c41b0250637fb701dd93b5f496c83283fc571574b4aba",
+      "byte_size": 1202475,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/history_of_chemistry_Д_И_Менделеев_Периодический_закон.djvu.txt",
+      "sha256": "010a4cd28f42408ae28f49291f803816d0ce255d7465d515dafc7687c66042f4",
+      "byte_size": 2802434,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/history_of_chemistry_Основы_химии.txt",
+      "sha256": "c373abd573551e96431c41b0250637fb701dd93b5f496c83283fc571574b4aba",
+      "byte_size": 1202475,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/history_of_computing__NASA_Computers_in_Spaceflight.txt",
+      "sha256": "c7495105e8298a6ff50b521a5bb0d764953e63b4767f673e321b87deb8c71ef8",
+      "byte_size": 810864,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/history_of_computing__Passages_from_the_Life_of_a_Philosopher.txt",
+      "sha256": "342a880b05d8e148b695329a1e353ab1e2f017d3b25d8cd050d6205367c01e17",
+      "byte_size": 849371,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/history_of_engineering__A_History_of_Inventions_and_Discoveries.txt",
+      "sha256": "c14418b731877c62a223c5f4221515c0f87b4b83cd9dc128cd27d93890f48cbe",
+      "byte_size": 1390119,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/history_of_engineering__Lives_of_the_Engineers.txt",
+      "sha256": "f372fe1e678e0f8d1e38fb51b030e7e2b15b4af7fce3c3f3a641c70936eb0c84",
+      "byte_size": 706173,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/history_of_engineering__The_Origins_of_Invention_A_Study_of_Industry_Among_Primitive_Peoples.txt",
+      "sha256": "d953a8ce1b100fe3538bebf53513939cca8049e3f83ea7223874884d6c518626",
+      "byte_size": 757020,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/history_of_engineering__Беседы_о_механике.djvu.txt",
+      "sha256": "5966c5223549312e1a9654ebda54d7e3910798880b0910479c9bb382cfb38a9b",
+      "byte_size": 1075384,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/history_of_engineering__Беседы_о_механике.txt",
+      "sha256": "5966c5223549312e1a9654ebda54d7e3910798880b0910479c9bb382cfb38a9b",
+      "byte_size": 1075384,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/history_of_engineering_Беседы_о_механике.djvu.txt",
+      "sha256": "5966c5223549312e1a9654ebda54d7e3910798880b0910479c9bb382cfb38a9b",
+      "byte_size": 1075384,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/history_of_mathematics__A_History_of_Mathematics.txt",
+      "sha256": "f3bc2417d98c09def1212f4da5845d3a9b169d2982fa9b44e7d9b2b0553c962b",
+      "byte_size": 776315,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/history_of_mathematics__A_Short_Account_of_the_History_of_Mathematics.txt",
+      "sha256": "1be708c8b2db009821c9bd2579df6eb9e90f5e52cb3a9c709c573bb273e2c9dd",
+      "byte_size": 1172043,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/history_of_mathematics__History_of_Mathematics_vol.1.txt",
+      "sha256": "346145b47f1e126c8412d1dda75203568cf5e9512d7fcb9f546afa3dab3b22c9",
+      "byte_size": 1249749,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/history_of_mathematics__History_of_Mathematics_vol.2.txt",
+      "sha256": "bff3ac86b3c25b6891d236dceabe714cb4fb755c4f55c5b8f69f51dc79325243",
+      "byte_size": 1484496,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/history_of_mathematics__История_математики_в_XVI_и_XVII_веках.txt",
+      "sha256": "108625f8b991d897f5e416065aeb099f60efbf2eef1d860f8af9f07ce9b8d41a",
+      "byte_size": 1940680,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/history_of_mathematics__История_математики_в_древности_и_в_средние_века.txt",
+      "sha256": "0c3ef4736391eb954c1a049853dfe050c76ce306670b32c8263fb6341f75ff1b",
+      "byte_size": 1044398,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/history_of_physics_Principia_Mathematical_Principles_of_Natural_Philosophy_.txt",
+      "sha256": "52d8fa4efdc4ea091e6aa0d4c93c173370be52ffca038291d559ac0597154063",
+      "byte_size": 8763,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/history_of_physics__A_History_of_Physics.txt",
+      "sha256": "96cbc84c33f65f4a5e4630a7a86de6c48b5fbd481c5f7dd81a43a876e92b8564",
+      "byte_size": 616815,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/history_of_physics__A_History_of_Physics_in_its_Elementary_Branches.txt",
+      "sha256": "96cbc84c33f65f4a5e4630a7a86de6c48b5fbd481c5f7dd81a43a876e92b8564",
+      "byte_size": 616815,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/history_of_physics__A_Treatise_on_Electricity_and_Magnetism.txt",
+      "sha256": "df520a9a5959103754c3c140233aa841447efca97bb546d5a0a8b6ebf75ed4f5",
+      "byte_size": 1045208,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/history_of_physics__Dialogues_Concerning_Two_New_Sciences.txt",
+      "sha256": "b0e5e26761111b074c31e24d84e93353bba285264815ce5bb0a587cbcf54a80b",
+      "byte_size": 647117,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/history_of_physics__Experimental_Researches_in_Electricity.txt",
+      "sha256": "7e34be438a4ae7e2ed3c92241fb29ce18022bce9cbeba9a4b01c12a62b1a96d4",
+      "byte_size": 1703869,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/history_of_physics__Principia_Mathematical_Principles_of_Natural_Philosophy.txt",
+      "sha256": "52d8fa4efdc4ea091e6aa0d4c93c173370be52ffca038291d559ac0597154063",
+      "byte_size": 8763,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/history_of_physics__The_Science_of_Mechanics.txt",
+      "sha256": "9f50a33ab32087dea0b4128ed7d8b0220ae1f0844a772d4ac49c66cb162b0e32",
+      "byte_size": 2981,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/history_of_physics__Исаак_Ньютон.txt",
+      "sha256": "c78e22571a8663038b2fc4de4ffcb23412d0d257eee0b039b990561d8b992c5d",
+      "byte_size": 825100,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/history_of_science_general__The_Dialogues_Concerning_Two_New_Sciences.txt",
+      "sha256": "a9d1205f00eaa7b17f2676af833084b3444219a8a5abf5b1b594ebacb7401db4",
+      "byte_size": 587139,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/history_of_science_general__Whewell_History_of_the_Inductive_Sciences.txt",
+      "sha256": "674312ba675ae75437485bf8559291584b23920decf307e44e88ad10e15bd07b",
+      "byte_size": 1379522,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/history_of_technology__NASA_Beyond_the_Ionosphere.txt",
+      "sha256": "d911ac40c7f0ca8131f525fb770423c032205b55d3a46e52aba53ecb5fd414ce",
+      "byte_size": 1100595,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/history_of_technology__US_National_AI_Strategic_Plan_2019.txt",
+      "sha256": "7d13589054ca044942ba34e3a441239f81c225fa2d5ac3b18a03d2b26691f795",
+      "byte_size": 135653,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/history_of_technology__US_Preparing_for_Future_of_AI_2016.txt",
+      "sha256": "3822869f408842a23c2daef6fe2152e95aa3613659de688faff6be96d3b7838d",
+      "byte_size": 166191,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/lesson1__Bacon_Advancement_of_Learning.txt",
+      "sha256": "f6ab80374106cecb06cb30461fbe8ba9d70e04b18ca16adc4535ec0a77f933fd",
+      "byte_size": 899961,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/lesson1__Bacon_Novum_Organum.txt",
+      "sha256": "34bff9bcc8e3e5c1406ca7313d7adbeb14394dd4374dee60086ce9038abb91d7",
+      "byte_size": 246523,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/lesson1__Barnes_Studies_in_Historical_Method.txt",
+      "sha256": "373d4e3c1c50ce1a37b068e70404621e0245d3d93df620fb601f641541e8de8b",
+      "byte_size": 302376,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/lesson1__Bernard_Experimental_Medicine.txt",
+      "sha256": "35581bf5fb512f397a0c5aecb8346d71bbea31ee704d991ecd1a01ffc81035cd",
+      "byte_size": 597677,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/lesson1__Bourne_Essays_in_Historical_Criticism.txt",
+      "sha256": "dd1e609ed5a280166820abf1f39976fa144a3ea6cc6d0138cd8834fed112a937",
+      "byte_size": 611545,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/lesson1__Campbell_What_is_Science.txt",
+      "sha256": "b7f818a1a7dc6d78329e0ffe3b4ea47ac5a1296b89376d680273c14534088ae2",
+      "byte_size": 356563,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/lesson1__Clifford_Common_Sense_Exact_Sciences.txt",
+      "sha256": "817925480f3801067a9db8f78cef93347f2f6219b5c3b6672b4b156bbcc46325",
+      "byte_size": 521373,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/lesson1__Comte_Positive_Philosophy.txt",
+      "sha256": "71f682647bf6cfb2b7f2a09a81c07efa46700a93c905231c7b32795db1db8829",
+      "byte_size": 1000953,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/lesson1__Croce_Theory_and_History_of_Historiography.txt",
+      "sha256": "95d0144c44477336d245cdf9b637e39758d6aed4e3b27572b5e54efe1598682b",
+      "byte_size": 554436,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/lesson1__Descartes_Discourse_on_Method.txt",
+      "sha256": "cb0fdbbf64442361d94612a16288c6c5319b9353c51691e211b6029e2da17d8e",
+      "byte_size": 917775,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/lesson1__Faraday_Chemical_History_of_a_Candle.txt",
+      "sha256": "50606c68938c0808b33f3a1fc9c0af62e71c6289b8c4a0dbb2ab731852e64d94",
+      "byte_size": 229177,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/lesson1__Flint_Outline_of_Historical_Method.txt",
+      "sha256": "b508e57eb281543b0bea78df86f8f307e39d2a7a2a131ac6bb2ee7f584484c36",
+      "byte_size": 182624,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/lesson1__Flint_Writing_of_History.txt",
+      "sha256": "81289ba4db7c3244b3e69bcf164b5b1fb54e2859c5fa4ec921deef1c3df58105",
+      "byte_size": 285631,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/lesson1__Herschel_Discourse_Natural_Philosophy.txt",
+      "sha256": "cdf08d0216fae47482ad97d630ef0d8ef82f21a3189cddee3a2785e80b860b65",
+      "byte_size": 651047,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/lesson1__Historical_Criticism_of_Documents.txt",
+      "sha256": "dbabe538f40cd31d7705b596921599e289e2aa2fc7934ea421a185584229b6f5",
+      "byte_size": 60257,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/lesson1__Huxley_Science_and_Culture.txt",
+      "sha256": "400b556343d48a5a6ccdb141c72fb95f9c72922f595bf02d0755cb7b724648fb",
+      "byte_size": 534023,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/lesson1__Jevons_Principles_of_Science.txt",
+      "sha256": "019c4960c4d71f547d536ce45fb0ead9a26d458a0f93eb189254d601d04f8d8d",
+      "byte_size": 1761656,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/lesson1__Kelvin_Popular_Lectures.txt",
+      "sha256": "53cb345b69998bda219142ce43ad0ce5d5a7dd506c5b01b8882a07540b86c5b3",
+      "byte_size": 683386,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/lesson1__Libby_History_of_Science.txt",
+      "sha256": "a2e870d7de05669941b3ec9decbc7be24eb580cebf7d6cb75636dc5397ae9b46",
+      "byte_size": 458303,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/lesson1__Mill_System_of_Logic.txt",
+      "sha256": "ac94ca6f102746c2f2b4214e78f52f78bd8c4c5d78df53dd7f92b663037b7fd0",
+      "byte_size": 2116353,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/lesson1__Pearson_Grammar_of_Science.txt",
+      "sha256": "a1b60cd3929b2040a8185641d8449417391f5d9da4aa2b9f4c3d6c3498c0011d",
+      "byte_size": 1170526,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/lesson1__Poincare_Science_and_Method.txt",
+      "sha256": "a665c25bd0fc75876902f6cbaf4b511f937a9fd18c456ca2c8d328780220216c",
+      "byte_size": 434367,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/lesson1__Royal_Society_Record.txt",
+      "sha256": "0a02437ea8c9d2a01fd29305ffc94ec0fe81bc48817cba61a28553fd64e4fae7",
+      "byte_size": 1097478,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/lesson1__Sedgwick_Tyler_Short_History_of_Science.txt",
+      "sha256": "105af80ef4eba9399e47c8bae168b8ba22dd3daa357cce12d41c5c47b02ed86b",
+      "byte_size": 1058799,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/lesson1__Tyndall_Fragments_of_Science.txt",
+      "sha256": "ea06a8d2a39f44d0de257d2659390f11407d583ecfdda90bf671f8f9e18507ad",
+      "byte_size": 1204724,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/lesson1__Whewell_History_of_the_Inductive_Sciences.txt",
+      "sha256": "e0110343a860f305d425ec9e55a090ff16775823210f5bdca76a197ff84651fc",
+      "byte_size": 872885,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/lesson1__Whewell_Philosophy_of_Discovery.txt",
+      "sha256": "ad3fe4e74a450cee03c08764790e98977e7ad2b2040dbc5d67de85cc6f46f81e",
+      "byte_size": 1150651,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/lesson1__Whewell_Philosophy_of_the_Inductive_Sciences.txt",
+      "sha256": "677571b79650c3649c0b1dc1a699f253bc7d41f0ba088523224d292fe9b95a2e",
+      "byte_size": 1320071,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/oa__A_Timeline_of_Medieval_Universities_10.14428_rete.v8i0_timel.txt",
+      "sha256": "b81d407d851d8d45a73d22b72588278e4f5d385cb991fce922e1ed806c8c307a",
+      "byte_size": 13236,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/oa__A_method_for_assessing_scientific_and_additional_values_of_geomorphosi_10.5194_gh-62-148-2007.txt",
+      "sha256": "7e69d975aafa1ac660f42476545f770afba1c84c6669a4e3ca0c2f816cb97100",
+      "byte_size": 41926,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/oa__Ancient_technology_and_punctuated_change_Detecting_the_emergence_of_th_10.1371_journal.pone.022.txt",
+      "sha256": "d69f5138ebaecc5834adee6334de0c9efc8189b9d34d6aaf0e82994f2a906816",
+      "byte_size": 53199,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/oa__Architecture_City_and_Mathematics_The_Lost_Connection_10.22052_mir.2019.189803.txt",
+      "sha256": "6d19622efed189bb0d78480a27a6c0c91a926a7ab9b1798013b92009ec593bad",
+      "byte_size": 30423,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/oa__Crafts_by_Nomads_of_the_Ural_and_Turgai_Regions_at_the_Beginning_of_th_10.15688_jvolsu4.2021.4..txt",
+      "sha256": "6693467286ee9bcdfd0eb3fb7051d5146816af1ac2fa137ad75e007d44ecb68e",
+      "byte_size": 84411,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/oa__Dmitriy_Mendeleevs_Forecasts_of_the_Population_of_Russia_and_the_Reali_10.3897_popecon.2.e36054.txt",
+      "sha256": "6466600dbc742c105b40dd88457f3c56b85686949e25aa43f3bb6734ce353445",
+      "byte_size": 76860,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/oa__From_Neolithic_Revolution_to_industrialization_10.1017_s136510052300021.txt",
+      "sha256": "ff8f9e5a48863c896f1f8c0d703755b411eab1888a0412cb2ce7cbca66b6d0fc",
+      "byte_size": 84079,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/oa__GOD_NATURE_AND_THE_CAUSE_ESSAYS_IN_ISLAM_AND_SCIENCE_10.18317_kaderdergi.3643.txt",
+      "sha256": "701fd5419a75ce31892f0fb24f690e4a553e69ed331a003b219d8f52690bfa7f",
+      "byte_size": 22542,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/oa__HELIOCENTRISM_OF_JULIAN_THE_APOSTATE_10.25205_1995-4328-2024-.txt",
+      "sha256": "f3cdf7defb8cfce9bd9fbe7e4b78d368c49ae0054fb670fee05f49bfb71a5d81",
+      "byte_size": 31102,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/oa__Individuals_and_Institutions_in_Medieval_Scholasticism_10.14296_520.97819127023.txt",
+      "sha256": "c06196c9e134e079443d5d0f7c104909c8880be14177366696e1adc268adcb0b",
+      "byte_size": 867630,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/oa__Intentionality_in_medieval_and_baroque_scholasticism_10.21146_2072-0726-2020-.txt",
+      "sha256": "136b2632c21bddf1a6ed1f9cde454313b97f4e6e255b767aef52170e397d5a7a",
+      "byte_size": 80769,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/oa__Making_Modern_Migraine_Medieval_Men_of_Science_Hildegard_of_Bingen_and_10.1017_mdh.2014.28.txt",
+      "sha256": "c48c5b0d8203d4e26ab476243ac70a3920ec82cd787a7be6fe2c9896ab5a2a40",
+      "byte_size": 84243,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/oa__Modelling_and_measuring_complexity_of_traditional_and_ancient_technolo_10.1371_journal.pone.027.txt",
+      "sha256": "6b7814f8d40378f2edc4cee2bcdc886cb7ca3039c13bc4ae2048fc0f9576f67b",
+      "byte_size": 80782,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/oa__PHILOSOPHY_OF_ISLAMIC_SCIENCE_IN_AL_FARABIS_PERSPECTIVE_10.35961_rsd.v3i1.411.txt",
+      "sha256": "ce58c2f26dbc61f097b78953639a0b0e524625d2a5d9b07eaba4c40e6f4f0441",
+      "byte_size": 38375,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/oa__Perspective_Dimensions_of_the_scientific_method_10.1371_journal.pcbi.100.txt",
+      "sha256": "753bd9efe082f7ffbb177ced0c9db8e1215d2eafc2e2acf4b5053352f302bf04",
+      "byte_size": 49501,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/oa__The_when_the_where_and_the_why_of_the_Neolithic_revolution_in_the_Leva_10.4312_dp.28.3.txt",
+      "sha256": "297f7d360bb2dbdcc599cef130d3850621357f9ab2f09f8e9df6e3902fccae25",
+      "byte_size": 65431,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/oa__Women_in_the_medieval_university_10.12775_klio.2023.020.txt",
+      "sha256": "61e1e5ddb790c637a42e968b184f36259b22e58c07d7b33bbaed78f8d4ebcb62",
+      "byte_size": 39069,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/pd_MIND--COMPUTING-MACHINERY-AND-INTELLIGENCE.txt",
+      "sha256": "34982933e0640f54ec08fddb9f0e654548ef574947caae7f6d6ea3423dae0fc9",
+      "byte_size": 71083,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/pd__IA_10398549bsb.txt",
+      "sha256": "b6616ec8bea5ec08da1fdb2346a970a328ad0b12ecb947129eabbcf6636f9b9b",
+      "byte_size": 1183397,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/pd__IA_10562641bsb.txt",
+      "sha256": "f9091b1f3304260fce90692d57b345cf95262f6d5d9217703d07d9a767aeeff8",
+      "byte_size": 145934,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/pd__IA_10705490bsb.txt",
+      "sha256": "e439edef898c7a8704974aa6c56303d01ca701fb55895ff432537f8971e89edd",
+      "byte_size": 1547740,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/pd__IA_AngloNormanLapidaries.txt",
+      "sha256": "b24f89b3ae54d13438c75afc1ad2a266c0644b15a52de711e6e171192f6f6dab",
+      "byte_size": 851233,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/pd__IA_McGillLibrary-rbsc_bw_asadullah_bwlw7-16937.txt",
+      "sha256": "648d2735f33038131e7d362fa92d360f0cae3366e02f157e43e09a120c40bbc3",
+      "byte_size": 235870,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/pd__IA_Scholasticism.txt",
+      "sha256": "f3cf9b9fc62c2204a50fd74acfd8cad4175c0a5c24998575d5015dab41e659be",
+      "byte_size": 163374,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/pd__IA_anarrativeessay00hawtgoog.txt",
+      "sha256": "ca26f72dd5a5c19edc06daa103c4e692fed7b43441a3094950aa66d9f6a57d3c",
+      "byte_size": 151909,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/pd__IA_anintroductiont01lewigoog.txt",
+      "sha256": "b97b56e7f93f5893ef02d4ce6c380b47f139b674f8c7fd2c62cf89e3aa16d874",
+      "byte_size": 368034,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/pd__IA_annalidistorian01bologoog.txt",
+      "sha256": "252dd24481a8426bc9916f0ca3d99c745ead0142a9c851fd0ed766adfd8a8f0a",
+      "byte_size": 897808,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/pd__IA_annalslyceumnat02sciegoog.txt",
+      "sha256": "ef120cf1c76c99879d97b8fdbc8a82c0c3d644e83d3acf3dd37039f8a9d7e8c7",
+      "byte_size": 862182,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/pd__IA_arabicmanuscript10loui.txt",
+      "sha256": "df98bea8659a2cc70d209227dc772b9765a9a5d6175cc0beee58ce1424201de0",
+      "byte_size": 207485,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/pd__IA_arabicmanuscript28loui.txt",
+      "sha256": "cbaec64e284a149aa0806519b5c6f9aec3a5832a7a6ff4b0275427cd8859b724",
+      "byte_size": 171190,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/pd__IA_bub_gb_NbAgAAAAIAAJ.txt",
+      "sha256": "3a18c60ea60620d87f6a73e08296334d7ce869d46d1ec6238c8159d4ea6795e1",
+      "byte_size": 722109,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/pd__IA_bub_gb_pfc4AAAAMAAJ.txt",
+      "sha256": "f622693a83437a7afd754149ab4eafb529fb832a51b0e5d9a4df13a734a8b310",
+      "byte_size": 510208,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/pd__IA_bub_gb_qnAAAAAAYAAJ.txt",
+      "sha256": "8867d6e651350e68bae80f4d481080a3061bd379c24963554a15a9f20ea1819d",
+      "byte_size": 503485,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/pd__IA_bub_gb_xfY_AAAAIAAJ.txt",
+      "sha256": "3d16c61ae81c96e09aeb54152904ca397581ede15998b5a488b121fa7d3aed35",
+      "byte_size": 699151,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/pd__IA_bub_gb_zQwBAAAAYAAJ.txt",
+      "sha256": "5518deeeb9199c5a76eb79c0bb823b6eb64d979cee8855bba7985cd7e3e2386c",
+      "byte_size": 2038873,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/pd__IA_copernicus00dreygoog.txt",
+      "sha256": "943ce0cc85746e548d82b804b7a4e589aee3da4b177bb4a97ed6438c71726ac2",
+      "byte_size": 691405,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/pd__IA_cu31924012466433.txt",
+      "sha256": "86167142bfef6ec7ce8cd6374df3131844df186aad9e64b87351121af4bac279",
+      "byte_size": 905467,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/pd__IA_cu31924021994433.txt",
+      "sha256": "2bb824e9634cc42bd0b86fbd01530ff00a0be2802adc58eb961f50c4f5555459",
+      "byte_size": 1383961,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/pd__IA_diescholastikdes02wern.txt",
+      "sha256": "cf8e4889c428586d0bd6ba1123a4dfc93cdb373c2cf2073f86a7f43b636d60b5",
+      "byte_size": 1850168,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/pd__IA_diescholastiker00wich.txt",
+      "sha256": "bd1e93e5ce508913bf4447ef18512b4af36760c499a1453f575eed5a9b5f8768",
+      "byte_size": 271255,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/pd__IA_dlibra.bibliotekaelblaska.pl.34401_300.47580463.txt",
+      "sha256": "65a85a9bf1205edd287bdaae082fd7896592bee931dc8920ebe1cc2533917968",
+      "byte_size": 412929,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/pd__IA_drhgbronnsklasse0301cbron.txt",
+      "sha256": "7ed73b4e4ef981dcf054e84afc6e8efd2f7e7446fc0bee782297fe3f29b7d23b",
+      "byte_size": 1968126,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/pd__IA_elementseuclid00dgoog.txt",
+      "sha256": "1c352a5dc74e3bfca4d3f310547b0a02e926bd98a47dc6faa19fe64c7d75294b",
+      "byte_size": 1129885,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/pd__IA_elementseuclidv00robegoog.txt",
+      "sha256": "ea3f52e93156553325df609b26469dc7b80e11ba76db7339a6c72acb9bba42f0",
+      "byte_size": 549511,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/pd__IA_entwerfenanlageu464wagn.txt",
+      "sha256": "db1b10d44c3638d0310e3f1b7624d85f6ab6636259cd8339762dfedb02153f03",
+      "byte_size": 2053344,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/pd__IA_erkenntnisundir01machgoog.txt",
+      "sha256": "c55d847ff9689f5a2692efd0265e87a8ab446112aa48c563805b75ae44de5133",
+      "byte_size": 1114714,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/pd__IA_essaysoneducati01quicgoog.txt",
+      "sha256": "a2c6aa899b93cd2b70a2d02b963a9e1ba8aedf709264584f37114b08896d1444",
+      "byte_size": 1365134,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/pd__IA_exteriorballist00ingagoog.txt",
+      "sha256": "de556c0d4fd2c4e3685a75f65089b960c0b364062b4e7836f70339df44f867eb",
+      "byte_size": 266429,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/pd__IA_faithofmillionss01tyrr.txt",
+      "sha256": "b917a3fdcbeae48d10acdf83f831f1babef76e775ff7d84d09ef3ab278ed4a25",
+      "byte_size": 503992,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/pd__IA_flammarion_pluralite_mondes_habites_1862_1877_french.txt",
+      "sha256": "522650ddeacd874a99502b69e22a43a03be761f4f7b50c578b43f691afc97c1d",
+      "byte_size": 896507,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/pd__IA_foundationsofsci0000poin_e0k1.txt",
+      "sha256": "f46a686a0816e91ec55fd38f1a33312b27eecdbca375f6d57100874b4a26c4fc",
+      "byte_size": 1375271,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/pd__IA_foundationsscie01halsgoog.txt",
+      "sha256": "b8613f5b126aaf8c468ff98abaa8a031560a1642ad6060e9a9bdd6614e8298fe",
+      "byte_size": 1374013,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/pd__IA_geozentrischesWeltbild_2.txt",
+      "sha256": "cb560e46ef36d9d71bfe6522e582c82749d96e88a7fa7a6f5abca9ce139f59a2",
+      "byte_size": 269,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/pd__IA_histoiredesmath00zeutgoog.txt",
+      "sha256": "5577e1643b546e2619cc2805e2fda9d3b57e8a5a6746caddc29ee3f5daebc764",
+      "byte_size": 590907,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/pd__IA_in.ernet.dli.2015.100247.txt",
+      "sha256": "e87b1ed2f7d11f702cb925aa6956b14ca3c78b23681435cccb11789f980a543e",
+      "byte_size": 609005,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/pd__IA_in.ernet.dli.2015.196158.txt",
+      "sha256": "28830e64cc17cd278adeb1c152250da2f82ef85fb66a5dc1f1cef15a5da4a2ec",
+      "byte_size": 1676149,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/pd__IA_india.history.resource.35256.txt",
+      "sha256": "652e12ca9a665fc69fc04cc11582faa8bd015a292de515b6b438fd00b87faaa6",
+      "byte_size": 931026,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/pd__IA_india.history.resource.37084.txt",
+      "sha256": "bc999a70abf7c708d0e101375404917b65e2d965dc8d1e9d8a0343a5eef950a4",
+      "byte_size": 536718,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/pd__IA_india.history.resource.41217.txt",
+      "sha256": "3c9397e81bd2efd4c831b5e623b46d5d7ad036d8b7828f51bf2ed2e4c09e3578",
+      "byte_size": 1149244,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/pd__IA_inhonorempiiixpo00ross.txt",
+      "sha256": "61ccc4eda12e1a53a66e28fa8efed7b045c93f09afac46e2a9e19b7c4db36364",
+      "byte_size": 3430,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/pd__IA_int132452721916274274unse.txt",
+      "sha256": "973ee30d2ead463848d563be6b3ae3c3d7b694066989a5fb3101bf1a52269896",
+      "byte_size": 70489,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/pd__IA_introductiontoma0000bert_n2s9.txt",
+      "sha256": "8815d9965bfc75682aaa0d456b6aa2451c46dd3b969fe66dbb6c585098709ee2",
+      "byte_size": 440271,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/pd__IA_investigationofp19325gilc.txt",
+      "sha256": "bb9ab3535de9cf9b803b93296013a12091308e0ab050e6e5fe5fbcc0f66c86d4",
+      "byte_size": 58150,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/pd__IA_investigationson00shep.txt",
+      "sha256": "fb0bccc186eaf3d408836f2562ba467cf136c57f86609417df2493a986d14c46",
+      "byte_size": 629518,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/pd__IA_irishglossesmedi00stokuoft.txt",
+      "sha256": "89ca7e3e48abcdcbab5810b2df02cb6331ec1a31b58ad082a73a0a7f62b8eb2e",
+      "byte_size": 652402,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/pd__IA_jstor-1634732.txt",
+      "sha256": "f60e5719dd8824b0960ad2dc7ab0e479124a96ae45ff824309bd03a047ed861c",
+      "byte_size": 5361,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/pd__IA_jstor-1640266.txt",
+      "sha256": "5a46d45464575332f00a2566c096e7b93d878bf5789a090b11b00c61b0ccdb33",
+      "byte_size": 9678,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/pd__IA_jstor-1640499.txt",
+      "sha256": "4cc94c1275bd2144c984378e808362cf7f31f27141d85f96f2efa02769043aa0",
+      "byte_size": 9729,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/pd__IA_jstor-3142754.txt",
+      "sha256": "a360f06b12b05bfb965cfbc00dbda2f53649a5c071e31a4425ab388c1c9dc1dd",
+      "byte_size": 20805,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/pd__IA_logicchanceanes07venngoog.txt",
+      "sha256": "4fe93b090f79e507448f032d6da131f12c04fe80d55d9768f7b95434ad1fa5ce",
+      "byte_size": 1169954,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/pd__IA_originsofislamic0001alba.txt",
+      "sha256": "18cae474d7fd0af34e668004f8214c20af2c03f53ef0d35cc68a9295fcf74e24",
+      "byte_size": 884261,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/pd__IA_papers00fran.txt",
+      "sha256": "b1f7af3df3c18f9d68054fca1d6c2c9d74de72278ca5819b142ac478ef480deb",
+      "byte_size": 1311,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/pd__IA_pappialexandrin02hultgoog.txt",
+      "sha256": "299d91398a68e87e532dd70817a622508623dbbfa9b38dc63c9e314e3fd512c6",
+      "byte_size": 974361,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/pd__IA_pivotofcivilizat0000sang_g1a1.txt",
+      "sha256": "7961c55c1869bff60d7d47cbfa76acb35a4020b08e40ec11ea4436e9fcf387d0",
+      "byte_size": 344304,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/pd_analyticaltheory00four.txt",
+      "sha256": "d032537a7280ab17ee008e3b75a5a8dfa68c6344cbb04799997a692f12bdbe36",
+      "byte_size": 875868,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/pd_anatomicaldisser00harv.txt",
+      "sha256": "73879a2a4ff533492a3fce8ae2737a4578fea6a63af14f1ef7d6b586fe1153b0",
+      "byte_size": 346843,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/pd_atreatiseonelec01thomgoog.txt",
+      "sha256": "223db8c9312ddddf0677dd69ae1dce6e94b307cf0c716ee637188c38794ca66b",
+      "byte_size": 941323,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/pd_b28754761.txt",
+      "sha256": "cae7d5f597a95e86ef8b31a2caec8570a1a3d67c96de08220b64aec6db4ae4de",
+      "byte_size": 662303,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/pd_bacon-francis-novum-organum-the-new-organon.txt",
+      "sha256": "f9aedc78fde1a2001d2bcd87c592c7462c126d75d42a4c17ed3b50375daddfb7",
+      "byte_size": 469565,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/pd_baltimorelectur01kelvgoog.txt",
+      "sha256": "2c7c0e38cdaf33bc40f09da35b7a040dec2db469c6592033a83c67369eebfd02",
+      "byte_size": 1392249,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/pd_bub_gb_TqMEAAAAYAAJ.txt",
+      "sha256": "4c1c28fe6d67ed908a1f838b9c958b5867fcc5fd9286ac4322378d8e8969bf25",
+      "byte_size": 1197678,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/pd_conditionedrefle0000ippa.txt",
+      "sha256": "d4916c67ba789f1ec52a744c9ff85261ef04ab56ff6868ab255489a7c00e2e87",
+      "byte_size": 969029,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/pd_contributionstof00cantrich.txt",
+      "sha256": "bda77792ac24464a07100d22e2ffa772f54be47449c599f28579032b667486f4",
+      "byte_size": 274398,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/pd_dialogodigalileo00gali.txt",
+      "sha256": "f4390f38fcad9eb56f50356554a1accf8819bbc4a27f097d84e063b532590fa6",
+      "byte_size": 1209242,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/pd_discourseonmetho0000desc.txt",
+      "sha256": "2bc625ee4cc98f31894cc4aec97347c9df2ab1003083bf42fb6e31a1c76f44cf",
+      "byte_size": 146232,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/pd_electricwavesbe00hertgoog.txt",
+      "sha256": "9728ae4d2227a2fb7dc69598a8b361bb642e2f98b260c906ab1ed7403971c319",
+      "byte_size": 708008,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/pd_elementarytreati00maxwrich.txt",
+      "sha256": "91ab4218fd6f0a9d3107b0688505850e826545f259d636fc6984aada29b444c1",
+      "byte_size": 454151,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/pd_elementsofeuclid00eucl_0.txt",
+      "sha256": "a33935fab7482e609fab15aff829573366bca8da7c98ce213cb0207270bff7bf",
+      "byte_size": 174972,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/pd_foundationsgeom00hilbgoog.txt",
+      "sha256": "1987eaa895adb42e0a99526df54385aa35ce8008f600a2a8003be4409cb389b3",
+      "byte_size": 194979,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/pd_investigationofl01bool.txt",
+      "sha256": "5e5b141d0243b35871efb390cc0a16f0e53f5e412fc43d9f7a48f35829e6dff6",
+      "byte_size": 799880,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/pd_micrographia00hook.txt",
+      "sha256": "c10315ffd973091c124fa068cb3cfb1334f74eb0fc3de8a604a65fded2441a94",
+      "byte_size": 897867,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/pd_of-the-method-of-rendering-very-sensible-the-weakest-natural-or-artificial-electricity.txt",
+      "sha256": "859352862526571f864718f5501730ce7b338d74e4fb6de0cd1d6c07c6c1c124",
+      "byte_size": 153021,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/pd_on-the-revolutions-of-celestial-spheres.txt",
+      "sha256": "90b0ee788e934fc5e2ecc1c1adf10bfee36f9f189d071dbd7447790e823525d8",
+      "byte_size": 682604,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/pd_onloadstonemagne00gilbuoft.txt",
+      "sha256": "ae8ed1817b0c2059607302f61c7be7dc5fc80e16adff23cdde32154931b922af",
+      "byte_size": 682735,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/pd_principia00newtuoft.txt",
+      "sha256": "dd26432a591f78468168ffcd8b1faefd6d5851815a131d4e3a9e58379ffd5026",
+      "byte_size": 1021288,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/pd_principleschemi00lawsgoog.txt",
+      "sha256": "6c55f34b83768dc30f569310d867f45f762eb39af22c3cc545a5d28b2ba8df2a",
+      "byte_size": 2090825,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/pd_principlesofchem00menduoft.txt",
+      "sha256": "96b506547a7c82b5226dfe9ea59ccf27ce5ea6e81b84bbb9c4cf77f2d5cd5066",
+      "byte_size": 854078,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/pd_scepticalchymis00BoylA.txt",
+      "sha256": "1e00d47350db20eb8f4627feaa767e77dec8f1479ede68eeff818ff40c37c834",
+      "byte_size": 510027,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/pd_systemworld00laplgoog.txt",
+      "sha256": "1969b0a7674698ea345d7af267024a248a030ea08326abd6ce29796b4315d9fe",
+      "byte_size": 359452,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/pd_treatiseonlight031310mbp.txt",
+      "sha256": "e1fca43a3defbb96a629335922673d80c7ea991521ec30150c2a127070a74dad",
+      "byte_size": 209376,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/pd_williamgilbertof00gilb.txt",
+      "sha256": "26c722428229acaff8fb02cdd5128cc56df3101eb7aac169f3f2905dfcd33465",
+      "byte_size": 682575,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/ru__FORMATION_OF_A_HEALTHY_LIFESTYLE_AMONG_PRIMARY_SCHOOL_PUPILS_IN_A_SCIE.txt",
+      "sha256": "eee6c50e03cc9371d8a0744eb6288d4546a26023c042ea100705f65931de981a",
+      "byte_size": 34804,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/ru__IMPACT_OF_THE_SCIENTIFIC_AND_TECHNICAL_REVOLUTION_ON_THE_DEVELOPMENT_O.txt",
+      "sha256": "1cc24865b02b67f7b8b6a49dc186a9e6a29506c75d3dbc9884a51e5e5ad9abd9",
+      "byte_size": 41305,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/ru__Ideal_Construction_and_Genesis_of_the_Mathematical_Science_.txt",
+      "sha256": "bc2ceb622724f4eb5266bb1fb87b9c67d57a84f22e13334e0ac28e929effb6cf",
+      "byte_size": 95616,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/ru__STELE_OF_THE_16th_с_FROM_KUMUKH_VILLAGE_A_HIGHLY_ARTISTIC_WORK_OF_ISLA.txt",
+      "sha256": "7536d60183737022298cf952a0a4488597aee357510a6ef4a1a13e45b9ba0acf",
+      "byte_size": 43158,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/ru__The_role_of_the_first_European_scholars_and_Christian_missionaries_in_.txt",
+      "sha256": "179c67d1c83b70d6edac1d7eb418bcbe27309befc6f3695bc18280f690f3240f",
+      "byte_size": 117049,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/ru__АД_Урсул_Научная_мысль_как_планетное_явление_К_150_летию_со_дня_рожден.txt",
+      "sha256": "cb7d9676c5c6003db023a2c6cc4c0163aaea7db887fec4d6e70b393bb959f9d6",
+      "byte_size": 129742,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/ru__АНАЛИЗ_КАДРОВОГО_ПОТЕНЦИАЛА_ИНСТИТУТА_ХИМИИ_АН_ЭССР_С_1947_ПО_1975_г_1.txt",
+      "sha256": "e257ece336580d480bd9e22ac76e0c4ff4799af299f81b728dfb929faf17a28d",
+      "byte_size": 59529,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/ru__Арабская_весна_и_исламская_правовая_мысль_10173232072_8166.txt",
+      "sha256": "9fd2185bf68522333e8234248d75dae192e0abb2d0ca0c34aa6d98d61083b7a9",
+      "byte_size": 129002,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/ru__ВОЗВРАЩАЯСЬ_К_ВОПРОСУ_О_ЧИСЛЕННОСТИ_РУССКОЙ_РАТИ_НА_КУЛИКОВОМ_ПОЛЕ_102.txt",
+      "sha256": "666a43a33bd7ad54be6320415f539cd1db2d8f5b256dfa0561e49f058e1fe221",
+      "byte_size": 116659,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/ru__Возвращение_Китая_на_национальный_путь_развития_в_эпоху_глобализации_з.txt",
+      "sha256": "1b7515409ccd272d5778d1d9853032d338faad84aa6484b2e5b467153dadbacb",
+      "byte_size": 75497,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/ru__Географические_и_климатические_особенности_Центральнокамчатской_низмен.txt",
+      "sha256": "f4888e45d07dd2b86b0548ee24fd8c9cea06ee944924081974779615698e9ac2",
+      "byte_size": 10869,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/ru__Гуревич_ПС_Ценность_в_квантовой_перспективе_1072561999_2793.txt",
+      "sha256": "7710095a5ac5ead601f22f523d1dfa0cc6110c63fc0a8aa59fe558f29c0dd094",
+      "byte_size": 38628,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/ru__ИСТОРИЯ_ПОЯВЛЕНИЯ_И_РАЗВИТИЯ_МНЕМОТЕХНИКИ_КАК_ЭФФЕКТИВНОГО_МЕТОДА_ЗАПО.txt",
+      "sha256": "75ee35a73f040b9d1ff4503174295289893713e8b8e0ff78616829d27916e241",
+      "byte_size": 40039,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/ru__ИСТОРИЯ_РАЗВИТИЯ_ТРЕХМЕРНОГО_ГЕОЛОГИЧЕСКОГО_МОДЕЛИРОВАНИЯ_КАК_МЕТОДА_И.txt",
+      "sha256": "084873b39acd458f640446cc945758b8caf63650cbb72f13ebff99ec4ec58a08",
+      "byte_size": 93851,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/ru__Искусственный_интеллект_технологии_Big_Data_больших_данных_и_особеннос.txt",
+      "sha256": "4317a9ba696f2fe1f4d7753eb06a50ef76249c3fd3e4a127457f8fb0669c13d9",
+      "byte_size": 71840,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/ru__Историографическая_дискуссия_о_происхождении_китайской_астрономии_1022.txt",
+      "sha256": "4a28facffca5520265abd50171140b1d97143e6f673a30c81739d1a0f23c0428",
+      "byte_size": 103026,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/ru__История_исследований_каменных_углей_и_их_переработки_в_Туве_1025178nit.txt",
+      "sha256": "365ae34c38485477c44ad087adc9a2eb3769ab3c0f012a7b877652627936292c",
+      "byte_size": 115522,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/ru__История_образования_в_России_досоветский_и_советский_периоды_1017805zp.txt",
+      "sha256": "a613c615d66a98295ae47aa6cc5957d10d1b21a9ca61e3151d4973b0733f8874",
+      "byte_size": 64045,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/ru__История_психологии_как_направление_психологической_науки_и_пространств.txt",
+      "sha256": "5b3bcaad46d5995d50687953a9989d7a27bbc3b713891bb94ba4ca39f9ecfe1e",
+      "byte_size": 99825,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/ru__История_радиофизики_важнейшее_направление_в_истории_физики_.txt",
+      "sha256": "02c52c67e617cdf6985ea2afab6027f3cd7ffb021d3d58bd98888458dbe2ded6",
+      "byte_size": 84663,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/ru__История_развития_представлений_об_адсорбции_в_конце_18_и_19_веке_10173.txt",
+      "sha256": "afe4e94d7094cbd17d9952a5fe7b4a647b1d7c5c5973f6237fa292d2ff8db61c",
+      "byte_size": 75747,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/ru__История_развития_экологических_исследований_в_Туве_1025178nit2020.txt",
+      "sha256": "09a3b79bca77056609f50910580ec09ff01fd9346eb694399f716811a1d58289",
+      "byte_size": 133046,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/ru__К_истории_арабистики_в_Казахстане_.txt",
+      "sha256": "df9ead84ec828f5366c5b0c8df3a6c7b1edd89d8e7241496b68222694595f017",
+      "byte_size": 59142,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/ru__КОМПЬЮТЕРНОЕ_МОДЕЛИРОВАНИЕ_И_ВИРТУАЛЬНЫЙ_ЭКСПЕРИМЕНТ_КАК_СРЕДСТВО_ФОРМ.txt",
+      "sha256": "1e2c5ae95297191f0dabff29f71beb6a8a216a6982b3e7c5884986586787166c",
+      "byte_size": 122940,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/ru__Контрацептивная_революция_в_России_1017323demreview.txt",
+      "sha256": "4054b2405209e9a25989f358e3f3c47dd28c4195be6b8969b6ecd3fa1ce8581c",
+      "byte_size": 132283,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/ru__Концепт_моң_как_элемент_татарского_Космо_Психо_Логоса_интеллектуальный.txt",
+      "sha256": "a3cc43322d28bc7a3d22cba24ace5c0b1da45a949c4856bddacbf688900a0ef0",
+      "byte_size": 124400,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/ru__Концептуализация_социальной_онтологии_постгуманизма_социологические_им.txt",
+      "sha256": "b40d01b309806d586a83ac3f7e984f650fc8aab4edea016154d437a578a94ca0",
+      "byte_size": 122064,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/ru__Культурный_концепт_Герой_как_ценностный_ракурс_эпохи_1017805zpu2022.txt",
+      "sha256": "ce120d0b1edecf95707c39d132e7b0a90fcc6b4b0dbf551ac8453ae851ac175f",
+      "byte_size": 79094,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/ru__Методика_изучения_закона_абсолютного_излучения_черного_тела_в_курсах_ф.txt",
+      "sha256": "d6466c0de998e2aa9e326515d39742d76e4fb484cd488af5b2b466af63df0620",
+      "byte_size": 19904,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/ru__Мировые_научно_технологические_тренды_и_вызовы_рынку_труда_в_России_10.txt",
+      "sha256": "f4ac03faebeba0598697154a8d564a208536aab5efbf48f4c930ee3774d85778",
+      "byte_size": 38891,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/ru__Мускус_и_камфора_Отъ_меня_вечоръ_Леила_А_С_Пушкина_Cтруктура_текста_и_.txt",
+      "sha256": "5202999ae8562c884e7ba262dfae16d900c292cadc567f715d4d8cf219acd6f1",
+      "byte_size": 66833,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/ru__Назидательная_арабская_надпись_на_керамическом_сосуде_с_территории_Руб.txt",
+      "sha256": "8d059ec2f76210f88ef4d73e0ae3ddd16a6177691deeaaeca75cba26ce4ae6e4",
+      "byte_size": 37602,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/ru__Народная_и_традиционная_медицина_возможности_интеграции_медицинских_си.txt",
+      "sha256": "fbf65484a02913f68648297149bff4ea2a643e7657075f210f515b93bdb406b2",
+      "byte_size": 135270,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/ru__Научная_школа_МосГУ_по_молодежным_исследованиям_становление_состояние_.txt",
+      "sha256": "eb5de27de18890056e7d7745ab46a8c1cd00d6b0e0b4360b6dc33f462c64dc4e",
+      "byte_size": 107517,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/ru__Научная_элита_и_власть_рецензия_на_книгу_ЖИ_Алферова_Власть_без_мозгов.txt",
+      "sha256": "6e5957946984e1a59b280f8d5b628a48ebe9210618faff7d5d3626ae4d8cb59f",
+      "byte_size": 43813,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/ru__ОЕ_Баксанский_Наука_и_философия_образования_в_ХХI_веке_нарративность_и.txt",
+      "sha256": "f8edbd1fcdad10e24c65b9e8122c3d71b36e56cc39dbdb14f36d54cf929974be",
+      "byte_size": 97596,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/ru__Образ_монарха_наставника_в_творчестве_Н_В_Гоголя_1015393j9art20.txt",
+      "sha256": "459b8b3e1d45afe2f49c24dbad8b7df327d6be600c08d301ef1b1b467fbdfd72",
+      "byte_size": 87101,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/ru__Особенности_возникновения_арабской_науки_в_VIIVIII_вв_1017805zpu2022.txt",
+      "sha256": "4e6389e355d29828019b1c721fa3e015f7702e3bc358ff0bca4f3f236ca87d29",
+      "byte_size": 24628,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/ru__Особенности_языковой_интерференции_во_французском_языке_марокканских_б.txt",
+      "sha256": "352c25336b44455ab09bbd8a6715aded860c727e51c76d725673504a927ef1b5",
+      "byte_size": 65256,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/ru__От_военной_системы_связи_к_военной_когнитивной_информационно_телекомму.txt",
+      "sha256": "ccc57a5de894252fd8ae5289069aab7e1f7a28aaf471929244d54b620c355b53",
+      "byte_size": 39383,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/ru__Подготовка_высококвалифицированных_специалистов_в_области_техники_и_те.txt",
+      "sha256": "373114dd8dff7acaa4620ddde74145b40bb5cd0c95d0e716b1760f56e6af0cc4",
+      "byte_size": 51234,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/ru__РЕШЕНИЕ_ХУДОЖЕСТВЕННО_ОБРАЗНЫХ_ЗАДАЧ_ПРИ_СОЗДАНИИ_ЛАБОРАТОРНОГО_ПРАКТИ.txt",
+      "sha256": "70beb67cf253b2448570a41a45917dff3d13f8202e935b8bc328c0f21f091862",
+      "byte_size": 59238,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/ru__Российская_революция_1917_года_сквозь_призму_демографической_модерниза.txt",
+      "sha256": "effa4e83ead3fcba1dcef1648f460162936b8f56d7104ea1286451e39ce866f7",
+      "byte_size": 244885,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/ru__СРЕДНЕВЕКОВАЯ_ГЛИНЯНАЯ_ПОСУДА_КАК_ОПРЕДЕЛИТЕЛЬ_ЭТНОКУЛЬТУРНОГО_СОСТАВА.txt",
+      "sha256": "b39f68f353f5a3114939ebabf461582a45256f0e1400532d6c66893e48dbcd7b",
+      "byte_size": 31339,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/ru__СТРУКТУРНО_СЕМАНТИЧЕСКИЕ_И_ЛИНГВОСТИЛИСТИЧЕСКИЕ_ОСОБЕННОСТИ_АФОРИЗМОВ_.txt",
+      "sha256": "e2b8277073ec196881cf4d53d2680d3af56c06afa17f25cb8ce02be7a2454441",
+      "byte_size": 45509,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/ru__Сабанчиева_АК_Особенности_терминов_как_специальных_лексических_единиц_.txt",
+      "sha256": "0b38f53a70a52121e5af6d5b2e687d075b30f8206fb58b995bd702324d22026f",
+      "byte_size": 87345,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/ru__Самарская_ЕА_Раймон_Арон_Идеально_типический_метод_рассмотрения_индуст.txt",
+      "sha256": "d48fda0a95b9678fe941d16bb5a12f792583fdc2727d2a65806ed47cf64a75cf",
+      "byte_size": 69766,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/ru__Сейсмическая_история_Алтае_Саянского_региона_и_место_в_ней_тувинских_з.txt",
+      "sha256": "ce51220f2600cb9ad3dcdd56d754e416f6b8f76a066f47180d888232a8a9ce0b",
+      "byte_size": 68363,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/ru__Социальные_медиа_как_фактор_формирования_общественно_политических_уста.txt",
+      "sha256": "31971287315075b95c0ed4cce68065d4c1d2da26b4c5b41de9df2d9f02fcb09b",
+      "byte_size": 111966,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/ru__Средневековая_библейская_герменевтика_как_основа_богословия_Бревилокви.txt",
+      "sha256": "dda05875ad73950d48a4856cb534dce0869c241da95ef3e1b8f3e0d6403c72f7",
+      "byte_size": 33729,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/ru__Средневековая_орнитофауна_дельты_Волги_по_археолозоологическим_материа.txt",
+      "sha256": "01794ce77a7b8257850ba3b1a3b21bd3bd712d309042b7c7242a87afc4edc7d4",
+      "byte_size": 51159,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/ru__Философский_анализ_научной_революции_в_новом_аспекте_10248661997_2857.txt",
+      "sha256": "f03c104f9f0fac6869b3884d892eaa34aedc460197af26b794ab90d6687107f5",
+      "byte_size": 39718,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/ru__Это_наша_Страна_наш_Путь_и_наша_История_1017805zpu2019.txt",
+      "sha256": "137ce54970b0c64b638d3b2fe25425a56477f85ca0dab7457d22a610e29dbf95",
+      "byte_size": 88199,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wiki_ru__Естествознание_и_народная_экономия_Щапов.txt",
+      "sha256": "4e99d0ce5ecec7a8d6066362ca8a37f3c63af840309cc6ad667bc0f4d32d2413",
+      "byte_size": 114567,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wiki_ru__Записка_о_необходимости_создания_Комиссии_по_изучению_истории_науки_фи.txt",
+      "sha256": "428ed569b1b728ef271a41af218d6a01ad9294c830703e85e7cdc656cd11a8cb",
+      "byte_size": 10572,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wiki_ru__Из_истории_идей_Вернадский_1912.txt",
+      "sha256": "adc678822849a091c883c658cc132dca263a9cfe407be2e455e076a2c222cdab",
+      "byte_size": 69424,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wiki_ru__Издание_об_истории_организации_управления_и_поддержки_науки_в_СССР_Баб.txt",
+      "sha256": "b6b99f985930f3a34d270a53aaf9fc1dfed839c9b415cf53e3a308aff600a90b",
+      "byte_size": 11142,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wiki_ru__История_Древнего_Востока_Тураев_Том_I_История_науки.txt",
+      "sha256": "b220a698ceed025e0c087083c5deae008eefc1453673e88ae45e1aa290299fb9",
+      "byte_size": 205850,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wiki_ru__ЭСБЕ_Естествознание.txt",
+      "sha256": "7fce94685ff7309562c436db4347a22bc7c569c11702dfe9b8e95402c27402ee",
+      "byte_size": 13011,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wiki_ru__ЭСБЕ_Россия_Русская_наука.txt",
+      "sha256": "2651bbf931eae7d24984b77edbb4db51cf38530eb2f32b164ca8244c69e956ef",
+      "byte_size": 3450,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__Ada_Lovelace.txt",
+      "sha256": "3b7112cbe0efc3794a14b7fb55b9663bf5c797a2e927f282c4fe9bcefc724ede",
+      "byte_size": 40767,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__Aerodynamics.txt",
+      "sha256": "cf28f58f11912a2472d757739a27dc8bc02bee63f686af0152e6d475687dd403",
+      "byte_size": 22553,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__Al-Khwarizmi.txt",
+      "sha256": "22eb64089511732145cb0b26cbf62f4a10f280994fbca82ecfc1dee266a467bc",
+      "byte_size": 24778,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__Alchemy.txt",
+      "sha256": "350f9b6ea2c7bf140c00885e41f60b8b4974db43770e366e3b52982c8e7092be",
+      "byte_size": 63325,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__Alexander_Stepanovich_Popov.txt",
+      "sha256": "9c3f45832efdaf06bcca76146ebca0a4d690dcf6258c8bfac92d508a88971a11",
+      "byte_size": 17261,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__Analytical_Engine.txt",
+      "sha256": "d9b7ea2cef530d28c001a100f51f29728d6e91830148d68dc7fe005f6ac25182",
+      "byte_size": 15728,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__Ancient_Greek_mathematics.txt",
+      "sha256": "da1951b4c4121a1d401d766215505fd1131dd9c449de325d5cb4a3c0cdfec22d",
+      "byte_size": 36008,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__Antipositivism.txt",
+      "sha256": "cfa465b9ca3aee3a555380aabc18ec2b2386b3823deb63177413b6078da36a62",
+      "byte_size": 8030,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__Apollo_program.txt",
+      "sha256": "15e859134462cdf82242ae69c01afaa63db702951e21b3ef48228b9282bfbf70",
+      "byte_size": 65381,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__Archimedes.txt",
+      "sha256": "9ce363fd25716c35b24c5180625471fcee294d344a4805822806af34cae03bd5",
+      "byte_size": 37943,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__Artificial_intelligence.txt",
+      "sha256": "7606420d65f94b913ae9ec989f3cd6f1bb18d8128514b74042a4aab51e00cef7",
+      "byte_size": 87072,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__Avicenna.txt",
+      "sha256": "99a48b7307b929e220ff68ba6c449595ee7f062307f85d529a980649b21d00a6",
+      "byte_size": 51387,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__Babbage.txt",
+      "sha256": "3e1081be353affb681ecff90bf8007e507c5da336f179a2bd8ce0e181384d059",
+      "byte_size": 48804,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__Bessemer_process.txt",
+      "sha256": "48b4a2a6bb01ed2c5ca12d4247cc5ec219bc7d5ffc3afd7654b5809e71621100",
+      "byte_size": 16804,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__Big_Science.txt",
+      "sha256": "342398fad0b3d074c31702b17f5ca1b5c7e45d92b46dbf837f63ff7b8db45c13",
+      "byte_size": 8847,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__Bionics.txt",
+      "sha256": "8a23a8266d000f3c7dfe30cf145229b3caf62b05f25375eb161e428bb776d610",
+      "byte_size": 18935,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__Charles_Darwin.txt",
+      "sha256": "92a209b013fb1b9cfe9d271f2f9cb6d4b3db902e9ddda0a438c7ea0558262189",
+      "byte_size": 63688,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__Chemical_element.txt",
+      "sha256": "12e3b12df358c8e998180899ae96fbb5fcb9081d2c47d9b03b7a062e9f0ea211",
+      "byte_size": 58039,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__Computer.txt",
+      "sha256": "166e9904cbb93f0ece6077aaef29e5bb662483c3fc51608dbf2a61bc83e36784",
+      "byte_size": 56317,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__Diesel_engine.txt",
+      "sha256": "6c750f666b5b86e0556fc8d8d7593edc714e9df6094499ea8477e554bda5edc7",
+      "byte_size": 69794,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__Digital_twin.txt",
+      "sha256": "3db7d716dfb8ac9ecb5ede5a58a95bef77dd702ff8f0b8f5a3b3f4c3a6a74eb8",
+      "byte_size": 17137,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__Dmitri_Mendeleev.txt",
+      "sha256": "01c31736f64f5656aa512bad2cd4726b2a068de726d529450fd62f5dac1c7729",
+      "byte_size": 24547,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__ENIAC.txt",
+      "sha256": "4c44fcd29bbd7bbb5fd1a6c6d0cd79fffecc645a921b4f3d3226a55bbb0669c5",
+      "byte_size": 33070,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__Electromagnetic_radiation.txt",
+      "sha256": "67711b4428616c7baa04b0d856d7232f3e6bbac9a79cf759f1d486be88f6a0e6",
+      "byte_size": 51711,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__Empirical_evidence.txt",
+      "sha256": "c328d40f1ab91e02aa7542e23bfb9c810e4ccba0526e692925fe2d00f69bf82b",
+      "byte_size": 17208,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__Euclid.txt",
+      "sha256": "725d08dd270ce85fd61a423d8489db78d19fa59d13109b1f7b284bfec3a94cc7",
+      "byte_size": 19019,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__Evolution.txt",
+      "sha256": "ad388e592914de0f18afc0baa4b671346b1ab4ad46934e4c0eb427128b70cbbf",
+      "byte_size": 70029,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__Galileo_Galilei.txt",
+      "sha256": "4ae23231350521dd2107ba011410fb5beb3005066698b45ed1beb155dcb4b779",
+      "byte_size": 66937,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__Guglielmo_Marconi.txt",
+      "sha256": "d5a6b536228cca44e74779c1c3331036344d5732461fa1104ec91ca55a3dc459",
+      "byte_size": 39939,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__Gunpowder.txt",
+      "sha256": "90a2693e29e6c6aeaef477f84f363b7d52bad8bad3f437d8385a382c950a3ced",
+      "byte_size": 51554,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__Heinrich_Hertz.txt",
+      "sha256": "72811d01dc615f942c1eab0e90646ed9371eacc76d84d95fcf23b4835227b51a",
+      "byte_size": 16169,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__Historical_method.txt",
+      "sha256": "c1fc1b3d57cfb979b256f2d2e21ddf3adfebf0ac030648f141cf60dc4c815b06",
+      "byte_size": 26082,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__Historiography.txt",
+      "sha256": "4dd586e7d6cf72b5ba5a0bf23b378fe81d29d17ea8ea0823e99ace5616196850",
+      "byte_size": 105796,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__Historiography_of_science.txt",
+      "sha256": "26d4e38a6608047045ea34a27fedddafdd557a3809dacef4ffec035ec2301fd1",
+      "byte_size": 23039,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__History_of_algebra.txt",
+      "sha256": "fec37aec545d9a6f2fc5462e4ac1c2754d088df2d1b14932b21f809297a5d1aa",
+      "byte_size": 56557,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__History_of_anatomy.txt",
+      "sha256": "734db374c3602f1efe443edec5b602c843076bb4f06a2ad5bab2ab1e8510c058",
+      "byte_size": 36679,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__History_of_artificial_intelligence.txt",
+      "sha256": "b75ce39d0b0047c10b880b15da852f3b9dbb82a0db8087dc660f670cb083cca0",
+      "byte_size": 95450,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__History_of_astronomy.txt",
+      "sha256": "c7d0d5092f8e6256624c88e6dddf302348bce6e4f1c508b26c56ac477ecf3008",
+      "byte_size": 49448,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__History_of_aviation.txt",
+      "sha256": "fd278acefb4d303f1e851ffea1814d17c9e6236830626fe9dd926346c76ac2b8",
+      "byte_size": 72393,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__History_of_biology.txt",
+      "sha256": "610072448eaeb3836da46c68fcd5bb10b598fbcea58afdb29b66ab178f9e5717",
+      "byte_size": 57565,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__History_of_chemistry.txt",
+      "sha256": "7dba79fc2ad5ada97e5bd601c663b31cabce19133fd8980b74100c16aee83151",
+      "byte_size": 105480,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__History_of_computers.txt",
+      "sha256": "390c5fe4aa8b1fad974052d4ed6a08e03d11a5f9b8cd3464d6129f8c664fc039",
+      "byte_size": 67948,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__History_of_computing.txt",
+      "sha256": "70fd5b23ddfe08d07d168d4381ec90164cc33c83da0541ec7474508c601eb60d",
+      "byte_size": 29079,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__History_of_electrical_engineering.txt",
+      "sha256": "52d56d74d9a01bbb11f76e227a00a0c9e8b7f4ce3fd45527e95b90c3ef4aaa0c",
+      "byte_size": 19281,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__History_of_geometry.txt",
+      "sha256": "b6860c6e53713495e7adfcbb7f1e72126db0764f7e243bc3450dcb193490614b",
+      "byte_size": 34500,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__History_of_mathematics.txt",
+      "sha256": "7b493875ad2c09f93a8ccf2fc7c37156dadfe28712c2c4dfdca9855db034974f",
+      "byte_size": 36093,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__History_of_mechanical_engineering.txt",
+      "sha256": "be04a605c3a23202b49c1a0afc14e8a416defc528c919284e8d2200b21be3503",
+      "byte_size": 18172,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__History_of_metallurgy.txt",
+      "sha256": "e6f6ab05cbdbd30bf39535a437698b3c0dca4391580263f715c27d2ad27b9e4f",
+      "byte_size": 19784,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__History_of_optics.txt",
+      "sha256": "c920d86c30aec1906abcd9ded70c28c04233396779031a73dd3a04ae804b6542",
+      "byte_size": 26084,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__History_of_physics.txt",
+      "sha256": "cdd1f647275a621f49611ee0aaca4f83fd7b02645e1be7785d9d8627e4117dd0",
+      "byte_size": 84958,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__History_of_printing.txt",
+      "sha256": "82c7f79291bb4c91187a0b3d2b7a5d9714ec2a4053425df5be0f7c68c5e32eeb",
+      "byte_size": 86388,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__History_of_radar.txt",
+      "sha256": "16978d0a484802a90050bcf7902d90ff7bc5f0b29bb4b37f6f3ff1a233b833cf",
+      "byte_size": 95920,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__History_of_rockets.txt",
+      "sha256": "edc110cec1cb1a56c2efcf89ce635926ca85235063d6c32f1758b6e330429ee0",
+      "byte_size": 47975,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__History_of_science.txt",
+      "sha256": "709997b06e94c824c081e4f850f2cc827d89930fcde4b4630a14cc43d5fe4c03",
+      "byte_size": 86022,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__History_of_science_and_technology.txt",
+      "sha256": "bcd8a8a12d06e601196f790a01a7b86eba35047160d0614f70d49c06237f3229",
+      "byte_size": 19754,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__History_of_scientific_method.txt",
+      "sha256": "6e4e07d706e98b81f1c72b0046d9e3749580d739fecef735a30bcf5d047c4eca",
+      "byte_size": 61423,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__History_of_telecommunication.txt",
+      "sha256": "60f63ad6d3b911804419a9ab69e616c4c314038e4fc34dbff6876eaec4611dfb",
+      "byte_size": 28447,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__History_of_the_Internet.txt",
+      "sha256": "50c9171b9cf959bf9b2adfa523873f5066d840f4f7c92909aed6749cb04f184d",
+      "byte_size": 80155,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__History_of_the_microscope.txt",
+      "sha256": "01568328521968b3667680e945de8ecde9677d2c3152d16ec56faca5809a2885",
+      "byte_size": 19636,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__History_of_the_periodic_table.txt",
+      "sha256": "0d34d9612b1cdb56da940d25051429b02fc292734f8e6a1fa383ad73b0a22dc6",
+      "byte_size": 49585,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__History_of_the_steam_engine.txt",
+      "sha256": "38a2ad1ff1fc8a32bf1e3d9a8b198924642064df388083f456ff23921a07b2ee",
+      "byte_size": 35513,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__History_of_the_telescope.txt",
+      "sha256": "f7b9586fe9d20b04e63dff691d97e8bcb98dc63d16d6ab61169a01b9a42be97d",
+      "byte_size": 48644,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__History_of_thermodynamics.txt",
+      "sha256": "560fa1ce7afb63966535b3c3852dea1879e7ce06ce0aeab28a9576defab29f13",
+      "byte_size": 22179,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__Hypothesis.txt",
+      "sha256": "b4b22df13021b546ce37ee47175aea22328d4e2d35e483fb9cffa69c5c321dee",
+      "byte_size": 12537,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__Inductivism.txt",
+      "sha256": "e1ec30aba68d95d9c487ab50ea16a55ee0d20b5829302df0e02aec32cdf0877a",
+      "byte_size": 53697,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__Industrial_Revolution.txt",
+      "sha256": "6fc34910cc7ed24928cafcd7d57e026fbfe92389039841e9d3ca814d8276971b",
+      "byte_size": 112810,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__Internal_combustion_engine.txt",
+      "sha256": "bba977674888a8b57d7159fe883ba6b5fd0f685848a374cebe1b48cead36e3df",
+      "byte_size": 73826,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__Invisible_college.txt",
+      "sha256": "370fc3d60f31e03af920bc3fe5edda76d135ab25803d059a77b1b726e685542f",
+      "byte_size": 9158,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__Ivan_Pavlov.txt",
+      "sha256": "08d5195c06ced885a6d8a96561b6e237ef42f46567e1292a8fa041fa4799e9ae",
+      "byte_size": 20582,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__James_Clerk_Maxwell.txt",
+      "sha256": "c9afd4b0a62ca47707649ad7a91fec19dfe81c80b5c12612de4a14a02f8b4828",
+      "byte_size": 42287,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__James_Watt.txt",
+      "sha256": "d7882ab3d9b3a0161bd396a43880a8ae24e02e0084b42f5523a3078e06c5cf57",
+      "byte_size": 34662,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__Jean-Baptiste_Lamarck.txt",
+      "sha256": "220c57cfec59c778338441d63be64f86d8c709b7ef1322e10049117e2d196057",
+      "byte_size": 26859,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__Johannes_Kepler.txt",
+      "sha256": "2c9c1c4620468a7ea8001f87f748f8194d67db21acb6039dd8e210ca2d1c8c75",
+      "byte_size": 74225,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__Konstantin_Tsiolkovsky.txt",
+      "sha256": "a9add762ed0f2da34ff0ff9d160838a5518a858d7a5cdf11aff978ecb92d1de9",
+      "byte_size": 22183,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__Machine_learning.txt",
+      "sha256": "7b0e5449116f4228fae8009e9a17b8d6f91fe73f573d055772ecc10a22d073f0",
+      "byte_size": 59099,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__Manhattan_Project.txt",
+      "sha256": "ee7bf556bee498cb67a60b442705b92c308ecf5ff50c4c6cccc41505f1366084",
+      "byte_size": 114966,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__Medieval_university.txt",
+      "sha256": "2553be814297eafa252cdfbc232fb70cde2485397cd6cd13b94bcf3f7f8cb9d1",
+      "byte_size": 17802,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__Metascience.txt",
+      "sha256": "1e4f9c7ee03eb9d711bacfa40e70a1ba40eae9630bae06a02319b8b4476ada6a",
+      "byte_size": 46719,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__Michael_Faraday.txt",
+      "sha256": "6ac69a3368ada35c8a1266bf1b63a214dd4f279724b85c7ac0424ef43cb0b7fd",
+      "byte_size": 32872,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__Mikhail_Lomonosov.txt",
+      "sha256": "e2761027e7e3f712a33a1c7048d735675de8ec6609096518b02b105f6b5c94de",
+      "byte_size": 26494,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__Military_aviation.txt",
+      "sha256": "fad37d3108fca958b18acda0e915a6e534493966a95215308958ba3b0c60dc28",
+      "byte_size": 10811,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__Natural_philosophy.txt",
+      "sha256": "700235021d8087b5b580001929318a8409c0233f031a0a0ed5dee9eb5e9eee79",
+      "byte_size": 26198,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__Newton_s_Laws.txt",
+      "sha256": "bdc42e4693149b6904fbb4593af5698b6d77a8f540af63ba70451e47374b2ff2",
+      "byte_size": 64078,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__Nicolaus_Copernicus.txt",
+      "sha256": "007d4ac53dc4228679d406e435bd31aa3e808e778f6a09846421dd1f30b0cfc0",
+      "byte_size": 79549,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__Nikola_Tesla.txt",
+      "sha256": "963170543180634ea72ebeccf34321447df5b0f0b463355ebceaa971f3897586",
+      "byte_size": 51254,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__Objectivity__philosophy_.txt",
+      "sha256": "2f238b9cdaefc50b33acf27b33b7b5398c7d0b0327d7b1ca4607291afc59b25b",
+      "byte_size": 17881,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__On_the_Origin_of_Species.txt",
+      "sha256": "33d39fc058d7b21bbc9529ba7c96871218f35af9ba77bb1940255415b0b82565",
+      "byte_size": 88503,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__Peer_review.txt",
+      "sha256": "69888ae45131d43b35b968d0b7bd13cd771e3b6d601e5822f43bddbf01017857",
+      "byte_size": 22402,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__Periodic_table.txt",
+      "sha256": "daafb211b3f545c4bdab5bb836d7db0f54f7b599e49be428f82ffb7ec0e7839a",
+      "byte_size": 96122,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__Philosophy_of_science.txt",
+      "sha256": "9ad455f0e0bd2f792e316c7499aa96aa7c486ef8fe7f3aa874fa582ec257257e",
+      "byte_size": 53560,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__Positivism.txt",
+      "sha256": "f0b6de7ec779699859754e3519f7e3a39d3196ae2c94b5f431da95b5c06e7bd3",
+      "byte_size": 44433,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__Primary_source.txt",
+      "sha256": "7ebde1ae6157803903f36de5b2ae925cb057691302c9db9c0c23bdcf989cf85c",
+      "byte_size": 14633,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__Pythagoras.txt",
+      "sha256": "2ee21d7824a742580542afd4a1f7a102771de26b99b467711fbc2868f633fccf",
+      "byte_size": 41817,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__Radar.txt",
+      "sha256": "1e0d05a77c2f8601741d0d0d09258a622a80da8792ac8f79793419c6865950e9",
+      "byte_size": 53903,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__Radio.txt",
+      "sha256": "2e3ab42989de8a138b3925153e08c7e1a5f06030516bcf4a895a490ee7c261a5",
+      "byte_size": 20234,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__Reproducibility.txt",
+      "sha256": "1a684a3f8850ce2529a4d4e53a90bc3ff3004021e2f799c4616b7aa39d69fc01",
+      "byte_size": 14949,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__Republic_of_Letters.txt",
+      "sha256": "48830aa05befa16290e8973276e6560be6f974d69e9f2bef29b2c4a6627b3cf6",
+      "byte_size": 3096,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__Research_ethics.txt",
+      "sha256": "ddd9233786179f215195e4b095743107b17d109189f6db5ea6093803ccb710ed",
+      "byte_size": 5272,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__Richard_Trevithick.txt",
+      "sha256": "21ec6e155312bef60ba506148f04886203dd173a350f96b67a3417b93f375683",
+      "byte_size": 35009,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__Royal_Society.txt",
+      "sha256": "9f43ed6a5a1f336e3400ad8cda2a1986c83b418100a9f4e61a08eb2db1ce33af",
+      "byte_size": 34667,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__Russian_aviation.txt",
+      "sha256": "bfb047c8fc7e32a806810744d0f0021fe933a86a0d75064c59bae85f8a1b25ae",
+      "byte_size": 14085,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__Science_and_technology_in_Russia.txt",
+      "sha256": "4ee60cb9e0f6e2be8e912e21b3c981295ea29d6876bbf91a6630a85294157143",
+      "byte_size": 20477,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__Science_and_technology_studies.txt",
+      "sha256": "3d27999e0734a609c68623b87000f31ae1bfd9d42351b092a3b54b71bbe8e736",
+      "byte_size": 41990,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__Science_in_the_medieval_Islamic_world.txt",
+      "sha256": "036b847ce627d2da67e6840432921f6b89b22eb3824fc7e87396043c97c44c57",
+      "byte_size": 23296,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__Science_policy.txt",
+      "sha256": "fb87be39a370815e76901cf8ba4fc6c9ced5577cf2ecd27dc1d68c9087ae3e4c",
+      "byte_size": 20651,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__Science_studies.txt",
+      "sha256": "47bf2946d9bdd2bbfa46b372c1fc1f3684d2549e304b7ccf35902e0976c9f333",
+      "byte_size": 15201,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__Scientific_Revolution.txt",
+      "sha256": "bcacd2adf320a7f548874e870c74ea45906fcbbe0795859b15c1fa91bf9a133d",
+      "byte_size": 56029,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__Scientific_community.txt",
+      "sha256": "9075ac8610fa7236e44c2fb506c9ea4fd20ea4b59fb254d921e08b820dca7950",
+      "byte_size": 11202,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__Scientific_literature.txt",
+      "sha256": "81894d6c8158486619cd589a8466cf19e1de56b1facc452c21144b8dd2cc4786",
+      "byte_size": 14324,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__Scientific_method.txt",
+      "sha256": "79b93b42651903b8f43474e63375b9ef99e5305c572b7a92e78651bea2b1fbc6",
+      "byte_size": 77811,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__Scientific_misconduct.txt",
+      "sha256": "4b37ba1a6d474c190d8ef94954775f3b187c9e087d832ddb826c718e31c4fed7",
+      "byte_size": 32485,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__Scientific_realism.txt",
+      "sha256": "a145b456f37b996b7ed06694e2152939572ac262e501ebe3145cf14355eaef85",
+      "byte_size": 13731,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__Scientific_theory.txt",
+      "sha256": "1e891188ffd10236c0e6c9b93455565819dea9dd2caef4c0f79a26878b530758",
+      "byte_size": 37417,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__Second_Industrial_Revolution.txt",
+      "sha256": "365f7c3fb0fee71fda4239b172819251e54d97e418739eff25a36233c1c5f804",
+      "byte_size": 52519,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__Secondary_source.txt",
+      "sha256": "e2df9d622733a32490ab4cbdd78a26a4504f847d2339bf53bc8628bbaf14feab",
+      "byte_size": 9202,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__Sergei_Korolev.txt",
+      "sha256": "c2fa2f9067b0143fa3f20624ff2098ad9321580497eb93145e3736363c1e841e",
+      "byte_size": 49354,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__Sextant.txt",
+      "sha256": "050248359579814b186de9993ab42a5519d4bc5e4382064d2cd9e77131874fed",
+      "byte_size": 17377,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__Sociology_of_scientific_knowledge.txt",
+      "sha256": "aaf10f72a05aae959d67637f2a2008643fa9e32f35b318ea5a4d933ce79d07fd",
+      "byte_size": 11236,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__Source_criticism.txt",
+      "sha256": "ad3099f2d54af50f8ee787d526d149655e23f8a3ce16e5dc7d93a818b92dfc20",
+      "byte_size": 28875,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__Space_Race.txt",
+      "sha256": "7ad12e03e395955dc78dd58beefc33168918ac1a47fe20de257ccac9dc74e940",
+      "byte_size": 89140,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__Steam_engine.txt",
+      "sha256": "219d6cfef492764fdba4af676c4b2a60a6bf5245ee790900adc57ab56d05a160",
+      "byte_size": 50761,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__Steam_locomotive.txt",
+      "sha256": "4d1605fa4159b7e0b2b1c14cd59d336f3cb0f4b3b514f2d1d588233a5bb44d9b",
+      "byte_size": 95883,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__Thomas_Newcomen.txt",
+      "sha256": "57c610aaca29d24ffa4e61cc335776511ab052684102509b71ab6f4d49f47f4f",
+      "byte_size": 10086,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__Transistor.txt",
+      "sha256": "178e00627e59e1466bd9da550c4eba0cb9cb7a6789c8c31ad0dd70c624aaccb0",
+      "byte_size": 49523,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__Turing_machine.txt",
+      "sha256": "107a89cadba44fb35fbc3dbbc795ead98efa1bb6689dc0ff762561e866a9d16e",
+      "byte_size": 42322,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__Tycho_Brahe.txt",
+      "sha256": "1cfb19ade21651a9c0c387726826aed716ce4076dd15c2883919078c25b723d6",
+      "byte_size": 58531,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__Unmanned_aerial_vehicle.txt",
+      "sha256": "f56cdaf0490be7caea47ca535938d09d97c85bfb5c0f3ca3d0c8c2096075c173",
+      "byte_size": 27277,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    },
+    {
+      "path": "texts/wikipedia__Von_Neumann_architecture.txt",
+      "sha256": "fe4b3ec4d88da4c8b8244d5692777c8818a5ee6005a15d1c2e5fc4ebc6cb3278",
+      "byte_size": 21405,
+      "role": "text",
+      "artifact_id": "texts.zip"
+    }
+  ],
+  "index": {
+    "kind": "annoy",
+    "config_path": "config.json",
+    "chunks_path": "chunks.jsonl",
+    "text_mapping_path": null,
+    "embedding_model_id": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+    "embedding_revision": null
+  },
+  "license": {
+    "name": "CC-BY-SA-4.0 (материалы курса); GPL-3.0-or-later (код)",
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "redistributable": true
+  }
+}

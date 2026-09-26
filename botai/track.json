@@ -1,0 +1,1238 @@
+{
+  "schema_version": 2,
+  "modules": [
+    {
+      "module_id": "metodologiya",
+      "title": "Наука, техника и технология: методология",
+      "order": 0,
+      "objective_ids": [
+        "lec-01",
+        "lec-02"
+      ],
+      "source_refs": [
+        {
+          "path": "syllabus.md",
+          "sha256": "868eadde272bdaa2890b68047937b2c7fd1cee50c0ea8f0d1daba612c08778f4",
+          "locator": {
+            "lines": {
+              "start": 28,
+              "end": 28
+            }
+          }
+        },
+        {
+          "path": "syllabus.md",
+          "sha256": "868eadde272bdaa2890b68047937b2c7fd1cee50c0ea8f0d1daba612c08778f4",
+          "locator": {
+            "lines": {
+              "start": 29,
+              "end": 29
+            }
+          }
+        }
+      ]
+    },
+    {
+      "module_id": "drevniy-mir",
+      "title": "Первобытное общество и Древний мир",
+      "order": 1,
+      "objective_ids": [
+        "lec-03",
+        "lec-04"
+      ],
+      "source_refs": [
+        {
+          "path": "syllabus.md",
+          "sha256": "868eadde272bdaa2890b68047937b2c7fd1cee50c0ea8f0d1daba612c08778f4",
+          "locator": {
+            "lines": {
+              "start": 30,
+              "end": 30
+            }
+          }
+        },
+        {
+          "path": "syllabus.md",
+          "sha256": "868eadde272bdaa2890b68047937b2c7fd1cee50c0ea8f0d1daba612c08778f4",
+          "locator": {
+            "lines": {
+              "start": 31,
+              "end": 31
+            }
+          }
+        }
+      ]
+    },
+    {
+      "module_id": "antichnost",
+      "title": "Античность: наука и математура",
+      "order": 2,
+      "objective_ids": [
+        "lec-05",
+        "lec-06"
+      ],
+      "source_refs": [
+        {
+          "path": "syllabus.md",
+          "sha256": "868eadde272bdaa2890b68047937b2c7fd1cee50c0ea8f0d1daba612c08778f4",
+          "locator": {
+            "lines": {
+              "start": 32,
+              "end": 32
+            }
+          }
+        },
+        {
+          "path": "syllabus.md",
+          "sha256": "868eadde272bdaa2890b68047937b2c7fd1cee50c0ea8f0d1daba612c08778f4",
+          "locator": {
+            "lines": {
+              "start": 33,
+              "end": 33
+            }
+          }
+        }
+      ]
+    },
+    {
+      "module_id": "srednie-veka",
+      "title": "Средние века и Арабская наука",
+      "order": 3,
+      "objective_ids": [
+        "lec-07",
+        "lec-08"
+      ],
+      "source_refs": [
+        {
+          "path": "syllabus.md",
+          "sha256": "868eadde272bdaa2890b68047937b2c7fd1cee50c0ea8f0d1daba612c08778f4",
+          "locator": {
+            "lines": {
+              "start": 34,
+              "end": 34
+            }
+          }
+        },
+        {
+          "path": "syllabus.md",
+          "sha256": "868eadde272bdaa2890b68047937b2c7fd1cee50c0ea8f0d1daba612c08778f4",
+          "locator": {
+            "lines": {
+              "start": 35,
+              "end": 35
+            }
+          }
+        }
+      ]
+    },
+    {
+      "module_id": "novoe-vremya",
+      "title": "Новое время: Коперник и Галилей",
+      "order": 4,
+      "objective_ids": [
+        "lec-09",
+        "lec-10"
+      ],
+      "source_refs": [
+        {
+          "path": "syllabus.md",
+          "sha256": "868eadde272bdaa2890b68047937b2c7fd1cee50c0ea8f0d1daba612c08778f4",
+          "locator": {
+            "lines": {
+              "start": 36,
+              "end": 36
+            }
+          }
+        },
+        {
+          "path": "syllabus.md",
+          "sha256": "868eadde272bdaa2890b68047937b2c7fd1cee50c0ea8f0d1daba612c08778f4",
+          "locator": {
+            "lines": {
+              "start": 37,
+              "end": 37
+            }
+          }
+        }
+      ]
+    },
+    {
+      "module_id": "nyuton",
+      "title": "Ньютон и механика Нового времени",
+      "order": 5,
+      "objective_ids": [
+        "lec-11",
+        "lec-12"
+      ],
+      "source_refs": [
+        {
+          "path": "syllabus.md",
+          "sha256": "868eadde272bdaa2890b68047937b2c7fd1cee50c0ea8f0d1daba612c08778f4",
+          "locator": {
+            "lines": {
+              "start": 38,
+              "end": 38
+            }
+          }
+        },
+        {
+          "path": "syllabus.md",
+          "sha256": "868eadde272bdaa2890b68047937b2c7fd1cee50c0ea8f0d1daba612c08778f4",
+          "locator": {
+            "lines": {
+              "start": 39,
+              "end": 39
+            }
+          }
+        }
+      ]
+    },
+    {
+      "module_id": "promyshlennyy-perevorot",
+      "title": "Пар и машины: промышленный переворот",
+      "order": 6,
+      "objective_ids": [
+        "lec-13",
+        "lec-14",
+        "lec-15"
+      ],
+      "source_refs": [
+        {
+          "path": "syllabus.md",
+          "sha256": "868eadde272bdaa2890b68047937b2c7fd1cee50c0ea8f0d1daba612c08778f4",
+          "locator": {
+            "lines": {
+              "start": 40,
+              "end": 40
+            }
+          }
+        },
+        {
+          "path": "syllabus.md",
+          "sha256": "868eadde272bdaa2890b68047937b2c7fd1cee50c0ea8f0d1daba612c08778f4",
+          "locator": {
+            "lines": {
+              "start": 41,
+              "end": 41
+            }
+          }
+        },
+        {
+          "path": "syllabus.md",
+          "sha256": "868eadde272bdaa2890b68047937b2c7fd1cee50c0ea8f0d1daba612c08778f4",
+          "locator": {
+            "lines": {
+              "start": 42,
+              "end": 42
+            }
+          }
+        }
+      ]
+    },
+    {
+      "module_id": "elektrichestvo",
+      "title": "Электричество, поле и волны",
+      "order": 7,
+      "objective_ids": [
+        "lec-16",
+        "lec-17",
+        "lec-18"
+      ],
+      "source_refs": [
+        {
+          "path": "syllabus.md",
+          "sha256": "868eadde272bdaa2890b68047937b2c7fd1cee50c0ea8f0d1daba612c08778f4",
+          "locator": {
+            "lines": {
+              "start": 48,
+              "end": 48
+            }
+          }
+        },
+        {
+          "path": "syllabus.md",
+          "sha256": "868eadde272bdaa2890b68047937b2c7fd1cee50c0ea8f0d1daba612c08778f4",
+          "locator": {
+            "lines": {
+              "start": 49,
+              "end": 49
+            }
+          }
+        },
+        {
+          "path": "syllabus.md",
+          "sha256": "868eadde272bdaa2890b68047937b2c7fd1cee50c0ea8f0d1daba612c08778f4",
+          "locator": {
+            "lines": {
+              "start": 50,
+              "end": 50
+            }
+          }
+        }
+      ]
+    },
+    {
+      "module_id": "himiya",
+      "title": "Химия XIX века",
+      "order": 8,
+      "objective_ids": [
+        "lec-19",
+        "lec-20"
+      ],
+      "source_refs": [
+        {
+          "path": "syllabus.md",
+          "sha256": "868eadde272bdaa2890b68047937b2c7fd1cee50c0ea8f0d1daba612c08778f4",
+          "locator": {
+            "lines": {
+              "start": 51,
+              "end": 51
+            }
+          }
+        },
+        {
+          "path": "syllabus.md",
+          "sha256": "868eadde272bdaa2890b68047937b2c7fd1cee50c0ea8f0d1daba612c08778f4",
+          "locator": {
+            "lines": {
+              "start": 52,
+              "end": 52
+            }
+          }
+        }
+      ]
+    },
+    {
+      "module_id": "biologiya",
+      "title": "Биология XIX века",
+      "order": 9,
+      "objective_ids": [
+        "lec-21",
+        "lec-22",
+        "lec-23"
+      ],
+      "source_refs": [
+        {
+          "path": "syllabus.md",
+          "sha256": "868eadde272bdaa2890b68047937b2c7fd1cee50c0ea8f0d1daba612c08778f4",
+          "locator": {
+            "lines": {
+              "start": 53,
+              "end": 53
+            }
+          }
+        },
+        {
+          "path": "syllabus.md",
+          "sha256": "868eadde272bdaa2890b68047937b2c7fd1cee50c0ea8f0d1daba612c08778f4",
+          "locator": {
+            "lines": {
+              "start": 54,
+              "end": 54
+            }
+          }
+        },
+        {
+          "path": "syllabus.md",
+          "sha256": "868eadde272bdaa2890b68047937b2c7fd1cee50c0ea8f0d1daba612c08778f4",
+          "locator": {
+            "lines": {
+              "start": 55,
+              "end": 55
+            }
+          }
+        }
+      ]
+    },
+    {
+      "module_id": "inzhenernaya-shkola",
+      "title": "Инженерная школа в России",
+      "order": 10,
+      "objective_ids": [
+        "lec-24",
+        "lec-25"
+      ],
+      "source_refs": [
+        {
+          "path": "syllabus.md",
+          "sha256": "868eadde272bdaa2890b68047937b2c7fd1cee50c0ea8f0d1daba612c08778f4",
+          "locator": {
+            "lines": {
+              "start": 56,
+              "end": 56
+            }
+          }
+        },
+        {
+          "path": "syllabus.md",
+          "sha256": "868eadde272bdaa2890b68047937b2c7fd1cee50c0ea8f0d1daba612c08778f4",
+          "locator": {
+            "lines": {
+              "start": 57,
+              "end": 57
+            }
+          }
+        }
+      ]
+    },
+    {
+      "module_id": "vychislitelnaya-tehnika",
+      "title": "Вычислительная техника",
+      "order": 11,
+      "objective_ids": [
+        "lec-26",
+        "lec-27"
+      ],
+      "source_refs": [
+        {
+          "path": "syllabus.md",
+          "sha256": "868eadde272bdaa2890b68047937b2c7fd1cee50c0ea8f0d1daba612c08778f4",
+          "locator": {
+            "lines": {
+              "start": 58,
+              "end": 58
+            }
+          }
+        },
+        {
+          "path": "syllabus.md",
+          "sha256": "868eadde272bdaa2890b68047937b2c7fd1cee50c0ea8f0d1daba612c08778f4",
+          "locator": {
+            "lines": {
+              "start": 59,
+              "end": 59
+            }
+          }
+        }
+      ]
+    },
+    {
+      "module_id": "nauka-i-obschestvo",
+      "title": "Наука и общество в XX-XXI вв.",
+      "order": 12,
+      "objective_ids": [
+        "lec-28",
+        "lec-29",
+        "lec-30"
+      ],
+      "source_refs": [
+        {
+          "path": "syllabus.md",
+          "sha256": "868eadde272bdaa2890b68047937b2c7fd1cee50c0ea8f0d1daba612c08778f4",
+          "locator": {
+            "lines": {
+              "start": 60,
+              "end": 60
+            }
+          }
+        },
+        {
+          "path": "syllabus.md",
+          "sha256": "868eadde272bdaa2890b68047937b2c7fd1cee50c0ea8f0d1daba612c08778f4",
+          "locator": {
+            "lines": {
+              "start": 61,
+              "end": 61
+            }
+          }
+        },
+        {
+          "path": "syllabus.md",
+          "sha256": "868eadde272bdaa2890b68047937b2c7fd1cee50c0ea8f0d1daba612c08778f4",
+          "locator": {
+            "lines": {
+              "start": 62,
+              "end": 62
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "objectives": [
+    {
+      "objective_id": "lec-01",
+      "module_id": "metodologiya",
+      "title": "Вводное: цели курса, программа, источники и работа с корпусом",
+      "prerequisites": [],
+      "source_refs": [
+        {
+          "path": "lectures/01_uvodnoe.md",
+          "sha256": "07720aa738ac43cb3d2de57607673b2247d2b4af6f9e2b05f61d592730bc12b1",
+          "locator": {
+            "lines": {
+              "start": 21,
+              "end": 27
+            }
+          }
+        }
+      ],
+      "check_kinds": [
+        "explain",
+        "apply"
+      ],
+      "estimated_minutes": 90,
+      "required": true
+    },
+    {
+      "objective_id": "lec-02",
+      "module_id": "metodologiya",
+      "title": "Наука, техника, технология: понятийный аппарат и методология истории науки",
+      "prerequisites": [
+        "lec-01"
+      ],
+      "source_refs": [
+        {
+          "path": "lectures/02_metodologiya.md",
+          "sha256": "03a1c2ce94cbca0c96ef15060e9273b9a40b9fdd1577cf47e0f83cf585fabf6c",
+          "locator": {
+            "lines": {
+              "start": 42,
+              "end": 48
+            }
+          }
+        }
+      ],
+      "check_kinds": [
+        "explain",
+        "apply"
+      ],
+      "estimated_minutes": 90,
+      "required": true
+    },
+    {
+      "objective_id": "lec-03",
+      "module_id": "drevniy-mir",
+      "title": "Первобытное общество: аграрная революция и начало техносферы",
+      "prerequisites": [
+        "lec-02"
+      ],
+      "source_refs": [
+        {
+          "path": "lectures/03_agrarnaya_revolyuciya.md",
+          "sha256": "fea78fbf19c3f162f8ccdb88572eb2c54310f941d98054b7eab47854c6b01fee",
+          "locator": {
+            "lines": {
+              "start": 26,
+              "end": 32
+            }
+          }
+        }
+      ],
+      "check_kinds": [
+        "explain",
+        "apply"
+      ],
+      "estimated_minutes": 90,
+      "required": true
+    },
+    {
+      "objective_id": "lec-04",
+      "module_id": "drevniy-mir",
+      "title": "Древний мир: зодчество, металлы и «простые машины»",
+      "prerequisites": [
+        "lec-03"
+      ],
+      "source_refs": [
+        {
+          "path": "lectures/04_drevniy_mir_mashiny.md",
+          "sha256": "aad720491adb4ebf854668dcf473a76d9c975e79a439e7fc7da88f408316a2a4",
+          "locator": {
+            "lines": {
+              "start": 21,
+              "end": 27
+            }
+          }
+        }
+      ],
+      "check_kinds": [
+        "explain",
+        "critique",
+        "apply"
+      ],
+      "estimated_minutes": 90,
+      "required": true
+    },
+    {
+      "objective_id": "lec-05",
+      "module_id": "antichnost",
+      "title": "Античная математика: рождение доказательства",
+      "prerequisites": [
+        "lec-04"
+      ],
+      "source_refs": [
+        {
+          "path": "lectures/05_antichnaya_matematika.md",
+          "sha256": "4c2bd7112d04e5a4c31fbdd53227634b1e18f4d5c7b772b51f9c19bd36dde80d",
+          "locator": {
+            "lines": {
+              "start": 26,
+              "end": 32
+            }
+          }
+        }
+      ],
+      "check_kinds": [
+        "explain",
+        "critique"
+      ],
+      "estimated_minutes": 90,
+      "required": true
+    },
+    {
+      "objective_id": "lec-06",
+      "module_id": "antichnost",
+      "title": "Античная наука: механика, астрономия и роль Аристотеля",
+      "prerequisites": [
+        "lec-05"
+      ],
+      "source_refs": [
+        {
+          "path": "lectures/06_antichnaya_nauka.md",
+          "sha256": "8669b6b92a56fec8b67aa5b937670d41dd0b097bc7e987188d7ae74b575d1f43",
+          "locator": {
+            "lines": {
+              "start": 23,
+              "end": 29
+            }
+          }
+        }
+      ],
+      "check_kinds": [
+        "explain",
+        "critique",
+        "apply"
+      ],
+      "estimated_minutes": 90,
+      "required": true
+    },
+    {
+      "objective_id": "lec-07",
+      "module_id": "srednie-veka",
+      "title": "Средние века: арабская наука и индийские цифры",
+      "prerequisites": [
+        "lec-06"
+      ],
+      "source_refs": [
+        {
+          "path": "lectures/07_arabskaya_nauka.md",
+          "sha256": "18eecb9df558cbd3172b056a4cd0e1d7bff5aa576f4b7feb792bd256bd21ea0f",
+          "locator": {
+            "lines": {
+              "start": 21,
+              "end": 27
+            }
+          }
+        }
+      ],
+      "check_kinds": [
+        "explain",
+        "apply"
+      ],
+      "estimated_minutes": 90,
+      "required": true
+    },
+    {
+      "objective_id": "lec-08",
+      "module_id": "srednie-veka",
+      "title": "Средние века: университеты, передача знания и «парадокс Нидхэма»",
+      "prerequisites": [
+        "lec-07"
+      ],
+      "source_refs": [
+        {
+          "path": "lectures/08_universitety_nidhem.md",
+          "sha256": "dcc84dc6d311c62ef6a0b741808df011033d88cb0b16e57083fc34c916a2ce23",
+          "locator": {
+            "lines": {
+              "start": 22,
+              "end": 28
+            }
+          }
+        }
+      ],
+      "check_kinds": [
+        "explain",
+        "critique",
+        "apply"
+      ],
+      "estimated_minutes": 90,
+      "required": true
+    },
+    {
+      "objective_id": "lec-09",
+      "module_id": "novoe-vremya",
+      "title": "Коперник и гелиоцентрическая система",
+      "prerequisites": [
+        "lec-08"
+      ],
+      "source_refs": [
+        {
+          "path": "lectures/09_kopernik.md",
+          "sha256": "f8dba412ef050489f29a299cd3d51d0a9682b1889efa8eca883da768f208371c",
+          "locator": {
+            "lines": {
+              "start": 23,
+              "end": 29
+            }
+          }
+        }
+      ],
+      "check_kinds": [
+        "explain",
+        "apply"
+      ],
+      "estimated_minutes": 90,
+      "required": true
+    },
+    {
+      "objective_id": "lec-10",
+      "module_id": "novoe-vremya",
+      "title": "Галилей: эксперимент, прибор и рождение экспериментальной науки",
+      "prerequisites": [
+        "lec-09"
+      ],
+      "source_refs": [
+        {
+          "path": "lectures/10_galiley.md",
+          "sha256": "6bc29849b6991b29f669aac9b95f8bf18e9f6bcc4a752570aff8b9b3addece98",
+          "locator": {
+            "lines": {
+              "start": 19,
+              "end": 25
+            }
+          }
+        }
+      ],
+      "check_kinds": [
+        "explain",
+        "apply"
+      ],
+      "estimated_minutes": 90,
+      "required": true
+    },
+    {
+      "objective_id": "lec-11",
+      "module_id": "nyuton",
+      "title": "Ньютон: «Математические начала» и механика Нового времени",
+      "prerequisites": [
+        "lec-10"
+      ],
+      "source_refs": [
+        {
+          "path": "lectures/11_nyuton.md",
+          "sha256": "b03df693bd335852b6fc4085d248132f672b0c5caa83f5cb07aef59b9a1e9861",
+          "locator": {
+            "lines": {
+              "start": 20,
+              "end": 26
+            }
+          }
+        }
+      ],
+      "check_kinds": [
+        "explain",
+        "apply"
+      ],
+      "estimated_minutes": 90,
+      "required": true
+    },
+    {
+      "objective_id": "lec-12",
+      "module_id": "nyuton",
+      "title": "Ньютон: метод, спор о приоритете и рождение Академии наук в России",
+      "prerequisites": [
+        "lec-11"
+      ],
+      "source_refs": [
+        {
+          "path": "lectures/12_nyuton_metod_akademiya.md",
+          "sha256": "d809b9cbde57c0bfaf0187ff90d3382f9e3e5e54b63bdfef6e02d1847b907d83",
+          "locator": {
+            "lines": {
+              "start": 21,
+              "end": 27
+            }
+          }
+        }
+      ],
+      "check_kinds": [
+        "explain",
+        "critique"
+      ],
+      "estimated_minutes": 90,
+      "required": true
+    },
+    {
+      "objective_id": "lec-13",
+      "module_id": "promyshlennyy-perevorot",
+      "title": "Паровой двигатель и промышленный переворот",
+      "prerequisites": [
+        "lec-12"
+      ],
+      "source_refs": [
+        {
+          "path": "lectures/13_parovoy_dvigatel.md",
+          "sha256": "22bd10c3d5e3aa87572d5dd53f61de4929858af269c5372b05c4e745df8c9a41",
+          "locator": {
+            "lines": {
+              "start": 20,
+              "end": 26
+            }
+          }
+        }
+      ],
+      "check_kinds": [
+        "explain",
+        "apply"
+      ],
+      "estimated_minutes": 90,
+      "required": true
+    },
+    {
+      "objective_id": "lec-14",
+      "module_id": "promyshlennyy-perevorot",
+      "title": "Инженерная профессия, «промышленное Просвещение» и транспорт",
+      "prerequisites": [
+        "lec-13"
+      ],
+      "source_refs": [
+        {
+          "path": "lectures/14_inzhenernaya_professiya.md",
+          "sha256": "4721183f910a5396294e59755d939bea6aebcd7e923a1a54e3e648d4e8cba835",
+          "locator": {
+            "lines": {
+              "start": 21,
+              "end": 27
+            }
+          }
+        }
+      ],
+      "check_kinds": [
+        "explain",
+        "apply"
+      ],
+      "estimated_minutes": 90,
+      "required": true
+    },
+    {
+      "objective_id": "lec-15",
+      "module_id": "promyshlennyy-perevorot",
+      "title": "От аграрной революции к индустриальной: сквозные линии техники и науки",
+      "prerequisites": [
+        "lec-14"
+      ],
+      "source_refs": [
+        {
+          "path": "lectures/15_skvoznye_linii.md",
+          "sha256": "e605e5769c75027750f20e80ac2009a85cd2440852ec8a497909eb079084eaeb",
+          "locator": {
+            "lines": {
+              "start": 14,
+              "end": 20
+            }
+          }
+        }
+      ],
+      "check_kinds": [
+        "explain",
+        "apply"
+      ],
+      "estimated_minutes": 90,
+      "required": true
+    },
+    {
+      "objective_id": "lec-16",
+      "module_id": "elektrichestvo",
+      "title": "Электричество в XVIII–XIX вв.: Гальвани, Вольта, Эрстед, Ампер",
+      "prerequisites": [
+        "lec-15"
+      ],
+      "source_refs": [
+        {
+          "path": "lectures/16_elektrichestvo_xviii.md",
+          "sha256": "d14f8c802e7e7d99477ad7ea545c169640df5e3d49e9795de0b6af55812180a4",
+          "locator": {
+            "lines": {
+              "start": 21,
+              "end": 27
+            }
+          }
+        }
+      ],
+      "check_kinds": [
+        "explain",
+        "critique"
+      ],
+      "estimated_minutes": 90,
+      "required": true
+    },
+    {
+      "objective_id": "lec-17",
+      "module_id": "elektrichestvo",
+      "title": "Фарадей и Максвелл: силовые линии и теория поля",
+      "prerequisites": [
+        "lec-16"
+      ],
+      "source_refs": [
+        {
+          "path": "lectures/17_faraday_maksvell.md",
+          "sha256": "063ca340cb290c9cb6199133a6acec43d12c90899e7c3990e2eb55bdfe2466fb",
+          "locator": {
+            "lines": {
+              "start": 20,
+              "end": 26
+            }
+          }
+        }
+      ],
+      "check_kinds": [
+        "explain",
+        "apply"
+      ],
+      "estimated_minutes": 90,
+      "required": true
+    },
+    {
+      "objective_id": "lec-18",
+      "module_id": "elektrichestvo",
+      "title": "Герц, радио и радиолокация: от опыта к технике (профильная тема)",
+      "prerequisites": [
+        "lec-17"
+      ],
+      "source_refs": [
+        {
+          "path": "lectures/18_gerc_radiolokaciya.md",
+          "sha256": "307677a8fb061b4c162af788b78b0fd6b3eb35a1cda1efe7914ce065c208c90f",
+          "locator": {
+            "lines": {
+              "start": 16,
+              "end": 22
+            }
+          }
+        }
+      ],
+      "check_kinds": [
+        "explain",
+        "apply"
+      ],
+      "estimated_minutes": 90,
+      "required": true
+    },
+    {
+      "objective_id": "lec-19",
+      "module_id": "himiya",
+      "title": "Химия XVIII–XIX вв.: от флогистона к элементам, газы атмосферы",
+      "prerequisites": [
+        "lec-18"
+      ],
+      "source_refs": [
+        {
+          "path": "lectures/19_himiya_flogiston.md",
+          "sha256": "2b1801b172463fd15ddcdfb7e6302ad88d3d1fbd14f79c16456b85cfabfe74a6",
+          "locator": {
+            "lines": {
+              "start": 21,
+              "end": 27
+            }
+          }
+        }
+      ],
+      "check_kinds": [
+        "explain",
+        "apply"
+      ],
+      "estimated_minutes": 90,
+      "required": true
+    },
+    {
+      "objective_id": "lec-20",
+      "module_id": "himiya",
+      "title": "Менделеев и периодический закон: систематика как предсказание",
+      "prerequisites": [
+        "lec-19"
+      ],
+      "source_refs": [
+        {
+          "path": "lectures/20_mendeleev.md",
+          "sha256": "8d5efcdaaec76f61f450d397f989dedb15c9f5afbab8e7806f02ebb401184d81",
+          "locator": {
+            "lines": {
+              "start": 18,
+              "end": 24
+            }
+          }
+        }
+      ],
+      "check_kinds": [
+        "explain",
+        "apply",
+        "predict"
+      ],
+      "estimated_minutes": 90,
+      "required": true
+    },
+    {
+      "objective_id": "lec-21",
+      "module_id": "biologiya",
+      "title": "Эволюционная идея: Ламарк и Дарвин",
+      "prerequisites": [
+        "lec-20"
+      ],
+      "source_refs": [
+        {
+          "path": "lectures/21_evolyuciya_lamark_darvin.md",
+          "sha256": "b86aad0a9b9464ae3b6dda7a48b502886fa4ac484440f03069cb50ecd8b904bf",
+          "locator": {
+            "lines": {
+              "start": 20,
+              "end": 26
+            }
+          }
+        }
+      ],
+      "check_kinds": [
+        "explain",
+        "critique"
+      ],
+      "estimated_minutes": 90,
+      "required": true
+    },
+    {
+      "objective_id": "lec-22",
+      "module_id": "biologiya",
+      "title": "Дарвин о человеке, Геккель и Сеченов: биология превращается в науку о механизмах",
+      "prerequisites": [
+        "lec-21"
+      ],
+      "source_refs": [
+        {
+          "path": "lectures/22_darvin_sechenov.md",
+          "sha256": "aded0d57c3d5c7ea936b344de3508187f69b43417280c71e2deb37743c8415e5",
+          "locator": {
+            "lines": {
+              "start": 19,
+              "end": 25
+            }
+          }
+        }
+      ],
+      "check_kinds": [
+        "explain",
+        "apply"
+      ],
+      "estimated_minutes": 90,
+      "required": true
+    },
+    {
+      "objective_id": "lec-23",
+      "module_id": "biologiya",
+      "title": "Биология и инженерия: бионические системы (профильная тема)",
+      "prerequisites": [
+        "lec-22"
+      ],
+      "source_refs": [
+        {
+          "path": "lectures/23_bionika.md",
+          "sha256": "1ae79357145a6b4e135a58e59845ce271fd3f56d4cc4d6d8846e7d91703ab428",
+          "locator": {
+            "lines": {
+              "start": 19,
+              "end": 25
+            }
+          }
+        }
+      ],
+      "check_kinds": [
+        "explain",
+        "apply"
+      ],
+      "estimated_minutes": 90,
+      "required": true
+    },
+    {
+      "objective_id": "lec-24",
+      "module_id": "inzhenernaya-shkola",
+      "title": "Механика и инженерная школа в России: Кирпичёв",
+      "prerequisites": [
+        "lec-23"
+      ],
+      "source_refs": [
+        {
+          "path": "lectures/24_kirpichev.md",
+          "sha256": "e563dbf6f636c36ed630b73fc00259e1ccf58233205af704b8b53d429f08da16",
+          "locator": {
+            "lines": {
+              "start": 16,
+              "end": 22
+            }
+          }
+        }
+      ],
+      "check_kinds": [
+        "explain",
+        "apply"
+      ],
+      "estimated_minutes": 90,
+      "required": true
+    },
+    {
+      "objective_id": "lec-25",
+      "module_id": "inzhenernaya-shkola",
+      "title": "Аэродинамика и авиация: от механики Кирпичёва к Жуковскому и БАС (профильная тема)",
+      "prerequisites": [
+        "lec-24"
+      ],
+      "source_refs": [
+        {
+          "path": "lectures/25_aerodinamika_bas.md",
+          "sha256": "495e6ee366f1b569f125840f041f9b350b8d8259924432207e3a8761d8113a92",
+          "locator": {
+            "lines": {
+              "start": 15,
+              "end": 21
+            }
+          }
+        }
+      ],
+      "check_kinds": [
+        "explain",
+        "apply"
+      ],
+      "estimated_minutes": 90,
+      "required": true
+    },
+    {
+      "objective_id": "lec-26",
+      "module_id": "vychislitelnaya-tehnika",
+      "title": "Вычислительная техника: Бэббидж и аналитическая машина",
+      "prerequisites": [
+        "lec-25"
+      ],
+      "source_refs": [
+        {
+          "path": "lectures/26_bebbiddzh.md",
+          "sha256": "0028707a7f31bc56a0254b27dc64520e222647d8924d3ebffc4bd4e82755e06f",
+          "locator": {
+            "lines": {
+              "start": 19,
+              "end": 25
+            }
+          }
+        }
+      ],
+      "check_kinds": [
+        "explain",
+        "critique",
+        "apply"
+      ],
+      "estimated_minutes": 90,
+      "required": true
+    },
+    {
+      "objective_id": "lec-27",
+      "module_id": "vychislitelnaya-tehnika",
+      "title": "От Бэббиджа к цифровым двойникам и беспилотным системам (профильная тема)",
+      "prerequisites": [
+        "lec-26"
+      ],
+      "source_refs": [
+        {
+          "path": "lectures/27_cifrovye_dvoyniki.md",
+          "sha256": "ef14ee1dd30491d57e9d3db6d30d85aa4b641bc9af3aed2d75eabe0ed10c641f",
+          "locator": {
+            "lines": {
+              "start": 16,
+              "end": 22
+            }
+          }
+        }
+      ],
+      "check_kinds": [
+        "explain",
+        "apply",
+        "predict"
+      ],
+      "estimated_minutes": 90,
+      "required": true
+    },
+    {
+      "objective_id": "lec-28",
+      "module_id": "nauka-i-obschestvo",
+      "title": "Наука и общество в XX в.: организация науки, мегапроекты, советская модель науки",
+      "prerequisites": [
+        "lec-27"
+      ],
+      "source_refs": [
+        {
+          "path": "lectures/28_nauka_i_obschestvo_xx.md",
+          "sha256": "5ca271d6f936da04031fa103ae2e2a5b6d85c776a82772398a92b2014dc3cc56",
+          "locator": {
+            "lines": {
+              "start": 15,
+              "end": 21
+            }
+          }
+        }
+      ],
+      "check_kinds": [
+        "explain",
+        "critique"
+      ],
+      "estimated_minutes": 90,
+      "required": true
+    },
+    {
+      "objective_id": "lec-29",
+      "module_id": "nauka-i-obschestvo",
+      "title": "Ракетно-космическая техника и космическая гонка (профильная тема)",
+      "prerequisites": [
+        "lec-28"
+      ],
+      "source_refs": [
+        {
+          "path": "lectures/29_kosmicheskaya_gonka.md",
+          "sha256": "7673b455cc4cdbe60240145289bf95f5ca648a65d2e73cf40180dcb2a5d8dba9",
+          "locator": {
+            "lines": {
+              "start": 15,
+              "end": 21
+            }
+          }
+        }
+      ],
+      "check_kinds": [
+        "explain",
+        "apply"
+      ],
+      "estimated_minutes": 90,
+      "required": true
+    },
+    {
+      "objective_id": "lec-30",
+      "module_id": "nauka-i-obschestvo",
+      "title": "Наука и технологии в начале XXI в.: ИИ, цифровая экономика и авиакосмическая отрасль",
+      "prerequisites": [
+        "lec-29"
+      ],
+      "source_refs": [
+        {
+          "path": "lectures/30_nauka_xxi.md",
+          "sha256": "1926e55607b7d3ae83578b442e0b69251209bdbcaaf98e49fb7333aaac30074b",
+          "locator": {
+            "lines": {
+              "start": 22,
+              "end": 28
+            }
+          }
+        }
+      ],
+      "check_kinds": [
+        "explain",
+        "apply"
+      ],
+      "estimated_minutes": 90,
+      "required": true
+    }
+  ]
+}
