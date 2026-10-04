@@ -20,7 +20,10 @@
 
 ## Полные документы (источник истины)
 
-- Процедура целиком — `physics-dataset-competition/docs/EXPERT-ASSIGNMENT.md`.
+- **Пошаговая инструкция целиком —
+  `physics-dataset-competition/docs/EXPERT-GUIDE.md`** (начать здесь).
+- Краткая версия задания —
+  `physics-dataset-competition/docs/EXPERT-ASSIGNMENT.md`.
 - Жёсткие правила и промпт агента —
   `physics-dataset-competition/docs/OPENCODE-EXPERT-PROMPT.md`.
 - Формат Hub-репозитория — `physics-dataset-competition/docs/HF-DATASET.md`.

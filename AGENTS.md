@@ -65,7 +65,9 @@
    задание курса. Полный конвейер (поиск в официальных API
    OpenAlex/arXiv/Crossref → lawful-загрузка → извлечение → выборочная
    проверка → Hub-PR) описан в руководствах модуля — работать строго по ним:
-   `physics-dataset-competition/docs/EXPERT-ASSIGNMENT.md` и
+   **`physics-dataset-competition/docs/EXPERT-GUIDE.md`** (подробная пошаговая
+   инструкция), `physics-dataset-competition/docs/EXPERT-ASSIGNMENT.md`
+   (краткая версия) и
    `physics-dataset-competition/docs/OPENCODE-EXPERT-PROMPT.md` (краткий
    маршрут — `docs/opencode-physics-expert.md`). Правила безопасности:
    скачанные первоисточники — только в `.local/physics-bronze/` (в git они

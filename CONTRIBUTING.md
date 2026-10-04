@@ -42,7 +42,9 @@ HuggingFace.
 (`physics-dataset-competition/configs/schema/record.schema.json`), а не
 универсальную схему первого вклада
 (`assignments/00-first-contribution/`). Полные руководства —
-`physics-dataset-competition/docs/EXPERT-ASSIGNMENT.md` (процедура) и
+`physics-dataset-competition/docs/EXPERT-GUIDE.md` (подробная пошаговая
+инструкция эксперту и агенту), `physics-dataset-competition/docs/EXPERT-ASSIGNMENT.md`
+(краткая процедура) и
 `physics-dataset-competition/docs/OPENCODE-EXPERT-PROMPT.md` (правила
 агента); краткий маршрут — `docs/opencode-physics-expert.md`.
 

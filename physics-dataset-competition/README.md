@@ -42,7 +42,8 @@ physics-dataset-competition/
 ├── data/{bronze,silver,gold}/      # слои данных (в git только .gitkeep)
 ├── tests/                          # фикстуры и тесты
 └── docs/
-    ├── EXPERT-ASSIGNMENT.md        # первое задание эксперта (полная процедура)
+    ├── EXPERT-GUIDE.md             # подробная пошаговая инструкция (начать здесь)
+    ├── EXPERT-ASSIGNMENT.md        # первое задание эксперта (краткая версия)
     ├── OPENCODE-EXPERT-PROMPT.md   # copy-pastable промпт для агента
     ├── HF-DATASET.md               # формат HF-репозитория и PR
     ├── requirements-publish.txt    # опциональный huggingface_hub
@@ -51,7 +52,10 @@ physics-dataset-competition/
 
 ## Документация эксперта
 
-- **[docs/EXPERT-ASSIGNMENT.md](docs/EXPERT-ASSIGNMENT.md)** — полная процедура
+- **[docs/EXPERT-GUIDE.md](docs/EXPERT-GUIDE.md)** — **подробная пошаговая
+  инструкция эксперту и агенту**: подготовка окружения, все 10 шагов задания,
+  точные команды, право-гейт, troubleshooting и rubric. Начинать здесь.
+- **[docs/EXPERT-ASSIGNMENT.md](docs/EXPERT-ASSIGNMENT.md)** — краткая версия
   первого задания: поиск, lawful-загрузка, извлечение, проверка, PR. Есть rubric
   и DoD.
 - **[docs/OPENCODE-EXPERT-PROMPT.md](docs/OPENCODE-EXPERT-PROMPT.md)** —
