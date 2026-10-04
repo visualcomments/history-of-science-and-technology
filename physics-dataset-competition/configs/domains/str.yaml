@@ -1,0 +1,4 @@
+domain: STR
+required_conditions: [T, material]
+units: {E: GPa, sigma: MPa, epsilon: "-", N: cycles}
+ranges: {E: [0.1, 500], sigma: [0, 3000], epsilon: [0, 1]}

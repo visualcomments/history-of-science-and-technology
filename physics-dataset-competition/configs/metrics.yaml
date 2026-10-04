@@ -1,0 +1,3 @@
+primary: normalized_rmse
+per_domain: {AERO: rmse, STR: rmse, RADAR: rmse_db, CTRL: rmse}
+tie_break: [mae, physics_violations, submission_time]

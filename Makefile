@@ -3,7 +3,7 @@
 PY ?= python3
 VENV_PY ?= $(PY)
 
-.PHONY: help search index-fetch session assignment verify serve status quotes corpus-fetch corpus-status order order-check
+.PHONY: help search index-fetch session assignment verify serve status quotes corpus-fetch corpus-status order order-check physics-validate physics-benchmark
 
 help:
 	@echo "Цели:"
@@ -17,6 +17,8 @@ help:
 	@echo "  make serve port=8765         запуск RAG-API (Ctrl+C — стоп)"
 	@echo "  make order                   порядок занятий и проверка его детерминированности"
 	@echo "  make status                  состояние курса и корпуса"
+	@echo "  make physics-validate FILE=records.jsonl  проверка записей физического модуля"
+	@echo "  make physics-benchmark       воспроизводимый benchmark физического модуля"
 
 search:
 	test -n "$(QUERY)" || (echo "Укажите QUERY=..."; exit 1)
@@ -66,3 +68,14 @@ corpus-status:
 
 # Совместимость: старые инструкции и навыки вызывают index-fetch.
 index-fetch: corpus-fetch
+
+# --- Исследовательский модуль: физические данные и соревнование --------------
+# Схема и валидатор живут в physics-dataset-competition/; каталог не входит в
+# тридцать занятий, поэтому цели вынесены отдельно и не мешают `make order`.
+# Без FILE валидатор запускается в режиме --selftest (доказывает, что умеет
+# падать), с FILE — проверяет конкретный JSONL-файл записей.
+physics-validate:
+	$(PY) physics-dataset-competition/src/physics_ds/schema/validate.py $(if $(FILE),$(FILE),--selftest)
+
+physics-benchmark:
+	$(PY) physics-dataset-competition/benchmark/run.py

@@ -20,6 +20,7 @@
 | `Makefile` | Короткие цели для всех инструментов (`make help`) |
 | `docs/AGENT-WORKFLOW.md` | Полный цикл работы агента |
 | `docs/GOOGLE-DRIVE.md` | Индекс/эмбеддинги на Google Диске — схема доступа (+ `index-manifest.example.json`) |
+| `physics-dataset-competition/` | Исследовательский модуль: сбор/валидация физических данных (AERO/STR/RADAR/CTRL), схема с единицами и провенансом, benchmark и Kaggle community competition |
 | `CORPUS.md` | Как устроен локальный корпус, что опубликовано, а что нет, и как его пересобрать |
 | `corpus-manifest.example.json` | Образец манифеста текстов: `url` и хэши пусты — тексты корпуса пока не опубликованы |
 
@@ -49,6 +50,15 @@
    разворачивает в `COURSE_CORPUS_ROOT/index/`; далее работают `make search`,
    `make verify`, `make serve`. Состав архива и контрольные суммы — в
    `docs/GOOGLE-DRIVE.md`.
+8. **Проверять записи физического модуля**
+   (`physics-dataset-competition/`): запускать
+   `python physics-dataset-competition/src/physics_ds/schema/validate.py <файл.jsonl>`
+   (`--selftest` — самопроверка валидатора, `--json` — машиночитаемая
+   сводка); схема — `physics-dataset-competition/configs/schema/record.schema.json`.
+   Запись обязана иметь физические единицы, оценку неопределённости и
+   цепочку провенанса; контракт цитирования/происхождения сохраняется —
+   источник указывается файлом и координатами, без фабрикации прав и
+   ссылок.
 
 ## Порядок занятий (детерминированный)
 

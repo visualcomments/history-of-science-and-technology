@@ -1,0 +1,41 @@
+# SPDX-FileCopyrightText: 2026 history-of-science-and-technology contributors
+# SPDX-License-Identifier: GPL-3.0-or-later
+name: Физический датасет
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'physics-dataset-competition/**'
+      - 'docs/physics-dataset-competition.md'
+      - '.github/workflows/physics-dataset.yml'
+  pull_request:
+    paths:
+      - 'physics-dataset-competition/**'
+      - 'docs/physics-dataset-competition.md'
+      - '.github/workflows/physics-dataset.yml'
+  workflow_dispatch:
+
+jobs:
+  validate:
+    name: Данные и benchmark
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683  # v4.2.2
+
+      - uses: actions/setup-python@0b93645e9fea7318ecaed2b359559ac225c90a2b  # v5.3.0
+        with:
+          python-version: '3.12'
+
+      - name: Тесты физического модуля
+        run: |
+          python -m pip install --quiet pytest
+          python -m pytest physics-dataset-competition/tests/ -q
+
+      - name: Самопроверка валидатора записей
+        # Валидатор обязан падать на заведомо сломанной записи: проверка,
+        # которая не может упасть, ничего не проверяет.
+        run: python physics-dataset-competition/src/physics_ds/schema/validate.py --selftest
+
+      - name: Тесты инструментов курса
+        run: python -m pytest tests/ -q

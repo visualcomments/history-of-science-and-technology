@@ -1,0 +1,4 @@
+domain: CTRL
+required_conditions: [plant, T]
+units: {Kp: "-", Ki: "-", Kd: "-", gain_margin: dB, phase_margin: deg, T: s}
+ranges: {gain_margin: [-20, 80], phase_margin: [0, 180]}

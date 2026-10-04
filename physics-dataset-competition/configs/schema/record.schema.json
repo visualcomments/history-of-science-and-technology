@@ -1,0 +1,79 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PhysicsExperimentRecord",
+  "type": "object",
+  "required": ["record_id", "schema_version", "domain", "source", "rights", "provenance", "values", "validation"],
+  "properties": {
+    "record_id": {"type": "string", "pattern": "^[A-Z]{2,6}-[0-9A-F]{8,}$"},
+    "schema_version": {"type": "string", "pattern": "^\\d+\\.\\d+\\.\\d+$"},
+    "domain": {"enum": ["AERO", "STR", "RADAR", "CTRL"]},
+    "subdomain": {"type": "string"},
+    "period": {"type": "string", "description": "напр. 1930-1950"},
+    "source": {
+      "type": "object",
+      "required": ["title", "source_type", "year", "language", "url", "license"],
+      "properties": {
+        "title": {"type": "string"},
+        "authors": {"type": "array", "items": {"type": "string"}},
+        "publisher": {"type": "string"},
+        "year": {"type": "integer"},
+        "source_type": {"enum": ["book", "article", "report", "dataset", "standard", "patent", "thesis"]},
+        "language": {"type": "string"},
+        "url": {"type": "string", "format": "uri"},
+        "doi": {"type": "string"},
+        "license": {"type": "string", "description": "SPDX id или 'metadata-only'"},
+        "copyright_status": {"enum": ["public-domain", "cc-by", "cc-by-sa", "cc0", "permission-granted", "metadata-only", "unknown"]},
+        "archive_location": {"type": "string"}
+      }
+    },
+    "rights": {
+      "type": "object",
+      "required": ["reusable", "redistributable", "basis"],
+      "properties": {
+        "reusable": {"type": "boolean"},
+        "redistributable": {"type": "boolean"},
+        "basis": {"type": "string", "description": "правило/лицензия/разрешение"},
+        "reviewer_role_id": {"type": "string"}
+      }
+    },
+    "conditions": {"type": "object", "description": "Re, Ma, T, pressure, geometry..."},
+    "values": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "value", "unit"],
+        "properties": {
+          "name": {"type": "string"},
+          "value": {"type": ["number", "array"]},
+          "unit": {"type": "string"},
+          "uncertainty": {"type": "number"},
+          "uncertainty_kind": {"enum": ["std", "ci95", "range", "unknown"]}
+        }
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "required": ["activity", "agent_role_id", "retrieved_at", "method", "sha256"],
+      "properties": {
+        "activity": {"type": "string", "description": "PROV activity: collect/ocr/digitize/validate"},
+        "agent_role_id": {"type": "string", "description": "Rxx или agent id"},
+        "retrieved_at": {"type": "string", "format": "date-time"},
+        "method": {"type": "string", "description": "ocr/manual/webplotdigitizer/api"},
+        "tool_version": {"type": "string"},
+        "sha256": {"type": "string"},
+        "parent_record_id": {"type": "string"},
+        "review_chain": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "validation": {
+      "type": "object",
+      "required": ["status", "checked_by_role_id", "checked_at"],
+      "properties": {
+        "status": {"enum": ["unchecked", "in-review", "accepted", "rejected", "needs-expert"]},
+        "checked_by_role_id": {"type": "string"},
+        "checked_at": {"type": "string", "format": "date-time"},
+        "notes": {"type": "string"}
+      }
+    }
+  }
+}

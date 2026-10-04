@@ -1,0 +1,8 @@
+splits_version: splits-v1
+seed: 42
+strategy: grouped_temporal
+ratios: {train: 0.6, val: 0.2, test: 0.2}
+group_by: source.id
+temporal_by: year
+embargo_years: 1
+private_ratio: 0.3

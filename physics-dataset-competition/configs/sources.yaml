@@ -1,0 +1,64 @@
+# Реестр источников (скелет). Периоды — по DESIGN §5.1.
+# Ключ периода -> приоритетные платформы и ожидаемый copyright-статус.
+periods:
+  pre-1900:
+    sources: [internet-archive, hathitrust, google-books, gallica, rgb]
+    expected_copyright_status: public-domain
+  1900-1950:
+    sources: [nasa-ntrs, dtic, osti]
+    expected_copyright_status: public-domain
+  1950-2000:
+    sources: [crossref, openalex, semantic-scholar, elibrary]
+    expected_copyright_status: metadata-only
+  2000-plus:
+    sources: [arxiv, zenodo, datacite, oa-journals]
+    expected_copyright_status: cc-by
+sources:
+  - id: internet-archive
+    title: Internet Archive
+    url: https://archive.org
+  - id: hathitrust
+    title: HathiTrust
+    url: https://www.hathitrust.org
+  - id: google-books
+    title: Google Books
+    url: https://books.google.com
+  - id: gallica
+    title: Gallica (BnF)
+    url: https://gallica.bnf.fr
+  - id: rgb
+    title: Российская государственная библиотека
+    url: https://www.rsl.ru
+  - id: nasa-ntrs
+    title: NASA NTRS
+    url: https://ntrs.nasa.gov
+  - id: dtic
+    title: DTIC
+    url: https://www.dtic.mil
+  - id: osti
+    title: OSTI
+    url: https://www.osti.gov
+  - id: crossref
+    title: Crossref API
+    url: https://api.crossref.org
+  - id: openalex
+    title: OpenAlex
+    url: https://docs.openalex.org
+  - id: semantic-scholar
+    title: Semantic Scholar API
+    url: https://api.semanticscholar.org
+  - id: elibrary
+    title: eLIBRARY
+    url: https://elibrary.ru
+  - id: arxiv
+    title: arXiv API
+    url: https://arxiv.org/help/api
+  - id: zenodo
+    title: Zenodo
+    url: https://zenodo.org
+  - id: datacite
+    title: DataCite
+    url: https://datacite.org
+  - id: oa-journals
+    title: OA journals (CC-BY)
+    url: https://creativecommons.org/licenses/

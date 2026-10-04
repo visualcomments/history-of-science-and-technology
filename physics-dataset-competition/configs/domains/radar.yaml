@@ -1,0 +1,4 @@
+domain: RADAR
+required_conditions: [f, theta]
+units: {RCS: dBsm, SNR: dB, theta: deg, f: Hz}
+ranges: {RCS: [-60, 80], SNR: [-20, 120], theta: [0, 360]}
