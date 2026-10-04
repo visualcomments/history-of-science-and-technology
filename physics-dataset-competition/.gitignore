@@ -1,0 +1,30 @@
+# SPDX-License-Identifier: GPL-3.0-or-later
+# Локальные, НЕ публикуемые артефакты модуля физического датасета.
+
+# Локальное хранилище скачанных первоисточников (PDF/сканы) — только на диске.
+.local/
+.local/physics-bronze/
+.local/**/fetch-manifest.jsonl
+
+# Скачанные/сырые артефакты в data/: держим только .gitkeep.
+data/bronze/*
+data/silver/*
+data/gold/*
+!data/bronze/.gitkeep
+!data/silver/.gitkeep
+!data/gold/.gitkeep
+
+# Отчёты и рабочие файлы.
+docs/reports/*
+!docs/reports/.gitkeep
+_reports/
+
+# Локальные секреты и токены — сюда попадать не должны.
+.env
+.env.*
+*.token
+
+# Python-артефакты.
+__pycache__/
+*.py[cod]
+.pytest_cache/

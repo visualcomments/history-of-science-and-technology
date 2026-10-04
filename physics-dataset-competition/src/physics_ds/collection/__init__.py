@@ -1,11 +1,20 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
-"""Адаптеры сбора данных (crawlers/OCR/digitize) — заглушка.
+"""Адаптеры сбора данных из официальных API (stdlib-only).
 
-Пакет намеренно оставлен без логики на этапе P0 (DESIGN §17, эпик E-03).
-Реальные адаптеры (Crossref/OpenAlex/arXiv/Internet Archive, OCR, WebPlotDigitizer)
-подключаются на этапе A1 «Collection Sprint» и обязаны соблюдать ToS/robots.txt
-и политику прав из ``physics_ds.rights``.
+Модули:
+  * :mod:`physics_ds.collection.http`      — GET с таймаутом/ретраями/лимитом;
+  * :mod:`physics_ds.collection.openalex`  — OpenAlex works (метаданные);
+  * :mod:`physics_ds.collection.arxiv`     — arXiv Atom API (метаданные+PDF-ссылка);
+  * :mod:`physics_ds.collection.crossref`  — Crossref works (только метаданные);
+  * :mod:`physics_ds.collection.download`  — право-гейтированная загрузка OA;
+  * :mod:`physics_ds.collection.manifest`  — JSONL-манифест кандидатов.
 
-Всё, что кладётся в ``data/bronze``, должно сопровождаться записью в
-append-only журнале ``physics_ds.provenance.writer`` (sha256 входа/выхода).
+Поиск — всегда metadata-only. Загрузка файлов разрешена только при
+``rights.classifier.classify(...)['redistributable'] is True``, только по https
+и только с хостов из allow-list. Скачанные артефакты хранятся ЛОКАЛЬНО
+(рекомендуется ``.local/physics-bronze/``, вне git) и сопровождаются sha256.
 """
+
+from . import arxiv, crossref, download, http, manifest, openalex
+
+__all__ = ["arxiv", "crossref", "download", "http", "manifest", "openalex"]

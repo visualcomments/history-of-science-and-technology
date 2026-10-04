@@ -34,6 +34,42 @@ HuggingFace.
 | **Разработчик** | код, тесты, CI, воспроизводимый запуск | принятый PR, зелёный CI |
 | **Исследователь** *(опц.)* | метод, постановка задачи соревнования | описанный метод |
 
+## Исследовательский трек: физические данные (опционально, отдельное задание)
+
+Это **необязательное отдельное задание** для роли «эксперт» в модуле
+`physics-dataset-competition`. Оно **не заменяет** первое задание выше и
+использует **физическую схему** модуля
+(`physics-dataset-competition/configs/schema/record.schema.json`), а не
+универсальную схему первого вклада
+(`assignments/00-first-contribution/`). Полные руководства —
+`physics-dataset-competition/docs/EXPERT-ASSIGNMENT.md` (процедура) и
+`physics-dataset-competition/docs/OPENCODE-EXPERT-PROMPT.md` (правила
+агента); краткий маршрут — `docs/opencode-physics-expert.md`.
+
+Кратко, конвейер (домен — один из `AERO`/`STR`/`RADAR`/`CTRL`):
+
+1. **Поиск метаданных** в официальных API (OpenAlex/arXiv/Crossref):
+   `make physics-search QUERY="..." DOMAIN=AERO` → кандидаты в
+   `.local/physics-bronze/candidates.jsonl`.
+2. **Право-гейт и загрузка**: скачиваются только `redistributable`
+   источники с allow-list хостов, через
+   `python physics-dataset-competition/scripts/collect.py fetch ...`;
+   файлы — только в `.local/physics-bronze/` (вне git); `skipped` —
+   корректный исход.
+3. **Спецификация и извлечение** (агент помогает, эксперт проверяет):
+   спека по образцу `physics-dataset-competition/tests/fixtures/spec.aero.json`
+   с реальным `bronze.sha256`, затем `make physics-extract SPEC=... MANIFEST=... DOMAIN=AERO`.
+4. **Выборочная проверка и исправления**: `make physics-sample-check RECORDS=...`
+   (0 ошибок — критерий), ошибки исправляются append-only через
+   `physics-dataset-competition/scripts/correct.py`.
+5. **Публикация**: Hub-PR в датасет `chaotic-good-project/physics-experiment-records`
+   — `make physics-hf-pr RECORDS=...` (dry-run; реальный PR — `PUBLISH=1`).
+   Токен — только через окружение `HF_TOKEN`. Для зачёта достаточно URL
+   созданного PR в отчёте; PR не мержится экспертом.
+
+Raw-источники, секреты и персональные данные не коммитятся; права не
+угадываются (детали — в руководствах модуля выше).
+
 ## Как внести изменение
 
 1. Определитесь с ролью и возьмите задачу из `assignments/00-first-contribution/`.

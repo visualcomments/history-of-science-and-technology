@@ -3,7 +3,7 @@
 PY ?= python3
 VENV_PY ?= $(PY)
 
-.PHONY: help search index-fetch session assignment verify serve status quotes corpus-fetch corpus-status order order-check physics-validate physics-benchmark
+.PHONY: help search index-fetch session assignment verify serve status quotes corpus-fetch corpus-status order order-check physics-validate physics-benchmark physics-search physics-extract physics-sample-check physics-hf-pr
 
 help:
 	@echo "Цели:"
@@ -19,6 +19,10 @@ help:
 	@echo "  make status                  состояние курса и корпуса"
 	@echo "  make physics-validate FILE=records.jsonl  проверка записей физического модуля"
 	@echo "  make physics-benchmark       воспроизводимый benchmark физического модуля"
+	@echo "  make physics-search QUERY=\"...\" DOMAIN=AERO   поиск метаданных (OpenAlex/arXiv/Crossref)"
+	@echo "  make physics-extract SPEC=... MANIFEST=... DOMAIN=AERO   сбор записей из спеки"
+	@echo "  make physics-sample-check RECORDS=...   выборочная проверка записей"
+	@echo "  make physics-hf-pr RECORDS=... [PUBLISH=1]   Hub-PR физического датасета (по умолчанию dry-run)"
 
 search:
 	test -n "$(QUERY)" || (echo "Укажите QUERY=..."; exit 1)
@@ -79,3 +83,50 @@ physics-validate:
 
 physics-benchmark:
 	$(PY) physics-dataset-competition/benchmark/run.py
+
+# --- Физический модуль: первое экспертное задание ----------------------------
+# Полная процедура — physics-dataset-competition/docs/EXPERT-ASSIGNMENT.md.
+# Скачанные первоисточники живут только в .local/physics-bronze/ (вне git);
+# токен HF — только из окружения HF_TOKEN; секреты и raw-файлы не коммитятся.
+# Цели запускаются в Linux CI: mkdir -p создаёт выходные каталоги безопасно.
+PHYSICS_BRONZE ?= .local/physics-bronze
+
+physics-search:
+	test -n "$(QUERY)" || (echo "Укажите QUERY=\"...\""; exit 1)
+	test -n "$(DOMAIN)" || (echo "Укажите DOMAIN=AERO|STR|RADAR|CTRL"; exit 1)
+	mkdir -p $(PHYSICS_BRONZE)
+	$(PY) physics-dataset-competition/scripts/collect.py search \
+		--service $(if $(SERVICE),$(SERVICE),all) --domain $(DOMAIN) \
+		--query "$(QUERY)" --limit $(if $(LIMIT),$(LIMIT),10) \
+		--out $(if $(PHYSICS_OUT),$(PHYSICS_OUT),$(PHYSICS_BRONZE)/candidates.jsonl)
+
+physics-extract:
+	test -n "$(SPEC)" || (echo "Укажите SPEC=spec.json"; exit 1)
+	test -n "$(MANIFEST)" || (echo "Укажите MANIFEST=candidates.jsonl"; exit 1)
+	test -n "$(DOMAIN)" || (echo "Укажите DOMAIN=AERO|STR|RADAR|CTRL"; exit 1)
+	test -f "$(SPEC)" || (echo "Нет файла: $(SPEC)"; exit 2)
+	test -f "$(MANIFEST)" || (echo "Нет файла: $(MANIFEST)"; exit 2)
+	mkdir -p $(PHYSICS_BRONZE)
+	$(PY) physics-dataset-competition/scripts/extract.py \
+		--spec "$(SPEC)" \
+		--out $(if $(OUT),$(OUT),$(PHYSICS_BRONZE)/records.jsonl)
+
+physics-sample-check:
+	test -n "$(RECORDS)" || (echo "Укажите RECORDS=records.jsonl"; exit 1)
+	test -f "$(RECORDS)" || (echo "Нет файла: $(RECORDS)"; exit 2)
+	$(PY) physics-dataset-competition/scripts/validate_sample.py \
+		--records "$(RECORDS)" \
+		--sample $(if $(SAMPLE),$(SAMPLE),1.0) --seed $(if $(SEED),$(SEED),42) \
+		--report $(if $(REPORT),$(REPORT),.local/physics-bronze/sample-report.json)
+
+# По умолчанию dry-run (план без сети); реальный PR — только PUBLISH=1.
+# Токен HF_TOKEN берётся издателем из окружения; в Makefile его нет и не будет.
+physics-hf-pr:
+	test -n "$(RECORDS)" || (echo "Укажите RECORDS=records.jsonl"; exit 1)
+	test -f "$(RECORDS)" || (echo "Нет файла: $(RECORDS)"; exit 2)
+	$(PY) physics-dataset-competition/src/physics_ds/publish/hf.py \
+		--records "$(RECORDS)" \
+		--repo-id $(if $(REPO_ID),$(REPO_ID),chaotic-good-project/physics-experiment-records) \
+		--revision $(if $(REVISION),$(REVISION),expert/submission) \
+		$(if $(TITLE),--title "$(TITLE)",) \
+		$(if $(PUBLISH),,--dry-run)

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:arxiv="http://arxiv.org/schemas/atom">
+  <title>arXiv Query: search_query=all:airfoil</title>
+  <entry>
+    <id>http://arxiv.org/abs/2401.00001v1</id>
+    <updated>2024-01-01T00:00:00Z</updated>
+    <published>2024-01-01T00:00:00Z</published>
+    <title>Experimental aerodynamics of a low-Reynolds airfoil</title>
+    <summary>We report wind-tunnel measurements.</summary>
+    <author>
+      <name>A. Researcher</name>
+    </author>
+    <arxiv:doi>10.1234/arxiv.example</arxiv:doi>
+    <arxiv:license href="http://creativecommons.org/licenses/by/4.0/">CC BY 4.0</arxiv:license>
+    <link href="http://arxiv.org/abs/2401.00001v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2401.00001v1" rel="related" type="application/pdf"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2401.00002v1</id>
+    <updated>2024-02-01T00:00:00Z</updated>
+    <published>2024-02-01T00:00:00Z</published>
+    <title>A study without an explicit license</title>
+    <summary>No license element is present.</summary>
+    <author>
+      <name>B. Author</name>
+    </author>
+    <link href="http://arxiv.org/abs/2401.00002v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2401.00002v1" rel="related" type="application/pdf"/>
+  </entry>
+</feed>

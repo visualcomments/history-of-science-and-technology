@@ -1,0 +1,26 @@
+{
+  "status": "ok",
+  "message-type": "work-list",
+  "message": {
+    "items": [
+      {
+        "DOI": "10.5555/closed.example",
+        "title": ["A copyrighted structural-fatigue study"],
+        "publisher": "Proprietary Press",
+        "URL": "https://doi.org/10.5555/closed.example",
+        "issued": {"date-parts": [[1995, 6]]},
+        "license": []
+      },
+      {
+        "DOI": "10.5555/oa.example",
+        "title": ["An open-access structural-fatigue study"],
+        "publisher": "Open Press",
+        "URL": "https://doi.org/10.5555/oa.example",
+        "issued": {"date-parts": [[2019, 1]]},
+        "license": [
+          {"URL": "https://creativecommons.org/licenses/by/4.0/", "content-version": "vor"}
+        ]
+      }
+    ]
+  }
+}

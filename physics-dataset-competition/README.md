@@ -26,16 +26,40 @@ physics-dataset-competition/
 ├── src/physics_ds/
 │   ├── schema/validate.py          # stdlib-валидатор JSONL
 │   ├── validation/checks.py        # диапазоны, единицы, conditions
+│   ├── validation/sampling.py      # детерминированная выборка + отчёт
 │   ├── provenance/writer.py        # append-only JSONL (PROV-O)
 │   ├── rights/classifier.py        # decision tree §5.3
-│   ├── collection/                 # адаптеры сбора (заглушка)
+│   ├── collection/                 # OpenAlex/arXiv/Crossref + fetch (stdlib)
+│   ├── extract/record_builder.py   # сборка записей из спека эксперта
 │   ├── ml/metrics.py               # RMSE/MAE/MAPE/R²/violations
-│   └── publish/                    # HF/Kaggle (заглушка)
+│   └── publish/hf.py               # HF Hub PR (lazy huggingface_hub)
+├── scripts/
+│   ├── collect.py                  # search (metadata) / fetch (lawful OA)
+│   ├── extract.py                  # собрать записи из спека
+│   ├── validate_sample.py          # выборочная проверка
+│   └── correct.py                  # запись-исправление (append-only)
 ├── benchmark/run.py                # воспроизводимый harness
-├── data/{bronze,silver,gold}/      # слои данных
+├── data/{bronze,silver,gold}/      # слои данных (в git только .gitkeep)
 ├── tests/                          # фикстуры и тесты
-└── docs/RUNBOOK.md                 # инциденты и восстановление
+└── docs/
+    ├── EXPERT-ASSIGNMENT.md        # первое задание эксперта (полная процедура)
+    ├── OPENCODE-EXPERT-PROMPT.md   # copy-pastable промпт для агента
+    ├── HF-DATASET.md               # формат HF-репозитория и PR
+    ├── requirements-publish.txt    # опциональный huggingface_hub
+    └── RUNBOOK.md                  # инциденты и восстановление
 ```
+
+## Документация эксперта
+
+- **[docs/EXPERT-ASSIGNMENT.md](docs/EXPERT-ASSIGNMENT.md)** — полная процедура
+  первого задания: поиск, lawful-загрузка, извлечение, проверка, PR. Есть rubric
+  и DoD.
+- **[docs/OPENCODE-EXPERT-PROMPT.md](docs/OPENCODE-EXPERT-PROMPT.md)** —
+  готовый промпт для OpenCode-агента (строгие правила: не выдумывать данные,
+  не скачивать paywall, `blocked` при неизвестных правах).
+- **[docs/HF-DATASET.md](docs/HF-DATASET.md)** — структура Hub-репозитория,
+  dataset card, PR-конвенция, секрет `HF_TOKEN`, откат.
+- **[docs/RUNBOOK.md](docs/RUNBOOK.md)** — классы инцидентов и восстановление.
 
 ## Быстрый старт
 
@@ -50,9 +74,33 @@ python physics-dataset-competition/src/physics_ds/schema/validate.py \
 # 3. Запустить benchmark (встроенная фикстура)
 python physics-dataset-competition/benchmark/run.py --json
 
-# 4. Тесты
-python -m pytest tests/test_physics_dataset.py -q
+# 4. Поиск (metadata-only) и lawful-загрузка OA
+python physics-dataset-competition/scripts/collect.py search \
+    --service openalex --domain AERO --query "airfoil drag" --limit 10 \
+    --out .local/physics-bronze/candidates.jsonl
+python physics-dataset-competition/scripts/collect.py fetch \
+    --manifest .local/physics-bronze/candidates.jsonl \
+    --out-dir .local/physics-bronze --max-items 5
+
+# 5. Извлечение, проверка, публикация
+python physics-dataset-competition/scripts/extract.py \
+    --spec .local/physics-bronze/spec.aero.json \
+    --out .local/physics-bronze/records.jsonl
+python physics-dataset-competition/scripts/validate_sample.py \
+    --records .local/physics-bronze/records.jsonl --sample 0.5 --seed 42
+python physics-dataset-competition/src/physics_ds/publish/hf.py \
+    --records .local/physics-bronze/records.jsonl --dry-run
+
+# 6. Тесты
+python -m pytest physics-dataset-competition/tests/ -q
 ```
+
+### Локальное хранилище
+
+Скачанные первоисточники (PDF/сканы) живут **только** в
+`.local/physics-bronze/` и не коммитятся (см. `.gitignore` модуля). В git
+допускаются только `.gitkeep`-заглушки в `data/` и `docs/reports/`.
+
 
 ## Слои данных (DESIGN §4.1)
 

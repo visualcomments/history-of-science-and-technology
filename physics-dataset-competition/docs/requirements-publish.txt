@@ -1,0 +1,10 @@
+# SPDX-License-Identifier: GPL-3.0-or-later
+# Опциональные зависимости ТОЛЬКО для публикации в Hugging Face Hub.
+# НЕ добавлять в обязательные зависимости проекта/CI: модуль остаётся
+# stdlib-only, а huggingface_hub импортируется лениво в не-dry-run ветке.
+#
+# Установка:
+#   python -m pip install -r docs/requirements-publish.txt
+#
+# Секрет: HF_TOKEN — только через переменную окружения (не в файлах/логах).
+huggingface_hub>=0.25

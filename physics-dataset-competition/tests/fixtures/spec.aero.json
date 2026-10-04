@@ -1,0 +1,39 @@
+{
+  "domain": "AERO",
+  "subdomain": "airfoil-polar",
+  "period": "1930-1950",
+  "source": {
+    "title": "Wind tunnel measurements of an airfoil at low Reynolds",
+    "authors": ["A. Researcher"],
+    "publisher": "NASA",
+    "year": 1935,
+    "source_type": "report",
+    "language": "en",
+    "url": "https://ntrs.nasa.gov/api/citations/1",
+    "license": "public-domain"
+  },
+  "bronze": {
+    "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "path": ".local/physics-bronze/test.pdf",
+    "service_id": "W123456789",
+    "provenance_service": "openalex.org"
+  },
+  "conditions": {"Re": 3000000, "Ma": 0.2, "alpha": 4.0},
+  "values": [
+    {"name": "Cx", "value": 0.021, "unit": "-", "uncertainty": 0.002, "uncertainty_kind": "std"},
+    {"name": "Cy", "value": 0.412, "unit": "-", "uncertainty": 0.01, "uncertainty_kind": "std"},
+    {"name": "alpha", "value": 4.0, "unit": "deg"}
+  ],
+  "provenance": {
+    "activity": "digitize",
+    "agent_role_id": "R03",
+    "retrieved_at": "2026-10-04T10:00:00Z",
+    "method": "manual",
+    "tool_version": "1.0"
+  },
+  "validation": {
+    "status": "unchecked",
+    "checked_by_role_id": "R03",
+    "checked_at": "2026-10-04T10:00:00Z"
+  }
+}

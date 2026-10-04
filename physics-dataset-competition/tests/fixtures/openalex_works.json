@@ -1,0 +1,31 @@
+{
+  "meta": {"count": 1},
+  "results": [
+    {
+      "id": "https://openalex.org/W123456789",
+      "doi": "https://doi.org/10.1234/example",
+      "title": "Wind tunnel measurements of an airfoil at low Reynolds",
+      "display_name": "Wind tunnel measurements of an airfoil at low Reynolds",
+      "publication_year": 1935,
+      "open_access": {"is_oa": true, "oa_url": "https://arxiv.org/pdf/2401.00001"},
+      "best_oa_location": {
+        "pdf_url": "https://arxiv.org/pdf/2401.00001",
+        "landing_page_url": "https://arxiv.org/abs/2401.00001",
+        "license": "cc-by-4.0",
+        "source": {
+          "display_name": "arXiv",
+          "homepage_url": "https://arxiv.org"
+        }
+      },
+      "primary_location": {
+        "landing_page_url": "https://arxiv.org/abs/2401.00001",
+        "source": {"display_name": "arXiv", "homepage_url": "https://arxiv.org"}
+      },
+      "abstract_inverted_index": {
+        "Measured": [0],
+        "drag": [1],
+        "coefficients": [2]
+      }
+    }
+  ]
+}
