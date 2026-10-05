@@ -22,6 +22,7 @@
 | `Makefile` | Короткие цели (`make help`) |
 | `capstone-aviation-radar/` | Рабочий модуль-капстоун: архивные данные по авиации/радиолокации → Kaggle-датасеты и community-соревнование (правовая прозрачность PD, пошаговые задания, спецификация датасета, публикация на Kaggle, шаблон лицензии CC0/PDDL) |
 | `physics-dataset-competition/` | Исследовательский модуль: сбор и валидация физических данных по доменам AERO/STR/RADAR/CTRL → схема с единицами и провенансом → benchmark и Kaggle community competition; инфраструктура конвейера (`collect`/`extract`/`validate_sample`/HF-PR) и **экспертное задание доступны** — см. `physics-dataset-competition/docs/EXPERT-ASSIGNMENT.md`. Публичный датасет-приёмник создан: [`chaotic-good-project/physics-experiment-records`](https://huggingface.co/datasets/chaotic-good-project/physics-experiment-records) — пока он содержит только стартовую карточку и схему; реальные экспериментальные записи ещё не публиковались |
+| `physics-dataset-competition/calibration/` | Отдельное задание калибровки агента: JSONL-цепочки исправлений эксперта → [`top-papers/physics-agent-calibrations`](https://huggingface.co/datasets/top-papers/physics-agent-calibrations); developer harness и общий skill — [`top-papers/top-papers-graph`](https://github.com/top-papers/top-papers-graph/tree/main/scripts/eval) |
 | `docs/` | `AGENT-WORKFLOW.md` — цикл работы агента; `GOOGLE-DRIVE.md` — индекс на Google Диске; `CORPUS.md` — корпус источников |
 
 ## Исследовательский модуль: физические данные и соревнование

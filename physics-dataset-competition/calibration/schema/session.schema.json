@@ -1,0 +1,205 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/chaotic-good-project/physics-dataset-competition/calibration/schema/session.schema.json",
+  "title": "ExpertCalibrationSessionEvent",
+  "description": "Одно событие JSONL-журнала экспертной калибровки: эксперт подаёт статью/книгу, агент извлекает данные эксперимента, эксперт указывает явные ошибки, агент повторяет, пока не будет полного одобрения. Хранит цепочки сессий калибровки, а не финальные записи эксперимента.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "session_id",
+    "event_id",
+    "round",
+    "role",
+    "timestamp",
+    "source",
+    "payload"
+  ],
+  "properties": {
+    "session_id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9._-]{4,64}$",
+      "description": "Идентификатор сессии калибровки; стабилен для всей цепочки событий."
+    },
+    "event_id": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{16,64}$",
+      "description": "Детерминированный идентификатор события (hex). Повторение запрещено внутри сессии."
+    },
+    "round": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Номер раунда: 0 = постановка задачи, далее 1..N (ответ агента + разбор эксперта)."
+    },
+    "role": {
+      "enum": ["task", "agent_answer", "expert_review", "correction", "final"],
+      "description": "Роль события в цепочке. Порядок: task -> agent_answer -> expert_review -> correction -> ... -> final."
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO-8601 UTC. Передаётся явно (детерминизм), не берётся из системных часов."
+    },
+    "source": {
+      "type": "object",
+      "description": "Метаданные/провенанс первоисточника, который эксперт скармливает агенту. Сырые бинарники запрещены.",
+      "additionalProperties": false,
+      "required": ["source_type", "title", "rights"],
+      "properties": {
+        "source_type": {
+          "enum": ["book", "article", "report", "dataset", "standard", "patent", "thesis", "other"]
+        },
+        "title": {"type": "string", "minLength": 1},
+        "authors": {"type": "array", "items": {"type": "string"}},
+        "year": {"type": "integer"},
+        "language": {"type": "string"},
+        "doi": {"type": "string"},
+        "url": {"type": "string"},
+        "excerpt": {
+          "type": "string",
+          "maxLength": 2000,
+          "description": "Короткая текстовая выдержка. Полный текст/скан/PDF не хранится."
+        },
+        "rights": {
+          "type": "object",
+          "description": "Права на первоисточник: можно ли переиспользовать/распространять.",
+          "additionalProperties": false,
+          "required": ["reusable", "redistributable", "basis"],
+          "properties": {
+            "reusable": {"type": "boolean"},
+            "redistributable": {"type": "boolean"},
+            "basis": {"type": "string", "minLength": 1}
+          }
+        },
+        "provenance": {
+          "type": "object",
+          "description": "W3C PROV-O-подобная цепочка происхождения текста.",
+          "additionalProperties": true,
+          "properties": {
+            "retrieved_at": {"type": "string", "format": "date-time"},
+            "method": {"type": "string"},
+            "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+            "agent_role_id": {"type": "string"}
+          }
+        }
+      }
+    },
+    "payload": {
+      "type": "object",
+      "description": "Содержимое шага: промпт/задача, ответ агента, разбор ошибок эксперта, исправленный ответ, одобрение.",
+      "additionalProperties": false,
+      "properties": {
+        "prompt": {
+          "type": "string",
+          "description": "Постановка задачи агенту (role=task)."
+        },
+        "agent_answer": {
+          "type": "object",
+          "description": "Извлечённые агентом данные эксперимента (role=agent_answer/correction).",
+          "additionalProperties": true,
+          "properties": {
+            "summary": {"type": "string"},
+            "values": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": ["name", "value", "unit"],
+                "additionalProperties": true,
+                "properties": {
+                  "name": {"type": "string"},
+                  "value": {"type": ["number", "string", "array"]},
+                  "unit": {"type": "string"},
+                  "uncertainty": {"type": "number"}
+                }
+              }
+            },
+            "notes": {"type": "string"}
+          }
+        },
+        "expert_analysis": {
+          "type": "string",
+          "description": "Явный разбор ошибок экспертом (role=expert_review)."
+        },
+        "errors_found": {
+          "type": "array",
+          "description": "Явные ошибки, указанные экспертом.",
+          "items": {
+            "type": "object",
+            "required": ["field", "problem"],
+            "additionalProperties": true,
+            "properties": {
+              "field": {"type": "string"},
+              "problem": {"type": "string"},
+              "expected": {"type": ["string", "number", "array", "null"]},
+              "actual": {"type": ["string", "number", "array", "null"]}
+            }
+          }
+        },
+        "corrected_answer": {
+          "type": "object",
+          "description": "Исправленный ответ агента после разбора (role=correction).",
+          "additionalProperties": true,
+          "properties": {
+            "summary": {"type": "string"},
+            "values": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": ["name", "value", "unit"],
+                "additionalProperties": true,
+                "properties": {
+                  "name": {"type": "string"},
+                  "value": {"type": ["number", "string", "array"]},
+                  "unit": {"type": "string"},
+                  "uncertainty": {"type": "number"}
+                }
+              }
+            },
+            "notes": {"type": "string"}
+          }
+        },
+        "expert_approved": {
+          "type": "boolean",
+          "description": "Явное одобрение экспертом. Для role=final обязано быть true."
+        },
+        "approval_note": {
+          "type": "string",
+          "description": "Короткое пояснение одобрения/отказа."
+        }
+      }
+    }
+  },
+  "allOf": [
+    {
+      "description": "role=task требует payload.prompt.",
+      "if": {"properties": {"role": {"const": "task"}}},
+      "then": {"required": ["payload"], "properties": {"payload": {"required": ["prompt"]}}}
+    },
+    {
+      "description": "role=agent_answer требует payload.agent_answer.",
+      "if": {"properties": {"role": {"const": "agent_answer"}}},
+      "then": {"properties": {"payload": {"required": ["agent_answer"]}}}
+    },
+    {
+      "description": "role=expert_review требует payload.expert_analysis.",
+      "if": {"properties": {"role": {"const": "expert_review"}}},
+      "then": {"properties": {"payload": {"required": ["expert_analysis"]}}}
+    },
+    {
+      "description": "role=correction требует payload.corrected_answer.",
+      "if": {"properties": {"role": {"const": "correction"}}},
+      "then": {"properties": {"payload": {"required": ["corrected_answer"]}}}
+    },
+    {
+      "description": "role=final требует payload.expert_approved=true.",
+      "if": {"properties": {"role": {"const": "final"}}},
+      "then": {
+        "properties": {
+          "payload": {
+            "required": ["expert_approved"],
+            "properties": {"expert_approved": {"const": true}}
+          }
+        }
+      }
+    }
+  ]
+}
