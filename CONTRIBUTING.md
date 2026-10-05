@@ -48,26 +48,34 @@ HuggingFace.
 `physics-dataset-competition/docs/OPENCODE-EXPERT-PROMPT.md` (правила
 агента); краткий маршрут — `docs/opencode-physics-expert.md`.
 
-Кратко, конвейер (домен — один из `AERO`/`STR`/`RADAR`/`CTRL`):
+Кратко: задание выполняется **агентом**, эксперт подтверждает результат.
 
-1. **Поиск метаданных** в официальных API (OpenAlex/arXiv/Crossref):
-   `make physics-search QUERY="..." DOMAIN=AERO` → кандидаты в
-   `.local/physics-bronze/candidates.jsonl`.
-2. **Право-гейт и загрузка**: скачиваются только `redistributable`
-   источники с allow-list хостов, через
-   `python physics-dataset-competition/scripts/collect.py fetch ...`;
-   файлы — только в `.local/physics-bronze/` (вне git); `skipped` —
-   корректный исход.
-3. **Спецификация и извлечение** (агент помогает, эксперт проверяет):
-   спека по образцу `physics-dataset-competition/tests/fixtures/spec.aero.json`
-   с реальным `bronze.sha256`, затем `make physics-extract SPEC=... MANIFEST=... DOMAIN=AERO`.
-4. **Выборочная проверка и исправления**: `make physics-sample-check RECORDS=...`
-   (0 ошибок — критерий), ошибки исправляются append-only через
-   `physics-dataset-competition/scripts/correct.py`.
-5. **Публикация**: Hub-PR в датасет `chaotic-good-project/physics-experiment-records`
-   — `make physics-hf-pr RECORDS=...` (dry-run; реальный PR — `PUBLISH=1`).
-   Токен — только через окружение `HF_TOKEN`. Для зачёта достаточно URL
-   созданного PR в отчёте; PR не мержится экспертом.
+Запуск в OpenCode (из корня репозитория): команда `/phys-expert` или фраза
+«начинайте выполнение первого задания для эксперта». Агент работает в режиме
+«делает почти всё сам, эксперт валидирует», через один оркестратор
+`physics-dataset-competition/scripts/run_assignment.py` (домен —
+`AERO`/`STR`/`RADAR`/`CTRL`):
+
+1. **Поиск метаданных** в официальных API (OpenAlex/arXiv/Crossref) — ничего
+   не скачивается.
+2. **Авто-фильтр прав**: остаются только `redistributable` кандидаты с
+   allow-list хостов; отбракованные попадают в `skipped` с причинами.
+3. **Lawful-загрузка** разрешённых источников — файлы только в
+   `.local/physics-bronze/` (вне git).
+4. **Авто-извлечение** чисел с единицами из скачанного текста (черновик).
+5. **Сборка записей** по канонической схеме.
+6. **Выборочная проверка** (детерминированная) — критерий 0 ошибок.
+7. **Пакет `validation-bundle.json`** — что именно эксперт должен подтвердить.
+
+Эксперт в конце **проверяет и подтверждает** числа (единицы, знаки, условия) по
+первоисточнику; при замечаниях исправление делается новой записью (append-only)
+через `scripts/correct.py`. Затем — **Hub-PR** в датасет
+`chaotic-good-project/physics-experiment-records` (`--publish`; dry-run по
+умолчанию). Токен — только через окружение `HF_TOKEN`. Для зачёта достаточно
+URL созданного PR в отчёте; PR не мержится экспертом.
+
+Полные руководства: `physics-dataset-competition/docs/EXPERT-GUIDE.md` и
+`docs/opencode-physics-expert.md`.
 
 Raw-источники, секреты и персональные данные не коммитятся; права не
 угадываются (детали — в руководствах модуля выше).

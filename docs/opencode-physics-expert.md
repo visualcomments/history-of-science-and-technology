@@ -13,10 +13,11 @@
 
 ## Роль агента и согласие участника
 
-- Агент — **ассистент эксперта**: помогает искать источники в официальных
-  API, готовить спецификации извлечения, запускать проверки и публикацию.
-  Решения о правах принимает эксперт; агент не выдумывает данные и
-  метаданные.
+- Режим — **«агент делает работу, эксперт валидирует результат»**: агент сам
+  проходит весь конвейер (официальные API → право-гейт → lawful-загрузка →
+  авто-извлечение → сборка → выборочная проверка → пакет для проверки), а
+  участник **подтверждает** итоговые числа по первоисточнику. Агент не
+  выдумывает данные и метаданные.
 - Задание предлагается **только с явного согласия** участника
   (consent-gate, как и первое задание курса): «хотите выполнить
   исследовательское задание по физическим данным? Домен — один из
@@ -39,39 +40,44 @@
 
 ## Порядок команд (из корня репозитория)
 
+Режим — **«агент делает работу, эксперт валидирует результат»**: один запуск
+оркестратора вместо ручных шагов.
+
 ```bash
-# 1. Поиск метаданных (metadata-only, ничего не скачивает)
-make physics-search QUERY="wind tunnel airfoil drag coefficient" DOMAIN=AERO
-#   → .local/physics-bronze/candidates.jsonl
+# Один запуск: поиск → авто-фильтр прав → lawful-загрузка → авто-извлечение →
+# сборка записей → выборочная проверка → схемный валидатор → validation-bundle.json
+python physics-dataset-competition/scripts/run_assignment.py \
+  --domain AERO --query "wind tunnel airfoil drag coefficient" --slug aero-2026-10 \
+  --service all --limit 15 --target-records 3 \
+  --workdir .local/physics-bronze \
+  --retrieved-at "$(date -u +%Y-%m-%dT%H:%M:%SZ)"
+#   → .local/physics-bronze/validation-bundle.json  (пакет для эксперта)
 
-# 2. Право-гейт: показать кандидатов эксперту (is_oa/license/service);
-#    загрузка — только после явного одобрения, только redistributable.
-python physics-dataset-competition/scripts/collect.py fetch \
-  --manifest .local/physics-bronze/candidates.jsonl \
-  --out-dir .local/physics-bronze --max-items 5
-
-# 3. Спецификация извлечения (эксперт/агент) → сбор записей
-make physics-extract SPEC=.local/physics-bronze/spec.aero.json \
-  MANIFEST=.local/physics-bronze/candidates.jsonl DOMAIN=AERO
-#   → .local/physics-bronze/records.jsonl
-
-# 4. Детерминированная выборочная проверка (критерий — 0 ошибок)
-make physics-sample-check RECORDS=.local/physics-bronze/records.jsonl
-
-# 5. Исправления — append-only (новая запись с parent_record_id)
+# Эксперт проверяет числа по первоисточнику; при замечаниях — append-only фикс:
 python physics-dataset-competition/scripts/correct.py \
   --record corrected.json --parent-record-id AERO-XXXXXXXXXX \
   --records .local/physics-bronze/records.jsonl \
   --out .local/physics-bronze/records.jsonl
+python physics-dataset-competition/scripts/validate_sample.py \
+  --records .local/physics-bronze/records.jsonl --sample 0.5 --seed 42 \
+  --report .local/physics-bronze/sample-report.json
 
-# 6. Публикация: сначала dry-run, затем реальный PR (PUBLISH=1)
-make physics-hf-pr RECORDS=.local/physics-bronze/records.jsonl
-make physics-hf-pr RECORDS=.local/physics-bronze/records.jsonl \
-  PUBLISH=1 REVISION=expert/<slug> TITLE="<домен>: N записей"
+# Публикация: dry-run по умолчанию; реальный PR — --publish (HF_TOKEN из окружения)
+python physics-dataset-competition/scripts/run_assignment.py \
+  --domain AERO --query "..." --slug aero-2026-10 --publish \
+  --retrieved-at "$(date -u +%Y-%m-%dT%H:%M:%SZ)"
 # Целевой датасет: https://huggingface.co/datasets/chaotic-good-project/physics-experiment-records
 ```
 
+Коды возврата оркестратора: `0` успех (пакет готов), `1` ошибки валидации,
+`2` blocked (нет входа/секрета), `3` недостаточно разрешённых источников.
+
 Тесты модуля перед публикацией: `python -m pytest physics-dataset-competition/tests/ -q`.
+
+Отдельные шаги (если нужны по одному): `make physics-search`,
+`make physics-extract`, `make physics-sample-check`, `make physics-hf-pr`; а также
+`scripts/collect.py`, `scripts/autofill.py`, `scripts/extract.py`,
+`scripts/validate_sample.py`, `scripts/correct.py`.
 
 ## Права, безопасность, секреты
 
@@ -91,8 +97,10 @@ make physics-hf-pr RECORDS=.local/physics-bronze/records.jsonl \
 
 1. `≥ 3` принятых записей из `≥ 2` источников выбранного домена
    (`validation.status = accepted`).
-2. Отчёт выборочной проверки с **0 ошибок** (`make physics-sample-check`
-   → exit 0).
-3. URL созданного Hub-PR записан в отчёт участника (для зачёта достаточно
+2. Отчёт выборочной проверки с **0 ошибок** (в пакете
+   `validation-bundle.json`; `run_assignment.py` → exit 0).
+3. Эксперт **подтвердил** числа по первоисточнику (единицы, знаки, условия) —
+   в отчёте указано, что именно он проверил.
+4. URL созданного Hub-PR записан в отчёт участника (для зачёта достаточно
    dry-run только при объективной невозможности сети; полный балл — PR).
-4. В отчёте указано, где использовался ИИ (раскрытие, `CONTRIBUTING.md`).
+5. В отчёте указано, где использовался ИИ (раскрытие, `CONTRIBUTING.md`).

@@ -1,0 +1,2 @@
+A binary-like placeholder that the autofill must not parse as numbers.
+No numeric facts are provided here.

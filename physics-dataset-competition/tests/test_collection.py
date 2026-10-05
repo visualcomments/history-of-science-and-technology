@@ -68,18 +68,18 @@ def test_arxiv_parses_atom_feed() -> None:
 def test_arxiv_single_request_does_not_sleep() -> None:
     slept: list[float] = []
 
-    from physics_ds.collection import http as http_mod
-
-    original = http_mod.get
+    # arxiv.py связывает get при импорте (from .http import get), поэтому
+    # патчим именно модуль arxiv, а не http.
+    original = arxiv.get
 
     def fake_get(url, **kwargs):  # noqa: ARG001
         return (FIXTURES / "arxiv_feed.xml").read_bytes()
 
-    http_mod.get = fake_get  # type: ignore[assignment]
+    arxiv.get = fake_get  # type: ignore[assignment]
     try:
         rows = arxiv.search("airfoil", domain="AERO", limit=2, sleep=slept.append)
     finally:
-        http_mod.get = original  # type: ignore[assignment]
+        arxiv.get = original  # type: ignore[assignment]
     assert len(rows) == 2
     assert slept == []  # одиночный запрос не спит
 
@@ -92,21 +92,19 @@ def test_arxiv_pagination_sleeps_three_seconds() -> None:
     ]
     calls = {"n": 0}
 
-    from physics_ds.collection import http as http_mod
-
-    original = http_mod.get
+    original = arxiv.get
 
     def fake_get(url, **kwargs):  # noqa: ARG001
         body = pages[min(calls["n"], len(pages) - 1)]
         calls["n"] += 1
         return body
 
-    http_mod.get = fake_get  # type: ignore[assignment]
+    arxiv.get = fake_get  # type: ignore[assignment]
     try:
         # page_size=2 => две страницы по 2 записи
         arxiv.search("airfoil", domain="AERO", limit=4, page_size=2, sleep=slept.append)
     finally:
-        http_mod.get = original  # type: ignore[assignment]
+        arxiv.get = original  # type: ignore[assignment]
     assert slept == [arxiv.POLITE_DELAY_SECONDS]
 
 

@@ -1,0 +1,14 @@
+Wind tunnel test report (public domain).
+
+The model was tested at Re = 3000000 and Ma = 0.20, alpha = 4.0 deg.
+
+Results table:
+  Cx = 0.021
+  Cy = 0.412
+  Cm = -0.045
+  thickness ratio 0.12
+  chord 1.5 m
+  speed 40.0 m/s
+  temperature 293 K
+
+Uncertainty of the drag coefficient is 0.002 (std).

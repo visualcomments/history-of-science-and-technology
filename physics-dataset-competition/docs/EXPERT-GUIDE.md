@@ -5,14 +5,44 @@
 извлечение → проверка → исправления → Hub PR». Документ рассчитан на две
 аудитории одновременно:
 
-- **Эксперт** (роль EXP/DOMAIN) — принимает решения о правах, физической
-  корректности и исправлениях;
-- **OpenCode-агент** — выполняет механическую работу по точным командам,
-  но ничего не выдумывает и не решает за эксперта.
+- **Эксперт** (роль EXP/DOMAIN) — **валидирует** результат: подтверждает права,
+  физическую корректность и исправления;
+- **OpenCode-агент** — выполняет почти всю работу автономно одной командой,
+  ничего не выдумывает и не обходит право-гейт.
 
 Краткая версия задания — `EXPERT-ASSIGNMENT.md`; готовый промпт для агента —
 `OPENCODE-EXPERT-PROMPT.md`; формат Hub-репозитория — `HF-DATASET.md`.
-Этот документ — самая полная версия: выполнйте его построчно.
+
+## Agent-first: одна команда вместо ручных approval'ов
+
+Раньше агент останавливался и просил человека подтверждать кандидатов,
+писать спек вручную, одобрять каждую правку и токен. Теперь этого не нужно:
+агент запускает оркестратор, который делает всё сам, а эксперт **только
+проверяет итоговый бандл**.
+
+```bash
+python physics-dataset-competition/scripts/run_assignment.py \
+  --domain AERO --query "wind tunnel airfoil drag coefficient" \
+  --slug <slug> --service all --limit 15 --target-records 3 \
+  --workdir .local/physics-bronze --seed 42 \
+  --retrieved-at "$(date -u +%Y-%m-%dT%H:%M:%SZ)"
+```
+
+Оркестратор выполняет: search → авто-фильтр (redistributable + https +
+allow-list) → fetch → autofill → extract → validate_sample → schema-валидатор →
+`validation-bundle.json` → publisher dry-run (или реальный PR при `--publish`).
+
+Итог для эксперта — `validation-bundle.json`:
+
+- счётчики (candidates/selected/skipped/downloaded/records);
+- provenance по каждому источнику (sha256, url, license, redistributable);
+- отчёт выборочной проверки;
+- `requires_expert_validation: true` и список того, что эксперт обязан
+  подтвердить (каждое значение с координатой источника, каждое основание прав,
+  каждая единица).
+
+Эксперт открывает бандл, сверяет числа с первоисточником, при необходимости
+исправляет через `correct.py` (append-only) и записывает URL PR.
 
 ## Запуск с агентом OpenCode
 
@@ -23,11 +53,11 @@
 - фраза **«начинайте выполнение первого задания для эксперта»** — агент
   распознаёт её и начинает с consent-gate.
 
-Агент задаст те же шаги, что и ниже: домен и запрос → поиск → право-гейт →
-lawful-загрузка → извлечение → выборочная проверка → исправления → тесты →
-Hub PR. Конфигурация лежит в репозитории: `.opencode/agent/phys-expert.md`,
-`.opencode/command/phys-expert.md`, `opencode.json`. После первого добавления
-этих файлов нужно один раз перезапустить OpenCode, чтобы он их подхватил.
+Агент выполняет `run_assignment.py`, а затем предлагает эксперту проверить
+`validation-bundle.json`. Конфигурация лежит в репозитории:
+`.opencode/agent/phys-expert.md`, `.opencode/command/phys-expert.md`,
+`opencode.json`. После первого добавления этих файлов нужно один раз
+перезапустить OpenCode, чтобы он их подхватил.
 
 Если предпочитаете вести всё вручную — выполняйте шаги ниже без агента.
 
@@ -232,9 +262,39 @@ python physics-dataset-competition/scripts/collect.py fetch \
 ## Шаг 5. Извлечение записей
 
 Извлечение делается по **спецификации** — JSON-файлу, который описывает один
-источник и извлечённые из него величины. Спецификацию готовит эксперт (агент
-может помочь механически), по образцу
-`physics-dataset-competition/tests/fixtures/spec.aero.json`:
+источник и извлечённые из него величины. Спецификацию **не пишут вручную**:
+её собирает `autofill.py` из `fetch-manifest.jsonl` (агент делает это сам).
+
+```bash
+python physics-dataset-competition/scripts/autofill.py \
+  --manifest .local/physics-bronze/fetch-manifest.jsonl \
+  --bronze-dir .local/physics-bronze \
+  --domain AERO --target-records 3 \
+  --retrieved-at "$(date -u +%Y-%m-%dT%H:%M:%SZ)" \
+  --out .local/physics-bronze/spec.json
+```
+
+Что делает `autofill.py`:
+
+- читает строки манифеста со `status=downloaded` и локальные файлы;
+- для текстовых форматов предлагает числа+единицы регуляркой — это
+  **предложение**, а не истина (у каждого значения `uncertainty_kind=unknown`);
+- для бинарных (`.pdf` и др.) содержимое не парсится: запись помечается
+  `needs-agent-review`, а `values` заполняются вручную;
+- метаданные источника копирует **только** из манифеста — ничего не выдумывает;
+- требует `--retrieved-at` (или `SOURCE_DATE_EPOCH`); «1970-01-01» не
+  подставляется;
+- при отсутствии чисел помечает источник `skipped: no numeric facts`.
+
+Соберите записи:
+
+```bash
+python physics-dataset-competition/scripts/extract.py \
+  --spec .local/physics-bronze/spec.json \
+  --out .local/physics-bronze/records.jsonl
+```
+
+Образец структуры спека — `tests/fixtures/spec.aero.json`:
 
 ```jsonc
 {
@@ -265,13 +325,14 @@ python physics-dataset-competition/scripts/collect.py fetch \
     {"name": "alpha", "value": 4.0, "unit": "deg"}
   ],
   "provenance": {
-    "activity": "digitize", "agent_role_id": "R03",
-    "retrieved_at": "2026-10-04T10:00:00Z",
-    "method": "manual", "tool_version": "1.0"
+    "activity": "auto-extract", "agent_role_id": "agent",
+    "retrieved_at": "2026-10-05T00:00:00Z",
+    "method": "script"
   },
   "validation": {
-    "status": "unchecked", "checked_by_role_id": "R03",
-    "checked_at": "2026-10-04T10:00:00Z"
+    "status": "unchecked", "checked_by_role_id": "agent",
+    "checked_at": "2026-10-05T00:00:00Z",
+    "notes": "числа предложены регуляркой и требуют проверки эксперта"
   }
 }
 ```
@@ -476,6 +537,19 @@ python physics-dataset-competition/src/physics_ds/publish/hf.py \
 
 ## Быстрая шпаргалка (все команды подряд)
 
+### Вариант A: агент — одной командой (рекомендуется)
+
+```bash
+python physics-dataset-competition/scripts/run_assignment.py \
+  --domain AERO --query "wind tunnel airfoil drag coefficient" \
+  --slug <slug> --service all --limit 15 --target-records 3 \
+  --workdir .local/physics-bronze --seed 42 \
+  --retrieved-at "$(date -u +%Y-%m-%dT%H:%M:%SZ)"
+# → validation-bundle.json готов; эксперт проверяет его
+```
+
+### Вариант B: по шагам (ручной контроль)
+
 ```bash
 mkdir -p .local/physics-bronze
 
@@ -487,8 +561,14 @@ python physics-dataset-competition/scripts/collect.py fetch \
   --manifest .local/physics-bronze/candidates.jsonl \
   --out-dir .local/physics-bronze --max-items 5
 
+python physics-dataset-competition/scripts/autofill.py \
+  --manifest .local/physics-bronze/fetch-manifest.jsonl \
+  --bronze-dir .local/physics-bronze --domain AERO --target-records 3 \
+  --retrieved-at "$(date -u +%Y-%m-%dT%H:%M:%SZ)" \
+  --out .local/physics-bronze/spec.json
+
 python physics-dataset-competition/scripts/extract.py \
-  --spec .local/physics-bronze/spec.aero.json \
+  --spec .local/physics-bronze/spec.json \
   --out .local/physics-bronze/records.jsonl
 
 python physics-dataset-competition/scripts/validate_sample.py \

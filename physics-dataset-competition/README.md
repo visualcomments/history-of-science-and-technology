@@ -30,11 +30,14 @@ physics-dataset-competition/
 │   ├── provenance/writer.py        # append-only JSONL (PROV-O)
 │   ├── rights/classifier.py        # decision tree §5.3
 │   ├── collection/                 # OpenAlex/arXiv/Crossref + fetch (stdlib)
-│   ├── extract/record_builder.py   # сборка записей из спека эксперта
+│   ├── extract/record_builder.py   # сборка записей из спека
+│   ├── extract/autofill.py         # авто-спек (regex-числа) из манифеста
 │   ├── ml/metrics.py               # RMSE/MAE/MAPE/R²/violations
 │   └── publish/hf.py               # HF Hub PR (lazy huggingface_hub)
 ├── scripts/
+│   ├── run_assignment.py           # ОРКЕСТРАТОР: всё за один запуск
 │   ├── collect.py                  # search (metadata) / fetch (lawful OA)
+│   ├── autofill.py                 # авто-спецификация извлечения
 │   ├── extract.py                  # собрать записи из спека
 │   ├── validate_sample.py          # выборочная проверка
 │   └── correct.py                  # запись-исправление (append-only)
@@ -53,11 +56,11 @@ physics-dataset-competition/
 ## Документация эксперта
 
 - **[docs/EXPERT-GUIDE.md](docs/EXPERT-GUIDE.md)** — **подробная пошаговая
-  инструкция эксперту и агенту**: подготовка окружения, все 10 шагов задания,
-  точные команды, право-гейт, troubleshooting и rubric. Начинать здесь.
+  инструкция эксперту и агенту**: agent-first прогон одной командой, все шаги
+  задания, точные команды, право-гейт, troubleshooting и rubric. Начинать здесь.
 - **[docs/EXPERT-ASSIGNMENT.md](docs/EXPERT-ASSIGNMENT.md)** — краткая версия
-  первого задания: поиск, lawful-загрузка, извлечение, проверка, PR. Есть rubric
-  и DoD.
+  первого задания: агент запускает `run_assignment.py`, эксперт проверяет
+  `validation-bundle.json`. Есть rubric и DoD.
 - **[docs/OPENCODE-EXPERT-PROMPT.md](docs/OPENCODE-EXPERT-PROMPT.md)** —
   готовый промпт для OpenCode-агента (строгие правила: не выдумывать данные,
   не скачивать paywall, `blocked` при неизвестных правах).
@@ -66,6 +69,22 @@ physics-dataset-competition/
 - **[docs/RUNBOOK.md](docs/RUNBOOK.md)** — классы инцидентов и восстановление.
 
 ## Быстрый старт
+
+### Agent-first: одна команда (рекомендуется)
+
+```bash
+# Агент делает всё сам, эксперт затем проверяет validation-bundle.json
+python physics-dataset-competition/scripts/run_assignment.py \
+    --domain AERO --query "wind tunnel airfoil drag coefficient" \
+    --slug <slug> --service all --limit 15 --target-records 3 \
+    --workdir .local/physics-bronze --seed 42 \
+    --retrieved-at "$(date -u +%Y-%m-%dT%H:%M:%SZ)"
+```
+
+Коды возврата: `0` бандл готов, `1` ошибки валидации, `2` blocked
+(нет входа/секрета), `3` недостаточно redistributable-источников.
+
+### По шагам (ручной контроль)
 
 ```bash
 # 1. Проверить валидатор (доказывает, что он умеет падать)
@@ -86,9 +105,14 @@ python physics-dataset-competition/scripts/collect.py fetch \
     --manifest .local/physics-bronze/candidates.jsonl \
     --out-dir .local/physics-bronze --max-items 5
 
-# 5. Извлечение, проверка, публикация
+# 5. Авто-спецификация, извлечение, проверка, публикация
+python physics-dataset-competition/scripts/autofill.py \
+    --manifest .local/physics-bronze/fetch-manifest.jsonl \
+    --bronze-dir .local/physics-bronze --domain AERO --target-records 3 \
+    --retrieved-at "$(date -u +%Y-%m-%dT%H:%M:%SZ)" \
+    --out .local/physics-bronze/spec.json
 python physics-dataset-competition/scripts/extract.py \
-    --spec .local/physics-bronze/spec.aero.json \
+    --spec .local/physics-bronze/spec.json \
     --out .local/physics-bronze/records.jsonl
 python physics-dataset-competition/scripts/validate_sample.py \
     --records .local/physics-bronze/records.jsonl --sample 0.5 --seed 42

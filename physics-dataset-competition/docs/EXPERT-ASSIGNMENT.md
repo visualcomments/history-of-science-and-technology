@@ -10,6 +10,14 @@
 raw-сканы не коммитятся. Всё, что попадает в публичный датасет, должно быть
 воспроизводимо из файлов этого репозитория.
 
+> **Agent-first.** Агент (OpenCode) выполняет почти всю механическую работу
+> одной командой `run_assignment.py`: поиск, право-гейт, lawful-загрузку,
+> черновое извлечение чисел, выборочную проверку и публикацию (dry-run/PR).
+> **Эксперт не пишет JSON вручную и не approves каждый кандидат** — он
+> получает готовый `validation-bundle.json` и подтверждает/исправляет
+> результат. Подробная процедура для агента — `EXPERT-GUIDE.md`; готовый
+> промпт — `OPENCODE-EXPERT-PROMPT.md`.
+
 ---
 
 ## 0. Что считается сделанной работой (DoD)
@@ -19,11 +27,49 @@ raw-сканы не коммитятся. Всё, что попадает в п�
 2. У каждой записи **воспроизводимые права**: `rights.basis` объясняет
    основание, `rights.redistributable=true` подтверждено политикой §5.3.
 3. Выборочная проверка даёт **0 ошибок** (`validate_sample.py` → exit 0).
-4. Открыт **Hub PR URL** и записан в отчёт; сам PR не мержится экспертом.
-5. Скачанные первоисточники лежат **только** в `.local/physics-bronze/`
+4. Получен **`validation-bundle.json`** с `requires_expert_validation: true`;
+   эксперт подтвердил перечисленные в нём значения/единицы/права.
+5. Открыт **Hub PR URL** и записан в отчёт; сам PR не мержится экспертом.
+6. Скачанные первоисточники лежат **только** в `.local/physics-bronze/`
    (в git их нет).
 
 ---
+
+## Как выполняется задание (агент + эксперт)
+
+```bash
+# Агент запускает весь конвейер одной командой:
+python physics-dataset-competition/scripts/run_assignment.py \
+  --domain AERO --query "wind tunnel airfoil drag coefficient" \
+  --slug <ваш-slug> --service all --limit 15 --target-records 3 \
+  --workdir .local/physics-bronze --seed 42 \
+  --retrieved-at "$(date -u +%Y-%m-%dT%H:%M:%SZ)"
+```
+
+Что происходит внутри (агент делает это сам, без остановок на approval):
+
+1. **search** — метаданные из OpenAlex/arXiv/Crossref (ничего не скачивает);
+2. **авто-фильтр** — оставляем только `redistributable` + https + allow-list;
+3. **fetch** — lawful-загрузка разрешённых OA-источников (право-гейт сохранён);
+4. **autofill** — регуляркой предлагаются числа+единицы и условия
+   (`Re`/`Ma`/`alpha`/…); метаданные копируются ТОЛЬКО из манифеста;
+5. **extract** — сборка записей по схеме (права — `rights.classifier`);
+6. **validate_sample** — детерминированная выборочная проверка (seed);
+7. **validation-bundle.json** — сводка для эксперта;
+8. **publisher dry-run** (или реальный PR при `--publish`).
+
+Коды возврата: `0` успех (бандл готов), `1` ошибки валидации, `2` blocked
+(нет входа/секрета), `3` недостаточно redistributable-источников.
+
+**Что делает эксперт:** открывает `validation-bundle.json`, сверяет каждое
+число с первоисточником (единицы/знаки/условия), подтверждает `rights.basis`,
+исправляет неверное через `correct.py` (новая запись, append-only) и записывает
+URL PR. Больше ничего вручную писать не нужно.
+
+### Отдельные шаги (если нужен ручной контроль)
+
+Агент также может запускать шаги по отдельности — `collect.py`, `autofill.py`,
+`extract.py`, `validate_sample.py`, `correct.py`, `hf.py`; их описания ниже.
 
 ## 1. Выбор домена и запроса
 
@@ -87,25 +133,36 @@ python physics-dataset-competition/scripts/collect.py fetch \
 > подставлять credentials. Если права неясны — команда вернёт `skipped`;
 > это корректный исход, а не ошибка.
 
-## 4. Извлечение записей (агент помогает, эксперт проверяет)
+## 4. Автозаполнение спецификации (агент) и извлечение
 
-1. Откройте локальный файл из `.local/physics-bronze/` и извлеките
-   числовые результаты (таблицы/графики) — вручную или через WebPlotDigitizer.
-2. Подготовьте **спецификацию извлечения** (JSON) по образцу
-   `physics-dataset-competition/tests/fixtures/spec.aero.json`:
+Спецификацию **не нужно писать вручную** — её собирает `autofill.py` из
+`fetch-manifest.jsonl`. Числа предлагаются регуляркой и помечаются
+`validation.status = "unchecked"`; это первый черновик, который обязан
+проверить эксперт.
 
-   - `source` — реальные метаданные источника (title/year/license/url/…);
-   - `bronze.sha256` — sha256 скачанного файла из `fetch-manifest.jsonl`
-     (**обязателен**; метаданные не выдумываются);
-   - `conditions` — Re/Ma/alpha/T/…;
-   - `values[]` — name/value/unit (+ `uncertainty`, `uncertainty_kind`);
-   - `provenance` — activity/agent_role_id/retrieved_at/method.
+```bash
+python physics-dataset-competition/scripts/autofill.py \
+  --manifest .local/physics-bronze/fetch-manifest.jsonl \
+  --bronze-dir .local/physics-bronze \
+  --domain AERO --target-records 3 \
+  --retrieved-at "$(date -u +%Y-%m-%dT%H:%M:%SZ)" \
+  --out .local/physics-bronze/spec.json
+```
 
-3. Соберите записи:
+- метаданные источника копируются **только** из манифеста — ничего не
+  выдумывается; отсутствующие поля остаются отсутствующими;
+- `bronze.sha256`/`path`/`service_id` берутся из манифеста;
+- `retrieved_at` обязателен (или `SOURCE_DATE_EPOCH`); фиксированное
+  `1970-01-01` не подставляется;
+- бинарные файлы (`.pdf` и др.) не парсятся: запись помечается
+  `needs-agent-review`, `values` заполняются вручную;
+- если чисел нет — источник помечается `skipped: no numeric facts`.
+
+Соберите записи:
 
 ```bash
 python physics-dataset-competition/scripts/extract.py \
-  --spec .local/physics-bronze/spec.aero.json \
+  --spec .local/physics-bronze/spec.json \
   --out .local/physics-bronze/records.jsonl
 ```
 
@@ -113,8 +170,8 @@ python physics-dataset-competition/scripts/extract.py \
 генерируется детерминированно из `DOMAIN + sha256 bronze + индекс`. Запись
 проверяется структурно и по домену; при ошибках JSONL не пишется.
 
-**OpenCode ассистирует** извлечение, но эксперт обязан глазами сверить каждое
-число с первоисточником: правильность единиц, знаков, условий эксперимента.
+**Эксперт обязан** глазами сверить каждое число с первоисточником:
+правильность единиц, знаков, условий эксперимента.
 
 ## 5. Выборочная проверка (детерминированная)
 
@@ -198,6 +255,10 @@ python physics-dataset-competition/src/physics_ds/publish/hf.py \
 
 ## Частые ошибки
 
+- Ручное написание спека/approval каждого кандидата — не нужно: агент делает
+  это через `run_assignment.py` + `autofill.py`, эксперт только валидирует.
+- Считать auto-числа истиной: они предложены регуляркой (`unchecked`) — эксперт
+  обязан сверить каждое с первоисточником.
 - Загрузка «в обход» — категорически запрещена; `skipped` — норма.
 - `bronze.sha256` не из манифеста, а «из головы» → `extract.py` откажет.
 - Попытка опубликовать `metadata-only` → publisher откажет (код 1).
