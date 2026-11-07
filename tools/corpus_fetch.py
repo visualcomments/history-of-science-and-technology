@@ -202,7 +202,9 @@ def verify_members(unpack, manifest):
 def verify_structure(unpack, kind):
     """Structural fallback when no hashes are published. Says so explicitly."""
     if kind == "index":
-        need = ["annoy.index", "embeddings.npy", "chunks.jsonl", "config.json"]
+        # annoy.index is optional: the exact-cosine backend (embeddings.npy)
+        # is sufficient for rag_search.py; config.json documents the backend.
+        need = ["embeddings.npy", "chunks.jsonl", "config.json"]
     else:
         need = []
     if not need:
@@ -292,6 +294,16 @@ def fetch_artifact(label, url, manifest, root, kind, subdir, dest_name):
             # Index installs wholesale into <root>/index/.
             pass
         install_dir(src, target)
+
+        # The index archive ships the corpus working scripts (rag_search.py,
+        # verify_quotes.py). They belong in <root>/scripts/, not index/.
+        if kind == "index":
+            for script_name in ("rag_search.py", "verify_quotes.py"):
+                sp = os.path.join(target, script_name)
+                if os.path.exists(sp):
+                    os.makedirs(os.path.join(root, "scripts"), exist_ok=True)
+                    shutil.move(sp, os.path.join(root, "scripts", script_name))
+                    print("  скрипт корпуса: %s -> scripts/" % script_name)
 
         print("  установлено: %s" % target)
         cfg = os.path.join(target, "config.json")

@@ -1,55 +1,39 @@
 {
  "schema": 1,
- "index_version": "2026-09-13-v2",
- "note": "Индекс корпуса курса «История России: история и философия науки и технологий». Версия v2: корпус расширен до 231 файла — добавлены 60 открытых источников под занятие 1 (28 первоисточников общественного достояния: Уэвелл ×3, Гершель, Милль, Пирсон, Пуанкаре, Джевонс, Бернар, Кэмпбелл, Клиффорд, Флинт ×2, Барнс, Борн, Кроче, Тиндаль, Гексли, Фарадей, Кельвин, Бэкон ×2, Декарт, Либби, Седжвик, Конт, Записи Королевского общества + 32 статьи Wikipedia CC BY-SA 4.0 по историографии науки, научному методу и источниковедению). Чанков 47 781 → 67 242. Полный перечень — docs/lesson1-sources.md.",
+ "index_version": "2026-11-07",
+ "note": "Индекс корпуса курса «Право интеллектуальной собственности», пересобран на GPU (sentence-transformers + torch/CUDA): 427 файлов -> 59 768 чанков (1400/140). Точный косинусный поиск (annoy недоступен на Windows; rag_search.py автоматически использует embeddings.npy). В index.zip также включены рабочие скрипты корпуса (scripts/rag_search.py, scripts/verify_quotes.py), необходимые для make search и make verify.",
  "archive": {
-  "filename": "course-index-2026-09-13-v2.zip",
-  "size_bytes": 231504883,
-  "sha256": "996E3CD6C3C1ECB5F49E1D1EC93C88C900CD927B0EC4D26041FBD90A60A9524A",
-  "url": "https://huggingface.co/datasets/brics-edtech/histsci-corpus",
-  "file_id": "17byaQPYS9GtkWgHebY5zN5vj-ThcZ5sf",
-  "view_url": "https://drive.google.com/file/d/17byaQPYS9GtkWgHebY5zN5vj-ThcZ5sf/view",
-  "kind": "huggingface",
-  "hf_total_bytes": 484698621,
-  "sha256_note": "per-file sha256 in files[]; aggregate not applicable to HF source"
+  "filename": "index.zip",
+  "size_bytes": 254342858,
+  "sha256": "3D844110F620C8472A724F125ABC973F815A2F457F8D702CC42BB99CA69E1A0D",
+  "url": "https://huggingface.co/datasets/brics-edtech/histsci-corpus/resolve/main/index.zip",
+  "kind": "huggingface"
  },
  "files": [
   {
-   "path": "annoy.index",
-   "size_bytes": 168812496,
-   "sha256": "76087EAC2866D1C43321BDF575293DDF5392D49EA2038A3429956BAF3799A849"
+   "path": "embeddings.npy",
+   "size_bytes": 207200384,
+   "sha256": "7B80C0855BE1186692EDA024C3F4D23FC8F0D5034EE429E05EFF62B0CBA267F1"
   },
   {
    "path": "chunks.jsonl",
-   "size_bytes": 161780966,
-   "sha256": "E8378082263A78189EDE66C26EC77B04D64B2503288F2FDD8543201A5FD703F7"
+   "size_bytes": 203410198,
+   "sha256": "56E90D6961EB6F5EA37A23A88B4DE0BE62295DD5ED05AFE3A34EB76664CBB7DA"
   },
   {
    "path": "config.json",
-   "size_bytes": 22727,
-   "sha256": "C6EAA1BB1186B86E003577AA8DC159BE2382D493367448BE1A7D7F78E41C86B2"
-  },
-  {
-   "path": "embeddings.npy",
-   "size_bytes": 154082432,
-   "sha256": "F9EB4434B8611BCF6F9C0D85844EC1853F33BC369A10B3204AD292073748274E"
+   "size_bytes": 35444,
+   "sha256": "6F4DE8F8E0C1D07897C9D5292681EC9DD136F174C059C1CB39177BAF4C6A3535"
   }
  ],
  "corpus": {
-  "n_files": 364,
-  "n_chunks": 100314,
-  "composition": {
-   "pre_existing_pd_free": 47,
-   "lesson1_primary_sources_pd": 28,
-   "oa_cc_licensed_articles": 17,
-   "pd_primary_sources": 84,
-   "ru_language_publications": 53,
-   "wikipedia_cc_by_sa": 135
-  },
+  "n_files": 638,
+  "n_chunks": 134896,
   "model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
   "dim": 384,
   "chunk_chars": 1400,
-  "overlap": 140
+  "overlap": 140,
+  "backend": "exact-cosine"
  },
  "index_hf_kind": "huggingface"
 }

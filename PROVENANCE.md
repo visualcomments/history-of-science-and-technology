@@ -105,3 +105,45 @@ of the World» (1809), Кельвин «Baltimore Lectures» (1904), Лавуа�
   синтезом с пометкой «вне корпуса»).
 - Появление недопустимых файлов выявляется на этапе верификации и
   чистки индекса (`index_prune`).
+
+## Расширение корпуса 2026-11-07 (индекс 2026-11-07)
+
+Корпус расширен с 364 до **581 файла**; индекс пересобран на GPU.
+Все источники — PD (Gutenberg, зеркало pglaf), Wikipedia (CC BY-SA 4.0,
+заголовок атрибуции в каждом файле) и OA-статьи DOAJ (только
+CC BY / CC BY-SA; NC/ND отклонены).
+
+### PD-книги Project Gutenberg (+54)
+
+Дарвин (Origin of Species, Descent of Man, Voyage of the Beagle,
+Foundations, + выборка Wallace/Mivart/Weismann/Romanes), Ламарк (EN+DE),
+Галилей (Sidereal Messenger), Berry (Short History of Astronomy),
+Heath (Archimedes, Copernicus of Antiquity), Лавуазье (EN+FR), Дальтон,
+Менделеев (Principles of Chemistry, EN), Фарадей (×2), Thompson
+(Michael Faraday), Лоренц (Maxwell), Chipman (Electromagnetic
+Instruments), Гальвани, Вольта, Гильберт (×2), Шеele, Торп (Priestley),
+Лайель (×2), Кювье, Клод Бернар (FR), Гельмгольц, Гиппократ, Весалий,
+пар (×4), Бэббидж (×3), Витрувий (×2), Герон (Pneumatics), Лилиенталь,
+Vivian (History of Aeronautics), Weismann (×2), Рассел, Blades
+(Printing). Полный список — в `docs/corpus-new-sources.md`.
+
+### Wikipedia (CC BY-SA 4.0) — +154
+
+EN ~120 статей по 30 темам: от Neolithic Revolution и Ancient
+Egyptian technology до Space Race, History of AI, Bionics, Digital
+twin, History of radar; RU ~85: История науки, Коперник, Галилей,
+Ньютон, Менделеев, Дарвин, Сеченов, Бионика, Жуковский, Циолковский,
+Королёв и др.
+
+### OA-статьи DOAJ (CC BY / CC BY-SA) — +20
+
+Неолитическая революция, древние укрепления, эволюция электромагнетизма
+XIX в., рецепция дарвинизма, история микробиологии, цифровые двойники и
+датчики, история ракет. Нерелевантные (12 шт.) отфильтрованы;
+манифест — `catalog/doaj-manifest-2026-11-07.json`.
+
+### Проверка покрытия
+
+Карта `catalog/sources-map.json`: **≥ 10 источников на каждое из 30
+занятий**. Индекс: точный косинусный поиск (annoy недоступен на
+Windows; rag_search.py использует embeddings.npy автоматически).

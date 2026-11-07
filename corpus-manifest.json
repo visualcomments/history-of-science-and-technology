@@ -1,0 +1,3205 @@
+{
+ "schema": 1,
+ "version": "2026-11-07",
+ "note": "Корпус курса «Право интеллектуальной собственности»: расширение до 427 файлов. Тексты: договоры (официальные, не объекты АП), Wikipedia (CC BY-SA 4.0), PD-трактаты (Gutenberg/Internet Archive), OA-статьи (CC BY/BY-SA), судебная практика (GPL-3.0 датасеты). Провенанс — PROVENANCE.md.",
+ "archive": {
+  "filename": "texts.zip",
+  "size_bytes": 60796493,
+  "sha256": "9A6C87735E7A8B02EE88B6CA082F3D08727DADA7753B9EB4A329E9278884C1EC",
+  "url": "https://huggingface.co/datasets/brics-edtech/histsci-corpus/resolve/main/texts.zip",
+  "kind": "huggingface"
+ },
+ "n_files": 638,
+ "files": [
+  {
+   "path": "texts/history_of_astronomy_A_Popular_History_of_Astronomy_During_the_Nineteenth_Centur.txt",
+   "size_bytes": 1075641,
+   "sha256": "F78B9725B963CC0489370792D2E6EB5AD447EF78A802C0D4C568B095303055D4"
+  },
+  {
+   "path": "texts/history_of_astronomy_Outlines_of_Astronomy.txt",
+   "size_bytes": 84898,
+   "sha256": "8EA9BF1A43F09B9CEA59C0D9A0A9E097CEE631DCBC2587EA62DC22DE9363E140"
+  },
+  {
+   "path": "texts/history_of_astronomy__A_Popular_History_of_Astronomy_During_the_Nineteenth_Century.txt",
+   "size_bytes": 1075641,
+   "sha256": "F78B9725B963CC0489370792D2E6EB5AD447EF78A802C0D4C568B095303055D4"
+  },
+  {
+   "path": "texts/history_of_astronomy__A_Short_History_of_Astronomy.txt",
+   "size_bytes": 1056067,
+   "sha256": "CDB630E171FE3F921BC6089B845EA618EDD4D18A140BDBD93A821C44D6453C38"
+  },
+  {
+   "path": "texts/history_of_astronomy__Old_and_New_Astronomy.txt",
+   "size_bytes": 150100,
+   "sha256": "2F92FA2778CC00E0673BC017DE1B79EE36CDC9D285DF7E4D3B045B28114D750A"
+  },
+  {
+   "path": "texts/history_of_astronomy__Outlines_of_Astronomy.txt",
+   "size_bytes": 84898,
+   "sha256": "8EA9BF1A43F09B9CEA59C0D9A0A9E097CEE631DCBC2587EA62DC22DE9363E140"
+  },
+  {
+   "path": "texts/history_of_biology__On_the_Origin_of_Species.txt",
+   "size_bytes": 954824,
+   "sha256": "06488B655F2B2E883376CFF05604A016431319928EA200CAC47F03BD258D9B95"
+  },
+  {
+   "path": "texts/history_of_biology__The_Descent_of_Man.txt",
+   "size_bytes": 1917711,
+   "sha256": "DFC080338496FE46A49F65F7DE1DB1D61A228C7F5A0CFDA4015BCB4DE68DC052"
+  },
+  {
+   "path": "texts/history_of_biology__The_History_of_Biology.txt",
+   "size_bytes": 2356450,
+   "sha256": "F596186172AFF58524B212121AE34276CB068EA8CA4C0AA1EF3A0089B231FE08"
+  },
+  {
+   "path": "texts/history_of_biology__The_History_of_Creation_vol.1.txt",
+   "size_bytes": 696063,
+   "sha256": "8B703C73D71709AD235246EBCDA3A588547973B6C91B3F9D9A1E8ED0D1A0233D"
+  },
+  {
+   "path": "texts/history_of_biology__The_History_of_Creation_vol.2.txt",
+   "size_bytes": 640245,
+   "sha256": "6C4E569461F5AC7F13DC6A91D59EB0DEAE9FBF2290579CF3744B1B1B131ED26A"
+  },
+  {
+   "path": "texts/history_of_biology__Zoological_Philosophy.txt",
+   "size_bytes": 1173494,
+   "sha256": "ADEE93589C1DCFF6F34DF1D81C862A9BF12062A7E0EF40CF4236C2A9164DE1C6"
+  },
+  {
+   "path": "texts/history_of_biology__Рефлексы_головного_мозга.txt",
+   "size_bytes": 431475,
+   "sha256": "B00C9832A82C909C52AD998397861CB50EEFB7296540D3ED7B2F887B4CDDBBAC"
+  },
+  {
+   "path": "texts/history_of_chemistry__A_History_of_Chemistry.txt",
+   "size_bytes": 14795,
+   "sha256": "A2906C4F579F663A6C65CE461B0003B5041FC34159D3BB3B97331193607F70FD"
+  },
+  {
+   "path": "texts/history_of_chemistry__The_Gases_of_the_Atmosphere_The_History_of_Their_Discovery.txt",
+   "size_bytes": 375305,
+   "sha256": "0A669CB890B574D736945C2DD9E673319E9C04071F311C6C64D680E6DD69B13D"
+  },
+  {
+   "path": "texts/history_of_chemistry__The_History_of_Chemistry.txt",
+   "size_bytes": 1253395,
+   "sha256": "BE003E1D1983198E669BA6C5496FF3FABCD75B0E75A79ED156F4BF86BD3460DC"
+  },
+  {
+   "path": "texts/history_of_chemistry__Основы_химии.txt",
+   "size_bytes": 1202475,
+   "sha256": "C373ABD573551E96431C41B0250637FB701DD93B5F496C83283FC571574B4ABA"
+  },
+  {
+   "path": "texts/history_of_chemistry_Д_И_Менделеев_Периодический_закон.djvu.txt",
+   "size_bytes": 2802434,
+   "sha256": "010A4CD28F42408AE28F49291F803816D0CE255D7465D515DAFC7687C66042F4"
+  },
+  {
+   "path": "texts/history_of_chemistry_Основы_химии.txt",
+   "size_bytes": 1202475,
+   "sha256": "C373ABD573551E96431C41B0250637FB701DD93B5F496C83283FC571574B4ABA"
+  },
+  {
+   "path": "texts/history_of_computing__NASA_Computers_in_Spaceflight.txt",
+   "size_bytes": 810864,
+   "sha256": "C7495105E8298A6FF50B521A5BB0D764953E63B4767F673E321B87DEB8C71EF8"
+  },
+  {
+   "path": "texts/history_of_computing__Passages_from_the_Life_of_a_Philosopher.txt",
+   "size_bytes": 849371,
+   "sha256": "342A880B05D8E148B695329A1E353AB1E2F017D3B25D8CD050D6205367C01E17"
+  },
+  {
+   "path": "texts/history_of_engineering__A_History_of_Inventions_and_Discoveries.txt",
+   "size_bytes": 1390119,
+   "sha256": "C14418B731877C62A223C5F4221515C0F87B4B83CD9DC128CD27D93890F48CBE"
+  },
+  {
+   "path": "texts/history_of_engineering__Lives_of_the_Engineers.txt",
+   "size_bytes": 706173,
+   "sha256": "F372FE1E678E0F8D1E38FB51B030E7E2B15B4AF7FCE3C3F3A641C70936EB0C84"
+  },
+  {
+   "path": "texts/history_of_engineering__The_Origins_of_Invention_A_Study_of_Industry_Among_Primitive_Peoples.txt",
+   "size_bytes": 757020,
+   "sha256": "D953A8CE1B100FE3538BEBF53513939CCA8049E3F83EA7223874884D6C518626"
+  },
+  {
+   "path": "texts/history_of_engineering__Беседы_о_механике.djvu.txt",
+   "size_bytes": 1075384,
+   "sha256": "5966C5223549312E1A9654EBDA54D7E3910798880B0910479C9BB382CFB38A9B"
+  },
+  {
+   "path": "texts/history_of_engineering__Беседы_о_механике.txt",
+   "size_bytes": 1075384,
+   "sha256": "5966C5223549312E1A9654EBDA54D7E3910798880B0910479C9BB382CFB38A9B"
+  },
+  {
+   "path": "texts/history_of_engineering_Беседы_о_механике.djvu.txt",
+   "size_bytes": 1075384,
+   "sha256": "5966C5223549312E1A9654EBDA54D7E3910798880B0910479C9BB382CFB38A9B"
+  },
+  {
+   "path": "texts/history_of_mathematics__A_History_of_Mathematics.txt",
+   "size_bytes": 776315,
+   "sha256": "F3BC2417D98C09DEF1212F4DA5845D3A9B169D2982FA9B44E7D9B2B0553C962B"
+  },
+  {
+   "path": "texts/history_of_mathematics__A_Short_Account_of_the_History_of_Mathematics.txt",
+   "size_bytes": 1172043,
+   "sha256": "1BE708C8B2DB009821C9BD2579DF6EB9E90F5E52CB3A9C709C573BB273E2C9DD"
+  },
+  {
+   "path": "texts/history_of_mathematics__History_of_Mathematics_vol.1.txt",
+   "size_bytes": 1249749,
+   "sha256": "346145B47F1E126C8412D1DDA75203568CF5E9512D7FCB9F546AFA3DAB3B22C9"
+  },
+  {
+   "path": "texts/history_of_mathematics__History_of_Mathematics_vol.2.txt",
+   "size_bytes": 1484496,
+   "sha256": "BFF3AC86B3C25B6891D236DCEABE714CB4FB755C4F55C5B8F69F51DC79325243"
+  },
+  {
+   "path": "texts/history_of_mathematics__История_математики_в_XVI_и_XVII_веках.txt",
+   "size_bytes": 1940680,
+   "sha256": "108625F8B991D897F5E416065AEB099F60EFBF2EEF1D860F8AF9F07CE9B8D41A"
+  },
+  {
+   "path": "texts/history_of_mathematics__История_математики_в_древности_и_в_средние_века.txt",
+   "size_bytes": 1044398,
+   "sha256": "0C3EF4736391EB954C1A049853DFE050C76CE306670B32C8263FB6341F75FF1B"
+  },
+  {
+   "path": "texts/history_of_physics_Principia_Mathematical_Principles_of_Natural_Philosophy_.txt",
+   "size_bytes": 8763,
+   "sha256": "52D8FA4EFDC4EA091E6AA0D4C93C173370BE52FFCA038291D559AC0597154063"
+  },
+  {
+   "path": "texts/history_of_physics__A_History_of_Physics.txt",
+   "size_bytes": 616815,
+   "sha256": "96CBC84C33F65F4A5E4630A7A86DE6C48B5FBD481C5F7DD81A43A876E92B8564"
+  },
+  {
+   "path": "texts/history_of_physics__A_History_of_Physics_in_its_Elementary_Branches.txt",
+   "size_bytes": 616815,
+   "sha256": "96CBC84C33F65F4A5E4630A7A86DE6C48B5FBD481C5F7DD81A43A876E92B8564"
+  },
+  {
+   "path": "texts/history_of_physics__A_Treatise_on_Electricity_and_Magnetism.txt",
+   "size_bytes": 1045208,
+   "sha256": "DF520A9A5959103754C3C140233AA841447EFCA97BB546D5A0A8B6EBF75ED4F5"
+  },
+  {
+   "path": "texts/history_of_physics__Dialogues_Concerning_Two_New_Sciences.txt",
+   "size_bytes": 647117,
+   "sha256": "B0E5E26761111B074C31E24D84E93353BBA285264815CE5BB0A587CBCF54A80B"
+  },
+  {
+   "path": "texts/history_of_physics__Experimental_Researches_in_Electricity.txt",
+   "size_bytes": 1703869,
+   "sha256": "7E34BE438A4AE7E2ED3C92241FB29CE18022BCE9CBEBA9A4B01C12A62B1A96D4"
+  },
+  {
+   "path": "texts/history_of_physics__Principia_Mathematical_Principles_of_Natural_Philosophy.txt",
+   "size_bytes": 8763,
+   "sha256": "52D8FA4EFDC4EA091E6AA0D4C93C173370BE52FFCA038291D559AC0597154063"
+  },
+  {
+   "path": "texts/history_of_physics__The_Science_of_Mechanics.txt",
+   "size_bytes": 2981,
+   "sha256": "9F50A33AB32087DEA0B4128ED7D8B0220AE1F0844A772D4AC49C66CB162B0E32"
+  },
+  {
+   "path": "texts/history_of_physics__Исаак_Ньютон.txt",
+   "size_bytes": 825100,
+   "sha256": "C78E22571A8663038B2FC4DE4FFCB23412D0D257EEE0B039B990561D8B992C5D"
+  },
+  {
+   "path": "texts/history_of_science_general__The_Dialogues_Concerning_Two_New_Sciences.txt",
+   "size_bytes": 587139,
+   "sha256": "A9D1205F00EAA7B17F2676AF833084B3444219A8A5ABF5B1B594EBACB7401DB4"
+  },
+  {
+   "path": "texts/history_of_science_general__Whewell_History_of_the_Inductive_Sciences.txt",
+   "size_bytes": 1379522,
+   "sha256": "674312BA675AE75437485BF8559291584B23920DECF307E44E88AD10E15BD07B"
+  },
+  {
+   "path": "texts/history_of_technology__NASA_Beyond_the_Ionosphere.txt",
+   "size_bytes": 1100595,
+   "sha256": "D911AC40C7F0CA8131F525FB770423C032205B55D3A46E52ABA53ECB5FD414CE"
+  },
+  {
+   "path": "texts/history_of_technology__US_National_AI_Strategic_Plan_2019.txt",
+   "size_bytes": 135653,
+   "sha256": "7D13589054CA044942BA34E3A441239F81C225FA2D5AC3B18A03D2B26691F795"
+  },
+  {
+   "path": "texts/history_of_technology__US_Preparing_for_Future_of_AI_2016.txt",
+   "size_bytes": 166191,
+   "sha256": "3822869F408842A23C2DAEF6FE2152E95AA3613659DE688FAFF6BE96D3B7838D"
+  },
+  {
+   "path": "texts/lesson1__Bacon_Advancement_of_Learning.txt",
+   "size_bytes": 899961,
+   "sha256": "F6AB80374106CECB06CB30461FBE8BA9D70E04B18CA16ADC4535EC0A77F933FD"
+  },
+  {
+   "path": "texts/lesson1__Bacon_Novum_Organum.txt",
+   "size_bytes": 246523,
+   "sha256": "34BFF9BCC8E3E5C1406CA7313D7ADBEB14394DD4374DEE60086CE9038ABB91D7"
+  },
+  {
+   "path": "texts/lesson1__Barnes_Studies_in_Historical_Method.txt",
+   "size_bytes": 302376,
+   "sha256": "373D4E3C1C50CE1A37B068E70404621E0245D3D93DF620FB601F641541E8DE8B"
+  },
+  {
+   "path": "texts/lesson1__Bernard_Experimental_Medicine.txt",
+   "size_bytes": 597677,
+   "sha256": "35581BF5FB512F397A0C5AECB8346D71BBEA31EE704D991ECD1A01FFC81035CD"
+  },
+  {
+   "path": "texts/lesson1__Bourne_Essays_in_Historical_Criticism.txt",
+   "size_bytes": 611545,
+   "sha256": "DD1E609ED5A280166820ABF1F39976FA144A3EA6CC6D0138CD8834FED112A937"
+  },
+  {
+   "path": "texts/lesson1__Campbell_What_is_Science.txt",
+   "size_bytes": 356563,
+   "sha256": "B7F818A1A7DC6D78329E0FFE3B4EA47AC5A1296B89376D680273C14534088AE2"
+  },
+  {
+   "path": "texts/lesson1__Clifford_Common_Sense_Exact_Sciences.txt",
+   "size_bytes": 521373,
+   "sha256": "817925480F3801067A9DB8F78CEF93347F2F6219B5C3B6672B4B156BBCC46325"
+  },
+  {
+   "path": "texts/lesson1__Comte_Positive_Philosophy.txt",
+   "size_bytes": 1000953,
+   "sha256": "71F682647BF6CFB2B7F2A09A81C07EFA46700A93C905231C7B32795DB1DB8829"
+  },
+  {
+   "path": "texts/lesson1__Croce_Theory_and_History_of_Historiography.txt",
+   "size_bytes": 554436,
+   "sha256": "95D0144C44477336D245CDF9B637E39758D6AED4E3B27572B5E54EFE1598682B"
+  },
+  {
+   "path": "texts/lesson1__Descartes_Discourse_on_Method.txt",
+   "size_bytes": 917775,
+   "sha256": "CB0FDBBF64442361D94612A16288C6C5319B9353C51691E211B6029E2DA17D8E"
+  },
+  {
+   "path": "texts/lesson1__Faraday_Chemical_History_of_a_Candle.txt",
+   "size_bytes": 229177,
+   "sha256": "50606C68938C0808B33F3A1FC9C0AF62E71C6289B8C4A0DBB2AB731852E64D94"
+  },
+  {
+   "path": "texts/lesson1__Flint_Outline_of_Historical_Method.txt",
+   "size_bytes": 182624,
+   "sha256": "B508E57EB281543B0BEA78DF86F8F307E39D2A7A2A131AC6BB2EE7F584484C36"
+  },
+  {
+   "path": "texts/lesson1__Flint_Writing_of_History.txt",
+   "size_bytes": 285631,
+   "sha256": "81289BA4DB7C3244B3E69BCF164B5B1FB54E2859C5FA4EC921DEEF1C3DF58105"
+  },
+  {
+   "path": "texts/lesson1__Herschel_Discourse_Natural_Philosophy.txt",
+   "size_bytes": 651047,
+   "sha256": "CDF08D0216FAE47482AD97D630EF0D8EF82F21A3189CDDEE3A2785E80B860B65"
+  },
+  {
+   "path": "texts/lesson1__Historical_Criticism_of_Documents.txt",
+   "size_bytes": 60257,
+   "sha256": "DBABE538F40CD31D7705B596921599E289E2AA2FC7934EA421A185584229B6F5"
+  },
+  {
+   "path": "texts/lesson1__Huxley_Science_and_Culture.txt",
+   "size_bytes": 534023,
+   "sha256": "400B556343D48A5A6CCDB141C72FB95F9C72922F595BF02D0755CB7B724648FB"
+  },
+  {
+   "path": "texts/lesson1__Jevons_Principles_of_Science.txt",
+   "size_bytes": 1761656,
+   "sha256": "019C4960C4D71F547D536CE45FB0EAD9A26D458A0F93EB189254D601D04F8D8D"
+  },
+  {
+   "path": "texts/lesson1__Kelvin_Popular_Lectures.txt",
+   "size_bytes": 683386,
+   "sha256": "53CB345B69998BDA219142CE43AD0CE5D5A7DD506C5B01B8882A07540B86C5B3"
+  },
+  {
+   "path": "texts/lesson1__Libby_History_of_Science.txt",
+   "size_bytes": 458303,
+   "sha256": "A2E870D7DE05669941B3EC9DECBC7BE24EB580CEBF7D6CB75636DC5397AE9B46"
+  },
+  {
+   "path": "texts/lesson1__Mill_System_of_Logic.txt",
+   "size_bytes": 2116353,
+   "sha256": "AC94CA6F102746C2F2B4214E78F52F78BD8C4C5D78DF53DD7F92B663037B7FD0"
+  },
+  {
+   "path": "texts/lesson1__Pearson_Grammar_of_Science.txt",
+   "size_bytes": 1170526,
+   "sha256": "A1B60CD3929B2040A8185641D8449417391F5D9DA4AA2B9F4C3D6C3498C0011D"
+  },
+  {
+   "path": "texts/lesson1__Poincare_Science_and_Method.txt",
+   "size_bytes": 434367,
+   "sha256": "A665C25BD0FC75876902F6CBAF4B511F937A9FD18C456CA2C8D328780220216C"
+  },
+  {
+   "path": "texts/lesson1__Royal_Society_Record.txt",
+   "size_bytes": 1097478,
+   "sha256": "0A02437EA8C9D2A01FD29305FFC94EC0FE81BC48817CBA61A28553FD64E4FAE7"
+  },
+  {
+   "path": "texts/lesson1__Sedgwick_Tyler_Short_History_of_Science.txt",
+   "size_bytes": 1058799,
+   "sha256": "105AF80EF4EBA9399E47C8BAE168B8BA22DD3DAA357CCE12D41C5C47B02ED86B"
+  },
+  {
+   "path": "texts/lesson1__Tyndall_Fragments_of_Science.txt",
+   "size_bytes": 1204724,
+   "sha256": "EA06A8D2A39F44D0DE257D2659390F11407D583ECFDDA90BF671F8F9E18507AD"
+  },
+  {
+   "path": "texts/lesson1__Whewell_History_of_the_Inductive_Sciences.txt",
+   "size_bytes": 872885,
+   "sha256": "E0110343A860F305D425EC9E55A090FF16775823210F5BDCA76A197FF84651FC"
+  },
+  {
+   "path": "texts/lesson1__Whewell_Philosophy_of_Discovery.txt",
+   "size_bytes": 1150651,
+   "sha256": "AD3FE4E74A450CEE03C08764790E98977E7AD2B2040DBC5D67DE85CC6F46F81E"
+  },
+  {
+   "path": "texts/lesson1__Whewell_Philosophy_of_the_Inductive_Sciences.txt",
+   "size_bytes": 1320071,
+   "sha256": "677571B79650C3649C0B1DC1A699F253BC7D41F0BA088523224D292FE9B95A2E"
+  },
+  {
+   "path": "texts/oa__.txt",
+   "size_bytes": 58039,
+   "sha256": "75BF632DF434BC81B94BE61DAB383F8A7406D99D0B21E66E514441BEE315D56B"
+  },
+  {
+   "path": "texts/oa__A_Critical_Review_on_the_Book_A_Realist_Theory_of_Science.txt",
+   "size_bytes": 87575,
+   "sha256": "0FBAC3E427B324DFA8ED3D4E433A5386E25074D465D83332221179D6C86BCF0C"
+  },
+  {
+   "path": "texts/oa__A_Sensor_to_API_Data_Infrastructure_for_Building_Digital_Twins_Harmonizing_Multi.txt",
+   "size_bytes": 48337,
+   "sha256": "0425D5ED57D687654B43C0D3FE72CA201A4E8612FBAA916DD96276B9B0E0E04B"
+  },
+  {
+   "path": "texts/oa__A_Timeline_of_Medieval_Universities_10.14428_rete.v8i0_timel.txt",
+   "size_bytes": 13236,
+   "sha256": "B81D407D851D8D45A73D22B72588278E4F5D385CB991FCE922E1ED806C8C307A"
+  },
+  {
+   "path": "texts/oa__A_method_for_assessing_scientific_and_additional_values_of_geomorphosi_10.5194_gh-62-148-2007.txt",
+   "size_bytes": 41926,
+   "sha256": "7E69D975AAFA1AC660F42476545F770AFBA1C84C6669A4E3CA0C2F816CB97100"
+  },
+  {
+   "path": "texts/oa__Ancient_technology_and_punctuated_change_Detecting_the_emergence_of_th_10.1371_journal.pone.022.txt",
+   "size_bytes": 53199,
+   "sha256": "D69F5138EBAECC5834ADEE6334DE0C9EFC8189B9D34D6AAF0E82994F2A906816"
+  },
+  {
+   "path": "texts/oa__Architecture_City_and_Mathematics_The_Lost_Connection_10.22052_mir.2019.189803.txt",
+   "size_bytes": 30423,
+   "sha256": "6D19622EFED189BB0D78480A27A6C0C91A926A7AB9B1798013B92009EC593BAD"
+  },
+  {
+   "path": "texts/oa__Cosmological_Ideas_in_the_Natural_Philosophy_of_Cadwallader_Colden.txt",
+   "size_bytes": 37889,
+   "sha256": "3795681F08204F54345B697686A1A96BECCBC2BE2C0045DFCE306AD58B9E2581"
+  },
+  {
+   "path": "texts/oa__Crafts_by_Nomads_of_the_Ural_and_Turgai_Regions_at_the_Beginning_of_th_10.15688_jvolsu4.2021.4..txt",
+   "size_bytes": 84411,
+   "sha256": "6693467286EE9BCDFD0EB3FB7051D5146816AF1AC2FA137AD75E007D44ECB68E"
+  },
+  {
+   "path": "texts/oa__DARWIN_E_IL_SUO_PUBBLICO_LA_TEORIA_EVOLUZIONISTICA_TRA_COMPLESSIT_E_DIVULGAZIONE.txt",
+   "size_bytes": 28646,
+   "sha256": "512A3E9C9FF850000A24EB8A845DD9277DD1AE78C951E6A20E40F639310E3C97"
+  },
+  {
+   "path": "texts/oa__Dmitriy_Mendeleevs_Forecasts_of_the_Population_of_Russia_and_the_Reali_10.3897_popecon.2.e36054.txt",
+   "size_bytes": 76860,
+   "sha256": "6466600DBC742C105B40DD88457F3C56B85686949E25AA43F3BB6734CE353445"
+  },
+  {
+   "path": "texts/oa__Evolution_of_Electromagnetics_in_the_19th_Century.txt",
+   "size_bytes": 16288,
+   "sha256": "7D776D1009230408D17A005319516CBA3DEBF51ECEF3B90370F48C4EDC4B45FA"
+  },
+  {
+   "path": "texts/oa__Formulation_of_the_relationship_between_ethics_and_politics_in_Farabi_s_politica.txt",
+   "size_bytes": 138450,
+   "sha256": "F4E28EB57C5B42DA5658C6F7C2C374AE2D7444549B0E83EF6EDCE01FEC80F470"
+  },
+  {
+   "path": "texts/oa__Fortification_strategies_of_ancient_settlements_and_natural_challenges_the_defen.txt",
+   "size_bytes": 79468,
+   "sha256": "B9945F898F30D54255790AED28A825F500B53D330857AC5C1C52D05A63546593"
+  },
+  {
+   "path": "texts/oa__From_Neolithic_Revolution_to_industrialization_10.1017_s136510052300021.txt",
+   "size_bytes": 84079,
+   "sha256": "FF8F9E5A48863C896F1F8C0D703755B411EAB1888A0412CB2CE7CBCA66B6D0FC"
+  },
+  {
+   "path": "texts/oa__GOD_NATURE_AND_THE_CAUSE_ESSAYS_IN_ISLAM_AND_SCIENCE_10.18317_kaderdergi.3643.txt",
+   "size_bytes": 22542,
+   "sha256": "701FD5419A75CE31892F0FB24F690E4A553E69ED331A003B219D8F52690BFA7F"
+  },
+  {
+   "path": "texts/oa__HELIOCENTRISM_OF_JULIAN_THE_APOSTATE_10.25205_1995-4328-2024-.txt",
+   "size_bytes": 31102,
+   "sha256": "F3CDF7DEFB8CFCE9BD9FBE7E4B78D368C49AE0054FB670FEE05F49BFB71A5D81"
+  },
+  {
+   "path": "texts/oa__How_cuneiform_puns_inspired_some_of_the_bizarre_Greek_constellations_and_asteris.txt",
+   "size_bytes": 100960,
+   "sha256": "651AA993663DEFB2308424364918CE0158C8D866AD59BF441EC8E91D64C4297B"
+  },
+  {
+   "path": "texts/oa__Individuals_and_Institutions_in_Medieval_Scholasticism_10.14296_520.97819127023.txt",
+   "size_bytes": 867630,
+   "sha256": "C06196C9E134E079443D5D0F7C104909C8880BE14177366696E1ADC268ADCB0B"
+  },
+  {
+   "path": "texts/oa__Industria_4_0.txt",
+   "size_bytes": 42956,
+   "sha256": "0CC2DC5F2B1E2AB10A3F6AAC45918BDAAC6522B4934EA16DBA31B84BB8F40018"
+  },
+  {
+   "path": "texts/oa__Intentionality_in_medieval_and_baroque_scholasticism_10.21146_2072-0726-2020-.txt",
+   "size_bytes": 80769,
+   "sha256": "136B2632C21BDDF1A6ED1F9CDE454313B97F4E6E255B767AEF52170E397D5A7A"
+  },
+  {
+   "path": "texts/oa__K_v_skumu_slovenskej_recepcie_darvinizmu_na_prelome_19_a_20_storo_ia.txt",
+   "size_bytes": 87047,
+   "sha256": "D3DAFC9F339F3461FC75B87D03F3025578AC250888D0909922F1336902352A9C"
+  },
+  {
+   "path": "texts/oa__Making_Modern_Migraine_Medieval_Men_of_Science_Hildegard_of_Bingen_and_10.1017_mdh.2014.28.txt",
+   "size_bytes": 84243,
+   "sha256": "C48C5B0D8203D4E26AB476243AC70A3920EC82CD787A7BE6FE2C9896AB5A2A40"
+  },
+  {
+   "path": "texts/oa__Modelling_and_measuring_complexity_of_traditional_and_ancient_technolo_10.1371_journal.pone.027.txt",
+   "size_bytes": 80782,
+   "sha256": "6B7814F8D40378F2EDC4CEE2BCDC886CB7CA3039C13BC4AE2048FC0F9576F67B"
+  },
+  {
+   "path": "texts/oa__National_Scientific_Practical_Conference_S_y_n_Bike_An_Outstanding_Woman_and_Rul.txt",
+   "size_bytes": 9759,
+   "sha256": "2DB6AFA297605C8F779151DA885082823AA36C726D9CFD2CDDC47DD09E97EFE2"
+  },
+  {
+   "path": "texts/oa__PHILOSOPHY_OF_ISLAMIC_SCIENCE_IN_AL_FARABIS_PERSPECTIVE_10.35961_rsd.v3i1.411.txt",
+   "size_bytes": 38375,
+   "sha256": "CE58C2F26DBC61F097B78953639A0B0E524625D2A5D9B07EABA4C40E6F4F0441"
+  },
+  {
+   "path": "texts/oa__Perspective_Dimensions_of_the_scientific_method_10.1371_journal.pcbi.100.txt",
+   "size_bytes": 49501,
+   "sha256": "753BD9EFE082F7FFBB177CED0C9DB8E1215D2EAFC2E2ACF4B5053352F302BF04"
+  },
+  {
+   "path": "texts/oa__Primitive_thought_religiosity_and_higher_education.txt",
+   "size_bytes": 118365,
+   "sha256": "5F8972D0B4F8DCBCABF34B28010482EC5BB9BC228E31A60983DA65E8A1148D72"
+  },
+  {
+   "path": "texts/oa__Professor_dean_and_rector_of_Saratov_University_Vladimir_V_Golubev_3_His_name_me.txt",
+   "size_bytes": 124298,
+   "sha256": "0877B0594CC5F51C1B9AAFA0AE02E9745470EE2AD56EFE5FC02AC45C0995FD94"
+  },
+  {
+   "path": "texts/oa__Professor_dean_and_rector_of_Saratov_university_Vladimir_V_Golubev_1_I_left_the.txt",
+   "size_bytes": 95411,
+   "sha256": "31C1F567A3CF677D83A8502E33DBBD78EE870E9AB0817C410C3C15CD806CA139"
+  },
+  {
+   "path": "texts/oa__Scienza_filosofia_senso_comune_come_l_incredibile_pu_diventare_ovvio.txt",
+   "size_bytes": 31210,
+   "sha256": "0BDF32B36DE98C638DE589BE8CAE8D0160EF275EFC23D3877F55CA599C4C79B9"
+  },
+  {
+   "path": "texts/oa__Sixty_years_among_rockets_and_rocket_scientists.txt",
+   "size_bytes": 79846,
+   "sha256": "3D01477B725334A80D533FBA695433B0BCFC45F73F229820E9FA6966F4A50679"
+  },
+  {
+   "path": "texts/oa__The_Mode_of_Constructing_Safe_Trajectories_of_Motion_of_the_Unmanned_Aerial_Vehi.txt",
+   "size_bytes": 71000,
+   "sha256": "1C22F637F0BAF3EF8ED76C968DF6780F66ACBA3D886856F39A3B3856445D0B39"
+  },
+  {
+   "path": "texts/oa__The_history_of_the_formation_and_development_of_microbiology_at_Saratov_State_Un.txt",
+   "size_bytes": 64643,
+   "sha256": "A6968E46490371C34B2B0704669A56BA32BF23D91B963034B649B5ADD37D872B"
+  },
+  {
+   "path": "texts/oa__The_when_the_where_and_the_why_of_the_Neolithic_revolution_in_the_Leva_10.4312_dp.28.3.txt",
+   "size_bytes": 65431,
+   "sha256": "297F7D360BB2DBDCC599CEF130D3850621357F9AB2F09F8E9DF6E3902FCCAE25"
+  },
+  {
+   "path": "texts/oa__Valley_longitudinal_profiles_record_the_fluvial_landscape_evolution_and_geologic.txt",
+   "size_bytes": 115763,
+   "sha256": "02A441C1FD8C57822BD43222806FDCCD973520388332C6F40EF7C20D38C3E3C2"
+  },
+  {
+   "path": "texts/oa__Women_in_the_medieval_university_10.12775_klio.2023.020.txt",
+   "size_bytes": 39069,
+   "sha256": "61E1E5DDB790C637A42E968B184F36259B22E58C07D7B33BBAED78F8D4EBCB62"
+  },
+  {
+   "path": "texts/pd_MIND--COMPUTING-MACHINERY-AND-INTELLIGENCE.txt",
+   "size_bytes": 71083,
+   "sha256": "34982933E0640F54EC08FDDB9F0E654548EF574947CAAE7F6D6EA3423DAE0FC9"
+  },
+  {
+   "path": "texts/pd__Babbage_Calculating_Engine.txt",
+   "size_bytes": 171362,
+   "sha256": "4B4531F6BA3AA7A6862E59DBDAC845A38469FE9DEF619FF0A9D0D9A31AF586D8"
+  },
+  {
+   "path": "texts/pd__Babbage_Exposition_of_1851.txt",
+   "size_bytes": 424820,
+   "sha256": "749BFE976D7B24A96D86A8C1143D94D4C8F287D6DB50D141218F75B8C2AD7D3F"
+  },
+  {
+   "path": "texts/pd__Babbage_Passages_Life_of_Philosopher.txt",
+   "size_bytes": 900840,
+   "sha256": "2366848E42B2088B104D96B177E3372B622D2446F3BA8E4CEB6CC73F8B06FDFE"
+  },
+  {
+   "path": "texts/pd__Ball_Vesalius_Reformer_of_Anatomy.txt",
+   "size_bytes": 221842,
+   "sha256": "3D4AB409AF43693A125E7AA4D7A81BE9DDCD6560B876886AFDB683CDFDEA989C"
+  },
+  {
+   "path": "texts/pd__Bernard_Introduction_Medicine_Experimentale.txt",
+   "size_bytes": 657802,
+   "sha256": "5E2F0E52ED519A890C990BACFC331FE7411620CC5F1EBACF11C916FC9997C287"
+  },
+  {
+   "path": "texts/pd__Berry_Short_History_of_Astronomy.txt",
+   "size_bytes": 1015438,
+   "sha256": "94C715CD7E988E35B03E4D6068F00A49552A33D04B1441CCFE50257DDF42289D"
+  },
+  {
+   "path": "texts/pd__Blades_Pentateuch_of_Printing.txt",
+   "size_bytes": 187587,
+   "sha256": "DC6C58E0B0874F1C79478DE2C39F5146E3FCDDA230B4064AB379C7F6DF237F55"
+  },
+  {
+   "path": "texts/pd__Boelsche_Haeckel_Life_and_Work.txt",
+   "size_bytes": 509858,
+   "sha256": "72D51192931D0D0EF87527173D1D5A06B4F94A1514074301EA69E17C7A8E2D79"
+  },
+  {
+   "path": "texts/pd__Chipman_Earliest_Electromagnetic_Instruments.txt",
+   "size_bytes": 65077,
+   "sha256": "37CE17F160B5C2DB9290A501232DB14DD750269B73FA5DE2AD11B479BF464FA1"
+  },
+  {
+   "path": "texts/pd__Cuvier_Theory_of_the_Earth.txt",
+   "size_bytes": 891077,
+   "sha256": "52474EC8F846B11002D2BEBF5FC7DEAE5724C1B77251D3D8EBD803C0981B1599"
+  },
+  {
+   "path": "texts/pd__Dalton_New_System_of_Chemical_Philosophy.txt",
+   "size_bytes": 465727,
+   "sha256": "762CB9852133388008481A4B976E2D20E87880C3A6705EADBC9F6EA1E1C4D12F"
+  },
+  {
+   "path": "texts/pd__Darwin_Descent_of_Man.txt",
+   "size_bytes": 1045521,
+   "sha256": "5FE531CF18004915C0E063F91F199E2A8DBF165013BA765E473A5CFB94FDA647"
+  },
+  {
+   "path": "texts/pd__Darwin_Foundations_of_Origin.txt",
+   "size_bytes": 581109,
+   "sha256": "3ABDE62CF944209402944C1290185C14D80671420749CBACA5F66EA60033E373"
+  },
+  {
+   "path": "texts/pd__Darwin_Origin_of_Species.txt",
+   "size_bytes": 975941,
+   "sha256": "2FA9AD78AA6DD0C1C16E0B32ABC00F487D07F1E39E11EDB26034F6F85C331DBA"
+  },
+  {
+   "path": "texts/pd__Darwin_Voyage_of_the_Beagle.txt",
+   "size_bytes": 1226502,
+   "sha256": "18ACF87C2E1DA3DA0FC9F46DB942505DDC88BECB6DD06E4FF02AA977FE35F497"
+  },
+  {
+   "path": "texts/pd__Darwin_and_Natural_Selection.txt",
+   "size_bytes": 364288,
+   "sha256": "F1FC0670A3F84D863821FBB8A9E50D052DF324C65AE94DDECA3BB2A7DA77EFA8"
+  },
+  {
+   "path": "texts/pd__Epitome_of_Electricity_and_Galvanism.txt",
+   "size_bytes": 353288,
+   "sha256": "56848D85703023A61348146715CF34F9DF8E621034E99937AEA5EBA0B692C2C6"
+  },
+  {
+   "path": "texts/pd__Faraday_Chemical_History_of_a_Candle.txt",
+   "size_bytes": 230486,
+   "sha256": "0AEAFA9EC8056F2B3F5C740C3287E9F1E120B814333F0C3BB9A368B255F39B18"
+  },
+  {
+   "path": "texts/pd__Faraday_Experimental_Researches_in_Electricity.txt",
+   "size_bytes": 1431915,
+   "sha256": "7BC8AF76D9114F86AC404E58EEE5F5452DA053383211F8BB345EB2E365CF5CC6"
+  },
+  {
+   "path": "texts/pd__Galileo_Sidereal_Messenger.txt",
+   "size_bytes": 177599,
+   "sha256": "63CF176CC98C7496B7EED8970B5D29BE0C92D2F47AD569297F9C39EDDDAD9EB2"
+  },
+  {
+   "path": "texts/pd__Galvani_Influence_of_Electricity.txt",
+   "size_bytes": 160204,
+   "sha256": "F68A1C4E504E046467986862BF8AC1BDBD2EF5DD440DB551755DC3D08CF3EE93"
+  },
+  {
+   "path": "texts/pd__Gilbert_Natural_Philosophy.txt",
+   "size_bytes": 91523,
+   "sha256": "40B0418CCB3E8254EF9907EEED8D2A227BBD15655CF5B64C445697BB81AD1C25"
+  },
+  {
+   "path": "texts/pd__Gilbert_Terrestrial_Magnetism.txt",
+   "size_bytes": 20119,
+   "sha256": "A933DD9892065FE07EDBE58E26716BEC99D4AE0D9025FCD8B9661071B15E32C3"
+  },
+  {
+   "path": "texts/pd__Heath_Archimedes.txt",
+   "size_bytes": 106720,
+   "sha256": "BBA9AD3816D18151709C28C89B08AF78C0C6369969116FE1F5586B9BEA0C7442"
+  },
+  {
+   "path": "texts/pd__Heath_Copernicus_of_Antiquity.txt",
+   "size_bytes": 109802,
+   "sha256": "A41D1911080EB937CDB40829D4716E0E0A08D38BFBD54A0C3EA44962C3E98938"
+  },
+  {
+   "path": "texts/pd__Helmholtz_Popular_Lectures.txt",
+   "size_bytes": 409581,
+   "sha256": "5C38480A219D2476B9CFC19853F7A1BA2CA7AD2728B1D6E6045CAE81E0E53000"
+  },
+  {
+   "path": "texts/pd__Hero_Pneumatics.txt",
+   "size_bytes": 211089,
+   "sha256": "809EFEEBCE515E461358C3F8C45D562B9B29C4D2A0AA443CE9435E4D3BD4BC93"
+  },
+  {
+   "path": "texts/pd__Hime_Gunpowder_and_Ammunition.txt",
+   "size_bytes": 420048,
+   "sha256": "2265A34EF8058408E3A101B85E4853C26590E8B726EBA3762EF240283487B68F"
+  },
+  {
+   "path": "texts/pd__Hippocrates_Genuine_Works.txt",
+   "size_bytes": 1181919,
+   "sha256": "52A68A0C5CFC32021297AB7B77400B1E5A6BB4B4815727AB430B046DD4AF5C8B"
+  },
+  {
+   "path": "texts/pd__IA_10398549bsb.txt",
+   "size_bytes": 1183397,
+   "sha256": "B6616EC8BEA5EC08DA1FDB2346A970A328AD0B12ECB947129EABBCF6636F9B9B"
+  },
+  {
+   "path": "texts/pd__IA_10562641bsb.txt",
+   "size_bytes": 145934,
+   "sha256": "F9091B1F3304260FCE90692D57B345CF95262F6D5D9217703D07D9A767AEEFF8"
+  },
+  {
+   "path": "texts/pd__IA_10705490bsb.txt",
+   "size_bytes": 1547740,
+   "sha256": "E439EDEF898C7A8704974AA6C56303D01CA701FB55895FF432537F8971E89EDD"
+  },
+  {
+   "path": "texts/pd__IA_AngloNormanLapidaries.txt",
+   "size_bytes": 851233,
+   "sha256": "B24F89B3AE54D13438C75AFC1AD2A266C0644B15A52DE711E6E171192F6F6DAB"
+  },
+  {
+   "path": "texts/pd__IA_McGillLibrary-rbsc_bw_asadullah_bwlw7-16937.txt",
+   "size_bytes": 235870,
+   "sha256": "648D2735F33038131E7D362FA92D360F0CAE3366E02F157E43E09A120C40BBC3"
+  },
+  {
+   "path": "texts/pd__IA_Scholasticism.txt",
+   "size_bytes": 163374,
+   "sha256": "F3CF9B9FC62C2204A50FD74ACFD8CAD4175C0A5C24998575D5015DAB41E659BE"
+  },
+  {
+   "path": "texts/pd__IA_anarrativeessay00hawtgoog.txt",
+   "size_bytes": 151909,
+   "sha256": "CA26F72DD5A5C19EDC06DAA103C4E692FED7B43441A3094950AA66D9F6A57D3C"
+  },
+  {
+   "path": "texts/pd__IA_anintroductiont01lewigoog.txt",
+   "size_bytes": 368034,
+   "sha256": "B97B56E7F93F5893EF02D4CE6C380B47F139B674F8C7FD2C62CF89E3AA16D874"
+  },
+  {
+   "path": "texts/pd__IA_annalidistorian01bologoog.txt",
+   "size_bytes": 897808,
+   "sha256": "252DD24481A8426BC9916F0CA3D99C745EAD0142A9C851FD0ED766ADFD8A8F0A"
+  },
+  {
+   "path": "texts/pd__IA_annalslyceumnat02sciegoog.txt",
+   "size_bytes": 862182,
+   "sha256": "EF120CF1C76C99879D97B8FDBC8A82C0C3D644E83D3ACF3DD37039F8A9D7E8C7"
+  },
+  {
+   "path": "texts/pd__IA_arabicmanuscript10loui.txt",
+   "size_bytes": 207485,
+   "sha256": "DF98BEA8659A2CC70D209227DC772B9765A9A5D6175CC0BEEE58CE1424201DE0"
+  },
+  {
+   "path": "texts/pd__IA_arabicmanuscript28loui.txt",
+   "size_bytes": 171190,
+   "sha256": "CBAEC64E284A149AA0806519B5C6F9AEC3A5832A7A6FF4B0275427CD8859B724"
+  },
+  {
+   "path": "texts/pd__IA_bub_gb_NbAgAAAAIAAJ.txt",
+   "size_bytes": 722109,
+   "sha256": "3A18C60EA60620D87F6A73E08296334D7CE869D46D1EC6238C8159D4EA6795E1"
+  },
+  {
+   "path": "texts/pd__IA_bub_gb_pfc4AAAAMAAJ.txt",
+   "size_bytes": 510208,
+   "sha256": "F622693A83437A7AFD754149AB4EAFB529FB832A51B0E5D9A4DF13A734A8B310"
+  },
+  {
+   "path": "texts/pd__IA_bub_gb_qnAAAAAAYAAJ.txt",
+   "size_bytes": 503485,
+   "sha256": "8867D6E651350E68BAE80F4D481080A3061BD379C24963554A15A9F20EA1819D"
+  },
+  {
+   "path": "texts/pd__IA_bub_gb_xfY_AAAAIAAJ.txt",
+   "size_bytes": 699151,
+   "sha256": "3D16C61AE81C96E09AEB54152904CA397581EDE15998B5A488B121FA7D3AED35"
+  },
+  {
+   "path": "texts/pd__IA_bub_gb_zQwBAAAAYAAJ.txt",
+   "size_bytes": 2038873,
+   "sha256": "5518DEEEB9199C5A76EB79C0BB823B6EB64D979CEE8855BBA7985CD7E3E2386C"
+  },
+  {
+   "path": "texts/pd__IA_copernicus00dreygoog.txt",
+   "size_bytes": 691405,
+   "sha256": "943CE0CC85746E548D82B804B7A4E589AEE3DA4B177BB4A97ED6438C71726AC2"
+  },
+  {
+   "path": "texts/pd__IA_cu31924012466433.txt",
+   "size_bytes": 905467,
+   "sha256": "86167142BFEF6EC7CE8CD6374DF3131844DF186AAD9E64B87351121AF4BAC279"
+  },
+  {
+   "path": "texts/pd__IA_cu31924021994433.txt",
+   "size_bytes": 1383961,
+   "sha256": "2BB824E9634CC42BD0B86FBD01530FF00A0BE2802ADC58EB961F50C4F5555459"
+  },
+  {
+   "path": "texts/pd__IA_diescholastikdes02wern.txt",
+   "size_bytes": 1850168,
+   "sha256": "CF8E4889C428586D0BD6BA1123A4DFC93CDB373C2CF2073F86A7F43B636D60B5"
+  },
+  {
+   "path": "texts/pd__IA_diescholastiker00wich.txt",
+   "size_bytes": 271255,
+   "sha256": "BD1E93E5CE508913BF4447EF18512B4AF36760C499A1453F575EED5A9B5F8768"
+  },
+  {
+   "path": "texts/pd__IA_dlibra.bibliotekaelblaska.pl.34401_300.47580463.txt",
+   "size_bytes": 412929,
+   "sha256": "65A85A9BF1205EDD287BDAAE082FD7896592BEE931DC8920EBE1CC2533917968"
+  },
+  {
+   "path": "texts/pd__IA_drhgbronnsklasse0301cbron.txt",
+   "size_bytes": 1968126,
+   "sha256": "7ED73B4E4EF981DCF054E84AFC6E8EFD2F7E7446FC0BEE782297FE3F29B7D23B"
+  },
+  {
+   "path": "texts/pd__IA_elementseuclid00dgoog.txt",
+   "size_bytes": 1129885,
+   "sha256": "1C352A5DC74E3BFCA4D3F310547B0A02E926BD98A47DC6FAA19FE64C7D75294B"
+  },
+  {
+   "path": "texts/pd__IA_elementseuclidv00robegoog.txt",
+   "size_bytes": 549511,
+   "sha256": "EA3F52E93156553325DF609B26469DC7B80E11BA76DB7339A6C72ACB9BBA42F0"
+  },
+  {
+   "path": "texts/pd__IA_entwerfenanlageu464wagn.txt",
+   "size_bytes": 2053344,
+   "sha256": "DB1B10D44C3638D0310E3F1B7624D85F6AB6636259CD8339762DFEDB02153F03"
+  },
+  {
+   "path": "texts/pd__IA_erkenntnisundir01machgoog.txt",
+   "size_bytes": 1114714,
+   "sha256": "C55D847FF9689F5A2692EFD0265E87A8AB446112AA48C563805B75AE44DE5133"
+  },
+  {
+   "path": "texts/pd__IA_essaysoneducati01quicgoog.txt",
+   "size_bytes": 1365134,
+   "sha256": "A2C6AA899B93CD2B70A2D02B963A9E1BA8AEDF709264584F37114B08896D1444"
+  },
+  {
+   "path": "texts/pd__IA_exteriorballist00ingagoog.txt",
+   "size_bytes": 266429,
+   "sha256": "DE556C0D4FD2C4E3685A75F65089B960C0B364062B4E7836F70339DF44F867EB"
+  },
+  {
+   "path": "texts/pd__IA_faithofmillionss01tyrr.txt",
+   "size_bytes": 503992,
+   "sha256": "B917A3FDCBEAE48D10ACDF83F831F1BABEF76E775FF7D84D09EF3AB278ED4A25"
+  },
+  {
+   "path": "texts/pd__IA_flammarion_pluralite_mondes_habites_1862_1877_french.txt",
+   "size_bytes": 896507,
+   "sha256": "522650DDEACD874A99502B69E22A43A03BE761F4F7B50C578B43F691AFC97C1D"
+  },
+  {
+   "path": "texts/pd__IA_foundationsofsci0000poin_e0k1.txt",
+   "size_bytes": 1375271,
+   "sha256": "F46A686A0816E91EC55FD38F1A33312B27EECDBCA375F6D57100874B4A26C4FC"
+  },
+  {
+   "path": "texts/pd__IA_foundationsscie01halsgoog.txt",
+   "size_bytes": 1374013,
+   "sha256": "B8613F5B126AAF8C468FF98ABAA8A031560A1642AD6060E9A9BDD6614E8298FE"
+  },
+  {
+   "path": "texts/pd__IA_geozentrischesWeltbild_2.txt",
+   "size_bytes": 269,
+   "sha256": "CB560E46EF36D9D71BFE6522E582C82749D96E88A7FA7A6F5ABCA9CE139F59A2"
+  },
+  {
+   "path": "texts/pd__IA_histoiredesmath00zeutgoog.txt",
+   "size_bytes": 590907,
+   "sha256": "5577E1643B546E2619CC2805E2FDA9D3B57E8A5A6746CADDC29EE3F5DAEBC764"
+  },
+  {
+   "path": "texts/pd__IA_in.ernet.dli.2015.100247.txt",
+   "size_bytes": 609005,
+   "sha256": "E87B1ED2F7D11F702CB925AA6956B14CA3C78B23681435CCCB11789F980A543E"
+  },
+  {
+   "path": "texts/pd__IA_in.ernet.dli.2015.196158.txt",
+   "size_bytes": 1676149,
+   "sha256": "28830E64CC17CD278ADEB1C152250DA2F82EF85FB66A5DC1F1CEF15A5DA4A2EC"
+  },
+  {
+   "path": "texts/pd__IA_india.history.resource.35256.txt",
+   "size_bytes": 931026,
+   "sha256": "652E12CA9A665FC69FC04CC11582FAA8BD015A292DE515B6B438FD00B87FAAA6"
+  },
+  {
+   "path": "texts/pd__IA_india.history.resource.37084.txt",
+   "size_bytes": 536718,
+   "sha256": "BC999A70ABF7C708D0E101375404917B65E2D965DC8D1E9D8A0343A5EEF950A4"
+  },
+  {
+   "path": "texts/pd__IA_india.history.resource.41217.txt",
+   "size_bytes": 1149244,
+   "sha256": "3C9397E81BD2EFD4C831B5E623B46D5D7AD036D8B7828F51BF2ED2E4C09E3578"
+  },
+  {
+   "path": "texts/pd__IA_inhonorempiiixpo00ross.txt",
+   "size_bytes": 3430,
+   "sha256": "61CCC4EDA12E1A53A66E28FA8EFED7B045C93F09AFAC46E2A9E19B7C4DB36364"
+  },
+  {
+   "path": "texts/pd__IA_int132452721916274274unse.txt",
+   "size_bytes": 70489,
+   "sha256": "973EE30D2EAD463848D563BE6B3AE3C3D7B694066989A5FB3101BF1A52269896"
+  },
+  {
+   "path": "texts/pd__IA_introductiontoma0000bert_n2s9.txt",
+   "size_bytes": 440271,
+   "sha256": "8815D9965BFC75682AAA0D456B6AA2451C46DD3B969FE66DBB6C585098709EE2"
+  },
+  {
+   "path": "texts/pd__IA_investigationofp19325gilc.txt",
+   "size_bytes": 58150,
+   "sha256": "BB9AB3535DE9CF9B803B93296013A12091308E0AB050E6E5FE5FBCC0F66C86D4"
+  },
+  {
+   "path": "texts/pd__IA_investigationson00shep.txt",
+   "size_bytes": 629518,
+   "sha256": "FB0BCCC186EAF3D408836F2562BA467CF136C57F86609417DF2493A986D14C46"
+  },
+  {
+   "path": "texts/pd__IA_irishglossesmedi00stokuoft.txt",
+   "size_bytes": 652402,
+   "sha256": "89CA7E3E48ABCDCBAB5810B2DF02CB6331EC1A31B58AD082A73A0A7F62B8EB2E"
+  },
+  {
+   "path": "texts/pd__IA_jstor-1634732.txt",
+   "size_bytes": 5361,
+   "sha256": "F60E5719DD8824B0960AD2DC7AB0E479124A96AE45FF824309BD03A047ED861C"
+  },
+  {
+   "path": "texts/pd__IA_jstor-1640266.txt",
+   "size_bytes": 9678,
+   "sha256": "5A46D45464575332F00A2566C096E7B93D878BF5789A090B11B00C61B0CCDB33"
+  },
+  {
+   "path": "texts/pd__IA_jstor-1640499.txt",
+   "size_bytes": 9729,
+   "sha256": "4CC94C1275BD2144C984378E808362CF7F31F27141D85F96F2EFA02769043AA0"
+  },
+  {
+   "path": "texts/pd__IA_jstor-3142754.txt",
+   "size_bytes": 20805,
+   "sha256": "A360F06B12B05BFB965CFBC00DBDA2F53649A5C071E31A4425AB388C1C9DC1DD"
+  },
+  {
+   "path": "texts/pd__IA_logicchanceanes07venngoog.txt",
+   "size_bytes": 1169954,
+   "sha256": "4FE93B090F79E507448F032D6DA131F12C04FE80D55D9768F7B95434AD1FA5CE"
+  },
+  {
+   "path": "texts/pd__IA_originsofislamic0001alba.txt",
+   "size_bytes": 884261,
+   "sha256": "18CAE474D7FD0AF34E668004F8214C20AF2C03F53EF0D35CC68A9295FCF74E24"
+  },
+  {
+   "path": "texts/pd__IA_papers00fran.txt",
+   "size_bytes": 1311,
+   "sha256": "B1F7AF3DF3C18F9D68054FCA1D6C2C9D74DE72278CA5819B142AC478EF480DEB"
+  },
+  {
+   "path": "texts/pd__IA_pappialexandrin02hultgoog.txt",
+   "size_bytes": 974361,
+   "sha256": "299D91398A68E87E532DD70817A622508623DBBFA9B38DC63C9E314E3FD512C6"
+  },
+  {
+   "path": "texts/pd__IA_pivotofcivilizat0000sang_g1a1.txt",
+   "size_bytes": 344304,
+   "sha256": "7961C55C1869BFF60D7D47CBFA76ACB35A4020B08E40EC11EA4436E9FCF387D0"
+  },
+  {
+   "path": "texts/pd__Lamarck_Zoological_Philosophy.txt",
+   "size_bytes": 375490,
+   "sha256": "02E864B73FE12CE8C951BB85C88683F414244D4921170A38EDC1EBECF9AF1173"
+  },
+  {
+   "path": "texts/pd__Lamarck_Zoologische_Philosophie.txt",
+   "size_bytes": 420248,
+   "sha256": "06A20B1E7AE2C9DB17EF07B693515EAD9AB993DA258B9470BCF368AEDA8B86ED"
+  },
+  {
+   "path": "texts/pd__Lardner_Steam_Engine_Familiarly.txt",
+   "size_bytes": 649701,
+   "sha256": "31B2328E10FAB7B40C9B44E683D9CBA25BA30C9609A7C4B16C59E94B6E987F07"
+  },
+  {
+   "path": "texts/pd__Lavoisier_Elements_of_Chemistry.txt",
+   "size_bytes": 731129,
+   "sha256": "D9F46AF4F03F1645DE38B50DA7F45C705A3642AA401D80A3A03A2477905FFEF0"
+  },
+  {
+   "path": "texts/pd__Lavoisier_Traite_de_Chimie.txt",
+   "size_bytes": 533354,
+   "sha256": "77C6A3DAAFF7A1D9C0072A18136274D38CBC041F50A8E42A34046E121AED9A55"
+  },
+  {
+   "path": "texts/pd__Lilienthal_Vogelflug.txt",
+   "size_bytes": 346934,
+   "sha256": "4DC2D79B5BFC263E9AEFC5C821DD7AD4391425357E2BFDB02B7D794A01FBE509"
+  },
+  {
+   "path": "texts/pd__Lorentz_Maxwell_Electromagnetic_Theory.txt",
+   "size_bytes": 33985,
+   "sha256": "9CD6EEE860A8C1967F3A2BB8923E132CF51756512E870AA6F2A79546144FB1B4"
+  },
+  {
+   "path": "texts/pd__Lyell_Manual_of_Elementary_Geology.txt",
+   "size_bytes": 1596918,
+   "sha256": "655F24254D1A90511830CFDC6BCE5D42EB6FBB68017EBB5D1465E9D548EEF8B2"
+  },
+  {
+   "path": "texts/pd__Lyell_Principles_of_Geology.txt",
+   "size_bytes": 2676114,
+   "sha256": "8381C5D13C90678CF457401AE9417A383BB1C480A62EDA632647698FA787D5AB"
+  },
+  {
+   "path": "texts/pd__Mendeleyev_Principles_of_Chemistry.txt",
+   "size_bytes": 2470914,
+   "sha256": "4EE5C526204144BC0D7959DE804E2982D12A73DE0940EA07C7098AFF84F7550A"
+  },
+  {
+   "path": "texts/pd__Mivart_Darwin_and_Huxley.txt",
+   "size_bytes": 65459,
+   "sha256": "B2CA34B6C55AE98F1CECEF7234C6BAC9BDC342F34E7D868114C0A48D42ADBC0E"
+  },
+  {
+   "path": "texts/pd__Rathbun_Gas_Oil_Steam_Engines.txt",
+   "size_bytes": 750351,
+   "sha256": "C1CB47031AF20977A81B37744E3FD42E4CD598E5FFC170B44236FBC7D8295E9A"
+  },
+  {
+   "path": "texts/pd__Romanes_Examination_of_Weismannism.txt",
+   "size_bytes": 414689,
+   "sha256": "C48EA38223ECF1BB9D376EE02C97DDAD742798485120D9CDAA4B1D4AF08729F4"
+  },
+  {
+   "path": "texts/pd__Russell_Foundations_of_Geometry.txt",
+   "size_bytes": 509323,
+   "sha256": "D30C486E38F2225DA567AFD89A7844FACEA2573680462BDD26D4AB4A9B84ABFA"
+  },
+  {
+   "path": "texts/pd__Scheele_Discovery_of_Oxygen.txt",
+   "size_bytes": 82578,
+   "sha256": "C27508EA1B43449511E85915DE108B1A8BB78853A6B1360813EF61D0E0AD4012"
+  },
+  {
+   "path": "texts/pd__Shipley_Atomic_Theory.txt",
+   "size_bytes": 77944,
+   "sha256": "593F09CB5779CABCB5D25EF1AF31B478568C5325940D561B634E6AE81C6F5360"
+  },
+  {
+   "path": "texts/pd__The_Steam_Engine_Explained.txt",
+   "size_bytes": 1159799,
+   "sha256": "E24765FCEF399EA2E8D353B66A62CB6940C2EC3DA0FF18C7A2468E0E842B7406"
+  },
+  {
+   "path": "texts/pd__Thompson_Michael_Faraday.txt",
+   "size_bytes": 578868,
+   "sha256": "8E721A986EE109B1C140DD7BE9171B9F61FC3223B96FC60AD970A2877FCBF03A"
+  },
+  {
+   "path": "texts/pd__Thorpe_Joseph_Priestley.txt",
+   "size_bytes": 440950,
+   "sha256": "CC12621A0F935D6C7F16F4D6F537DE89A94D743E4CDD50E8C052862C484850E9"
+  },
+  {
+   "path": "texts/pd__Vitruvius_Abridgment.txt",
+   "size_bytes": 196114,
+   "sha256": "9FB20B515A4831C940AA432CF244F0A4DEBB38E24B125C6571E572504A8A7542"
+  },
+  {
+   "path": "texts/pd__Vitruvius_De_Architectura.txt",
+   "size_bytes": 1380693,
+   "sha256": "8A5C4C416C9D19B2FAF19898CBE8817255C0D53ACDF31CAA16F526C42E5D6A6E"
+  },
+  {
+   "path": "texts/pd__Vivian_History_of_Aeronautics.txt",
+   "size_bytes": 877498,
+   "sha256": "70ED04EA89FF700FD4704F75234FA97AC2DC09CAA6F0917902F6AA88BD915829"
+  },
+  {
+   "path": "texts/pd__Volta_Illustrate_Nature.txt",
+   "size_bytes": 57016,
+   "sha256": "CCCEEACB5657846D088AA23F2E9179FC549D54E2C8BE8C80F53E8344BC92C0B0"
+  },
+  {
+   "path": "texts/pd__Weismann_Evolution_Theory_1.txt",
+   "size_bytes": 1124171,
+   "sha256": "4C1A10B7A396CF47DA7CAE156A1982D149E227BCAD97CE2273DC04E5269DF65C"
+  },
+  {
+   "path": "texts/pd__Weismann_Evolution_Theory_2.txt",
+   "size_bytes": 1124596,
+   "sha256": "92EED7B8376B5187EAE1E896052315778201B80E2C46D145D41E1E29B44D50BE"
+  },
+  {
+   "path": "texts/pd_analyticaltheory00four.txt",
+   "size_bytes": 875868,
+   "sha256": "D032537A7280AB17EE008E3B75A5A8DFA68C6344CBB04799997A692F12BDBE36"
+  },
+  {
+   "path": "texts/pd_anatomicaldisser00harv.txt",
+   "size_bytes": 346843,
+   "sha256": "73879A2A4FF533492A3FCE8AE2737A4578FEA6A63AF14F1EF7D6B586FE1153B0"
+  },
+  {
+   "path": "texts/pd_atreatiseonelec01thomgoog.txt",
+   "size_bytes": 941323,
+   "sha256": "223DB8C9312DDDDF0677DD69AE1DCE6E94B307CF0C716EE637188C38794CA66B"
+  },
+  {
+   "path": "texts/pd_b28754761.txt",
+   "size_bytes": 662303,
+   "sha256": "CAE7D5F597A95E86EF8B31A2CAEC8570A1A3D67C96DE08220B64AEC6DB4AE4DE"
+  },
+  {
+   "path": "texts/pd_bacon-francis-novum-organum-the-new-organon.txt",
+   "size_bytes": 469565,
+   "sha256": "F9AEDC78FDE1A2001D2BCD87C592C7462C126D75D42A4C17ED3B50375DADDFB7"
+  },
+  {
+   "path": "texts/pd_baltimorelectur01kelvgoog.txt",
+   "size_bytes": 1392249,
+   "sha256": "2C7C0E38CDAF33BC40F09DA35B7A040DEC2DB469C6592033A83C67369EEBFD02"
+  },
+  {
+   "path": "texts/pd_bub_gb_TqMEAAAAYAAJ.txt",
+   "size_bytes": 1197678,
+   "sha256": "4C1C28FE6D67ED908A1F838B9C958B5867FCC5FD9286AC4322378D8E8969BF25"
+  },
+  {
+   "path": "texts/pd_conditionedrefle0000ippa.txt",
+   "size_bytes": 969029,
+   "sha256": "D4916C67BA789F1EC52A744C9FF85261EF04AB56FF6868AB255489A7C00E2E87"
+  },
+  {
+   "path": "texts/pd_contributionstof00cantrich.txt",
+   "size_bytes": 274398,
+   "sha256": "BDA77792AC24464A07100D22E2FFA772F54BE47449C599F28579032B667486F4"
+  },
+  {
+   "path": "texts/pd_dialogodigalileo00gali.txt",
+   "size_bytes": 1209242,
+   "sha256": "F4390F38FCAD9EB56F50356554A1ACCF8819BBC4A27F097D84E063B532590FA6"
+  },
+  {
+   "path": "texts/pd_discourseonmetho0000desc.txt",
+   "size_bytes": 146232,
+   "sha256": "2BC625EE4CC98F31894CC4AEC97347C9DF2AB1003083BF42FB6E31A1C76F44CF"
+  },
+  {
+   "path": "texts/pd_electricwavesbe00hertgoog.txt",
+   "size_bytes": 708008,
+   "sha256": "9728AE4D2227A2FB7DC69598A8B361BB642E2F98B260C906AB1ED7403971C319"
+  },
+  {
+   "path": "texts/pd_elementarytreati00maxwrich.txt",
+   "size_bytes": 454151,
+   "sha256": "91AB4218FD6F0A9D3107B0688505850E826545F259D636FC6984AADA29B444C1"
+  },
+  {
+   "path": "texts/pd_elementsofeuclid00eucl_0.txt",
+   "size_bytes": 174972,
+   "sha256": "A33935FAB7482E609FAB15AFF829573366BCA8DA7C98CE213CB0207270BFF7BF"
+  },
+  {
+   "path": "texts/pd_foundationsgeom00hilbgoog.txt",
+   "size_bytes": 194979,
+   "sha256": "1987EAA895ADB42E0A99526DF54385AA35CE8008F600A2A8003BE4409CB389B3"
+  },
+  {
+   "path": "texts/pd_investigationofl01bool.txt",
+   "size_bytes": 799880,
+   "sha256": "5E5B141D0243B35871EFB390CC0A16F0E53F5E412FC43D9F7A48F35829E6DFF6"
+  },
+  {
+   "path": "texts/pd_micrographia00hook.txt",
+   "size_bytes": 897867,
+   "sha256": "C10315FFD973091C124FA068CB3CFB1334F74EB0FC3DE8A604A65FDED2441A94"
+  },
+  {
+   "path": "texts/pd_of-the-method-of-rendering-very-sensible-the-weakest-natural-or-artificial-electricity.txt",
+   "size_bytes": 153021,
+   "sha256": "859352862526571F864718F5501730CE7B338D74E4FB6DE0CD1D6C07C6C1C124"
+  },
+  {
+   "path": "texts/pd_on-the-revolutions-of-celestial-spheres.txt",
+   "size_bytes": 682604,
+   "sha256": "90B0EE788E934FC5E2ECC1C1ADF10BFEE36F9F189D071DBD7447790E823525D8"
+  },
+  {
+   "path": "texts/pd_onloadstonemagne00gilbuoft.txt",
+   "size_bytes": 682735,
+   "sha256": "AE8ED1817B0C2059607302F61C7BE7DC5FC80E16ADFF23CDDE32154931B922AF"
+  },
+  {
+   "path": "texts/pd_principia00newtuoft.txt",
+   "size_bytes": 1021288,
+   "sha256": "DD26432A591F78468168FFCD8B1FAEFD6D5851815A131D4E3A9E58379FFD5026"
+  },
+  {
+   "path": "texts/pd_principleschemi00lawsgoog.txt",
+   "size_bytes": 2090825,
+   "sha256": "6C55F34B83768DC30F569310D867F45F762EB39AF22C3CC545A5D28B2BA8DF2A"
+  },
+  {
+   "path": "texts/pd_principlesofchem00menduoft.txt",
+   "size_bytes": 854078,
+   "sha256": "96B506547A7C82B5226DFE9EA59CCF27CE5EA6E81B84BBB9C4CF77F2D5CD5066"
+  },
+  {
+   "path": "texts/pd_scepticalchymis00BoylA.txt",
+   "size_bytes": 510027,
+   "sha256": "1E00D47350DB20EB8F4627FEAA767E77DEC8F1479EDE68EEFF818FF40C37C834"
+  },
+  {
+   "path": "texts/pd_systemworld00laplgoog.txt",
+   "size_bytes": 359452,
+   "sha256": "1969B0A7674698EA345D7AF267024A248A030EA08326ABD6CE29796B4315D9FE"
+  },
+  {
+   "path": "texts/pd_treatiseonlight031310mbp.txt",
+   "size_bytes": 209376,
+   "sha256": "E1FCA43A3DEFBB96A629335922673D80C7EA991521EC30150C2A127070A74DAD"
+  },
+  {
+   "path": "texts/pd_williamgilbertof00gilb.txt",
+   "size_bytes": 682575,
+   "sha256": "26C722428229ACAFF8FB02CDD5128CC56DF3101EB7AAC169F3F2905DFCD33465"
+  },
+  {
+   "path": "texts/ru__FORMATION_OF_A_HEALTHY_LIFESTYLE_AMONG_PRIMARY_SCHOOL_PUPILS_IN_A_SCIE.txt",
+   "size_bytes": 34804,
+   "sha256": "EEE6C50E03CC9371D8A0744EB6288D4546A26023C042EA100705F65931DE981A"
+  },
+  {
+   "path": "texts/ru__IMPACT_OF_THE_SCIENTIFIC_AND_TECHNICAL_REVOLUTION_ON_THE_DEVELOPMENT_O.txt",
+   "size_bytes": 41305,
+   "sha256": "1CC24865B02B67F7B8B6A49DC186A9E6A29506C75D3DBC9884A51E5E5AD9ABD9"
+  },
+  {
+   "path": "texts/ru__Ideal_Construction_and_Genesis_of_the_Mathematical_Science_.txt",
+   "size_bytes": 95616,
+   "sha256": "BC2CEB622724F4EB5266BB1FB87B9C67D57A84F22E13334E0AC28E929EFFB6CF"
+  },
+  {
+   "path": "texts/ru__STELE_OF_THE_16th_с_FROM_KUMUKH_VILLAGE_A_HIGHLY_ARTISTIC_WORK_OF_ISLA.txt",
+   "size_bytes": 43158,
+   "sha256": "7536D60183737022298CF952A0A4488597AEE357510A6EF4A1A13E45B9BA0ACF"
+  },
+  {
+   "path": "texts/ru__The_role_of_the_first_European_scholars_and_Christian_missionaries_in_.txt",
+   "size_bytes": 117049,
+   "sha256": "179C67D1C83B70D6EDAC1D7EB418BCBE27309BEFC6F3695BC18280F690F3240F"
+  },
+  {
+   "path": "texts/ru__АД_Урсул_Научная_мысль_как_планетное_явление_К_150_летию_со_дня_рожден.txt",
+   "size_bytes": 129742,
+   "sha256": "CB7D9676C5C6003DB023A2C6CC4C0163AAEA7DB887FEC4D6E70B393BB959F9D6"
+  },
+  {
+   "path": "texts/ru__АНАЛИЗ_КАДРОВОГО_ПОТЕНЦИАЛА_ИНСТИТУТА_ХИМИИ_АН_ЭССР_С_1947_ПО_1975_г_1.txt",
+   "size_bytes": 59529,
+   "sha256": "E257ECE336580D480BD9E22AC76E0C4FF4799AF299F81B728DFB929FAF17A28D"
+  },
+  {
+   "path": "texts/ru__Арабская_весна_и_исламская_правовая_мысль_10173232072_8166.txt",
+   "size_bytes": 129002,
+   "sha256": "9FD2185BF68522333E8234248D75DAE192E0ABB2D0CA0C34AA6D98D61083B7A9"
+  },
+  {
+   "path": "texts/ru__ВОЗВРАЩАЯСЬ_К_ВОПРОСУ_О_ЧИСЛЕННОСТИ_РУССКОЙ_РАТИ_НА_КУЛИКОВОМ_ПОЛЕ_102.txt",
+   "size_bytes": 116659,
+   "sha256": "666A43A33BD7AD54BE6320415F539CD1DB2D8F5B256DFA0561E49F058E1FE221"
+  },
+  {
+   "path": "texts/ru__Возвращение_Китая_на_национальный_путь_развития_в_эпоху_глобализации_з.txt",
+   "size_bytes": 75497,
+   "sha256": "1B7515409CCD272D5778D1D9853032D338FAAD84AA6484B2E5B467153DADBACB"
+  },
+  {
+   "path": "texts/ru__Географические_и_климатические_особенности_Центральнокамчатской_низмен.txt",
+   "size_bytes": 10869,
+   "sha256": "F4888E45D07DD2B86B0548EE24FD8C9CEA06EE944924081974779615698E9AC2"
+  },
+  {
+   "path": "texts/ru__Гуревич_ПС_Ценность_в_квантовой_перспективе_1072561999_2793.txt",
+   "size_bytes": 38628,
+   "sha256": "7710095A5AC5EAD601F22F523D1DFA0CC6110C63FC0A8AA59FE558F29C0DD094"
+  },
+  {
+   "path": "texts/ru__ИСТОРИЯ_ПОЯВЛЕНИЯ_И_РАЗВИТИЯ_МНЕМОТЕХНИКИ_КАК_ЭФФЕКТИВНОГО_МЕТОДА_ЗАПО.txt",
+   "size_bytes": 40039,
+   "sha256": "75EE35A73F040B9D1FF4503174295289893713E8B8E0FF78616829D27916E241"
+  },
+  {
+   "path": "texts/ru__ИСТОРИЯ_РАЗВИТИЯ_ТРЕХМЕРНОГО_ГЕОЛОГИЧЕСКОГО_МОДЕЛИРОВАНИЯ_КАК_МЕТОДА_И.txt",
+   "size_bytes": 93851,
+   "sha256": "084873B39ACD458F640446CC945758B8CAF63650CBB72F13EBFF99EC4EC58A08"
+  },
+  {
+   "path": "texts/ru__Искусственный_интеллект_технологии_Big_Data_больших_данных_и_особеннос.txt",
+   "size_bytes": 71840,
+   "sha256": "4317A9BA696F2FE1F4D7753EB06A50EF76249C3FD3E4A127457F8FB0669C13D9"
+  },
+  {
+   "path": "texts/ru__Историографическая_дискуссия_о_происхождении_китайской_астрономии_1022.txt",
+   "size_bytes": 103026,
+   "sha256": "4A28FACFFCA5520265ABD50171140B1D97143E6F673A30C81739D1A0F23C0428"
+  },
+  {
+   "path": "texts/ru__История_исследований_каменных_углей_и_их_переработки_в_Туве_1025178nit.txt",
+   "size_bytes": 115522,
+   "sha256": "365AE34C38485477C44AD087ADC9A2EB3769AB3C0F012A7B877652627936292C"
+  },
+  {
+   "path": "texts/ru__История_образования_в_России_досоветский_и_советский_периоды_1017805zp.txt",
+   "size_bytes": 64045,
+   "sha256": "A613C615D66A98295AE47AA6CC5957D10D1B21A9CA61E3151D4973B0733F8874"
+  },
+  {
+   "path": "texts/ru__История_психологии_как_направление_психологической_науки_и_пространств.txt",
+   "size_bytes": 99825,
+   "sha256": "5B3BCAAD46D5995D50687953A9989D7A27BBC3B713891BB94BA4CA39F9ECFE1E"
+  },
+  {
+   "path": "texts/ru__История_радиофизики_важнейшее_направление_в_истории_физики_.txt",
+   "size_bytes": 84663,
+   "sha256": "02C52C67E617CDF6985EA2AFAB6027F3CD7FFB021D3D58BD98888458DBE2DED6"
+  },
+  {
+   "path": "texts/ru__История_развития_представлений_об_адсорбции_в_конце_18_и_19_веке_10173.txt",
+   "size_bytes": 75747,
+   "sha256": "AFE4E94D7094CBD17D9952A5FE7B4A647B1D7C5C5973F6237FA292D2FF8DB61C"
+  },
+  {
+   "path": "texts/ru__История_развития_экологических_исследований_в_Туве_1025178nit2020.txt",
+   "size_bytes": 133046,
+   "sha256": "09A3B79BCA77056609F50910580EC09FF01FD9346EB694399F716811A1D58289"
+  },
+  {
+   "path": "texts/ru__К_истории_арабистики_в_Казахстане_.txt",
+   "size_bytes": 59142,
+   "sha256": "DF9EAD84EC828F5366C5B0C8DF3A6C7B1EDD89D8E7241496B68222694595F017"
+  },
+  {
+   "path": "texts/ru__КОМПЬЮТЕРНОЕ_МОДЕЛИРОВАНИЕ_И_ВИРТУАЛЬНЫЙ_ЭКСПЕРИМЕНТ_КАК_СРЕДСТВО_ФОРМ.txt",
+   "size_bytes": 122940,
+   "sha256": "1E2C5AE95297191F0DABFF29F71BEB6A8A216A6982B3E7C5884986586787166C"
+  },
+  {
+   "path": "texts/ru__Контрацептивная_революция_в_России_1017323demreview.txt",
+   "size_bytes": 132283,
+   "sha256": "4054B2405209E9A25989F358E3F3C47DD28C4195BE6B8969B6ECD3FA1CE8581C"
+  },
+  {
+   "path": "texts/ru__Концепт_моң_как_элемент_татарского_Космо_Психо_Логоса_интеллектуальный.txt",
+   "size_bytes": 124400,
+   "sha256": "A3CC43322D28BC7A3D22CBA24ACE5C0B1DA45A949C4856BDDACBF688900A0EF0"
+  },
+  {
+   "path": "texts/ru__Концептуализация_социальной_онтологии_постгуманизма_социологические_им.txt",
+   "size_bytes": 122064,
+   "sha256": "B40D01B309806D586A83AC3F7E984F650FC8AAB4EDEA016154D437A578A94CA0"
+  },
+  {
+   "path": "texts/ru__Культурный_концепт_Герой_как_ценностный_ракурс_эпохи_1017805zpu2022.txt",
+   "size_bytes": 79094,
+   "sha256": "CE120D0B1EDECF95707C39D132E7B0A90FCC6B4B0DBF551AC8453AE851AC175F"
+  },
+  {
+   "path": "texts/ru__Методика_изучения_закона_абсолютного_излучения_черного_тела_в_курсах_ф.txt",
+   "size_bytes": 19904,
+   "sha256": "D6466C0DE998E2AA9E326515D39742D76E4FB484CD488AF5B2B466AF63DF0620"
+  },
+  {
+   "path": "texts/ru__Мировые_научно_технологические_тренды_и_вызовы_рынку_труда_в_России_10.txt",
+   "size_bytes": 38891,
+   "sha256": "F4AC03FAEBEBA0598697154A8D564A208536AAB5EFBF48F4C930EE3774D85778"
+  },
+  {
+   "path": "texts/ru__Мускус_и_камфора_Отъ_меня_вечоръ_Леила_А_С_Пушкина_Cтруктура_текста_и_.txt",
+   "size_bytes": 66833,
+   "sha256": "5202999AE8562C884E7BA262DFAE16D900C292CADC567F715D4D8CF219ACD6F1"
+  },
+  {
+   "path": "texts/ru__Назидательная_арабская_надпись_на_керамическом_сосуде_с_территории_Руб.txt",
+   "size_bytes": 37602,
+   "sha256": "8D059EC2F76210F88EF4D73E0AE3DDD16A6177691DEEAAECA75CBA26CE4AE6E4"
+  },
+  {
+   "path": "texts/ru__Народная_и_традиционная_медицина_возможности_интеграции_медицинских_си.txt",
+   "size_bytes": 135270,
+   "sha256": "FBF65484A02913F68648297149BFF4EA2A643E7657075F210F515B93BDB406B2"
+  },
+  {
+   "path": "texts/ru__Научная_школа_МосГУ_по_молодежным_исследованиям_становление_состояние_.txt",
+   "size_bytes": 107517,
+   "sha256": "EB5DE27DE18890056E7D7745AB46A8C1CD00D6B0E0B4360B6DC33F462C64DC4E"
+  },
+  {
+   "path": "texts/ru__Научная_элита_и_власть_рецензия_на_книгу_ЖИ_Алферова_Власть_без_мозгов.txt",
+   "size_bytes": 43813,
+   "sha256": "6E5957946984E1A59B280F8D5B628A48EBE9210618FAFF7D5D3626AE4D8CB59F"
+  },
+  {
+   "path": "texts/ru__ОЕ_Баксанский_Наука_и_философия_образования_в_ХХI_веке_нарративность_и.txt",
+   "size_bytes": 97596,
+   "sha256": "F8EDBD1FCDAD10E24C65B9E8122C3D71B36E56CC39DBDB14F36D54CF929974BE"
+  },
+  {
+   "path": "texts/ru__Образ_монарха_наставника_в_творчестве_Н_В_Гоголя_1015393j9art20.txt",
+   "size_bytes": 87101,
+   "sha256": "459B8B3E1D45AFE2F49C24DBAD8B7DF327D6BE600C08D301EF1B1B467FBDFD72"
+  },
+  {
+   "path": "texts/ru__Особенности_возникновения_арабской_науки_в_VIIVIII_вв_1017805zpu2022.txt",
+   "size_bytes": 24628,
+   "sha256": "4E6389E355D29828019B1C721FA3E015F7702E3BC358FF0BCA4F3F236CA87D29"
+  },
+  {
+   "path": "texts/ru__Особенности_языковой_интерференции_во_французском_языке_марокканских_б.txt",
+   "size_bytes": 65256,
+   "sha256": "352C25336B44455AB09BBD8A6715ADED860C727E51C76D725673504A927EF1B5"
+  },
+  {
+   "path": "texts/ru__От_военной_системы_связи_к_военной_когнитивной_информационно_телекомму.txt",
+   "size_bytes": 39383,
+   "sha256": "CCC57A5DE894252FD8AE5289069AAB7E1F7A28AAF471929244D54B620C355B53"
+  },
+  {
+   "path": "texts/ru__Подготовка_высококвалифицированных_специалистов_в_области_техники_и_те.txt",
+   "size_bytes": 51234,
+   "sha256": "373114DD8DFF7ACAA4620DDDE74145B40BB5CD0C95D0E716B1760F56E6AF0CC4"
+  },
+  {
+   "path": "texts/ru__РЕШЕНИЕ_ХУДОЖЕСТВЕННО_ОБРАЗНЫХ_ЗАДАЧ_ПРИ_СОЗДАНИИ_ЛАБОРАТОРНОГО_ПРАКТИ.txt",
+   "size_bytes": 59238,
+   "sha256": "70BEB67CF253B2448570A41A45917DFF3D13F8202E935B8BC328C0F21F091862"
+  },
+  {
+   "path": "texts/ru__Российская_революция_1917_года_сквозь_призму_демографической_модерниза.txt",
+   "size_bytes": 244885,
+   "sha256": "EFFA4E83EAD3FCBA1DCEF1648F460162936B8F56D7104EA1286451E39CE866F7"
+  },
+  {
+   "path": "texts/ru__СРЕДНЕВЕКОВАЯ_ГЛИНЯНАЯ_ПОСУДА_КАК_ОПРЕДЕЛИТЕЛЬ_ЭТНОКУЛЬТУРНОГО_СОСТАВА.txt",
+   "size_bytes": 31339,
+   "sha256": "B39F68F353F5A3114939EBABF461582A45256F0E1400532D6C66893E48DBCD7B"
+  },
+  {
+   "path": "texts/ru__СТРУКТУРНО_СЕМАНТИЧЕСКИЕ_И_ЛИНГВОСТИЛИСТИЧЕСКИЕ_ОСОБЕННОСТИ_АФОРИЗМОВ_.txt",
+   "size_bytes": 45509,
+   "sha256": "E2B8277073EC196881CF4D53D2680D3AF56C06AFA17F25CB8CE02BE7A2454441"
+  },
+  {
+   "path": "texts/ru__Сабанчиева_АК_Особенности_терминов_как_специальных_лексических_единиц_.txt",
+   "size_bytes": 87345,
+   "sha256": "0B38F53A70A52121E5AF6D5B2E687D075B30F8206FB58B995BD702324D22026F"
+  },
+  {
+   "path": "texts/ru__Самарская_ЕА_Раймон_Арон_Идеально_типический_метод_рассмотрения_индуст.txt",
+   "size_bytes": 69766,
+   "sha256": "D48FDA0A95B9678FE941D16BB5A12F792583FDC2727D2A65806ED47CF64A75CF"
+  },
+  {
+   "path": "texts/ru__Сейсмическая_история_Алтае_Саянского_региона_и_место_в_ней_тувинских_з.txt",
+   "size_bytes": 68363,
+   "sha256": "CE51220F2600CB9AD3DCDD56D754E416F6B8F76A066F47180D888232A8A9CE0B"
+  },
+  {
+   "path": "texts/ru__Социальные_медиа_как_фактор_формирования_общественно_политических_уста.txt",
+   "size_bytes": 111966,
+   "sha256": "31971287315075B95C0ED4CCE68065D4C1D2DA26B4C5B41DE9DF2D9F02FCB09B"
+  },
+  {
+   "path": "texts/ru__Средневековая_библейская_герменевтика_как_основа_богословия_Бревилокви.txt",
+   "size_bytes": 33729,
+   "sha256": "DDA05875AD73950D48A4856CB534DCE0869C241DA95EF3E1B8F3E0D6403C72F7"
+  },
+  {
+   "path": "texts/ru__Средневековая_орнитофауна_дельты_Волги_по_археолозоологическим_материа.txt",
+   "size_bytes": 51159,
+   "sha256": "01794CE77A7B8257850BA3B1A3B21BD3BD712D309042B7C7242A87AFC4EDC7D4"
+  },
+  {
+   "path": "texts/ru__Философский_анализ_научной_революции_в_новом_аспекте_10248661997_2857.txt",
+   "size_bytes": 39718,
+   "sha256": "F03C104F9F0FAC6869B3884D892EAA34AEDC460197AF26B794AB90D6687107F5"
+  },
+  {
+   "path": "texts/ru__Это_наша_Страна_наш_Путь_и_наша_История_1017805zpu2019.txt",
+   "size_bytes": 88199,
+   "sha256": "137CE54970B0C64B638D3B2FE25425A56477F85CA0DAB7457D22A610E29DBF95"
+  },
+  {
+   "path": "texts/wiki_ru__Аграрный_вопрос.txt",
+   "size_bytes": 35846,
+   "sha256": "520D75E5BF18C6EDA25A1FEFBB4D607342141728591FB2578D4FA507005F3B3B"
+  },
+  {
+   "path": "texts/wiki_ru__Ампер_Андре_Мари.txt",
+   "size_bytes": 11368,
+   "sha256": "822B3CA6D675DE90B264E4819B57514EF329021543CA31376CECC338A83CB2DC"
+  },
+  {
+   "path": "texts/wiki_ru__Архимед.txt",
+   "size_bytes": 91363,
+   "sha256": "5254ABC601C71685C3C63717F3CE534A73FB45B2BBE0BB01C9708B2DDC68B450"
+  },
+  {
+   "path": "texts/wiki_ru__Аэродинамика.txt",
+   "size_bytes": 85500,
+   "sha256": "FB6D62E899B5FC35EDB5BF62AE7EF8F4D655F3FBD4678F3CA14B4FF6E088C0BD"
+  },
+  {
+   "path": "texts/wiki_ru__Беспилотный_летательный_аппарат.txt",
+   "size_bytes": 84592,
+   "sha256": "ED1073DA6983C779F14A069C2E5ECB7156FFB1D36A2AAB3777BF665F5CF79BAD"
+  },
+  {
+   "path": "texts/wiki_ru__Биомиметика.txt",
+   "size_bytes": 13473,
+   "sha256": "71EC7C2FD5CD2F408222C3A0CA57A043AA09129398126D9777BF1DFAB676D2C7"
+  },
+  {
+   "path": "texts/wiki_ru__Бионика.txt",
+   "size_bytes": 13473,
+   "sha256": "71EC7C2FD5CD2F408222C3A0CA57A043AA09129398126D9777BF1DFAB676D2C7"
+  },
+  {
+   "path": "texts/wiki_ru__Бранли_Эдуар.txt",
+   "size_bytes": 3615,
+   "sha256": "E589049DBE1385CCA88621B3B3639BACA31F741EE592BDCA7F6261C9495821B2"
+  },
+  {
+   "path": "texts/wiki_ru__Британская_сельскохозяйственная_революция.txt",
+   "size_bytes": 6568,
+   "sha256": "C2945EE192A97B38CA9BDFEBF14CE1CE56AD90027BB85038217C7075E5E7DCE7"
+  },
+  {
+   "path": "texts/wiki_ru__Бэббидж_Чарльз.txt",
+   "size_bytes": 36289,
+   "sha256": "8B6D4567847354A164466A3BA40F67A20675C822FFC701BDD6D82E12FDBA3D3F"
+  },
+  {
+   "path": "texts/wiki_ru__Вольта_Алессандро.txt",
+   "size_bytes": 12732,
+   "sha256": "1D8D4A5F1BF174D262FD32C3380133D8C519A9FD8BF10BFF7B59374C29D673CB"
+  },
+  {
+   "path": "texts/wiki_ru__Второе_отделение.txt",
+   "size_bytes": 13330,
+   "sha256": "4387FAF69265E5BBF9FAE2EBA795CD6EE87449C397D517E3205A8752056DD9CD"
+  },
+  {
+   "path": "texts/wiki_ru__Галилео_Галилей.txt",
+   "size_bytes": 129097,
+   "sha256": "8C524CA8A92290B033AB621E606A398D0311ED44154C823BC519496E71CD2A9C"
+  },
+  {
+   "path": "texts/wiki_ru__Гальвани_Луиджи.txt",
+   "size_bytes": 13522,
+   "sha256": "A91AA0F7CC136700E3813E9ED7439F05457CA4050E6770EAC7E0D953673D01CC"
+  },
+  {
+   "path": "texts/wiki_ru__Геккель_Эрнст.txt",
+   "size_bytes": 33151,
+   "sha256": "438E7113D3276AC5207FD253D5D95503BF9C0E6CAE5881CD37A9ED8FF412D82F"
+  },
+  {
+   "path": "texts/wiki_ru__Гелиоцентрическая_система.txt",
+   "size_bytes": 113007,
+   "sha256": "A7D9A0A696B3D3EFBB8E827B3783964065592FAC95C4EDE4EE0D74977DC2BF7B"
+  },
+  {
+   "path": "texts/wiki_ru__Герц_Генрих.txt",
+   "size_bytes": 25530,
+   "sha256": "0AC98B55DC1A6FEE5CB7305AA5FF2436A7994B824B96FD0F9955793C157ADB87"
+  },
+  {
+   "path": "texts/wiki_ru__Дальтон_Джон.txt",
+   "size_bytes": 37296,
+   "sha256": "D7E38950C05B9C2ED2A22C78BA42B8BB3B7F80BC50CA5811D1CE74D7B914EB89"
+  },
+  {
+   "path": "texts/wiki_ru__Дарвин_Чарлз.txt",
+   "size_bytes": 65370,
+   "sha256": "887B65820E95DDACD0DA6C03E5A717751A118FEEA4FD3EB4E42E890F1388DE86"
+  },
+  {
+   "path": "texts/wiki_ru__Древний_Египет.txt",
+   "size_bytes": 218274,
+   "sha256": "0672C6746BB12E26876AE093A5E1310F4343FDB00B7728211CE6CAF77E805C8B"
+  },
+  {
+   "path": "texts/wiki_ru__Евклид.txt",
+   "size_bytes": 31764,
+   "sha256": "3AD1CB5BF4706FD65235A58C3D611136911587407A0C84AC9523EFAACA058B97"
+  },
+  {
+   "path": "texts/wiki_ru__Естествознание_и_народная_экономия_Щапов.txt",
+   "size_bytes": 114567,
+   "sha256": "4E99D0CE5ECEC7A8D6066362CA8A37F3C63AF840309CC6AD667BC0F4D32D2413"
+  },
+  {
+   "path": "texts/wiki_ru__Железная_дорога.txt",
+   "size_bytes": 10390,
+   "sha256": "8D4B66CAE120B73BCACB4B8BF840BCCC3C9E4F3C33AA100AED028BA60BAF346E"
+  },
+  {
+   "path": "texts/wiki_ru__Жуковский.txt",
+   "size_bytes": 6241,
+   "sha256": "5B84810BADC0FD062CD6E5BCB15B5708CD50791248396D35F315554DDC8F2C4A"
+  },
+  {
+   "path": "texts/wiki_ru__Жуковский_Николай_Егорович.txt",
+   "size_bytes": 28674,
+   "sha256": "BC485E2CA6EAA4AC3A1458202BC28F0F9758EAEB42399E322552FF806AB14621"
+  },
+  {
+   "path": "texts/wiki_ru__Записка_о_необходимости_создания_Комиссии_по_изучению_истории_науки_фи.txt",
+   "size_bytes": 10572,
+   "sha256": "428ED569B1B728EF271A41AF218D6A01AD9294C830703E85E7CDC656CD11A8CB"
+  },
+  {
+   "path": "texts/wiki_ru__Иерихон.txt",
+   "size_bytes": 20138,
+   "sha256": "9FBA7F4FC1D132315BA4A3C70446F800078CE6E198130985E5C1EA4F7523D65A"
+  },
+  {
+   "path": "texts/wiki_ru__Из_истории_идей_Вернадский_1912.txt",
+   "size_bytes": 69424,
+   "sha256": "ADC678822849A091C883C658CC132DCA263A9CFE407BE2E455E076A2C222CDAB"
+  },
+  {
+   "path": "texts/wiki_ru__Издание_об_истории_организации_управления_и_поддержки_науки_в_СССР_Баб.txt",
+   "size_bytes": 11142,
+   "sha256": "B6B99F985930F3A34D270A53AAF9FC1DFED839C9B415CF53E3A308AFF600A90B"
+  },
+  {
+   "path": "texts/wiki_ru__Инженер.txt",
+   "size_bytes": 22754,
+   "sha256": "F3CC13ED3F4F692B139BE95C1DD038A26537BEB3F76A6FD456604B89E3C79720"
+  },
+  {
+   "path": "texts/wiki_ru__Инженерное_дело.txt",
+   "size_bytes": 35042,
+   "sha256": "1F0693F6897DB15985F678A9C41C85EC9DCA4D5CBAA19B5311AF5C7D52474563"
+  },
+  {
+   "path": "texts/wiki_ru__Ирригация.txt",
+   "size_bytes": 44543,
+   "sha256": "AAD22F9EB44FEE81BE69E80C16C79C63A782CE40AFEEA7EBAC7203F58331E1B0"
+  },
+  {
+   "path": "texts/wiki_ru__Исаак_Ньютон.txt",
+   "size_bytes": 166635,
+   "sha256": "F1374F0BBB8C5AA756623A7755FD0C12024886B6ACF9045937EEB4E6C633CC0A"
+  },
+  {
+   "path": "texts/wiki_ru__Искусственный_интеллект.txt",
+   "size_bytes": 156719,
+   "sha256": "8964E846080D1A3754D921D6A40187B91668679AEEB201F207C975B1F3332AE5"
+  },
+  {
+   "path": "texts/wiki_ru__История_Древнего_Востока_Тураев_Том_I_История_науки.txt",
+   "size_bytes": 205850,
+   "sha256": "B220A698CEED025E0C087083C5DEAE008EEFC1453673E88AE45E1AA290299FB9"
+  },
+  {
+   "path": "texts/wiki_ru__История_вычислительной_техники.txt",
+   "size_bytes": 94069,
+   "sha256": "60CE757DAE34B2C329B7D2F14821600310E758082694267465274DBDD2FF2111"
+  },
+  {
+   "path": "texts/wiki_ru__История_искусственного_интеллекта.txt",
+   "size_bytes": 12555,
+   "sha256": "C92B8CDE3B84B87B5E75A0D9C7298B6DC0CD2A303BF50EDE00AC8B42D70C733C"
+  },
+  {
+   "path": "texts/wiki_ru__История_науки.txt",
+   "size_bytes": 84175,
+   "sha256": "25AD4F489AFD165F13D2A0BA5393E8BB52D31B6C2DCE96D8B4795C4D58613DCD"
+  },
+  {
+   "path": "texts/wiki_ru__История_техники.txt",
+   "size_bytes": 22259,
+   "sha256": "168188C8B90BC1E88600A8DDB8F387C1A0A1214CD4E17465721FF22D9BD694A7"
+  },
+  {
+   "path": "texts/wiki_ru__История_химии.txt",
+   "size_bytes": 62238,
+   "sha256": "C1930885021E3DB1F9D964BCC2A302A9FF40D4190655EB5C6EA528C86DD4E531"
+  },
+  {
+   "path": "texts/wiki_ru__Кибернетика.txt",
+   "size_bytes": 56555,
+   "sha256": "A8DB918A79CFC5B92E6B4306AA5A761A151F135DBB271B0AE015B70FF5F5DA16"
+  },
+  {
+   "path": "texts/wiki_ru__Кирпичёв.txt",
+   "size_bytes": 2846,
+   "sha256": "4B8967A20CEC6CA5E58C2AA3478324AD62BD63B265D13749F42549C7296E80C6"
+  },
+  {
+   "path": "texts/wiki_ru__Кирпичёв_Виктор_Львович.txt",
+   "size_bytes": 16694,
+   "sha256": "5A8DC217ED750802E4535DAC681DEAD129151860864FF6BD46E010517EF77A77"
+  },
+  {
+   "path": "texts/wiki_ru__Когерер.txt",
+   "size_bytes": 23588,
+   "sha256": "112A3027BAD082F3099EB13E59198BF449AE7008E94B0FFF5E737E7224153390"
+  },
+  {
+   "path": "texts/wiki_ru__Коперник_Николай.txt",
+   "size_bytes": 42082,
+   "sha256": "4F8813FC2EA9BC0F71816EDAD870C425BB26BC028DBC0A43E0922F8A21656716"
+  },
+  {
+   "path": "texts/wiki_ru__Королёв.txt",
+   "size_bytes": 5997,
+   "sha256": "D62BFB231AE09D18FB01C68A058D026DC20E477004F44242A489EB24F677B86F"
+  },
+  {
+   "path": "texts/wiki_ru__Королёв_Сергей_Павлович.txt",
+   "size_bytes": 76264,
+   "sha256": "372ADF9D730BE132474F6CC7415AE0F0FA9AB3B5E998AE2D7512BDDD60F17C44"
+  },
+  {
+   "path": "texts/wiki_ru__Космическая_гонка.txt",
+   "size_bytes": 79231,
+   "sha256": "D3777E339D4D242E38D982F17E07E552504C0B0D946C607F08BB3C97BC5D24AC"
+  },
+  {
+   "path": "texts/wiki_ru__Лавлейс.txt",
+   "size_bytes": 2409,
+   "sha256": "998EE70404216E6240EF74049CC30EC2A11A8CD07AF89E4C7411BC740F29F2EC"
+  },
+  {
+   "path": "texts/wiki_ru__Лавлейс_Ада.txt",
+   "size_bytes": 19424,
+   "sha256": "6E61B5002AD0FA8EA77F1321421E604A277BA93C04EBAAF76AC5AF91FA568074"
+  },
+  {
+   "path": "texts/wiki_ru__Лавуазье_Антуан.txt",
+   "size_bytes": 58080,
+   "sha256": "A99D621A2D05C72342798B9E70C5FE218732F1EF8D0A7A526DE52C01574D2095"
+  },
+  {
+   "path": "texts/wiki_ru__Лебедев_Пётр_Николаевич.txt",
+   "size_bytes": 34737,
+   "sha256": "1D23D88DDF1D40C8E078A2DA910F680F90FE4407098F2AC7C29A0D3D41D61514"
+  },
+  {
+   "path": "texts/wiki_ru__Лейбниц_Готфрид_Вильгельм.txt",
+   "size_bytes": 176336,
+   "sha256": "AB13931048ED3C470F2D24DB7D2B0DA98C5655FE1F0673394CB8FD5D2BC5FA64"
+  },
+  {
+   "path": "texts/wiki_ru__Лондонское_королевское_общество.txt",
+   "size_bytes": 10349,
+   "sha256": "44C8800EF14FB6B913B98725EF2725E00C9DE9EAB357F9FFEC82FDD74EAE2F23"
+  },
+  {
+   "path": "texts/wiki_ru__МГУ.txt",
+   "size_bytes": 125977,
+   "sha256": "6508FABFE68FFDF15D1C6383B033C4AB54E20E24584521FBB4DFBF058F0D3E5C"
+  },
+  {
+   "path": "texts/wiki_ru__Максвелл_Джеймс_Клерк.txt",
+   "size_bytes": 123829,
+   "sha256": "F8D6290D96F82A597277B37C20208EC201D89DE162356479D5C928E3919C598D"
+  },
+  {
+   "path": "texts/wiki_ru__Математические_начала_натуральной_философии.txt",
+   "size_bytes": 30541,
+   "sha256": "949D135C18E3C987EADE556839FA48EA05E985FD8B2F3CD59182E1A7A221343C"
+  },
+  {
+   "path": "texts/wiki_ru__Менделеев.txt",
+   "size_bytes": 205813,
+   "sha256": "FC5286655815D560E0C42ED40458E9F725256A206295755EACAA6AED3255BF41"
+  },
+  {
+   "path": "texts/wiki_ru__Менделеев_Дмитрий_Иванович.txt",
+   "size_bytes": 205813,
+   "sha256": "FC5286655815D560E0C42ED40458E9F725256A206295755EACAA6AED3255BF41"
+  },
+  {
+   "path": "texts/wiki_ru__Методология.txt",
+   "size_bytes": 7457,
+   "sha256": "61E8F6A4F24771758B67291E85CD966275D51125677EE964CB9D285361EE505C"
+  },
+  {
+   "path": "texts/wiki_ru__Наука.txt",
+   "size_bytes": 81782,
+   "sha256": "84DE41C46BDADBA5A82BFE3CE72B45FCD8C8CDE70705B7FA9A97BF1B06492298"
+  },
+  {
+   "path": "texts/wiki_ru__Научная_революция.txt",
+   "size_bytes": 24426,
+   "sha256": "5EA00696973EF3264D03F5703264B1D5596AAE0E47F06E4954618F41F1B4E599"
+  },
+  {
+   "path": "texts/wiki_ru__Неолит.txt",
+   "size_bytes": 14814,
+   "sha256": "BC11089C948237FE0EC4B2D1C0EF81AC9C7C3C915E950E820FFFA53FC2D6086F"
+  },
+  {
+   "path": "texts/wiki_ru__Неолитическая_революция.txt",
+   "size_bytes": 34825,
+   "sha256": "916EBD77656E11190B3D53D48B041D8B3D0F0EE9BB75EEFF236D0F7F1D2DA088"
+  },
+  {
+   "path": "texts/wiki_ru__Одомашнивание.txt",
+   "size_bytes": 33233,
+   "sha256": "1D45004EC7AA550326DF4C879AFE1C781C96E1A7BBC92AE58EC58C88A561825A"
+  },
+  {
+   "path": "texts/wiki_ru__Паровая_машина.txt",
+   "size_bytes": 102711,
+   "sha256": "852E0A28FB84418A1E7A812A24F07FE4FE20D508F90EFA96467F0117DE384DB8"
+  },
+  {
+   "path": "texts/wiki_ru__Периодический_закон.txt",
+   "size_bytes": 65492,
+   "sha256": "139C4D11BAF05E62F524BB16666C647672696B920A4BAB4066B5171C6218E33E"
+  },
+  {
+   "path": "texts/wiki_ru__Пирамиды_Гизы.txt",
+   "size_bytes": 32893,
+   "sha256": "0750DE56216CDEDE6B1F6A8DF890DF52CA48F297B6651653B6C6A727734A6767"
+  },
+  {
+   "path": "texts/wiki_ru__Плодородный_полумесяц.txt",
+   "size_bytes": 14133,
+   "sha256": "0B7D48EDCEBFE247F9B6925BF9582D10651DB96B9F6B1422624D357B69AB47F4"
+  },
+  {
+   "path": "texts/wiki_ru__Попов_Александр_Степанович.txt",
+   "size_bytes": 119461,
+   "sha256": "6E1B40BBECBD87931595BB23F1B3ABA9E8125AFC68BF10B09790A813E2F78459"
+  },
+  {
+   "path": "texts/wiki_ru__Пристли_Джозеф.txt",
+   "size_bytes": 22233,
+   "sha256": "7722B0094055FCB2E67C7E9860265A99FFA9A823809F76B715FA7F50DC6BCF2A"
+  },
+  {
+   "path": "texts/wiki_ru__Происхождение_видов.txt",
+   "size_bytes": 26917,
+   "sha256": "E8FEBA76831E7B7CEC5B32D0A5CBC598F5FEC0BF89569A640536762982F7BCF0"
+  },
+  {
+   "path": "texts/wiki_ru__Промышленная_революция.txt",
+   "size_bytes": 56946,
+   "sha256": "A738608B044485319355966B9F323617DBFA71DABBCB1DBBC33A87B38CE0C211"
+  },
+  {
+   "path": "texts/wiki_ru__Птолемей.txt",
+   "size_bytes": 26469,
+   "sha256": "1A700C42CCB2BB1405958E45BF0729685D481FE79DC369D8B3912DCE000A3063"
+  },
+  {
+   "path": "texts/wiki_ru__Радио.txt",
+   "size_bytes": 51664,
+   "sha256": "99662368E2D2CE1E490DCB26277381623578ECC24508C82CF7951822E0174CD9"
+  },
+  {
+   "path": "texts/wiki_ru__Радиолокационная_станция.txt",
+   "size_bytes": 67305,
+   "sha256": "80B8BEEEF189AC4A6D996EDDDF0C3140E466F3FC3F80AE1D10EC0CAC645CC22B"
+  },
+  {
+   "path": "texts/wiki_ru__Радиолокация.txt",
+   "size_bytes": 37322,
+   "sha256": "5AF3958203A42F4DF3E0FD9BB55CC608B8A42718731ECEE97EACDF3BA0F14221"
+  },
+  {
+   "path": "texts/wiki_ru__Сельское_хозяйство_Древнего_Египта.txt",
+   "size_bytes": 11071,
+   "sha256": "5091A9C8B13BF318F2D4A3A4B837481CEEDBC9B5A82158D6F5B078425B99734C"
+  },
+  {
+   "path": "texts/wiki_ru__Сеченов.txt",
+   "size_bytes": 68936,
+   "sha256": "23265495655E863CACC97C48DD9D039E60288BCF177FE71E06698E30596F3F2F"
+  },
+  {
+   "path": "texts/wiki_ru__Сеченов_Иван_Михайлович.txt",
+   "size_bytes": 68936,
+   "sha256": "23265495655E863CACC97C48DD9D039E60288BCF177FE71E06698E30596F3F2F"
+  },
+  {
+   "path": "texts/wiki_ru__Советская_космическая_программа.txt",
+   "size_bytes": 31706,
+   "sha256": "C3437E974F16C85A6A88B0D87B8DAAF32138AD48746CD5AB77DBC9EF6E79DA02"
+  },
+  {
+   "path": "texts/wiki_ru__Спутник-1.txt",
+   "size_bytes": 69132,
+   "sha256": "C4DB60218D3A327A7D4CC8093A23BF0D0B23B01AF7CD0759762ABBD11AB4FD35"
+  },
+  {
+   "path": "texts/wiki_ru__Спутник.txt",
+   "size_bytes": 11827,
+   "sha256": "0D37F8643459705749A50F2FD2105D89F17D774895F1C5DD06A06774EC7C974A"
+  },
+  {
+   "path": "texts/wiki_ru__Столетов_Александр_Григорьевич.txt",
+   "size_bytes": 21916,
+   "sha256": "7C4CB338BC8F2B35052B487CFD8E485DA5A39C139A3CA7D57149EE3505A4264A"
+  },
+  {
+   "path": "texts/wiki_ru__Телескоп.txt",
+   "size_bytes": 22948,
+   "sha256": "58C8AC4346889DFD6A76E8927FD3038A22A918D32A09519E3BF02B83340352A7"
+  },
+  {
+   "path": "texts/wiki_ru__Технология.txt",
+   "size_bytes": 30572,
+   "sha256": "C661A77A37320CC8E9C02047CF38FF45CDAE42064D42AA31D29AA5E19C57E77C"
+  },
+  {
+   "path": "texts/wiki_ru__Уатт_Джеймс.txt",
+   "size_bytes": 31148,
+   "sha256": "78860CA511150E16CBB6C2BD18185C7F90F9CEACB9C37DEC67F98F4A20556BA1"
+  },
+  {
+   "path": "texts/wiki_ru__Фарадей_Майкл.txt",
+   "size_bytes": 80338,
+   "sha256": "B8940FAB3DF0B15BB3E518D8BE3DFA0B4D69C354C610349A8A84BB56D73870E9"
+  },
+  {
+   "path": "texts/wiki_ru__Флогистон.txt",
+   "size_bytes": 10051,
+   "sha256": "E3A77F7957319EB60A09371C064199F462C4404A434392E92773A60E09C113A2"
+  },
+  {
+   "path": "texts/wiki_ru__ЦАГИ.txt",
+   "size_bytes": 12766,
+   "sha256": "102DE66D79B4DA185196F7A66A9CA20F4D20E52116615E002C2A80C4A6823804"
+  },
+  {
+   "path": "texts/wiki_ru__Циолковский.txt",
+   "size_bytes": 216995,
+   "sha256": "CECA0EBCDFC2DD7FFB650653C899317321AF38C39CD9676A62D5F6348F864661"
+  },
+  {
+   "path": "texts/wiki_ru__Циолковский_Константин_Эдуардович.txt",
+   "size_bytes": 216995,
+   "sha256": "CECA0EBCDFC2DD7FFB650653C899317321AF38C39CD9676A62D5F6348F864661"
+  },
+  {
+   "path": "texts/wiki_ru__Цифровой_двойник.txt",
+   "size_bytes": 7843,
+   "sha256": "58B6F2204B891FF15833E4EBE00FA5C0796502B62233B3253590BA6BB7959F25"
+  },
+  {
+   "path": "texts/wiki_ru__Чатал-Хююк.txt",
+   "size_bytes": 47819,
+   "sha256": "297C2D5FF2F0630EABD37A0AD18799335C17CDCC50FC8F64775DD4C1596EF9BF"
+  },
+  {
+   "path": "texts/wiki_ru__Шадуф.txt",
+   "size_bytes": 9268,
+   "sha256": "888931ED8ADF3260B141EF8A2A649814F596BC0C6C8AFCBF7506F6391F617DA1"
+  },
+  {
+   "path": "texts/wiki_ru__ЭСБЕ_Естествознание.txt",
+   "size_bytes": 13011,
+   "sha256": "7FCE94685FF7309562C436DB4347A22BC7C569C11702DFE9B8E95402C27402EE"
+  },
+  {
+   "path": "texts/wiki_ru__ЭСБЕ_Россия_Русская_наука.txt",
+   "size_bytes": 3450,
+   "sha256": "2651BBF931EAE7D24984B77EDBB4DB51CF38530EB2F32B164CA8244C69E956EF"
+  },
+  {
+   "path": "texts/wiki_ru__Электричество.txt",
+   "size_bytes": 78740,
+   "sha256": "99350CBA9B9A43F4D60EA0B60AAFBBAC70861FBE12E296470D8E6529B094D1EC"
+  },
+  {
+   "path": "texts/wiki_ru__Эрстед_Ханс_Кристиан.txt",
+   "size_bytes": 24756,
+   "sha256": "4B86832C02D9873A64A19AC04A0176B4399933B4BD0293E1F80C26B1686F52CC"
+  },
+  {
+   "path": "texts/wikipedia__Ada_Lovelace.txt",
+   "size_bytes": 40767,
+   "sha256": "3B7112CBE0EFC3794A14B7FB55B9663BF5C797A2E927F282C4FE9BCEFC724EDE"
+  },
+  {
+   "path": "texts/wikipedia__Aerodynamics.txt",
+   "size_bytes": 22553,
+   "sha256": "CF28F58F11912A2472D757739A27DC8BC02BEE63F686AF0152E6D475687DD403"
+  },
+  {
+   "path": "texts/wikipedia__Age_of_Enlightenment.txt",
+   "size_bytes": 120735,
+   "sha256": "471D0D717B840ADE2D60906B16DA2BD14752339B0BDC345958D5DECB540C69B2"
+  },
+  {
+   "path": "texts/wikipedia__Agricultural_revolution.txt",
+   "size_bytes": 1630,
+   "sha256": "E78D3C74098F922058FD90ACD49A8BF3BD1C00F9CACF2BF4AD481273F36A7EA4"
+  },
+  {
+   "path": "texts/wikipedia__Al-Khwarizmi.txt",
+   "size_bytes": 24778,
+   "sha256": "22EB64089511732145CB0B26CBF62F4A10F280994FBCA82ECFC1DEE266A467BC"
+  },
+  {
+   "path": "texts/wikipedia__Alchemy.txt",
+   "size_bytes": 63325,
+   "sha256": "350F9B6EA2C7BF140C00885E41F60B8B4974DB43770E366E3B52982C8E7092BE"
+  },
+  {
+   "path": "texts/wikipedia__Alexander_Popov.txt",
+   "size_bytes": 1709,
+   "sha256": "DB308AC4993235BD5C89FD2121CF05ACE630417C0974EA81D2402BB26F592C88"
+  },
+  {
+   "path": "texts/wikipedia__Alexander_Stepanovich_Popov.txt",
+   "size_bytes": 17261,
+   "sha256": "9C3F45832EFDAF06BCCA76146EBCA0A4D690DCF6258C8BFAC92D508A88971A11"
+  },
+  {
+   "path": "texts/wikipedia__Alfred_Russel_Wallace.txt",
+   "size_bytes": 71521,
+   "sha256": "23136F0D65AFFDF2C2F905F7CA0AA4DEF021EAAE529F9A15A9A451CAA200EBB7"
+  },
+  {
+   "path": "texts/wikipedia__Algebra.txt",
+   "size_bytes": 40044,
+   "sha256": "D915ED97C1FB75C77DB7AFB7674C7485F7432287F1F30E2CACED3FA2C18F04BE"
+  },
+  {
+   "path": "texts/wikipedia__Analytical_Engine.txt",
+   "size_bytes": 15728,
+   "sha256": "D9B7EA2CEF530D28C001A100F51F29728D6E91830148D68DC7FE005F6AC25182"
+  },
+  {
+   "path": "texts/wikipedia__Ancient_Egyptian_technology.txt",
+   "size_bytes": 35121,
+   "sha256": "FC3DA0888700952220B58FC115D5262BD6DC79991E5DDF1E7BB5BCDDB1FC128A"
+  },
+  {
+   "path": "texts/wikipedia__Ancient_Greek_mathematics.txt",
+   "size_bytes": 36008,
+   "sha256": "DA1951B4C4121A1D401D766215505FD1131DD9C449DE325D5CB4A3C0CDFEC22D"
+  },
+  {
+   "path": "texts/wikipedia__Antikythera_mechanism.txt",
+   "size_bytes": 57445,
+   "sha256": "FFF56D92D82A7519D057343FFD69CF52A43BE57492DDFEF2688DB4DDC43AB39D"
+  },
+  {
+   "path": "texts/wikipedia__Antipositivism.txt",
+   "size_bytes": 8030,
+   "sha256": "CFA465B9CA3AEE3A555380AABC18EC2B2386B3823DEB63177413B6078DA36A62"
+  },
+  {
+   "path": "texts/wikipedia__Antoine_Lavoisier.txt",
+   "size_bytes": 46580,
+   "sha256": "3D79D5DB55260D70D3C336C6CE8F8CE70594992969DC8AE8FC7527E9858915E7"
+  },
+  {
+   "path": "texts/wikipedia__Apollo_program.txt",
+   "size_bytes": 65381,
+   "sha256": "15E859134462CDF82242AE69C01AFAA63DB702951E21B3EF48228B9282BFBF70"
+  },
+  {
+   "path": "texts/wikipedia__Archimedes.txt",
+   "size_bytes": 37943,
+   "sha256": "9CE363FD25716C35B24C5180625471FCEE294D344A4805822806AF34CAE03BD5"
+  },
+  {
+   "path": "texts/wikipedia__Aristarchus_of_Samos.txt",
+   "size_bytes": 12014,
+   "sha256": "136F6EDC32749E1F5C01B86A4FE1F07ABE77726B2CA09184FFBA6BC3D0D93C76"
+  },
+  {
+   "path": "texts/wikipedia__Artificial_intelligence.txt",
+   "size_bytes": 87072,
+   "sha256": "7606420D65F94B913AE9EC989F3CD6F1BB18D8128514B74042A4AAB51E00CEF7"
+  },
+  {
+   "path": "texts/wikipedia__Artificial_neuron.txt",
+   "size_bytes": 22847,
+   "sha256": "798DEAFDCDAFB1407315479C0C6213ACB62D6C8EB6766A677263494EFEBA7242"
+  },
+  {
+   "path": "texts/wikipedia__Avicenna.txt",
+   "size_bytes": 51387,
+   "sha256": "99A48B7307B929E220FF68BA6C449595EE7F062307F85D529A980649B21D00A6"
+  },
+  {
+   "path": "texts/wikipedia__Babbage.txt",
+   "size_bytes": 48804,
+   "sha256": "3E1081BE353AFFB681ECFF90BF8007E507C5DA336F179A2BD8CE0E181384D059"
+  },
+  {
+   "path": "texts/wikipedia__Bessemer_process.txt",
+   "size_bytes": 16804,
+   "sha256": "48B4A2A6BB01ED2C5CA12D4247CC5EC219BC7D5FFC3AFD7654B5809E71621100"
+  },
+  {
+   "path": "texts/wikipedia__Big_Science.txt",
+   "size_bytes": 8847,
+   "sha256": "342398FAD0B3D074C31702B17F5CA1B5C7E45D92B46DBF837F63FF7B8DB45C13"
+  },
+  {
+   "path": "texts/wikipedia__Bio-inspired_robotics.txt",
+   "size_bytes": 12669,
+   "sha256": "93CAC3B4F62B937635FCD28E0EDACE8FDD6760994CE536B3D744316D3A4E3C86"
+  },
+  {
+   "path": "texts/wikipedia__Biologically_inspired_engineering.txt",
+   "size_bytes": 17958,
+   "sha256": "B6D02B9A6B6F1990AFB24FE0B897A34A7662B26371D0FB7922303D55278822A6"
+  },
+  {
+   "path": "texts/wikipedia__Biomechatronics.txt",
+   "size_bytes": 9164,
+   "sha256": "2CDC0FB3C0EFBB6682FD95731F2932CE1C2E4FA8BA46C3E859099A66739566D0"
+  },
+  {
+   "path": "texts/wikipedia__Biomimetics.txt",
+   "size_bytes": 40469,
+   "sha256": "86F2998965417E3B18696823CDC0E1412B34074E0BB82A837BA8D7B41333FF14"
+  },
+  {
+   "path": "texts/wikipedia__Biomimicry.txt",
+   "size_bytes": 40469,
+   "sha256": "86F2998965417E3B18696823CDC0E1412B34074E0BB82A837BA8D7B41333FF14"
+  },
+  {
+   "path": "texts/wikipedia__Bionic_architecture.txt",
+   "size_bytes": 12780,
+   "sha256": "6C9B79CE212A2E37CDD5981F2B2152148DB4DC7EC1C59BF3FB4825BADEACCAE0"
+  },
+  {
+   "path": "texts/wikipedia__Bionics.txt",
+   "size_bytes": 18935,
+   "sha256": "8A23A8266D000F3C7DFE30CF145229B3CAF62B05F25375EB161E428BB776D610"
+  },
+  {
+   "path": "texts/wikipedia__Boundary_layer.txt",
+   "size_bytes": 31510,
+   "sha256": "5E75C2F034CC604CF6EA5361C72E9FA4AF4DC0BEBDE1F76EC5CC81E98DF194B7"
+  },
+  {
+   "path": "texts/wikipedia__Bronze_Age.txt",
+   "size_bytes": 52190,
+   "sha256": "6880AC393E424B5EC3C6C7C4D83B2C79E13EA2D1E5C6F9767A542C169B61BEAD"
+  },
+  {
+   "path": "texts/wikipedia__Calculus_controversy.txt",
+   "size_bytes": 22876,
+   "sha256": "FBB9D68B7A17F99211D7D3766B826C32384237AE455929087FCA3D192C1AAAD4"
+  },
+  {
+   "path": "texts/wikipedia__Canal.txt",
+   "size_bytes": 43197,
+   "sha256": "ACC4292FDDBBC2B67D07FA0C22F410434D389BDD03DF9940F8BDC564CF4B7D9D"
+  },
+  {
+   "path": "texts/wikipedia__Carl_Wilhelm_Scheele.txt",
+   "size_bytes": 14954,
+   "sha256": "C2371CFE3DDA67D5414E4E516BF46E84647721E990975B0E2D4C704223CCB883"
+  },
+  {
+   "path": "texts/wikipedia__Cat_s_eye_reflector.txt",
+   "size_bytes": 12105,
+   "sha256": "7FCFC85296054BAAC3D44859BD7773E6B851EBBFB4B132A5FBBEC11D259ED5E3"
+  },
+  {
+   "path": "texts/wikipedia__Cavity_magnetron.txt",
+   "size_bytes": 31377,
+   "sha256": "F9D049F4387F7E2A0325F508D46E43D07F9476FB559F5C9605EBF78C718C6965"
+  },
+  {
+   "path": "texts/wikipedia__Chain_Home.txt",
+   "size_bytes": 79214,
+   "sha256": "C46B491A17ECEBDC2DA9703CED5E29200AB0BF047BC4AFB804BDE6F55BDD7CA9"
+  },
+  {
+   "path": "texts/wikipedia__Charles_Babbage.txt",
+   "size_bytes": 49654,
+   "sha256": "811B4B97F86DD666F1D850EE0F82D42665CB3C11D9192916AF952A9C99DFEAE6"
+  },
+  {
+   "path": "texts/wikipedia__Charles_Darwin.txt",
+   "size_bytes": 63688,
+   "sha256": "92A209B013FB1B9CFE9D271F2F9CB6D4B3DB902E9DDDA0A438C7EA0558262189"
+  },
+  {
+   "path": "texts/wikipedia__Chemical_element.txt",
+   "size_bytes": 58039,
+   "sha256": "12E3B12DF358C8E998180899AE96FBB5FCB9081D2C47D9B03B7A062E9F0EA211"
+  },
+  {
+   "path": "texts/wikipedia__Computer.txt",
+   "size_bytes": 56317,
+   "sha256": "166E9904CBB93F0ECE6077AAEF29E5BB662483C3FC51608DBF2A61BC83E36784"
+  },
+  {
+   "path": "texts/wikipedia__Copernicus.txt",
+   "size_bytes": 80532,
+   "sha256": "F158C994CAC90FA90F278A03B5BB2BC55ECC9B0345F2949F760A445452D14D68"
+  },
+  {
+   "path": "texts/wikipedia__Copper_Age.txt",
+   "size_bytes": 14997,
+   "sha256": "15EAE3E15A14BF26EBA02F3846E69F6690F0A1D1DAB53C13B194171323CDB7EF"
+  },
+  {
+   "path": "texts/wikipedia__Cybernetics.txt",
+   "size_bytes": 20338,
+   "sha256": "31991296D514AF4285DFADE4AC17C2B9B8D6448BAD1321CA2722918BC4578D1C"
+  },
+  {
+   "path": "texts/wikipedia__Cyborg.txt",
+   "size_bytes": 48802,
+   "sha256": "B2DF22A11B7E6D2AAD0B820152DD10F62F0806A4D589F662354B289CBEE08BDC"
+  },
+  {
+   "path": "texts/wikipedia__De_revolutionibus.txt",
+   "size_bytes": 31434,
+   "sha256": "9E394E489A82A54CBA83E72CA45F5486525588D2CD17221AF9BE9ACE093F988F"
+  },
+  {
+   "path": "texts/wikipedia__Diesel_engine.txt",
+   "size_bytes": 69794,
+   "sha256": "6C750F666B5B86E0556FC8D8D7593EDC714E9DF6094499EA8477E554BDA5EDC7"
+  },
+  {
+   "path": "texts/wikipedia__Digital_twin.txt",
+   "size_bytes": 17137,
+   "sha256": "3DB7D716DFB8AC9ECB5EDE5A58A95BEF77DD702FF8F0B8F5A3B3F4C3A6A74EB8"
+  },
+  {
+   "path": "texts/wikipedia__Dmitri_Mendeleev.txt",
+   "size_bytes": 24547,
+   "sha256": "01C31736F64F5656AA512BAD2CD4726B2A068DE726D529450FD62F5DAC1C7729"
+  },
+  {
+   "path": "texts/wikipedia__Domestication.txt",
+   "size_bytes": 28265,
+   "sha256": "A1D6AF87D42FF5D868B24D656AE3FDC6BDB88521EE401EE4E39D6537C96ECE57"
+  },
+  {
+   "path": "texts/wikipedia__ENIAC.txt",
+   "size_bytes": 33070,
+   "sha256": "4C44FCD29BBD7BBB5FD1A6C6D0CD79FFFECC645A921B4F3D3226A55BBB0669C5"
+  },
+  {
+   "path": "texts/wikipedia__Echolocation.txt",
+   "size_bytes": 1545,
+   "sha256": "12B961CBD6615D41B6D4AF8D9C2597CE133E3E70785FCAAE16642B5F11C0ED68"
+  },
+  {
+   "path": "texts/wikipedia__Egyptian_pyramid_construction_techniques.txt",
+   "size_bytes": 28779,
+   "sha256": "A516F604EC01228DA6CCC6C2AFEB0C6AEA3EE7F9D88D883E2619A54EAD83AE76"
+  },
+  {
+   "path": "texts/wikipedia__Electromagnetic_radiation.txt",
+   "size_bytes": 51711,
+   "sha256": "67711B4428616C7BAA04B0D856D7232F3E6BBAC9A79CF759F1D486BE88F6A0E6"
+  },
+  {
+   "path": "texts/wikipedia__Electromagnetic_spectrum.txt",
+   "size_bytes": 24810,
+   "sha256": "460C33BE9F72F196F2446FF4EC33AB54758E307E721A52517083847C7CE08319"
+  },
+  {
+   "path": "texts/wikipedia__Empirical_evidence.txt",
+   "size_bytes": 17208,
+   "sha256": "C328D40F1AB91E02AA7542E23BFB9C810E4CCBA0526E692925FE2D00F69BF82B"
+  },
+  {
+   "path": "texts/wikipedia__Ernst_Haeckel.txt",
+   "size_bytes": 39400,
+   "sha256": "468DE809960D47F0E921A05890F5CD02AEC4A3E9C4854EDD76B24574A4D5F143"
+  },
+  {
+   "path": "texts/wikipedia__Euclid.txt",
+   "size_bytes": 19019,
+   "sha256": "725D08DD270CE85FD61A423D8489DB78D19FA59D13109B1F7B284BFEC3A94CC7"
+  },
+  {
+   "path": "texts/wikipedia__Evolution.txt",
+   "size_bytes": 70029,
+   "sha256": "AD388E592914DE0F18AFC0BAA4B671346B1AB4AD46934E4C0EB427128B70CBBF"
+  },
+  {
+   "path": "texts/wikipedia__Evolutionary_computation.txt",
+   "size_bytes": 17382,
+   "sha256": "61AACC4D918AE969CBA1A0CAABEA26E964E6D5677FE7DFC6A395BBEDC99CB552"
+  },
+  {
+   "path": "texts/wikipedia__Four_Great_Inventions.txt",
+   "size_bytes": 16348,
+   "sha256": "385D7222F03C4312DE8DBDC6CD80B3DAF276906650424BD8C619BA795AF85073"
+  },
+  {
+   "path": "texts/wikipedia__Galileo_Galilei.txt",
+   "size_bytes": 66937,
+   "sha256": "4AE23231350521DD2107BA011410FB5BEB3005066698B45ED1BEB155DCB4B779"
+  },
+  {
+   "path": "texts/wikipedia__Gecko_feet.txt",
+   "size_bytes": 28691,
+   "sha256": "A2FB923D7DFA2B2D175C737D9EF0C4DF123E84A6929E7A8FD56DD00A1CF8DE43"
+  },
+  {
+   "path": "texts/wikipedia__Geocentric_model.txt",
+   "size_bytes": 43552,
+   "sha256": "8F6A4EE2E4541C33C46852ACE9FB08FC69E2A15584464C4703A0B01821069746"
+  },
+  {
+   "path": "texts/wikipedia__Granary.txt",
+   "size_bytes": 4961,
+   "sha256": "2FEE2DE9619BF599E810575F83B1F48383C90D8D97AE81CD879ECB206D0B4B43"
+  },
+  {
+   "path": "texts/wikipedia__Greek_technology.txt",
+   "size_bytes": 3492,
+   "sha256": "CFCC407601176AEE878180733D5312691121631DB6C4F8EE56081901C9552550"
+  },
+  {
+   "path": "texts/wikipedia__Guglielmo_Marconi.txt",
+   "size_bytes": 39939,
+   "sha256": "D5A6B536228CCA44E74779C1C3331036344D5732461FA1104EC91CA55A3DC459"
+  },
+  {
+   "path": "texts/wikipedia__Gunpowder.txt",
+   "size_bytes": 51554,
+   "sha256": "90A2693E29E6C6AEAEF477F84F363B7D52BAD8BAD3F437D8385A382C950A3CED"
+  },
+  {
+   "path": "texts/wikipedia__Heinrich_Hertz.txt",
+   "size_bytes": 16169,
+   "sha256": "72811D01DC615F942C1EAB0E90646ED9371EACC76D84D95FCF23B4835227B51A"
+  },
+  {
+   "path": "texts/wikipedia__Heliocentrism.txt",
+   "size_bytes": 48589,
+   "sha256": "5199F69629898A021C9A861864BD1565835EC45093335EE59379F9F7BAF46CB4"
+  },
+  {
+   "path": "texts/wikipedia__Historical_method.txt",
+   "size_bytes": 26082,
+   "sha256": "C1FC1B3D57CFB979B256F2D2E21DDF3ADFEBF0AC030648F141CF60DC4C815B06"
+  },
+  {
+   "path": "texts/wikipedia__Historiography.txt",
+   "size_bytes": 105796,
+   "sha256": "4DD586E7D6CF72B5BA5A0BF23B378FE81D29D17EA8EA0823E99ACE5616196850"
+  },
+  {
+   "path": "texts/wikipedia__Historiography_of_science.txt",
+   "size_bytes": 23039,
+   "sha256": "26D4E38A6608047045EA34A27FEDDDAFDD557A3809DACEF4FFEC035EC2301FD1"
+  },
+  {
+   "path": "texts/wikipedia__History_of_agriculture.txt",
+   "size_bytes": 52725,
+   "sha256": "CA94363621393DC5E27BC56065BB521CBA1632F240CE729F150F05C22787AC02"
+  },
+  {
+   "path": "texts/wikipedia__History_of_algebra.txt",
+   "size_bytes": 56557,
+   "sha256": "FEC37AEC545D9A6F2FC5462E4AC1C2754D088DF2D1B14932B21F809297A5D1AA"
+  },
+  {
+   "path": "texts/wikipedia__History_of_anatomy.txt",
+   "size_bytes": 36679,
+   "sha256": "734DB374C3602F1EFE443EDEC5B602C843076BB4F06A2AD5BAB2AB1E8510C058"
+  },
+  {
+   "path": "texts/wikipedia__History_of_artificial_intelligence.txt",
+   "size_bytes": 95450,
+   "sha256": "B75CE39D0B0047C10B880B15DA852F3B9DBB82A0DB8087DC660F670CB083CCA0"
+  },
+  {
+   "path": "texts/wikipedia__History_of_astronomy.txt",
+   "size_bytes": 49448,
+   "sha256": "C7D0D5092F8E6256624C88E6DDDF302348BCE6E4F1C508B26C56AC477ECF3008"
+  },
+  {
+   "path": "texts/wikipedia__History_of_aviation.txt",
+   "size_bytes": 72393,
+   "sha256": "FD278ACEFB4D303F1E851FFEA1814D17C9E6236830626FE9DD926346C76AC2B8"
+  },
+  {
+   "path": "texts/wikipedia__History_of_biology.txt",
+   "size_bytes": 57565,
+   "sha256": "610072448EAEB3836DA46C68FCD5BB10B598FBCEA58AFDB29B66AB178F9E5717"
+  },
+  {
+   "path": "texts/wikipedia__History_of_cartography.txt",
+   "size_bytes": 84470,
+   "sha256": "4DA9EC5816026128C35EFD939B2BA29398DB3D1B5010D4EDBD7AA0C5919864EF"
+  },
+  {
+   "path": "texts/wikipedia__History_of_chemistry.txt",
+   "size_bytes": 105480,
+   "sha256": "7DBA79FC2AD5ADA97E5BD601C663B31CABCE19133FD8980B74100C16AEE83151"
+  },
+  {
+   "path": "texts/wikipedia__History_of_computers.txt",
+   "size_bytes": 67948,
+   "sha256": "390C5FE4AA8B1FAD974052D4ED6A08E03D11A5F9B8CD3464D6129F8C664FC039"
+  },
+  {
+   "path": "texts/wikipedia__History_of_computing.txt",
+   "size_bytes": 29079,
+   "sha256": "70FD5B23DDFE08D07D168D4381EC90164CC33C83DA0541EC7474508C601EB60D"
+  },
+  {
+   "path": "texts/wikipedia__History_of_computing_hardware.txt",
+   "size_bytes": 68960,
+   "sha256": "4FCE1C538C43225ADC58CE8BFBA3AA03EBD0963CB4D7F51C5B40B45EC6CFD623"
+  },
+  {
+   "path": "texts/wikipedia__History_of_electrical_engineering.txt",
+   "size_bytes": 19281,
+   "sha256": "52D56D74D9A01BBB11F76E227A00A0C9E8B7F4CE3FD45527E95B90C3EF4AAA0C"
+  },
+  {
+   "path": "texts/wikipedia__History_of_electromagnetic_theory.txt",
+   "size_bytes": 103278,
+   "sha256": "BB2A8445B4556F8080392E5E7B5FB90BE7DFDF14D0BAA4215FB6C07754FEF9B3"
+  },
+  {
+   "path": "texts/wikipedia__History_of_engineering.txt",
+   "size_bytes": 13101,
+   "sha256": "11E1A877E2D0FB7B20DCEBEAFC9B4DDED108B41FC9C0E8C487475AD0BBA7F28A"
+  },
+  {
+   "path": "texts/wikipedia__History_of_ferrous_metallurgy.txt",
+   "size_bytes": 37381,
+   "sha256": "4333E3996969974172E3BFDE4D2DD9B2D2895CF5707FAD05F41B924EAE4B09A3"
+  },
+  {
+   "path": "texts/wikipedia__History_of_geometry.txt",
+   "size_bytes": 34500,
+   "sha256": "B6860C6E53713495E7ADFCBB7F1E72126DB0764F7E243BC3450DCB193490614B"
+  },
+  {
+   "path": "texts/wikipedia__History_of_mathematics.txt",
+   "size_bytes": 36093,
+   "sha256": "7B493875AD2C09F93A8CCF2FC7C37156DADFE28712C2C4DFDCA9855DB034974F"
+  },
+  {
+   "path": "texts/wikipedia__History_of_mechanical_engineering.txt",
+   "size_bytes": 18172,
+   "sha256": "BE04A605C3A23202B49C1A0AFC14E8A416DEFC528C919284E8D2200B21BE3503"
+  },
+  {
+   "path": "texts/wikipedia__History_of_medicine.txt",
+   "size_bytes": 99043,
+   "sha256": "AEBD54B7BB435C8FEA1577584B58868C51FDE7F31995CE382AB8534E8FA7EE42"
+  },
+  {
+   "path": "texts/wikipedia__History_of_metallurgy.txt",
+   "size_bytes": 19784,
+   "sha256": "E6F6AB05CBDBD30BF39535A437698B3C0DCA4391580263F715C27D2AD27B9E4F"
+  },
+  {
+   "path": "texts/wikipedia__History_of_optics.txt",
+   "size_bytes": 26084,
+   "sha256": "C920D86C30AEC1906ABCD9DED70C28C04233396779031A73DD3A04AE804B6542"
+  },
+  {
+   "path": "texts/wikipedia__History_of_physics.txt",
+   "size_bytes": 84958,
+   "sha256": "CDD1F647275A621F49611EE0AACA4F83FD7B02645E1BE7785D9D8627E4117DD0"
+  },
+  {
+   "path": "texts/wikipedia__History_of_printing.txt",
+   "size_bytes": 86388,
+   "sha256": "82C7F79291BB4C91187A0B3D2B7A5D9714EC2A4053425DF5BE0F7C68C5E32EEB"
+  },
+  {
+   "path": "texts/wikipedia__History_of_radar.txt",
+   "size_bytes": 95920,
+   "sha256": "16978D0A484802A90050BCF7902D90FF7BC5F0B29BB4B37F6F3FF1A233B833CF"
+  },
+  {
+   "path": "texts/wikipedia__History_of_rocketry.txt",
+   "size_bytes": 48754,
+   "sha256": "82C6113957B02819199E80E5B1FF69BD92B8DB11274DF7AE69082AB86FDB684C"
+  },
+  {
+   "path": "texts/wikipedia__History_of_rockets.txt",
+   "size_bytes": 47975,
+   "sha256": "EDC110CEC1CB1A56C2EFCF89CE635926CA85235063D6C32F1758B6E330429EE0"
+  },
+  {
+   "path": "texts/wikipedia__History_of_science.txt",
+   "size_bytes": 86022,
+   "sha256": "709997B06E94C824C081E4F850F2CC827D89930FCDE4B4630A14CC43D5FE4C03"
+  },
+  {
+   "path": "texts/wikipedia__History_of_science_and_technology.txt",
+   "size_bytes": 19754,
+   "sha256": "BCD8A8A12D06E601196F790A01A7B86EBA35047160D0614F70D49C06237F3229"
+  },
+  {
+   "path": "texts/wikipedia__History_of_scientific_method.txt",
+   "size_bytes": 61423,
+   "sha256": "6E4E07D706E98B81F1C72B0046D9E3749580D739FECEF735A30BCF5D047C4ECA"
+  },
+  {
+   "path": "texts/wikipedia__History_of_technology.txt",
+   "size_bytes": 51902,
+   "sha256": "3D23318EACB1AF172D63607D532910D71DA9BFDAB8DD00B5B37FC5C0A8083258"
+  },
+  {
+   "path": "texts/wikipedia__History_of_telecommunication.txt",
+   "size_bytes": 28447,
+   "sha256": "60F63AD6D3B911804419A9AB69E616C4C314038E4FC34DBFF6876EAEC4611DFB"
+  },
+  {
+   "path": "texts/wikipedia__History_of_the_Internet.txt",
+   "size_bytes": 80155,
+   "sha256": "50C9171B9CF959BF9B2ADFA523873F5066D840F4F7C92909AED6749CB04F184D"
+  },
+  {
+   "path": "texts/wikipedia__History_of_the_microscope.txt",
+   "size_bytes": 19636,
+   "sha256": "01568328521968B3667680E945DE8ECDE9677D2C3152D16EC56FACA5809A2885"
+  },
+  {
+   "path": "texts/wikipedia__History_of_the_periodic_table.txt",
+   "size_bytes": 49585,
+   "sha256": "0D34D9612B1CDB56DA940D25051429B02FC292734F8E6A1FA383AD73B0A22DC6"
+  },
+  {
+   "path": "texts/wikipedia__History_of_the_steam_engine.txt",
+   "size_bytes": 35513,
+   "sha256": "38A2AD1FF1FC8A32BF1E3D9A8B198924642064DF388083F456FF23921A07B2EE"
+  },
+  {
+   "path": "texts/wikipedia__History_of_the_telescope.txt",
+   "size_bytes": 48644,
+   "sha256": "F7B9586FE9D20B04E63DFF691D97E8BCB98DC63D16D6AB61169A01B9A42BE97D"
+  },
+  {
+   "path": "texts/wikipedia__History_of_thermodynamics.txt",
+   "size_bytes": 22179,
+   "sha256": "560FA1CE7AFB63966535B3C3852DEA1879E7CE06CE0AEAB28A9576DEFAB29F13"
+  },
+  {
+   "path": "texts/wikipedia__History_of_unmanned_aerial_vehicles.txt",
+   "size_bytes": 35938,
+   "sha256": "C7F06896D8D57D05432F10133F1A8D90C46F894A95C8E1ADF216F9F473020E97"
+  },
+  {
+   "path": "texts/wikipedia__History_of_writing_numbers.txt",
+   "size_bytes": 20303,
+   "sha256": "5978CD9DFC71D75FCCD4DBD17391F3CFF7E8FE25DF545BF3F872015EAE76DBA2"
+  },
+  {
+   "path": "texts/wikipedia__House_of_Wisdom.txt",
+   "size_bytes": 32683,
+   "sha256": "066E5AE3C289F720AD5554820CAEDF6D1C15E466B163347AE1C9FE949CDAC01B"
+  },
+  {
+   "path": "texts/wikipedia__Hypothesis.txt",
+   "size_bytes": 12537,
+   "sha256": "B4B22DF13021B546CE37EE47175AEA22328D4E2D35E483FB9CFFA69C5C321DEE"
+  },
+  {
+   "path": "texts/wikipedia__Inductivism.txt",
+   "size_bytes": 53697,
+   "sha256": "E1EC30ABA68D95D9C487AB50EA16A55EE0D20B5829302DF0E02AEC32CDF0877A"
+  },
+  {
+   "path": "texts/wikipedia__Industrial_Revolution.txt",
+   "size_bytes": 112810,
+   "sha256": "6FC34910CC7ED24928CAFCD7D57E026FBFE92389039841E9D3CA814D8276971B"
+  },
+  {
+   "path": "texts/wikipedia__Internal_combustion_engine.txt",
+   "size_bytes": 73826,
+   "sha256": "BBA977674888A8B57D7159FE883BA6B5FD0F685848A374CEBE1B48CEAD36E3DF"
+  },
+  {
+   "path": "texts/wikipedia__Invention_of_radio.txt",
+   "size_bytes": 55351,
+   "sha256": "83D13B1429F5183AD6357A5E8B5860E68D235932B6A351DC80F54D786DC42619"
+  },
+  {
+   "path": "texts/wikipedia__Invisible_college.txt",
+   "size_bytes": 9158,
+   "sha256": "370FC3D60F31E03AF920BC3FE5EDDA76D135AB25803D059A77B1B726E685542F"
+  },
+  {
+   "path": "texts/wikipedia__Iron_Age.txt",
+   "size_bytes": 29218,
+   "sha256": "FB83B994D13F2C99BAC3874491DB8C5F800AC9FE57602E8BA5FEB32400F444C4"
+  },
+  {
+   "path": "texts/wikipedia__Irrigation.txt",
+   "size_bytes": 49052,
+   "sha256": "78DD338BA3ABA5BB3D245FD6D4D29B3857BDFFA28C45A026778362EE4D6EA20C"
+  },
+  {
+   "path": "texts/wikipedia__Isaac_Newton.txt",
+   "size_bytes": 90705,
+   "sha256": "95455E352FC320ECC483D33EB012EA290007DCBB2E0D0AC716C48B3322C28797"
+  },
+  {
+   "path": "texts/wikipedia__Islamic_Golden_Age.txt",
+   "size_bytes": 58183,
+   "sha256": "B80AEADE8B9842F42EAB564266829F810F10B412504DF0E51E1D761BFB630CE7"
+  },
+  {
+   "path": "texts/wikipedia__Ivan_Pavlov.txt",
+   "size_bytes": 20582,
+   "sha256": "08D5195C06CED885A6D8A96561B6E237EF42F46567E1292A8FA041FA4799E9AE"
+  },
+  {
+   "path": "texts/wikipedia__Ivan_Sechenov.txt",
+   "size_bytes": 7187,
+   "sha256": "0FE3D839826403FE19549F263014D36D009D61FDB5581A9EF19E6109053ABC10"
+  },
+  {
+   "path": "texts/wikipedia__James_Clerk_Maxwell.txt",
+   "size_bytes": 42287,
+   "sha256": "C9AFD4B0A62CA47707649AD7A91FEC19DFE81C80B5C12612DE4A14A02F8B4828"
+  },
+  {
+   "path": "texts/wikipedia__James_Watt.txt",
+   "size_bytes": 34662,
+   "sha256": "D7882AB3D9B3A0161BD396A43880A8AE24E02E0084B42F5523A3078E06C5CF57"
+  },
+  {
+   "path": "texts/wikipedia__Jean-Baptiste_Lamarck.txt",
+   "size_bytes": 26859,
+   "sha256": "220C57CFEC59C778338441D63BE64F86D8C709B7EF1322E10049117E2D196057"
+  },
+  {
+   "path": "texts/wikipedia__Johannes_Kepler.txt",
+   "size_bytes": 74225,
+   "sha256": "2C9C1C4620468A7EA8001F87F748F8194D67DB21ACB6039DD8E210CA2D1C8C75"
+  },
+  {
+   "path": "texts/wikipedia__John_Dalton.txt",
+   "size_bytes": 27433,
+   "sha256": "E138063730BAAE77DA19282CE891915EAB46454EEA3D46FD863F5FA8D3194DAF"
+  },
+  {
+   "path": "texts/wikipedia__Joseph_Priestley.txt",
+   "size_bytes": 67550,
+   "sha256": "E4EE159B9BB280ED30EDBE6692048786717EA9913861A1227865EA766914AAA5"
+  },
+  {
+   "path": "texts/wikipedia__Joukowsky_airfoil.txt",
+   "size_bytes": 31178,
+   "sha256": "9B6710F354A344946E9A5695A27164A7FA7EB5215F1278D741C3AD44535D0018"
+  },
+  {
+   "path": "texts/wikipedia__Kite.txt",
+   "size_bytes": 24839,
+   "sha256": "4CCAB4548AED006899D5B5335FFBB4DE9178CFE92CEBC4C28B3760D8EFD2C865"
+  },
+  {
+   "path": "texts/wikipedia__Konstantin_Tsiolkovsky.txt",
+   "size_bytes": 22183,
+   "sha256": "A9ADD762ED0F2DA34FF0FF9D160838A5518A858D7A5CDF11AFF978ECB92D1DE9"
+  },
+  {
+   "path": "texts/wikipedia__Kutta_condition.txt",
+   "size_bytes": 8733,
+   "sha256": "123E9D8D23F1F911DB917560C0DD015F4285D20B0ADCD3C7B54E2F4CBC994E8B"
+  },
+  {
+   "path": "texts/wikipedia__Lamarck.txt",
+   "size_bytes": 27366,
+   "sha256": "71660012E006A79F87FBB63FEE98424E6CDDBD9782A59334E14A780A01CDEFE7"
+  },
+  {
+   "path": "texts/wikipedia__Leibniz.txt",
+   "size_bytes": 87695,
+   "sha256": "C3404EEBDFE45C026BA071AF5D603D6BB972E10F6A7C5F8ECF4CAC32B1EE3A91"
+  },
+  {
+   "path": "texts/wikipedia__Lotus_effect.txt",
+   "size_bytes": 8255,
+   "sha256": "4E907B250BBBC5AAAA5463BA4C70590E1059969AA25A3940426327A1AB50D075"
+  },
+  {
+   "path": "texts/wikipedia__Louis_Pasteur.txt",
+   "size_bytes": 48114,
+   "sha256": "3F74980659689514DA24E6B3962D51D331E047CAF7B2E0D1C837CB47D13078BC"
+  },
+  {
+   "path": "texts/wikipedia__Ludwig_Prandtl.txt",
+   "size_bytes": 14327,
+   "sha256": "5A3217026EF6A0F4868122DCDB681AB8428F4DA854262345C3B8DFCE5CF51E59"
+  },
+  {
+   "path": "texts/wikipedia__Machine_learning.txt",
+   "size_bytes": 59099,
+   "sha256": "7B0E5449116F4228FAE8009E9A17B8D6F91FE73F573D055772ECC10A22D073F0"
+  },
+  {
+   "path": "texts/wikipedia__Manhattan_Project.txt",
+   "size_bytes": 114966,
+   "sha256": "EE7BF556BEE498CB67A60B442705B92C308ECF5FF50C4C6CCCC41505F1366084"
+  },
+  {
+   "path": "texts/wikipedia__Mechanics.txt",
+   "size_bytes": 15165,
+   "sha256": "3898E120954C2F921C1542D593315037A762BA7E67CF519F0AD1804DD1A13DB2"
+  },
+  {
+   "path": "texts/wikipedia__Medieval_science.txt",
+   "size_bytes": 107435,
+   "sha256": "3B47011668C68539427DF34FA2CF3DC2CD2ED4A6F09F09ABD5A7F070281F595A"
+  },
+  {
+   "path": "texts/wikipedia__Medieval_university.txt",
+   "size_bytes": 17802,
+   "sha256": "2553BE814297EAFA252CDFBC232FB70CDE2485397CD6CD13B94BCF3F7F8CB9D1"
+  },
+  {
+   "path": "texts/wikipedia__Metascience.txt",
+   "size_bytes": 46719,
+   "sha256": "1E4F9C7EE03EB9D711BACFA40E70A1BA40EAE9630BAE06A02319B8B4476ADA6A"
+  },
+  {
+   "path": "texts/wikipedia__Michael_Faraday.txt",
+   "size_bytes": 32872,
+   "sha256": "6AC69A3368ADA35C8A1266BF1B63A214DD4F279724B85C7AC0424EF43CB0B7FD"
+  },
+  {
+   "path": "texts/wikipedia__Microscope.txt",
+   "size_bytes": 20224,
+   "sha256": "126624A036B4B1BB615C4CF093AF8FA68C1B381B4FE00D764D8003CF93B8BEF8"
+  },
+  {
+   "path": "texts/wikipedia__Mikhail_Lomonosov.txt",
+   "size_bytes": 26494,
+   "sha256": "E2761027E7E3F712A33A1C7048D735675DE8EC6609096518B02B105F6B5C94DE"
+  },
+  {
+   "path": "texts/wikipedia__Military_aviation.txt",
+   "size_bytes": 10811,
+   "sha256": "FAD37D3108FCA958B18ACDA0E915A6E534493966A95215308958BA3B0C60DC28"
+  },
+  {
+   "path": "texts/wikipedia__NASA.txt",
+   "size_bytes": 87629,
+   "sha256": "242ED162B7162A92EE387C7C3A2C671622C883B606C5926110AF6184FEFC6804"
+  },
+  {
+   "path": "texts/wikipedia__Natural_philosophy.txt",
+   "size_bytes": 26198,
+   "sha256": "700235021D8087B5B580001929318A8409C0233F031A0A0ED5DEE9EB5E9EEE79"
+  },
+  {
+   "path": "texts/wikipedia__Needham_question.txt",
+   "size_bytes": 32163,
+   "sha256": "10AFF7165157AD1442F5C655D32B55ED0BC3D14F28145831B4F150AD492BF60A"
+  },
+  {
+   "path": "texts/wikipedia__Neolithic_Revolution.txt",
+   "size_bytes": 41684,
+   "sha256": "FA517DE935D7804A8870DEFAE2FCF43004337361E1C11D9F40742963D8D3E489"
+  },
+  {
+   "path": "texts/wikipedia__Newcomen_engine.txt",
+   "size_bytes": 27280,
+   "sha256": "0AA206C7324F15C4129AE09D540C3DD992EFCB5E1823F9AFD1793A7AEE606364"
+  },
+  {
+   "path": "texts/wikipedia__Newton_s_Laws.txt",
+   "size_bytes": 64078,
+   "sha256": "BDC42E4693149B6904FBB4593AF5698B6D77A8F540AF63BA70451E47374B2FF2"
+  },
+  {
+   "path": "texts/wikipedia__Nicolaus_Copernicus.txt",
+   "size_bytes": 79549,
+   "sha256": "007D4AC53DC4228679D406E435BD31AA3E808E778F6A09846421DD1F30B0CFC0"
+  },
+  {
+   "path": "texts/wikipedia__Nikola_Tesla.txt",
+   "size_bytes": 51254,
+   "sha256": "963170543180634EA72EBECCF34321447DF5B0F0B463355EBCEAA971F3897586"
+  },
+  {
+   "path": "texts/wikipedia__Objectivity__philosophy_.txt",
+   "size_bytes": 17881,
+   "sha256": "2F238B9CDAEFC50B33ACF27B33B7B5398C7D0B0327D7B1CA4607291AFC59B25B"
+  },
+  {
+   "path": "texts/wikipedia__On_the_Origin_of_Species.txt",
+   "size_bytes": 88503,
+   "sha256": "33D39FC058D7B21BBC9529BA7C96871218F35AF9BA77BB1940255415B0B82565"
+  },
+  {
+   "path": "texts/wikipedia__Peer_review.txt",
+   "size_bytes": 22402,
+   "sha256": "69888AE45131D43B35B968D0B7BD13CD771E3B6D601E5822F43BDDBF01017857"
+  },
+  {
+   "path": "texts/wikipedia__Periodic_table.txt",
+   "size_bytes": 96122,
+   "sha256": "DAAFB211B3F545C4BDAB5BB836D7DB0F54F7B599E49BE428F82FFB7EC0E7839A"
+  },
+  {
+   "path": "texts/wikipedia__Philosophy_of_science.txt",
+   "size_bytes": 53560,
+   "sha256": "9AD455F0E0BD2F792E316C7499AA96AA7C486EF8FE7F3AA874FA582EC257257E"
+  },
+  {
+   "path": "texts/wikipedia__Phlogiston_theory.txt",
+   "size_bytes": 13898,
+   "sha256": "CC466186EAD53F4FC300F5BD75A415902FC3DB9D2EDF0FE88757E0F3A233766F"
+  },
+  {
+   "path": "texts/wikipedia__Plimpton_322.txt",
+   "size_bytes": 42660,
+   "sha256": "35C2C7782EBB4658B99E5026DB76CB6E80C7FD600C951166528C77E3F7FE8C32"
+  },
+  {
+   "path": "texts/wikipedia__Positivism.txt",
+   "size_bytes": 44433,
+   "sha256": "F0B6DE7EC779699859754E3519F7E3A39D3196AE2C94B5F431DA95B5C06E7BD3"
+  },
+  {
+   "path": "texts/wikipedia__Primary_source.txt",
+   "size_bytes": 14633,
+   "sha256": "7EBDE1AE6157803903F36DE5B2AE925CB057691302C9DB9C0C23BDCF989CF85C"
+  },
+  {
+   "path": "texts/wikipedia__Principia_Mathematica.txt",
+   "size_bytes": 57386,
+   "sha256": "AB4500B9A8568779CE25A89482FBD20CB8268EA9BE50F22D765BB41C0052616E"
+  },
+  {
+   "path": "texts/wikipedia__Printing_press.txt",
+   "size_bytes": 39420,
+   "sha256": "FD0B34EB8578217266310EC05FB948AAC499D0F410ABC38E866B263519FC7E35"
+  },
+  {
+   "path": "texts/wikipedia__Ptolemy.txt",
+   "size_bytes": 29241,
+   "sha256": "B0ECB7B74E09B2BE7DE8FA703B113347426DDB87B7060F1BD787BECB626475FE"
+  },
+  {
+   "path": "texts/wikipedia__Pythagoras.txt",
+   "size_bytes": 41817,
+   "sha256": "2EE21D7824A742580542AFD4A1F7A102771DE26B99B467711FBC2868F633FCCF"
+  },
+  {
+   "path": "texts/wikipedia__Pythagorean_theorem.txt",
+   "size_bytes": 46777,
+   "sha256": "7EDFA4CA892E0F7B8CCF05C772F5A3BCB702586FE0FB84A5B0A6238B07D82740"
+  },
+  {
+   "path": "texts/wikipedia__Radar.txt",
+   "size_bytes": 53903,
+   "sha256": "1E0D05A77C2F8601741D0D0D09258A622A80DA8792AC8F79793419C6865950E9"
+  },
+  {
+   "path": "texts/wikipedia__Radio.txt",
+   "size_bytes": 20234,
+   "sha256": "2E3AB42989DE8A138B3925153E08C7E1A5F06030516BCF4A895A490EE7C261A5"
+  },
+  {
+   "path": "texts/wikipedia__Railway.txt",
+   "size_bytes": 64381,
+   "sha256": "780D383AF90E821E0F9E4E54A2C98EDD875C34351A03AC57BF203F38487DBDC6"
+  },
+  {
+   "path": "texts/wikipedia__Reproducibility.txt",
+   "size_bytes": 14949,
+   "sha256": "1A684A3F8850CE2529A4D4E53A90BC3FF3004021E2F799C4616B7AA39D69FC01"
+  },
+  {
+   "path": "texts/wikipedia__Republic_of_Letters.txt",
+   "size_bytes": 3096,
+   "sha256": "48830AA05BEFA16290E8973276E6560BE6F974D69E9F2BEF29B2C4A6627B3CF6"
+  },
+  {
+   "path": "texts/wikipedia__Research_ethics.txt",
+   "size_bytes": 5272,
+   "sha256": "DDD9233786179F215195E4B095743107B17D109189F6DB5EA6093803CCB710ED"
+  },
+  {
+   "path": "texts/wikipedia__Richard_Trevithick.txt",
+   "size_bytes": 35009,
+   "sha256": "21EC6E155312BEF60BA506148F04886203DD173A350F96B67A3417B93F375683"
+  },
+  {
+   "path": "texts/wikipedia__Robotic_sensing.txt",
+   "size_bytes": 9171,
+   "sha256": "DA5ECBA9983B3B7B47A341DF4812AB4383392F6B86CDEC9351E6D3AF7D21C58A"
+  },
+  {
+   "path": "texts/wikipedia__Roger_Bacon.txt",
+   "size_bytes": 34761,
+   "sha256": "EED501CBCA44D66941ED6B124309E90E2A605E55483497F8D1FE5DF4B5F44FF4"
+  },
+  {
+   "path": "texts/wikipedia__Roman_technology.txt",
+   "size_bytes": 30770,
+   "sha256": "8887882A686BB60E592CD700649BBD285C215FE0F154F679F5E258578C749AE4"
+  },
+  {
+   "path": "texts/wikipedia__Royal_Society.txt",
+   "size_bytes": 34667,
+   "sha256": "9F43ED6A5A1F336E3400AD8CDA2A1986C83B418100A9F4E61A08EB2DB1CE33AF"
+  },
+  {
+   "path": "texts/wikipedia__Russian_aviation.txt",
+   "size_bytes": 14085,
+   "sha256": "BFB047C8FC7E32A806810744D0F0021FE933A86A0D75064C59BAE85F8A1B25AE"
+  },
+  {
+   "path": "texts/wikipedia__Science_and_technology_in_Russia.txt",
+   "size_bytes": 20477,
+   "sha256": "4EE60CB9E0F6E2BE8E912E21B3C981295EA29D6876BBF91A6630A85294157143"
+  },
+  {
+   "path": "texts/wikipedia__Science_and_technology_studies.txt",
+   "size_bytes": 41990,
+   "sha256": "3D27999E0734A609C68623B87000F31AE1BFD9D42351B092A3B54B71BBE8E736"
+  },
+  {
+   "path": "texts/wikipedia__Science_in_the_medieval_Islamic_world.txt",
+   "size_bytes": 23296,
+   "sha256": "036B847CE627D2DA67E6840432921F6B89B22EB3824FC7E87396043C97C44C57"
+  },
+  {
+   "path": "texts/wikipedia__Science_policy.txt",
+   "size_bytes": 20651,
+   "sha256": "FB87BE39A370815E76901CF8BA4FC6C9CED5577CF2ECD27DC1D68C9087AE3E4C"
+  },
+  {
+   "path": "texts/wikipedia__Science_studies.txt",
+   "size_bytes": 15201,
+   "sha256": "47BF2946D9BDD2BBFA46B372C1FC1F3684D2549E304B7CCF35902E0976C9F333"
+  },
+  {
+   "path": "texts/wikipedia__Scientific_Revolution.txt",
+   "size_bytes": 56029,
+   "sha256": "BCACD2ADF320A7F548874E870C74EA45906FCBBE0795859B15C1FA91BF9A133D"
+  },
+  {
+   "path": "texts/wikipedia__Scientific_community.txt",
+   "size_bytes": 11202,
+   "sha256": "9075AC8610FA7236E44C2FB506C9EA4FD20EA4B59FB254D921E08B820DCA7950"
+  },
+  {
+   "path": "texts/wikipedia__Scientific_literature.txt",
+   "size_bytes": 14324,
+   "sha256": "81894D6C8158486619CD589A8466CF19E1DE56B1FACC452C21144B8DD2CC4786"
+  },
+  {
+   "path": "texts/wikipedia__Scientific_method.txt",
+   "size_bytes": 77811,
+   "sha256": "79B93B42651903B8F43474E63375B9EF99E5305C572B7A92E78651BEA2B1FBC6"
+  },
+  {
+   "path": "texts/wikipedia__Scientific_misconduct.txt",
+   "size_bytes": 32485,
+   "sha256": "4B37BA1A6D474C190D8EF94954775F3B187C9E087D832DDB826C718E31C4FED7"
+  },
+  {
+   "path": "texts/wikipedia__Scientific_realism.txt",
+   "size_bytes": 13731,
+   "sha256": "A145B456F37B996B7ED06694E2152939572AC262E501EBE3145CF14355EAEF85"
+  },
+  {
+   "path": "texts/wikipedia__Scientific_theory.txt",
+   "size_bytes": 37417,
+   "sha256": "1E891188FFD10236C0E6C9B93455565819DEA9DD2CAEF4C0F79A26878B530758"
+  },
+  {
+   "path": "texts/wikipedia__Second_Industrial_Revolution.txt",
+   "size_bytes": 52519,
+   "sha256": "365F7C3FB0FEE71FDA4239B172819251E54D97E418739EFF25A36233C1C5F804"
+  },
+  {
+   "path": "texts/wikipedia__Secondary_source.txt",
+   "size_bytes": 9202,
+   "sha256": "E2DF9D622733A32490AB4CBDD78A26A4504F847D2339BF53BC8628BBAF14FEAB"
+  },
+  {
+   "path": "texts/wikipedia__Sergei_Korolev.txt",
+   "size_bytes": 49354,
+   "sha256": "C2FA2F9067B0143FA3F20624FF2098AD9321580497EB93145E3736363C1E841E"
+  },
+  {
+   "path": "texts/wikipedia__Sextant.txt",
+   "size_bytes": 17377,
+   "sha256": "050248359579814B186DE9993AB42A5519D4BC5E4382064D2CD9E77131874FED"
+  },
+  {
+   "path": "texts/wikipedia__Sharkskin.txt",
+   "size_bytes": 3133,
+   "sha256": "200E741426531E14A7F065F1775C381A6DAAB93AF9D7F0668DAA2E9F8EFB84F4"
+  },
+  {
+   "path": "texts/wikipedia__Sidereus_Nuncius.txt",
+   "size_bytes": 14108,
+   "sha256": "0C3FD566847AEC17629F31D69A9ACBE145735B99C5B53222E4730131B21244F4"
+  },
+  {
+   "path": "texts/wikipedia__Sociology_of_scientific_knowledge.txt",
+   "size_bytes": 11236,
+   "sha256": "AAF10F72A05AAE959D67637F2A2008643FA9E32F35B318EA5A4D933CE79D07FD"
+  },
+  {
+   "path": "texts/wikipedia__Soft_robotics.txt",
+   "size_bytes": 22003,
+   "sha256": "C1078A1C714D847F52A2A47B4718C30C748556CC4F20C7E70DA276947B3C3FCF"
+  },
+  {
+   "path": "texts/wikipedia__Sonar.txt",
+   "size_bytes": 63197,
+   "sha256": "362B394A1654ACFB054F4134107269969796C939A19B51F8311220A561DC8799"
+  },
+  {
+   "path": "texts/wikipedia__Source_criticism.txt",
+   "size_bytes": 28875,
+   "sha256": "AD3099F2D54AF50F8EE787D526D149655E23F8A3CE16E5DC7D93A818B92DFC20"
+  },
+  {
+   "path": "texts/wikipedia__Soviet_science.txt",
+   "size_bytes": 10372,
+   "sha256": "198041AE8596BBC1FF7A3B2D62192D88DE36F780C77388FA6F0E7ACA7F07E239"
+  },
+  {
+   "path": "texts/wikipedia__Space_Race.txt",
+   "size_bytes": 89140,
+   "sha256": "7AD12E03E395955DC78DD58BEEFC33168918AC1A47FE20DE257CCAC9DC74E940"
+  },
+  {
+   "path": "texts/wikipedia__Spinning_jenny.txt",
+   "size_bytes": 10890,
+   "sha256": "E35EF7B5951BC15CF81C06AB848FE292209446CA36388E6DAD4AA64D22EAF86D"
+  },
+  {
+   "path": "texts/wikipedia__Sputnik_1.txt",
+   "size_bytes": 34779,
+   "sha256": "DFF7ADA5C712EEAF3B01951EC1EBB97DBDCF8D5B7C45CE7097AE257356FBFC83"
+  },
+  {
+   "path": "texts/wikipedia__Statue_of_Anne.txt",
+   "size_bytes": 38067,
+   "sha256": "8C97BB4A710D899698DBB580B002293A56A527E3F6F3623FB216D28E8D5B5EB2"
+  },
+  {
+   "path": "texts/wikipedia__Steam_engine.txt",
+   "size_bytes": 50761,
+   "sha256": "219D6CFEF492764FDBA4AF676C4B2A60A6BF5245EE790900ADC57AB56D05A160"
+  },
+  {
+   "path": "texts/wikipedia__Steam_locomotive.txt",
+   "size_bytes": 95883,
+   "sha256": "4D1605FA4159B7E0B2B1C14CD59D336F3CB0F4B3B514F2D1D588233A5BB44D9B"
+  },
+  {
+   "path": "texts/wikipedia__Swarm_robotics.txt",
+   "size_bytes": 9710,
+   "sha256": "EB68687730A4E4C99A09CFC98A44B79E6F71B3F721DB0488B088A676520714BC"
+  },
+  {
+   "path": "texts/wikipedia__Telescope.txt",
+   "size_bytes": 14088,
+   "sha256": "FD645F8197AC3653183EB3C4B70B3BB9E78D638963CBF089CA538F02A35E2326"
+  },
+  {
+   "path": "texts/wikipedia__Textile_manufacture.txt",
+   "size_bytes": 32322,
+   "sha256": "3B799080D2ED76923E15462756CF76AF38F02FE03809CF804B5826A64F5A0BB6"
+  },
+  {
+   "path": "texts/wikipedia__Thermodynamics.txt",
+   "size_bytes": 32058,
+   "sha256": "0A05C3BC8FDC5CF310BEE941ED81672E80BBB47B6BDD6CCA99C3B763840FC01A"
+  },
+  {
+   "path": "texts/wikipedia__Thomas_Newcomen.txt",
+   "size_bytes": 10086,
+   "sha256": "57C610AACA29D24FFA4E61CC335776511AB052684102509B71AB6F4D49F47F4F"
+  },
+  {
+   "path": "texts/wikipedia__Transistor.txt",
+   "size_bytes": 49523,
+   "sha256": "178E00627E59E1466BD9DA550C4EBA0CB9CB7A6789C8C31AD0DD70C624AACCB0"
+  },
+  {
+   "path": "texts/wikipedia__Turing_machine.txt",
+   "size_bytes": 42322,
+   "sha256": "107A89CADBA44FB35FBC3DBBC795EAD98EFA1BB6689DC0FF762561E866A9D16E"
+  },
+  {
+   "path": "texts/wikipedia__Tycho_Brahe.txt",
+   "size_bytes": 58531,
+   "sha256": "1CFB19ADE21651A9C0C387726826AED716CE4076DD15C2883919078C25B723D6"
+  },
+  {
+   "path": "texts/wikipedia__Unmanned_aerial_vehicle.txt",
+   "size_bytes": 27277,
+   "sha256": "F56CDAF0490BE7CAEA47CA535938D09D97C85BFB5C0F3CA3D0C8C2096075C173"
+  },
+  {
+   "path": "texts/wikipedia__Vannevar_Bush.txt",
+   "size_bytes": 48849,
+   "sha256": "407C609CEE8534A0229D61B07141AC50E8854656F3808859F81C32E1069ACB9C"
+  },
+  {
+   "path": "texts/wikipedia__Velcro.txt",
+   "size_bytes": 17285,
+   "sha256": "254590E50BFF93B5C6FE8388B8549371D181A8549AC05A84CDE1BD8E3AB4779A"
+  },
+  {
+   "path": "texts/wikipedia__Von_Neumann_architecture.txt",
+   "size_bytes": 21405,
+   "sha256": "FE4B3EC4D88DA4C8B8244D5692777C8818A5EE6005A15D1C2E5FC4EBC6CB3278"
+  },
+  {
+   "path": "texts/wikipedia__Vortex.txt",
+   "size_bytes": 19211,
+   "sha256": "F74A337EEC329A2DE6A340369B2848B2C8514FC22D9E6AD086AC518A55363AEC"
+  },
+  {
+   "path": "texts/wikipedia__Watermill.txt",
+   "size_bytes": 28938,
+   "sha256": "D4A2DC21148C3183AEB40F4C3B9B32DEB4543037CCD9DB4727D3E93DC3133B65"
+  },
+  {
+   "path": "texts/wikipedia__Wheeled_vehicle.txt",
+   "size_bytes": 30133,
+   "sha256": "DB8DD62D072E74C3C96EA24A76B25D428D0B8494053D96B61959E6488FDE7557"
+  },
+  {
+   "path": "texts/wikipedia__William_of_Ockham.txt",
+   "size_bytes": 27568,
+   "sha256": "99659793AC7851AF5C822B1CB188FA9F607BB5CC10F31264B25D9594BE0984E3"
+  },
+  {
+   "path": "texts/wikipedia__Wireless_telegraphy.txt",
+   "size_bytes": 24951,
+   "sha256": "4C4885A02E29DEAFB5F4EFE253DE8AF521EB6ADE9ABDE79D6BE6B86370064712"
+  },
+  {
+   "path": "texts/wikipedia__Wright_Flyer.txt",
+   "size_bytes": 28432,
+   "sha256": "DE1793E4D14C696C3BAA067882E72CCAC3862E7CA51C2D31CB6182B8606096FE"
+  },
+  {
+   "path": "texts/wikipedia__Wright_brothers.txt",
+   "size_bytes": 82971,
+   "sha256": "892966BCE4E3286E41B7D7A0A3156710066D7EB7300CC4445A65EA9BB5786EF7"
+  }
+ ]
+}

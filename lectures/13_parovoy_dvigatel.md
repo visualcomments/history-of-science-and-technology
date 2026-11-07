@@ -34,7 +34,7 @@
 > **Цитата:** «At the same time workshops were erected; builders,
 > artisans, and labourers were brought together from distant quarters»
 >
-> **Источник:** `txt/history_of_engineering__Lives_of_the_Engineers.txt` · фрагмент #15589
+> **Источник:** `txt/history_of_engineering__Lives_of_the_Engineers.txt` · фрагмент #410
 
 Ремесленный цех превращается в концентрированное производство, куда
 «свозятся» мастера из разных мест: это и есть переход от ремесла к
@@ -47,7 +47,7 @@
 > when proceeding thither to learn the art of mathematical instrument
 > making»
 >
-> **Источник:** `txt/history_of_engineering__Lives_of_the_Engineers.txt` · фрагмент #15232
+> **Источник:** `txt/history_of_engineering__Lives_of_the_Engineers.txt` · фрагмент #53
 
 Инструментальное дело — изготовление измерительных приборов — станет
 точкой входа Уатта в технику паровой машины: именно необходимость точно

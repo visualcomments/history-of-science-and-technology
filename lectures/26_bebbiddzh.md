@@ -35,7 +35,7 @@
 > Cambridge, my head leaning forward on the Table in a kind of dreamy
 > mood, with a Table of logarithms lying open before me»
 >
-> **Источник:** `txt/history_of_computing__Passages_from_the_Life_of_a_Philosopher.txt` · фрагмент #13464
+> **Источник:** `txt/history_of_computing__Passages_from_the_Life_of_a_Philosopher.txt` · фрагмент #58
 
 Бэббидж указывает на социальный контекст: «Общество аналитиков» в
 Кембридже — кружок, где обсуждали положение дел в математике. Изобретение
@@ -47,7 +47,7 @@
 > comprised a few figures, and was made by myself, between 1820 and June
 > 1822»
 >
-> **Источник:** `txt/history_of_computing__Passages_from_the_Life_of_a_Philosopher.txt` · фрагмент #13471
+> **Источник:** `txt/history_of_computing__Passages_from_the_Life_of_a_Philosopher.txt` · фрагмент #65
 
 ## Вопросы для самопроверки
 

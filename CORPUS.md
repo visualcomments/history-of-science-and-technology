@@ -56,8 +56,8 @@ python tools/corpus_fetch.py --texts-only     # только тексты
 
 | Артефакт | Состояние | Что это значит |
 |---|---|---|
-| Индекс (`index-manifest.json`) | **опубликован** | версия `2026-09-13-v2`, 231 файл, 67 242 чанка, ссылка на Google Диске и SHA-256 заполнены |
-| Тексты (`txt/*.txt`) | **не опубликованы** | в репозитории лежит только `corpus-manifest.example.json` с пустыми `url` и хэшами; архива текстов нет |
+| Индекс (`index-manifest.json`) | **опубликован** | версия `2026-11-07`, 581 файл, ~140 000 чанков; texts.zip + index.zip на HuggingFace, SHA-256 заполнены |
+| Тексты (`txt/*.txt`) | **опубликованы** | `corpus-manifest.json`: архив texts.zip (HuggingFace, brics-edtech/histsci-corpus) с SHA-256 каждого файла |
 
 Пока тексты не опубликованы, `make corpus-fetch` скачает индекс и честно
 сообщит, что тексты взять неоткуда (`texts: no-url`), а `make verify` вернёт
@@ -144,10 +144,87 @@ CI (`tools/validate_course.py`) проверяет, что манифест с �
 У. Уэвелла «История индуктивных наук» (PD). Полный список и лицензии —
 в PROVENANCE.md.
 
-## Расширение корпуса 2026-09-13 (индекс 2026-09-13)
+## Расширение корпуса 2026-11-07 (индекс 2026-11-07)
 
-Корпус вырос с 57 до **171 файла** (67,6 МБ); индекс — с 28 969 до
-**47 781 чанка**:
+Корпус расширен с 364 до **581 файла**; индекс пересобран на GPU
+(sentence-transformers + torch/CUDA; профиль курса сохранён: чанки
+1400/140, модель paraphrase-multilingual-MiniLM-L12-v2, точный
+косинусный поиск). Цель — гарантированное покрытие каждого из 30 занятий
+(≥ 10 источников) и полный набор PD-первоисточников по упомянутым учёным.
+
+### 1. PD-книги (Project Gutenberg, зеркало pglaf) — +54
+
+| Тема | Добавлено |
+|---|---|
+| Дарвин/эволюция | Origin of Species (PG 22764), Descent of Man, Voyage of the Beagle, Foundations, Darwin and Natural Selection; Weismann ×2, Romanes, Mivart |
+| Ламарк | Zoological Philosophy (EN + DE) |
+| Галилей/астрономия | Sidereal Messenger (46036), Berry «Short History of Astronomy» |
+| Математика | Heath «Archimedes», Heath «Copernicus of Antiquity» (Аристарх) |
+| Химия | Лавуазье «Elements of Chemistry» + «Traité» (FR), Дальтон «New System», Менделеев «Principles of Chemistry», Shipley «Atomic Theory» |
+| Электричество | Фарадей «Chemical History of a Candle» + «Experimental Researches in Electricity», Thompson «Michael Faraday», Лоренц «Maxwell's EM Theory», Chipman «Earliest Electromagnetic Instruments», Гальвани, Вольта, «Epitome of Electricity and Galvanism», Гильберт ×2, Шеele «Discovery of Oxygen», Торп «Priestley» |
+| Геология | Лайель «Principles of Geology» + «Manual», Кювье «Theory of the Earth» |
+| Биология/медицина | Клод Бернар (FR), Гельмгольц «Popular Lectures», Гиппократ, Весалий (Болл) |
+| Пар/машины | «Steam Engine Explained» (42602), Ларднер, Rathbun, Hime «Gunpowder» |
+| Вычислительная техника | Бэббидж «Passages» + «Calculating Engine» + «Exposition of 1851» |
+| Авиация | Vivian «History of Aeronautics», Лилиенталь «Vogelflug» (DE) |
+| Античность | Витрувий (лат. + англ. пересказ), Герон «Pneumatics» |
+| Прочее | Рассел «Foundations of Geometry», Blades «Pentateuch of Printing» |
+
+5 книг с зеркала 404 (Cajori, Hilbert, Poincaré, Newton Principia,
+Sketch of Analytical Engine) — их эквиваленты уже есть в корпусе
+(pd_principia, pd_foundationsgeom00hilbgoog и др.).
+
+### 2. Wikipedia (CC BY-SA 4.0, с заголовком атрибуции) — +154
+
+EN (~120): по всем 30 темам — History of science/technology/engineering,
+Neolithic Revolution, Ancient Egyptian/Roman/Greek technology, Vitruvius,
+Euclid, Archimedes, Al-Khwarizmi, Islamic Golden Age, House of Wisdom,
+Needham question, Four Great Inventions, Gunpowder, Printing press,
+Copernicus, De revolutionibus, Galileo, Telescope, Scientific revolution,
+Newton, Principia, Leibniz, Royal Society, Steam engine, Newcomen, Watt,
+Industrial Revolution, Faraday, Maxwell, Hertz, Radio, History of radar,
+Phlogiston, Lavoisier, Priestley, Scheele, Dalton, Mendeleev, Periodic
+table, Darwin, Origin of Species, Wallace, Haeckel, Bionics, Biomimetics,
+Biomimicry, Soft robotics, Biomechatronics, Zhukovsky, History of
+aviation, Wright brothers, Aerodynamics, Digital twin, Babbage,
+Analytical engine, Ada Lovelace, Soviet science, Sputnik 1, Space Race,
+Korolev, Tsiolkovsky, History of rocketry, AI, History of AI,
+Cybernetics, NASA и др.
+
+RU (~85): История науки, Неолитическая революция, Древний Египет,
+Коперник, Галилео Галилей, Исаак Ньютон, Лейбниц, Паровая машина,
+Промышленная революция, Фарадей, Максвелл, Герц, Радиолокация, Когерер,
+Лавуазье, Менделеев, Дарвин, Геккель, Сеченов, Бионика, Биомиметика,
+Жуковский, Кирпичёв, ЦАГИ, Бэббидж, Лавлейс, Спутник, Королёв,
+Циолковский, Искусственный интеллект, Цифровой двойник, Беспилотный
+летательный аппарат и др.
+
+### 3. OA-статьи DOAJ (CC BY / CC BY-SA) — +20
+
+Новая выборка принимает **только CC BY / CC BY-SA** (NC/ND исключены).
+Тематика: неолитическая революция, древние укрепления, электромагнетизм
+XIX в., дарвинизм и его рецепция, история микробиологии, цифровое
+производство, датчики и цифровые двойники, история ракет. 12
+нерелевантных статей (экономика, гидрология, атмосферная химия)
+отфильтрованы. Манифест — `catalog/doaj-manifest-2026-11-07.json`.
+
+### Проверка покрытия
+
+Карта `catalog/sources-map.json` (генератор — `build-histsci/
+build_sources_map.py` в каталоге сбора) фиксирует **≥ 10 источников на
+каждое из 30 занятий** (минимум 10, максимум 42).
+
+## Прежние расширения (2026-09-13)
+
+Корпус вырос с 57 до 171 файла (47 781 чанка), затем до 364 (100 314
+чанков, версия v2 — добавлены PD-первоисточники и статьи Wikipedia под
+занятие 1).
+
+| Категория | Файлов | Лицензия |
+|---|---|---|
+| `wikipedia__*.txt` | 96 | CC BY-SA 4.0 |
+| `pd_*.txt` — первоисточники | 28 | общественное достояние |
+| Прежний корпус | 47 | PD / документы правительства США |
 
 | Категория | Файлов | Лицензия |
 |---|---|---|
