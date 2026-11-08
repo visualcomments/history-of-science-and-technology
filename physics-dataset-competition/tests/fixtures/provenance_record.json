@@ -1,0 +1,42 @@
+{
+  "record_id": "AERO-1234ABCD",
+  "schema_version": "1.0.0",
+  "domain": "AERO",
+  "source": {
+    "title": "Synthetic provenance fixture (not a research source)",
+    "source_type": "dataset",
+    "year": 2026,
+    "language": "en",
+    "url": "https://example.invalid/synthetic-provenance",
+    "license": "GPL-3.0-or-later",
+    "abstract": "Synthetic test data: speed = 12 m/s."
+  },
+  "rights": {
+    "reusable": true,
+    "redistributable": true,
+    "basis": "Synthetic test data authored for this fixture; no external source."
+  },
+  "values": [
+    {
+      "name": "speed",
+      "value": 12,
+      "unit": "m/s",
+      "uncertainty_kind": "unknown",
+      "source_ref": {
+        "location": "physics-dataset-competition/tests/fixtures/provenance_record.json#source.abstract"
+      }
+    }
+  ],
+  "provenance": {
+    "activity": "collect",
+    "agent_role_id": "test-agent",
+    "retrieved_at": "2026-10-24T00:00:00Z",
+    "method": "manual",
+    "sha256": "724f22429a5b8e82ce06e60bc2572d7108ade73448f15f7a0e3482a8f94810a1"
+  },
+  "validation": {
+    "status": "unchecked",
+    "checked_by_role_id": "test-validator",
+    "checked_at": "2026-10-24T00:00:00Z"
+  }
+}

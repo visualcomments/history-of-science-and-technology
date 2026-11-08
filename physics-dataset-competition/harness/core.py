@@ -285,7 +285,7 @@ def validate_case(case: Any) -> list[str]:
 
 
 def validate_record(rec: Any) -> list[str]:
-    """Проверить запись физданных по record.schema.json. Пустой список = валидно."""
+    """Проверить запись по схеме и координаты значений для ревью в harness."""
     errors: list[str] = []
     if not isinstance(rec, dict):
         return ["запись: должна быть JSON-объектом"]
@@ -352,6 +352,17 @@ def validate_record(rec: Any) -> list[str]:
                     errors.append(f"values[{i}]: отсутствует '{key}'")
             if isinstance(v.get("value"), bool):
                 errors.append(f"values[{i}].value не должен быть boolean")
+            source_ref = v.get("source_ref")
+            location = source_ref.get("location") if isinstance(source_ref, dict) else None
+            if not (
+                isinstance(location, str)
+                and "#" in location
+                and all(part.strip() for part in location.split("#", 1))
+            ):
+                errors.append(
+                    f"values[{i}].source_ref.location: "
+                    "координаты источника ('путь#локатор') обязательны"
+                )
 
     prov = rec.get("provenance")
     if not isinstance(prov, dict):
