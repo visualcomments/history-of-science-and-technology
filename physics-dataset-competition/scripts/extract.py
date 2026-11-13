@@ -34,13 +34,57 @@ from physics_ds.validation.checks import (  # noqa: E402
 )
 
 
+def _iter_source_specs(spec: dict) -> list[dict]:
+    """Развернуть общий спек и его ``records[]`` в отдельные источники."""
+    raw = spec.get("records")
+    entries = raw if isinstance(raw, list) else [spec]
+    sources: list[dict] = []
+    for entry in entries:
+        merged = dict(spec)
+        merged.pop("records", None)
+        if isinstance(entry, dict):
+            merged.update(entry)
+        sources.append(merged)
+    return sources
+
+
+def _missing_source(spec: dict) -> str | None:
+    """Вернуть путь к первому указанному, но отсутствующему источнику."""
+    for entry in _iter_source_specs(spec):
+        bronze = entry.get("bronze")
+        path = bronze.get("path") if isinstance(bronze, dict) else None
+        if isinstance(path, str) and path and not Path(path).is_file():
+            return path
+    return None
+
+
 def cmd_extract(spec_path: str, out_path: str | None) -> int:
+    spec_file = Path(spec_path)
+    if not spec_file.is_file():
+        print(
+            json.dumps(
+                {"error": f"файл спецификации не найден: {spec_file}"},
+                ensure_ascii=False,
+            ),
+            file=sys.stderr,
+        )
+        return 2
     try:
-        spec = load_spec(spec_path)
+        spec = load_spec(spec_file)
     except (OSError, json.JSONDecodeError) as exc:
         print(
             json.dumps(
                 {"error": f"не удалось прочитать спек: {exc}"}, ensure_ascii=False
+            ),
+            file=sys.stderr,
+        )
+        return 2
+
+    missing = _missing_source(spec)
+    if missing is not None:
+        print(
+            json.dumps(
+                {"error": f"файл источника не найден: {missing}"}, ensure_ascii=False
             ),
             file=sys.stderr,
         )
