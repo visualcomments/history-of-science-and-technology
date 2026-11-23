@@ -1,0 +1,35 @@
+{
+  "case_id": "aero-table-air-speed",
+  "schema_version": "1.0.0",
+  "domain": "AERO",
+  "source": {
+    "source_type": "dataset",
+    "title": "Synthetic airflow table",
+    "excerpt": "Table 1. Synthetic airflow readings\nQuantity | Value | Unit\nAir speed | 12.5 | m/s\nAir temperature | 20 | degC",
+    "rights": {
+      "reusable": true,
+      "redistributable": true,
+      "basis": "Synthetic data created for this test under the fixture license."
+    }
+  },
+  "prompt": "Extract the air speed from Table 1. Return the quantity name, numeric value, original unit and source location.",
+  "expected": {
+    "constraints": [
+      {
+        "name": "Air speed",
+        "value": 12.5,
+        "unit": "m/s",
+        "source_ref": {
+          "location": "physics-dataset-competition/tests/fixtures/harness_table_case.json#source.excerpt:line-3"
+        }
+      }
+    ]
+  },
+  "expert_notes": "The first data row is synthetic. A passing replay still requires expert approval.",
+  "provenance": {
+    "method": "manual",
+    "sha256": "bb18e5d0c46543a49a57b6c4a15595b06f7f5bc930d846b56c873559a5a19dc1"
+  },
+  "split": "test",
+  "license": "GPL-3.0-or-later"
+}
